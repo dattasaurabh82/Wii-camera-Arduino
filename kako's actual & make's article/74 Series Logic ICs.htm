@@ -1,0 +1,1368 @@
+
+<!-- saved from url=(0056)http://www.kpsec.freeuk.com/components/74series.htm#7404 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>74 Series Logic ICs</title>
+<!-- Written by John Hewes using StrongED for RISC OS -->
+
+<meta http-equiv="content-language" content="en-GB">
+<meta name="description" content="The Electronics Club">
+<meta name="keywords" content="electronics 74 series TTL 74LS 74HC 74HCT logic ICs chips logic gates counters display drivers">
+<style type="text/css">
+<!-- body { font-family: arial, sans-serif } -->
+</style>
+<style type="text/css" id="diigolet-chrome-css">body#dummybodyid .diigolet,body#dummybodyid .diigolet a,body#dummybodyid .diigolet em,body#dummybodyid .diigolet span,body#dummybodyid .diigolet div,body#dummybodyid .diigolet dl,body#dummybodyid .diigolet dt,body#dummybodyid .diigolet dd,body#dummybodyid .diigolet ul,body#dummybodyid .diigolet ol,body#dummybodyid .diigolet li,body#dummybodyid .diigolet h1,body#dummybodyid .diigolet h2,body#dummybodyid .diigolet h3,body#dummybodyid .diigolet h4,body#dummybodyid .diigolet h5,body#dummybodyid .diigolet h6,body#dummybodyid .diigolet pre,body#dummybodyid .diigolet form,body#dummybodyid .diigolet fieldset,body#dummybodyid .diigolet p,body#dummybodyid .diigolet blockquote,body#dummybodyid .diigolet th,body#dummybodyid .diigolet td,body#dummybodyid .diigolet input,body#dummybodyid .diigolet textarea,body#dummybodyid .diigolet select,body#dummybodyid .diigolet *{background:transparent none;padding:0;margin:0;border:#000 0 solid;text-align:left;text-decoration:none;text-transform:none;text-indent:0;line-height:normal;word-break:normal;word-wrap:normal;width:auto;height:auto;color:inherit;font:inherit;float:none;cursor:default;position:static;overflow:visible;max-width:none;box-shadow:none;opacity:1;border-radius:0;}
+body#dummybodyid .diigolet{color:#000;font:normal normal normal 13px arial,helvetica,clean,sans-serif;}
+body#dummybodyid .diigolet input[type=text],body#dummybodyid .diigolet textarea,body#dummybodyid .diigolet select,body#dummybodyid .diigolet fieldset{background-color:#FFF;border:1px #999 solid;padding:1px;font-size:11px;display:inline;}
+body#dummybodyid .diigolet input[type=text],body#dummybodyid .diigolet textarea{cursor:text;}
+body#dummybodyid .diigolet input[type="button"],body#dummybodyid .diigolet input[type="submit"],body#dummybodyid .diigolet input[type="reset"],body#dummybodyid .diigolet input[type="file"]{color:buttontext;cursor:default;padding:2px 5px;text-align:center;border:1px solid #ccc;background:#fff;border-radius:2px;background-image:-webkit-gradient(linear,0% 0,0% 100%,from(#f8f8f8),to(#d2d2d2));}
+body#dummybodyid .diigolet input[type="button"]:active,body#dummybodyid .diigolet input[type="submit"]:active,body#dummybodyid .diigolet input[type="reset"]:active,body#dummybodyid .diigolet input[type="file"]:active{background:#ddd;}
+body#dummybodyid .diigolet textarea{white-space:normal!important;}
+body#dummybodyid .diigolet input.diigo-check{border:none;vertical-align:middle;}
+body#dummybodyid .diigolet input.diigo-button{font-size:12px;font-weight:bold;margin-right:10px;padding:4px 8px;}
+body#dummybodyid .diigolet input.diigo-downlist{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/arrow-down.png) 50% 50% no-repeat,-webkit-gradient(linear,0% 0,0% 100%,from(#f8f8f8),to(#d2d2d2));width:12px;margin-left:-16px;}
+body#dummybodyid .diigolet input.diigo-downlist:active{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/arrow-down.png) 50% 50% no-repeat,#ddd;}
+body#dummybodyid .diigolet div.diigo-buttonswitchlist{padding:4px 2px;border:1px solid #ccc;position:absolute;right:72px;background:#fff;z-index:100000;}
+body#dummybodyid .diigolet div.diigo-buttonswitchlist ul li{padding:2px 6px;}
+body#dummybodyid .diigolet div.diigo-buttonswitchlist ul li:hover{background:#43658F;color:#fff;cursor:pointer;}
+body#dummybodyid #diigoletFNSubmit{width:50px;}
+body#dummybodyid .diigolet table{border-collapse:collapse;border-spacing:0;width:auto;}
+body#dummybodyid .diigolet label{cursor:pointer!important;display:inline;vertical-align:middle;}
+body#dummybodyid .diigolet fieldset,body#dummybodyid .diigolet img{border:0;}
+body#dummybodyid .diigolet address,body#dummybodyid .diigolet caption,body#dummybodyid .diigolet cite,body#dummybodyid .diigolet code,body#dummybodyid .diigolet dfn,body#dummybodyid .diigolet em,body#dummybodyid .diigolet strong,body#dummybodyid .diigolet th,body#dummybodyid .diigolet var{font-style:normal;font-weight:bold;}
+body#dummybodyid .diigolet ol,body#dummybodyid .diigolet ul,body#dummybodyid .diigolet li{list-style:none;display:block;}
+body#dummybodyid .diigolet caption,body#dummybodyid .diigolet th{text-align:left;}
+body#dummybodyid .diigolet h1,body#dummybodyid .diigolet h2,body#dummybodyid .diigolet h3,body#dummybodyid .diigolet h4,body#dummybodyid .diigolet h5,body#dummybodyid .diigolet h6{font-weight:bold;}
+body#dummybodyid .diigolet q:before,body#dummybodyid .diigolet q:after{content:'';}
+body#dummybodyid .diigolet abbr,body#dummybodyid .diigolet acronym{border:0;}
+body#dummybodyid .diigolet a:link,body#dummybodyid .diigolet a:visited,body#dummybodyid .diigolet a:hover,body#dummybodyid .diigolet a:active{text-decoration:none;color:#00F;cursor:pointer!important;}
+body#dummybodyid .diigolet a:hover{text-decoration:underline;}
+body#dummybodyid .diigolet a *{cursor:inherit;}
+body#dummybodyid #diigolet-tray{position:fixed;top:0;left:10;width:16px;height:16px;background:transparent url("chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/diigoletIconv3.gif") no-repeat left -4px;z-index:2147483646;}
+body#dummybodyid .diigolet a.diigolet-Help:link,body#dummybodyid .diigolet a.diigolet-Help:visited{color:#06F;}
+body#dummybodyid .diigolet a.diigolet-Help:hover,body#dummybodyid .diigo a.diigolet-Help:active{color:#00F;}
+body#dummybodyid .diigolet label{margin-left:3px;}
+body#dummybodyid .diigolet span.noComments{color:#AAA;font-size:10px;}
+body#dummybodyid #diigolet-toolbar{border:none;width:100%;position:absolute;top:0;left:0;z-index:2147483647;color:#333;}
+body#dummybodyid #diigolet-tb-content{padding:3px 5px;background:#EFEDDE url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/diigolet-toolbar-bg2.gif) repeat scroll 0;}
+body#dummybodyid #diigolet-tb-bar span,body#dummybodyid #diigolet-tb-bar div,body#dummybodyid #diigolet-tb-bar a,body#dummybodyid #diigolet-tb-bar em{line-height:24px;}
+body#dummybodyid #diigolet-tb-shadow{height:5px;background:transparent url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/diigolet-toolbar-shadow.png) repeat-x left top;}
+* html body#dummybodyid #diigolet-tb-shadow.ie6{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=scale,src="chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/diigolet-toolbar-shadow.png");overflow:hidden;background:none;}
+body#dummybodyid #diigolet-help{display:none;position:absolute;top:29px;right:10px;width:200px;border:1px #ccc solid;background-color:#FFC;padding:6px 16px 6px 6px;}
+body#dummybodyid .diigolet a.diigoletButton{height:24px;float:left;padding-right:4px;cursor:pointer!important;}
+body#dummybodyid .diigolet a.diigoletButton:hover{text-decoration:none;color:#000;background:transparent url("chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/diigoletBtn3_r.png") no-repeat right top;}
+body#dummybodyid .diigolet a.diigoletButton:active{background-position:right bottom;}
+body#dummybodyid .diigolet a.diigoletButton b{font-weight:normal;color:#000;line-height:24px;float:left;padding-left:4px;height:24px;}
+body#dummybodyid #diigolet-button-highlight-dropdown{width:8px;height:16px;margin-right:4px;background:transparent url('chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/down_arrow.gif') no-repeat scroll left 2px;}
+body#dummybodyid #diigolet-button-highlight-dropdown.mouseovered{border-left:1px solid #888;margin-right:0;text-decoration:none;width:11px;height:24px;background:transparent url("chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/diigoletBtn4.png") no-repeat left top!important;}
+body#dummybodyid #diigolet-button-highlight-dropdown.mouseoveredIe{border-left:1px solid #888;margin-right:1px;text-decoration:none;width:11px;height:24px;background:transparent url("chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/diigoletBtn4.png") no-repeat left top!important;}
+body#dummybodyid #diigolet-button-highlight-dropdown.checked{border-left:1px solid #888;margin-right:0;text-decoration:none;width:11px;height:24px;background:transparent url("chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/diigoletBtn4_s.png") no-repeat left top!important;}
+body#dummybodyid #diigolet-button-highlight.mouseovered{text-decoration:none;color:#000;background:transparent url("chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/diigoletBtn3_r.png") no-repeat right top!important;}
+body#dummybodyid #diigolet-button-highlight.mouseoveredIe{text-decoration:none;color:#000;background:transparent url("chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/diigoletBtn3_r.png") no-repeat right top!important;}
+body#dummybodyid #diigolet-button-highlight.mouseovered b.outer{background:transparent url('chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/diigoletBtn3.png') no-repeat left top;}
+body#dummybodyid #diigolet-button-highlight.mouseoveredIe b.outer{background:transparent url('chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/diigoletBtn3.png') no-repeat left top;}
+body#dummybodyid a#diigolet-button-highlight b.outer{padding-right:5px;}
+body#dummybodyid a#diigolet-button-highlight{padding-right:0!important;}
+body#dummybodyid a.diigoletButton:hover b.outer{background:transparent url('chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/diigoletBtn3.png') no-repeat left top;}
+body#dummybodyid a.diigoletButton:active b.outer{background-position:left bottom;}
+body#dummybodyid .diigolet a.diigoletButton b b{font-size:12px;padding-left:20px;background:transparent url("chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/diigoletIconv3.gif") no-repeat left 50%;}
+body#dummybodyid .diigolet a.diigoletButton:active b b{position:relative;top:1px;left:1px;}
+body#dummybodyid .diigolet a.diigoletButton.diigoletDisabled{cursor:default;}
+body#dummybodyid .diigolet a.diigoletButton.diigoletDisabled b b{color:#999;position:static;}
+body#dummybodyid .diigolet a.diigoletButton.diigoletDisabled:hover{background:none transparent;}
+body#dummybodyid .diigolet a.diigoletButton.diigoletDisabled:hover b.outer{background:none transparent;}
+body#dummybodyid .diigolet a.diigoletButton.checked{background:transparent url("chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/diigoletBtn3_r.png") no-repeat right top;background-position:right bottom;}
+body#dummybodyid .diigolet a.diigoletButton.checked b.outer{background:transparent url('chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/diigoletBtn3.png') no-repeat left top;background-position:left bottom;}
+body#dummybodyid .diigolet a.diigoletButton.checked b b{position:relative;top:1px;left:1px;}
+body#dummybodyid #diigolet-tb-btnSidebar b b{background-position:left -24px;}
+body#dummybodyid #diigolet-tb-btnSidebar.toClose b b{background-position:left -48px;}
+body#dummybodyid #diigolet-tb-btnBookmark b b{background-position:left -144px;}
+body#dummybodyid #diigolet-tb-btnBookmark.saved b b{background-position:left -120px;}
+body#dummybodyid #diigolet-button-highlight b b{background-position:left -72px;}
+body#dummybodyid #diigolet-button-highlight.dontShow b b{background-position:left -96px;}
+body#dummybodyid #diigolet-button-highlight.yellow b b{background-position:left -355px;}
+body#dummybodyid #diigolet-button-highlight.blue b b{background-position:left -375px;}
+body#dummybodyid #diigolet-button-highlight.green b b{background-position:left -395px;}
+body#dummybodyid #diigolet-button-highlight.pink b b{background-position:left -415px;}
+body#dummybodyid .diigolet .colorItem{padding-left:20px;height:16px;background:transparent url("chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/diigoletIconv3.gif") no-repeat left -440px;}
+body#dummybodyid #diigolet-context-yellow b,body#dummybodyid #diigolet-colorMenu-yellow b{background-position:left -440px;}
+body#dummybodyid #diigolet-context-blue b,body#dummybodyid #diigolet-colorMenu-blue b{background-position:left -460px;}
+body#dummybodyid #diigolet-context-green b,body#dummybodyid #diigolet-colorMenu-green b{background-position:left -480px;}
+body#dummybodyid #diigolet-context-pink b,body#dummybodyid #diigolet-colorMenu-pink b{background-position:left -500px;}
+body#dummybodyid #diigolet-context-yellow.colorchecked b,body#dummybodyid #diigolet-colorMenu-yellow.colorchecked b{background-position:left -520px;}
+body#dummybodyid #diigolet-context-blue.colorchecked b,body#dummybodyid #diigolet-colorMenu-blue.colorchecked b{background-position:left -540px;}
+body#dummybodyid #diigolet-context-green.colorchecked b,body#dummybodyid #diigolet-colorMenu-green.colorchecked b{background-position:left -560px;}
+body#dummybodyid #diigolet-context-pink.colorchecked b,body#dummybodyid #diigolet-colorMenu-pink.colorchecked b{background-position:left -580px;}
+body#dummybodyid #diigolet-tb-btnFloatNote b b{background-position:left -167px;}
+body#dummybodyid #diigolet-tb-btnTwitter b b{background:transparent url("http://twitter.com/favicon.ico") no-repeat left 50%;}
+body#dummybodyid #diigolet-tb-btnComment b b{background-position:left -192px;}
+body#dummybodyid #diigolet-tb-btnComment.commented b b{background-position:left -192px;}
+body#dummybodyid #diigolet-tb-btnMore b b{background-position:left 0;}
+body#dummybodyid #diigolet-tb-btnSignIn b b{background-position:left -264px;}
+body#dummybodyid #diigolet-tb-btnHide{float:right;height:24px;width:16px;background:transparent url("chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/diigoletIconv3.gif") no-repeat left -240px;}
+body#dummybodyid div.diigoIcon{cursor:pointer!important;margin:0;padding:0;position:absolute;display:none;width:24px!important;z-index:2147483643;height:23px!important;background:transparent url('chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/ietoolbar-images/edit-highlight.png') no-repeat left;}
+body#dummybodyid div.diigoIcon span{color:#000;display:block;font-family:Helvetica,Arial,sans-serif;font-size:13px;font-weight:700;line-height:18px;text-align:center;text-shadow:0 1px 1px #FFF;text-decoration:none;text-indent:0;}
+body#dummybodyid div.diigoHighlightcommented{display:block!important;}
+body#dummybodyid div.ImageIcon{background-color:transparent!important;}
+body#dummybodyid div.diigoIcon:hover{background-background:transparent!important;background-repeat:no-repeat!important;background-position:right!important;}
+body#dummybodyid div.diigoHighlightcommented.TextIcon{left:0;top:-8px;}
+body#dummybodyid div.diigoHighlightcommented.public{background:#FFF url('chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/ietoolbar-images/public-annotation.png') no-repeat left;}
+body#dummybodyid div.diigoHighlightcommented.private{background:#FFF url('chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/ietoolbar-images/private-annotation.png') no-repeat left;}
+body#dummybodyid div.diigoHighlightcommented.group{background:#FFF url('chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/ietoolbar-images/group-annotation.png') no-repeat left;}
+body#dummybodyid #diigolet-toolbar .dropdownMenu{display:none;border:1px solid #999;font:12px arial,helvetica,clean,sans-serif;background-color:Menu;padding:2px 0;z-index:2147483647;position:absolute;top:30px;width:140px;}
+body#dummybodyid #diigolet-toolbar .dropdownMenu a,body#dummybodyid #diigolet-toolbar .dropdownMenu a:link,body#dummybodyid #diigolet-toolbar .dropdownMenu a:visited,body#dummybodyid #diigolet-toolbar .dropdownMenu a:hover,body#dummybodyid #diigolet-toolbar .dropdownMenu a:active{display:block;padding:2px 12px;font-weight:normal;text-decoration:none;color:#000;background:#fff;cursor:default;}
+body#dummybodyid #diigolet-toolbar .dropdownMenu a:hover,body#dummybodyid #diigolet-toolbar .dropdownMenu a:active{color:#fff;background:#09f;}
+body#dummybodyid #diigolet-notify{display:none;position:absolute;top:33px;left:0;border:1px #ccc solid;background-color:#FFC;padding:6px 16px 6px 6px;z-index:2147483647;}
+body#dummybodyid #diigolet-notify.right{left:auto;right:0;text-align:right;}
+body#dummybodyid .diigolet .tagList{margin:2px 0;float:left;}
+body#dummybodyid .diigolet .tagList a{margin-right:6px;margin-bottom:4px;color:windowtext;text-decoration:none;border-bottom:1px solid #C9D7F1;border-right:1px solid #C9D7F1;border-top:1px solid #F5F5FA;border-left:1px solid #F5F5FA;padding:2px 3px;font-size:12px;height:15px;line-height:15px;overflow-y:hidden;overflow-x:hidden;display:block;float:left;cursor:default;background-color:#F5F5FA;}
+body#dummybodyid .diigolet .tagList a:link{color:windowtext;}
+body#dummybodyid .diigolet .tagList a:hover{border-width:1px;border-color:#04c;text-decoration:none;}
+body#dummybodyid .diigolet .tagList a.inused{color:#008000;}
+body#dummybodyid .diigolet .tagList a.selected{color:#fff;background-color:#06f;border-top:1px solid #06f;border-left:1px solid #06f;}
+body#dummybodyid .diigolet .tagList a span{display:inline;white-space:nowrap;}
+body#dummybodyid .diigolet .loading{display:none;}
+body#dummybodyid .diigolet .tagLoading a{display:none;margin-bottom:10px;}
+body#dummybodyid .diigolet .tagList.tagLoading .loading{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/ietoolbar-images/indicator.gif) no-repeat left top;height:16px;padding-left:22px;display:block;}
+body#dummybodyid .diigolet .tagLoading .tagListHeader{display:none;}
+body#dummybodyid .diigolet .tagListHeader{cursor:pointer;float:left;width:100px;line-height:23px;}
+body#dummybodyid .diigolet .tagListHeader:hover{text-decoration:underline;}
+body#dummybodyid .diigolet .tagList div{color:#666!important;font-size:12px!important;font-weight:bold!important;padding-right:5px!important;text-align:left!important;}
+body#dummybodyid #diigolet-twitter{background-color:threedface;font-family:Arial,sans-serif;font-size:13px;color:windowtext;padding:5px 5px;margin:0;left:0;top:30px;z-index:2147483646;width:380px;position:static;border:1px #09F solid;border-left-width:0;}
+body#dummybodyid #diigolet-twitter input{vertical-align:middle;}
+body#dummybodyid #diigolet-twitter input,body#dummybodyid textarea{font-family:Calibri,Arial,sans-serif;}
+body#dummybodyid .diigolet .twitterlogo{width:210px;height:49px;FILTER:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=scale,src="http://assets3.twitter.com/images/twitter.png");}
+body#dummybodyid #diigolet-tagForward{border:1px #9B9B9B solid;border-left-width:1;width:480px;position:static;right:5px;top:75px;z-index:2147483646;background-color:#EDEDED;border-top-right-radius:6px;border-top-left-radius:6px;-webkit-box-shadow:rgba(0,0,0,0.3) 2px 2px 6px;}
+body#dummybodyid #diigolet-tagForward .tabContainer{text-align:center;margin:5px;}
+body#dummybodyid #diigolet-tagForward .tab{margin-right:8px;margin-left:8px;padding:0 8px 2px 8px;font-weight:bold;}
+body#dummybodyid #diigolet-tagForward .tabContainer a:link,body#dummybodyid #diigolet-tagForward .tabContainer a:visited{padding:4px;border:1px #fff solid;font-weight:bold;color:#06c;text-decoration:none;}
+body#dummybodyid #diigolet-tagForward .tabContainer a.active:link,body#dummybodyid #diigolet-tagForward .tabContainer a.active:visited{border:none;background-color:#09f;color:#fff;padding:5px;}
+body#dummybodyid #diigolet-tagForward .tabContainer a:hover,body#dummybodyid #diigolet-tagForward .tabContainer a:active{border:1px #09f solid;}
+body#dummybodyid #diigolet-tagForward div.tabContent{display:none;}
+body#dummybodyid #diigolet-tagForward div.tabContent.active{display:block;}
+body#dummybodyid #diigolet-tagForward-caption{text-align:center;line-height:30px;font-size:14px;font-weight:bold;}
+body#dummybodyid #diigolet-tagForward-remove{color:#00F;text-decoration:underline;line-height:30px;font-size:11px;position:absolute;right:30px;top:0;}
+body#dummybodyid #diigolet-tagForward .diigo-hr{width:420px;border-top:1px #ccc solid;margin:0 auto;height:1px;overflow:hidden;}
+body#dummybodyid .diigolet .diigo-table{margin:10px 20px;}
+body#dummybodyid .diigolet .diigo-table td{padding:2px 0;}
+body#dummybodyid .diigolet .diigo-table th{color:#666;font-weight:bold;padding-right:5px;width:62px;text-align:left;font-size:12px;}
+body#dummybodyid .diigolet .diigolet-input{width:350px;padding:1px;font-size:11px;}
+body#dummybodyid #Diigo-Bookmark-Description,body#dummybodyid #Diigo-Forward-PS{width:350px;height:65px;margin:5px 0;}
+body#dummybodyid .diigolet .diigolet-submit{width:140px;height:25px;text-align:center;}
+body#dummybodyid #diigolet-txtPermalink{background-color:#eee;padding:3px;font-size:13px;}
+body#dummybodyid #diigolet-cross-promotion{font-family:arial,helvetica,sans-serif;font-size:12px;padding:10px;}
+body#dummybodyid #diigolet-cross-promotion a{background:whiteSmoke;border:1px solid #CCC;color:#06C;display:block;padding:3px 10px;text-align:center;text-decoration:none;-webkit-box-shadow:rgba(255,255,255,0.6) 0 1px 0;-webkit-border-radius:10px;-webkit-transition:all .25s linear;}
+body#dummybodyid #diigolet-cross-promotion a:hover{background:white;text-decoration:none;color:#04c;}
+body#dummybodyid .diigoletContexMenu{border:1px solid #999;font:12px arial,helvetica,clean,sans-serif;padding:2px;background-color:Menu;z-index:2147483645;max-width:250px;}
+body#dummybodyid #diigolet-csm{width:53px;padding:0!important;z-index:100000;}
+body#dummybodyid #diigolet-csm a:visited,body#dummybodyid #diigolet-csm a:link{padding:0!important;}
+body#dummybodyid #diigolet-csm-highlight{display:inline-block;height:22px!important;width:27px;background-image:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/highlight-large.png);}
+body#dummybodyid #diigolet-csm-highlight:hover{background-position:0 -22px;}
+body#dummybodyid #diigolet-csm-highlight:active{background-position:0 -44px;}
+body#dummybodyid #diigolet-csm-hightlight-container{height:19px;}
+body#dummybodyid #diigolet-csm-hightlight-more{display:inline-block;width:8px;background-image:url(../ext/diigolet/images/m-arrow.png);padding:5px;}
+body#dummybodyid #diigolet-csm-colorpanel{margin-left:9px;width:74px;height:14px;background-color:#f0f0f0;border:1px solid #2d8ce4;padding:6px;}
+body#dummybodyid #diigolet-csm-colorpanel-container{width:96px;height:26px;position:absolute;left:78px;top:-1px;}
+body#dummybodyid #diigolet-csm-colorpanel .colorItem{display:inline-block;padding:0!important;width:16px;cursor:pointer;color:blue;}
+body#dummybodyid #diigolet-blue{background-position:left -460px;}
+body#dummybodyid #diigolet-green{background-position:left -480px;}
+body#dummybodyid #diigolet-pink{background-position:left -500px;}
+body#dummybodyid #diigolet-csm-arrow{position:absolute;left:5px;top:10px;height:7px;width:6px;background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/l-arrow.png);}
+body#dummybodyid #diigolet-csm-highlight-icon{height:16px;width:16px;background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) 0 -32px no-repeat;margin-left:6px;margin-top:2px;}
+body#dummybodyid #diigolet-csm-search{display:inline-block;height:22px!important;width:26px;background-image:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/search-large.png);}
+body#dummybodyid #diigolet-csm-search:hover{background-position:0 -22px;}
+body#dummybodyid #diigolet-csm-search:active{background-position:0 -44px;}
+body#dummybodyid #diigolet-csm-search-icon{height:13px;width:12px;background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/search.png);margin-left:-4px;margin-top:4px;}
+body#dummybodyid #diigolet-csm-sep{width:25px;height:1px;background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/line.png);margin-top:2px;margin-bottom:2px;}
+body#dummybodyid #diigolet-annMenu-tip{text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
+body#dummybodyid .diigoletContexMenu a:link,body#dummybodyid .diigoletContexMenu a:visited{display:block;padding:2px 12px;text-decoration:none;color:#000;cursor:default;white-space:nowrap;}
+body#dummybodyid .diigoletContexMenu a:hover:not(.colorItem),body#dummybodyid .diigoletContexMenu a:active{color:#fff;background:#09f;}
+body#dummybodyid .diigoletContexMenu div.sep{line-height:0;border-top:1px solid #AAA;margin:3px 0;}
+body#dummybodyid *html .diigoletContexMenu ._selection a{width:45px;}
+body#dummybodyid *html .diigoletContexMenu ._highlight a{width:90px;}
+body#dummybodyid .diigolet.diigoletFN{z-index:2147483642;width:394px;}
+body#dummybodyid .diigolet.diigoletFN a:link,body#dummybodyid .diigolet.diigoletFN a:visited{color:#06c;}
+body#dummybodyid .diigolet.diigoletFN a:hover,body#dummybodyid .diigolet.diigoletFN a:active{color:#333;text-decoration:none;}
+body#dummybodyid .diigolet .diigoletFNL{width:23px;background:transparent url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/float_note_l.png) no-repeat left top;}
+body#dummybodyid .diigolet .diigoletFNT{height:32px;background:transparent url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/float_note_t.png) no-repeat right top;cursor:move!important;}
+body#dummybodyid .diigolet .diigoletFNR{width:16px;background:transparent url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/float_note_r.png) no-repeat left bottom;overflow:hidden;vertical-align:bottom;}
+body#dummybodyid .diigolet .diigoletFNB{height:34px;background:transparent url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/float_note_b.png) no-repeat left bottom;}
+body#dummybodyid .diigolet .diigoletFNTH{vertical-align:top;width:12px;}
+body#dummybodyid .diigolet .diigoletFNTH div{width:12px;height:12px;background:transparent url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/float_note_h_rt.gif) no-repeat right top;position:relative;top:5px;left:-22px;overflow:hidden;cursor:ne-resize!important;}
+body#dummybodyid .diigolet .diigoletFNB{vertical-align:top;overflow:hidden;}
+body#dummybodyid .diigolet .diigoletFNPosN .diigoletFNXjjR,body#dummybodyid .diigolet .diigoletFNPosN .diigoletFNXjjT,body#dummybodyid .diigolet .diigoletFNPosN .diigoletFNXjjB,body#dummybodyid .diigolet .diigoletFNPosN .diigoletFNTH div,body#dummybodyid .diigolet .diigoletFNPosN .diigoletFNB div{display:none;}
+body#dummybodyid .diigolet .diigoletFNT h1{font:12px/19px Arial,Helvetica,sans-serif;font-weight:bold;color:#666;margin:5px 0 0 5px;padding:0;}
+body#dummybodyid .diigolet .diigoletFNT div.menu{margin:3px 21px 10px 0;background-color:#fff9a4;border-right:1px solid #f2e984;border-left:1px solid #c9b822;}
+body#dummybodyid .diigolet .diigoletFNT div.menu a{display:block;line-height:19px;float:left;color:#666;padding:0 5px;border-right:1px solid #c9b822;text-decoration:none;}
+body#dummybodyid .diigolet .diigoletFNT div.menu a:hover,body#dummybodyid .diigolet .diigoletFNT div.menu a:active{background-color:#fff587;color:#333;}
+body#dummybodyid .diigolet .diigoletFNT div.menu a.diigoletFNOpt{background:transparent url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/float_note_downdot.gif) no-repeat right top;padding-right:14px;}
+body#dummybodyid .diigolet .diigoletFNT{font:12px/32px Arial,Helvetica,sans-serif;}
+body#dummybodyid .diigolet .diigoletFNContent,body#dummybodyid .diigolet .diigoletFNComment{background-color:#fff89f;color:#666;font-family:Arial,Helvetica,sans-serif;font-size:11px;overflow:auto;width:355px;zoom:1;border-bottom:1px solid #E0DB9D;}
+body#dummybodyid .diigolet .diigoletFNContent .diigoletFNAuthorP{font-size:10px;font-weight:normal;color:#666;margin:0 11px 5px 0;padding:2px 5px;line-height:100%;}
+body#dummybodyid .diigolet .diigoletFNContent .diigoletFNAuthorP .diigoletFNAuthor{border-bottom:1px dotted #ccc;color:#06c;}
+body#dummybodyid .diigolet .diigoletFNContent .diigoletFNAuthorP .diigoletFNAuthor:hover,body#dummybodyid .diigoletFNContent .diigoletFNAuthorP .diigoletFNAuthor:active{border-bottom:1px solid #ccc;color:#333;}
+body#dummybodyid .diigolet .diigoletFNContent .diigoletFNAuthorP a{color:#999;}
+body#dummybodyid .diigolet .diigoletFNContent .diigoletFNAuthorP a:hover,body#dummybodyid .diigoletFNContent .diigoletFNAuthorP a:active{color:#666;}
+body#dummybodyid .diigolet.diigoletFN blockquote{color:#333;font-size:12px;padding:0 5px;}
+body#dummybodyid .diigolet .diigoletFNComment select,body#dummybodyid .diigolet .diigoletFNComment input,body#dummybodyid .diigolet .diigoletFNComment textarea{font:11px/15px Verdana,Arial,Helvetica,sans-serif;}
+body#dummybodyid .diigolet .diigoletFNComment p{margin:5px 0;}
+body#dummybodyid .diigolet .diigoletFNTDiv{height:32px;overflow:hidden;}
+body#dummybodyid .diigolet.diigoletFN .menu{float:right;height:19px;overflow:hidden;}
+body#dummybodyid .diigolet .labelList label{margin-right:2px;background-color:#eee;color:#666;white-space:nowrap;font-weight:normal;font-size:9px;}
+body#dummybodyid .diigolet .labelList span{padding:0 2px;}
+body#dummybodyid .diigolet .labelList a{padding:0 2px;background-color:#ffe76a;}
+body#dummybodyid .diigolet .labelList a:hover{color:#fef5c7;text-decoration:none;}
+body#dummybodyid .diigolet .labelList a.del{border:none;padding-right:2px;font-weight:normal;}
+body#dummybodyid .diigolet a.del{cursor:pointer;background:url("chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/diigoletIconv3.gif") no-repeat left -343px;}
+body#dummybodyid .diigolet a.del:hover{filter:alpha(opacity=100);-moz-opacity:1;background-position:1px -342px;text-decoration:none;}
+body#dummybodyid .diigolet ul.diigoletFNDropdown{position:absolute;display:none;left:10px;background-color:#fff89f;border:1px solid #c9b822;z-index:2147483647;}
+body#dummybodyid .diigolet ul.diigoletFNDropdown li{padding-left:25px;}
+body#dummybodyid .diigolet ul.diigoletFNDropdown a:link,body#dummybodyid .diigolet ul.diigoletFNDropdown a:visited{color:#666;display:block;width:85px;font:11px Arial,Helvetica,sans-serif;}
+body#dummybodyid .diigolet ul.diigoletFNDropdown a:hover,body#dummybodyid .diigolet ul.diigoletFNDropdown a:active{background-color:#fff567;color:#333;}
+body#dummybodyid .diigolet.diigoletFNIEPatch .diigoletFNL{background:transparent url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/float_note_l.gif) no-repeat left top;}
+body#dummybodyid .diigolet.diigoletFNIEPatch .diigoletFNT{background:transparent url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/float_note_t.gif) no-repeat right top;}
+body#dummybodyid .diigolet.diigoletFNIEPatch .diigoletFNR{background:transparent url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/float_note_r.gif) no-repeat left bottom;}
+body#dummybodyid .diigolet.diigoletFNIEPatch .diigoletFNB{background:transparent url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/float_note_b.gif) no-repeat left bottom;}
+body#dummybodyid .diigolet.diigoletFNIEPatch .diigoletFNT{height:23px;}
+body#dummybodyid .diigolet.diigoletFNIEPatch .diigoletFNTDiv{height:23px;}
+body#dummybodyid .diigoletFN.editing .diigoletFNComment{display:block;}
+body#dummybodyid .personalText{color:#555!important;font-size:10px!important;display:inline-block;overflow:hidden!important;text-overflow:ellipsis!important;white-space:nowrap!important;width:343px!important;margin-top:4px!important;}
+body#dummybodyid .IconFeild{float:left!important;margin-left:8px!important;margin-top:5px!important;}
+body#dummybodyid .IconFeild:hover .editIcon{background-position:right!important;}
+body#dummybodyid .editIcon{cursor:pointer!important;width:24px!important;height:19px!important;background-image:url('chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/ietoolbar-images/edit-highlight-2.png')!important;background-attachment:no-repeat!important;background-color:transparent!important;background-position:left;}
+body#dummybodyid .multipalCol{padding-top:0!important;}
+body#dummybodyid .singleCol{padding-top:7px!important;}
+body#dummybodyid .myCommentSpan{margin-left:35px!important;}
+body#dummybodyid .notMyCommentSpan{margin-left:15px!important;}
+body#dummybodyid .footText{line-height:1.5;width:343px!important;}
+body#dummybodyid div.floatNote{position:absolute!important;width:29px;height:36px;text-align:center;background:transparent url('chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/float_icon.png') no-repeat 50% 50%!important;z-index:2147483643;}
+body#dummybodyid div.floatNote.diigoshow{-webkit-animation:bounceIn 400ms ease both;-webkit-animation-play-state:running;}
+body#dummybodyid div.floatNote.diigoadd{-webkit-animation:flipInY 600ms ease both;-webkit-animation-play-state:running;}
+body#dummybodyid div.floatNote span{color:#000;font:bold 13px Arial,Helvetica,sans-serif;cursor:default;line-height:37px;text-shadow:#fff 0 1px 0;}
+html body#dummybodyid div.floatNote{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=scale,src="chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/float_icon.png");overflow:hidden;background:none;}
+body#dummybodyid em.diigoHighlight{text-align:inherit;text-decoration:inherit;line-height:inherit;font:inherit;color:inherit;display:inline;position:relative;zoom:1;}
+body#dummybodyid em.diigoHighlight.diigoHighlightcommented{padding-left:25px;}
+body#dummybodyid em.diigoHighlight.mouseOvered{background-color:#ffc62a!important;}
+body#dummybodyid em.diigoHighlight.yellow{background-color:#FF9;}
+body#dummybodyid img.diigoHighlight.yellow{cursor:pointer;outline:2px solid #FF9!important;}
+body#dummybodyid em.diigoHighlight.blue{background-color:#ABD5FF;}
+body#dummybodyid img.diigoHighlight.blue{cursor:pointer;outline:2px solid #ABD5FF!important;}
+body#dummybodyid em.diigoHighlight.green{background-color:#B2E57E;}
+body#dummybodyid img.diigoHighlight.green{cursor:pointer;outline:2px solid #B2E57E!important;}
+body#dummybodyid em.diigoHighlight.pink{background-color:#fcc;}
+body#dummybodyid img.diigoHighlight.pink{cursor:pointer;outline:2px solid #fcc!important;}
+body#dummybodyid img.diigoHighlight.mouseOvered{cursor:pointer;outline:2px solid #ffc62a!important;}
+body#dummybodyid .diigolet .diigolet-closeBtn{position:absolute;background:transparent url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/close1.gif);width:14px;height:14px;top:2px;right:2px;cursor:pointer!important;}
+body#dummybodyid .ac_results{border:1px solid #000;background:#EEE none repeat scroll 0;cursor:pointer!important;font-size:11px;left:0;position:absolute;width:200px;z-index:2147483647;}
+body#dummybodyid .ac_results ul{margin:0;padding:0;}
+body#dummybodyid .ac_results li{list-style-image:none;list-style-position:outside;list-style-type:none;padding:2px 5px;}
+body#dummybodyid .ac_results a{width:100%;}
+body#dummybodyid .ac_results li.over{background:#ccf none repeat scroll 0;}
+body#dummybodyid #d3df-sidebar{border:1px #ccc solid;z-index:99997;}
+body#dummybodyid #d3df-sidebar div.heading{padding:3px;font-size:13px;border-top:1px #E8EEF7 solid;font-weight:bold;zoom:1;}
+body#dummybodyid #d3df-sidebar div.popOut{width:16px;height:16px;background:transparent url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/popout.gif) no-repeat scroll left top;cursor:pointer;}
+body#dummybodyid #d3df-sidebar div.popOut.popIn{background-image:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/popin.gif);}
+body#dummybodyid #d3df-sidebar div.popOut.close{background-image:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/close1.gif);}
+body#dummybodyid #d3df-sidebar div.heading a.add{background:transparent url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/diigoletIconv1.gif) no-repeat scroll left -172px;padding-left:18px;display:block;float:right;font-weight:normal;}
+body#dummybodyid #d3df-sidebar a.togglePanel{background:transparent url(http://www.diigo.com/images/v2/eoc.gif) no-repeat scroll left top;display:block;float:right;width:16px;height:16px;}
+body#dummybodyid #d3df-sidebar a.togglePanel.collapsed{background-position:left bottom;}
+body#dummybodyid #d3df-sidebar ul,body#dummybodyid #d3df-sidebar ul li{list-style:none;overflow:hidden;zoom:1;}
+body#dummybodyid #d3df-sidebar li.highlight a.highlight{overflow:hidden;height:24px;zoom:1;}
+body#dummybodyid #d3df-sidebar ul.highlights li{margin:1px;}
+body#dummybodyid #d3df-sidebar ul.comments li{margin:1px;padding:2px;}
+body#dummybodyid #d3df-sidebar div.noComments{font-size:11px;text-align:center;padding:15px 5px;}
+body#dummybodyid #d3df-sidebar p.commentBody,body#dummybodyid #d3df-sidebar p.commentBody a{font-size:11px;}
+body#dummybodyid #d3df-sidebar a.avatar{float:left;margin-right:3px;}
+body#dummybodyid #d3df-sidebar a.avatar img{padding:1px;border:1px #CCC solid;width:32px;height:32px;}
+body#dummybodyid #d3df-sidebar .commentInfo{font-size:12px;}
+body#dummybodyid #d3df-sidebar .commentInfo a{border-bottom:1px dotted #999;}
+body#dummybodyid #d3df-sidebar a.highlight{line-height:24px;padding-left:18px;display:block;background:transparent url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/diigoletIconv1.gif) no-repeat scroll left -192px;}
+body#dummybodyid #d3df-sidebar a.floatNote{padding-left:16px;background:transparent url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/diigoletIconv1.gif) no-repeat scroll left -144px;}
+body#dummybodyid #d3df-sidebar a.highlight .jumpTo{line-height:24px;padding-left:5px;font-size:12px;font-style:italic;}
+body#dummybodyid #d3df-sidebar.themeDefault .bgColor1{background-color:#C3D9FF;}
+body#dummybodyid #d3df-sidebar.themeDefault .bgColor2{background-color:#E8EEF7;}
+body#dummybodyid #d3df-sidebar.themeDefault .bgColor3{background-color:#FFF;}
+body#dummybodyid #d3df-sidebar.themeDefault .color1{color:#999;}
+body#dummybodyid #d3df-sidebar.themeDefault .color2{color:#333;}
+body#dummybodyid.diigoHiPen-yellow{cursor:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/ietoolbar-images/highlighter-orange.cur) 4 15,text!important;}
+body#dummybodyid.diigoHiPen-blue{cursor:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/ietoolbar-images/highlighter-blue.cur) 4 15,auto!important;}
+body#dummybodyid.diigoHiPen-green{cursor:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/ietoolbar-images/highlighter-green.cur) 4 15,text!important;}
+body#dummybodyid.diigoHiPen-pink{cursor:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/ietoolbar-images/highlighter-pink.cur) 4 15,text!important;}
+body#dummybodyid .diigolet.notice{font:bold 13px/1.5 Helvetica,Arial,sans-serif;position:fixed;top:5px;left:0;width:100%;text-align:center;z-index:2147483647;}
+body#dummybodyid .diigolet.notice>div{border:1px solid #fad42e;background:#fea;border-radius:5px;color:#000;display:inline-block;padding:5px 10px 5px 5px;-webkit-box-shadow:rgba(0,0,0,0.3) 0 1px 1px;}
+body#dummybodyid .diigolet.notice>div>b{display:inline-block;height:16px;width:16px;margin:2px 3px 0 0;background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) 0 -80px no-repeat;float:left;}
+body#dummybodyid .diigolet.notice>div>p>a{font-size:12px;}
+body#dummybodyid .diigolet.notice>div>p{float:left;max-width:420px;}
+body#dummybodyid .diigolet.notice>div.alert{background:#fef6f3;border-color:#cd0a0a;}
+body#dummybodyid .diigolet.notice>div.alert>b{background-position:-16px -80px;}
+body#dummybodyid .diigolet.notice>div.info>b{background-position:-32px -80px;}
+body#dummybodyid .diigolet.notice>div.wait>b{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/processing.gif) no-repeat scroll left 0 transparent;}
+body#dummybodyid #diigolet-panel-panel{z-index:2147483641;}
+body#dummybodyid #diigolet-panel-panel.notSignedIn .signedIn{display:none;}
+body#dummybodyid #diigolet-panel-panel.signedIn .notSignedIn{display:none;}
+body#dummybodyid #diigolet-panel-panel{border:1px solid #bbb;border-radius:3px;background-image:-webkit-gradient(linear,0% 0,0% 100%,from(#dae8fa),to(#5aa0f5));border-color:#9ec7fb #77a1eb #5c93d6;font:normal 12px/1.5 Helvetica,Arial,sans-serif;padding:0 4px 5px;position:fixed;left:5px;top:5px;-webkit-box-shadow:rgba(0,0,0,0.3) 1px 1px 2px;white-space:nowrap;}
+body#dummybodyid #diigolet-panel-header{border-bottom:1px solid #9ec7fb;color:#3b71b2;cursor:move;text-shadow:0 1px 0 #e3edfa;height:17px;line-height:18px;}
+body#dummybodyid #diigolet-panel-options{cursor:default;float:right;height:16px;width:120px;text-align:right;}
+body#dummybodyid #diigolet-panel-version{color:#555;font-size:.7em;display:none;}
+body#dummybodyid #diigolet-panel-feedback{font-size:12px;margin-right:4px;line-height:20px;vertical-align:top;color:#04C;display:inline-block;position:relative;}
+body#dummybodyid #diigolet-panel-feedback:hover{text-decoration:none;color:#02c;}
+body#dummybodyid #diigolet-panel-feedback>b{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) -50px -129px no-repeat;display:inline-block;height:12px;margin-right:3px;width:12px;}
+body#dummybodyid #diigolet-panel-closeBtn{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) -1px 2px no-repeat;display:inline-block;height:16px;width:14px;}
+body#dummybodyid #diigolet-panel-closeBtn:hover{background-position:-17px 2px;}
+body#dummybodyid #diigolet-panel-moreBtn{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) -32px 2px no-repeat;display:inline-block;height:16px;margin-right:3px;width:14px;text-decoration:none;position:relative;}
+body#dummybodyid #diigolet-panel-moreBtn:hover{background-position:-48px 2px;}
+body#dummybodyid .diigolet .optList{border:1px solid orange;border-radius:3px;border-color:#9ec7fb #77a1eb #5c93d6;list-style-type:none;margin:0;display:none;padding:2px;text-align:left;-webkit-box-shadow:rgba(0,0,0,0.3) 1px 1px 2px;text-shadow:none;font-size:12px;}
+body#dummybodyid .diigolet .optList li{color:#43658f;padding:0 5px;}
+body#dummybodyid .diigolet .optList li.sep{border-top:1px solid #83b9fd;margin:2px 2px 0;padding-top:2px;}
+body#dummybodyid .diigolet .optList li:hover{color:#fff;background-color:#43658f;}
+body#dummybodyid .diigolet .optList li b{float:left;width:16px;height:16px;background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) 0 16px no-repeat;margin-right:5px;margin-top:2px;}
+body#dummybodyid #diigolet-panel-feedback .optList .feecback_uservoice b{background-position:0 -128px;}
+body#dummybodyid #diigolet-panel-feedback .optList .feecback_tweet b{background-position:-16px -128px;}
+body#dummybodyid #diigolet-panel-feedback .optList .feecback_rate b{background-position:-32px -128px;}
+body#dummybodyid #diigolet-panel-feedback .optList.dropdownShown,body#dummybodyid #diigolet-panel-moreBtn .optList.dropdownShown{background-image:-webkit-gradient(linear,0% 0,0% 100%,from(#fff),to(#cbdefc));display:block;white-space:nowrap;right:-5px;position:absolute;top:16px;z-index:99;}
+body#dummybodyid #diigolet-panel-content{border-top:1px solid #d1e3f9;padding-top:4px;}
+body#dummybodyid .diigolet .buttonSep{display:inline-block;height:21px;line-height:21px;background-image:-webkit-gradient(linear,0% 0,0% 100%,from(#ccc),to(#bbb));width:1px;text-shadow:0 1px 0 #fff;-webkit-box-shadow:rgba(0,0,0,0.2) 0 1px 2px;}
+body#dummybodyid .diigolet a.diigoButton{border-top:1px solid #bbb;border-radius:0;background-image:-webkit-gradient(linear,0% 0,0% 100%,from(#fff),to(#e3eeff));border-color:#f5f5f5 #e8e8e8 #cdcdcd;color:#000;display:inline-block;height:20px;padding:0 5px;text-shadow:0 1px 0 #fff;-webkit-box-shadow:rgba(0,0,0,0.2) 0 1px 2px;}
+body#dummybodyid .diigolet .diigoButton.first{border-top-left-radius:2px;border-bottom-left-radius:2px;}
+body#dummybodyid .diigolet .diigoButton.last{border-top-right-radius:2px;border-bottom-right-radius:2px;}
+body#dummybodyid .diigolet .diigoButton span{display:inline-block;height:20px;line-height:21px;}
+body#dummybodyid .diigolet .diigoButton:hover{background-image:-webkit-gradient(linear,0% 0,0% 100%,from(#f3f8ff),to(#b3d1f5));border-color:#fff #b3d2f7 #90bdf4;}
+body#dummybodyid .diigolet .diigoButton:active{background-image:-webkit-gradient(linear,0% 0,0% 100%,from(#c2d1e4),to(#f2f7fe));border-color:#fff #b3d2f7 #eee;}
+body#dummybodyid .diigolet .diigoButton.pen{background-image:-webkit-gradient(linear,0% 0,0% 100%,from(#ccc),to(#fff));border-color:#fff #b3d2f7 #eee;}
+body#dummybodyid .diigolet .diigoButton.withOptions{border-top-right-radius:0;border-bottom-right-radius:0;border-right:none;margin-right:0;}
+body#dummybodyid .diigolet .diigoButton.opt{border-top-left-radius:0;border-bottom-left-radius:0;border-left:none;padding:0;}
+body#dummybodyid .diigolet .diigoButton.opt span{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/arrow-down.png) 50% 50% no-repeat;width:12px;}
+body#dummybodyid .diigolet .diigoButton.opt .optList{padding:2px;}
+body#dummybodyid .diigolet .diigoButton.opt{position:relative;}
+body#dummybodyid .diigolet .diigoButton.opt .optList.dropdownShown{background-image:-webkit-gradient(linear,0% 0,0% 100%,from(#fff),to(#cbdefc));display:block;white-space:nowrap;right:-5px;position:absolute;top:16px;z-index:99;}
+body#dummybodyid .diigolet .diigoButton b{display:inline-block;height:16px;margin-right:3px;vertical-align:text-bottom;width:16px;}
+body#dummybodyid #diigolet-panel-btnMore{padding:0;}
+body#dummybodyid #diigolet-panel-highlightIcon.yellow{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) 0 -32px no-repeat;}
+body#dummybodyid #diigolet-panel-highlightIcon.blue{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) -16px -32px no-repeat;}
+body#dummybodyid #diigolet-panel-highlightIcon.green{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) -32px -32px no-repeat;}
+body#dummybodyid #diigolet-panel-highlightIcon.pink{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) -48px -32px no-repeat;}
+body#dummybodyid #diigolet-panel-bookmarkIcon{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) 0 -16px no-repeat;}
+body#dummybodyid #diigolet-panel-bookmarkIcon.saved{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) -32px -16px no-repeat;}
+body#dummybodyid #diigolet-panel-stickyIcon{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) -16px -16px no-repeat;}
+body#dummybodyid #diigolet-panel-moreIcon{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) -48px -16px no-repeat;}
+body#dummybodyid #diigolet-panel-shareIcon{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) 0 -96px no-repeat;}
+body#dummybodyid #diigolet-panel-guideToHighlight{display:inline-block;vertical-align:middle;}
+body#dummybodyid #diigolet-panel-guideToSignin{background-color:#5d8cc5;border-radius:5px;margin-top:10px;padding:2px 4px;}
+body#dummybodyid #diigolet-panel-guideToSignin a{color:#d4e4f8;text-decoration:none;}
+body#dummybodyid #diigolet-panel-guideToSignin a:hover{color:#fff;text-decoration:underline;}
+body#dummybodyid #diigolet-panel-colorPicker li{padding-right:10px;}
+body#dummybodyid #diigolet-panel-colorPicker b{display:inline-block;height:16px;margin-right:3px;width:16px;vertical-align:text-bottom;}
+body#dummybodyid #diigolet-panel-colorPicker .yellow b{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) 0 -48px no-repeat;}
+body#dummybodyid #diigolet-panel-colorPicker .blue b{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) -16px -48px no-repeat;}
+body#dummybodyid #diigolet-panel-colorPicker .green b{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) -32px -48px no-repeat;}
+body#dummybodyid #diigolet-panel-colorPicker .pink b{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) -48px -48px no-repeat;}
+body#dummybodyid #diigolet-panel-colorPicker .yellow.selected b{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) 0 -64px no-repeat;}
+body#dummybodyid #diigolet-panel-colorPicker .blue.selected b{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) -16px -64px no-repeat;}
+body#dummybodyid #diigolet-panel-colorPicker .green.selected b{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) -32px -64px no-repeat;}
+body#dummybodyid #diigolet-panel-colorPicker .pink.selected b{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) -48px -64px no-repeat;}
+body#dummybodyid #diigolet-panel-btnMore.opt span{background:none;width:auto;}
+body#dummybodyid .diigolet .moreActionShare b{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) 0 -96px no-repeat;}
+body#dummybodyid #diigolet-dialog-share{background-color:#fff;border:1px solid #666;border-radius:5px;font:normal 13px/1.5 Helvetica,Arial,sans-serif;position:fixed;left:5px;top:7px;-webkit-box-shadow:rgba(0,0,0,0.3) 1px 1px 2px;white-space:nowrap;width:520px;z-index:2147483646;}
+body#dummybodyid #diigolet-dialog-share *{white-space:normal;}
+body#dummybodyid #diigolet-dialog-share-title{background-image:-webkit-gradient(linear,0% 0,0% 100%,from(#f9f9f9),to(#cdcdcd));border:1px solid #ddd;border-top-left-radius:5px;border-top-right-radius:5px;border-top-color:#fff;border-bottom-color:#aaa;cursor:move;height:26px;line-height:26px;font-weight:700;text-shadow:0 1px 0 #f5f5f5;padding:0 3px;}
+body#dummybodyid #diigolet-dialog-share-closeBtn{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) -48px -80px no-repeat;float:right;height:16px;margin-left:10px;width:16px;margin-top:5px;}
+body#dummybodyid #diigolet-share-shareToTabs{background-image:-webkit-gradient(linear,0% 0,0% 100%,from(#478bde),to(#3669a8));list-style-type:none;padding:0 5px;margin:0;height:30px;line-height:30px;}
+body#dummybodyid #diigolet-share-shareToTabs li{display:inline-block;line-height:22px;height:24px;margin-top:6px;}
+body#dummybodyid #diigolet-share-shareToTabs li a{text-decoration:none;border:1px solid #5499ee;border-bottom-color:#3669a8;border-top-left-radius:5px;border-top-right-radius:5px;color:#b9d6f8;display:block;padding:0 5px;}
+body#dummybodyid #diigolet-share-shareToTabs a:hover{color:#fff;}
+body#dummybodyid #diigolet-share-shareToTabs a.current{background-image:-webkit-gradient(linear,0% 0,0% 100%,from(#eee),to(#fff));border-color:#fff;color:#222;}
+body#dummybodyid #diigolet-share-shareToTabs a.current:hover{color:#222;}
+body#dummybodyid #diigolet-share-shareToTabs li b{display:inline-block;width:16px;height:16px;vertical-align:text-bottom;margin-right:3px;}
+body#dummybodyid .diigolet .shareToTwitter b{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) -16px -96px no-repeat;}
+body#dummybodyid .diigolet .shareToFacebook b{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) -32px -96px no-repeat;}
+body#dummybodyid .diigolet .shareToGplus b{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) -48px -96px no-repeat;}
+body#dummybodyid .diigolet .shareToEmail b{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) 0 -112px no-repeat;}
+body#dummybodyid .diigolet .getAnnotatedLink b{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) -16px -112px no-repeat;}
+body#dummybodyid .diigolet .twitterDesc{color:#777;font-size:13px;line-height:20px;}
+body#dummybodyid #diigolet-share-twitterLeftChars{color:#999;float:right;font-size:20px;font-weight:700;line-height:20px;}
+body#dummybodyid #diigolet-share-twitterLeftChars.full{color:#F00;}
+body#dummybodyid #diigolet-dialog-share .inputTxt{border:1px solid #7F9DB9;border-radius:3px;font:normal 12px/1.5 Arial,Helvetica,sans-serif;}
+body#dummybodyid #diigolet-dialog-share-twitterMsg{height:54px;width:100%;}
+body#dummybodyid #diigolet-dialog-share .buttonRow{margin-top:5px;text-align:right;}
+body#dummybodyid #diigolet-dialog-share .buttonRow input{margin-left:5px;padding:1px 6px;}
+body#dummybodyid #diigolet-dialog-share input.defaultAction{font-weight:700;}
+body#dummybodyid #diigolet-dialog-share-twitter{padding:10px;}
+body#dummybodyid #diigolet-dialog-share-facebook{padding:5px;font-size:20px;height:100px;line-height:100px;text-align:center;}
+body#dummybodyid #diigolet-dialog-share-gPlus{padding:5px;font-size:20px;height:100px;line-height:100px;text-align:center;}
+body#dummybodyid #diigolet-dialog-share-gBuzz iframe{border:none;height:340px;width:100%;overflow:hidden;}
+body#dummybodyid #diigolet-dialog-share-email{padding:10px;}
+body#dummybodyid #diigolet-dialog-share-email>table{width:100%;border-width:0;margin-bottom:5px;}
+body#dummybodyid #diigolet-dialog-share-email>table td{padding:2px 0;}
+body#dummybodyid #diigolet-dialog-share-email label{font-weight:700;}
+body#dummybodyid #diigolet-dialog-share-email-to,body#dummybodyid #diigolet-dialog-share-email-subject{width:100%;}
+body#dummybodyid #diigolet-dialog-share-email-message{height:72px;width:100%;}
+body#dummybodyid #diigolet-dialog-share-email-quotes-checker{font-weight:400!important;float:right;}
+body#dummybodyid #diigolet-dialog-share-email-quotes-checker input{margin-right:2px;vertical-align:text-bottom;}
+body#dummybodyid #diigolet-dialog-share-email-quotes{border:1px solid #bbb;border-radius:3px;width:100%;max-height:150px;overflow-y:scroll;}
+body#dummybodyid #diigolet-aidlog-share-email-quotes-content{margin:5px 10px 10px 10px;}
+body#dummybodyid #diigolet-dialog-share-annotatedLink{padding:10px;}
+body#dummybodyid .diigolet .annotatedLinkInfo{border:1px solid #fad42e;background:#fea;border-radius:5px;color:#000;display:inline-block;padding:0 0 0 20px!important;position:relative;margin-bottom:10px!important;}
+body#dummybodyid .diigolet .annotatedLinkInfo b{display:inline-block;height:16px;width:16px;margin-right:3px;background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) -32px -80px no-repeat;position:absolute;left:1px;top:1px;}
+body#dummybodyid #diigolet-dialog-share-annotatedLink-value{font-weight:700!important;font-size:13px!important;padding:2px;width:496px;}
+body#dummybodyid #diigolet-dialog-share-annotatedLink-value.loading{color:#ccc;font-style:italic;}
+body#dummybodyid #diigolet-dialog-share-annotatedLink-optLinks{float:left;}
+body#dummybodyid .diigolet .autocompleteContacts{border:1px solid #d9d9d9;border-top-color:#999;border-left-color:#999;width:380px;}
+body#dummybodyid .diigolet .recInput{font:12px verdana;border-width:0;float:left;margin:2px;padding-top:2px;}
+body#dummybodyid .diigolet .recItem{border:1px solid #7B9EBD;padding:0 2px;background-color:#F0F5FE;float:left;margin:2px 2px 0 0;}
+body#dummybodyid .diigolet .recInputSizer{position:absolute;visibility:hidden;left:0;bottom:0;font:11px verdana;}
+body#dummybodyid .diigolet .accTip{position:absolute;border:1px solid #ddd;border-top:none;background-color:#f5f5f5;font-size:11px;color:#777;text-align:left;padding:2px 0;text-indent:5px;z-index:8998;}
+body#dummybodyid .diigolet .accNotice{position:absolute;border:1px solid #ffd324;border-top:none;background-color:#fff6bf;font-size:11px;color:#600;text-align:left;padding:2px 0;text-indent:5px;z-index:8999;}
+body#dummybodyid .diigolet .accList{position:absolute;border:1px solid #999;border-top:none;background-color:#fff;font:10px verdana;color:#777;text-align:left;z-index:9000;line-height:18px;}
+body#dummybodyid .diigolet .accList .cItem{border-bottom:1px solid #ddd;background-color:#fff;cursor:pointer;padding:2px;color:#333;}
+body#dummybodyid .diigolet .accList .cItem b{font-size:11px;font-weight:normal;color:#000;}
+body#dummybodyid .diigolet .accList .cItem i,body#dummybodyid .recItem i{font-size:7pt;color:#090;font-style:normal;margin-right:2px;}
+body#dummybodyid .diigolet .accList div strong{background-color:#FFFADB;padding:0 2px;}
+body#dummybodyid .diigolet .accList div.hover{background-color:#E0ECFF;text-decoration:none;}
+body#dummybodyid .diigolet .recItem a{color:#999;font-family:Verdana,Arial,Helvetica,sans-serif;font-size:12px;font-weight:bold;line-height:16px;margin:0 1px 0 3px;}
+body#dummybodyid .diigolet .recItem a:hover{color:#333;text-decoration:none;}
+body#dummybodyid .diigolet .cItem span.extraDesc{float:none;font-weight:normal;color:#777;margin-left:10px;font-style:italic;}
+body#dummybodyid .diigolet .cItem span.extraDesc .keywordStrong{color:#000;font-style:italic;background-color:#fff;}
+body#dummybodyid .diigolet .cItem span.keywordStrong{float:none;font-weight:bold;}
+</style><style type="text/css" id="diigolet-chrome-css">body#dummybodyid .diigolet,body#dummybodyid .diigolet a,body#dummybodyid .diigolet em,body#dummybodyid .diigolet span,body#dummybodyid .diigolet div,body#dummybodyid .diigolet dl,body#dummybodyid .diigolet dt,body#dummybodyid .diigolet dd,body#dummybodyid .diigolet ul,body#dummybodyid .diigolet ol,body#dummybodyid .diigolet li,body#dummybodyid .diigolet h1,body#dummybodyid .diigolet h2,body#dummybodyid .diigolet h3,body#dummybodyid .diigolet h4,body#dummybodyid .diigolet h5,body#dummybodyid .diigolet h6,body#dummybodyid .diigolet pre,body#dummybodyid .diigolet form,body#dummybodyid .diigolet fieldset,body#dummybodyid .diigolet p,body#dummybodyid .diigolet blockquote,body#dummybodyid .diigolet th,body#dummybodyid .diigolet td,body#dummybodyid .diigolet input,body#dummybodyid .diigolet textarea,body#dummybodyid .diigolet select,body#dummybodyid .diigolet *{background:transparent none;padding:0;margin:0;border:#000 0 solid;text-align:left;text-decoration:none;text-transform:none;text-indent:0;line-height:normal;word-break:normal;word-wrap:normal;width:auto;height:auto;color:inherit;font:inherit;float:none;cursor:default;position:static;overflow:visible;max-width:none;box-shadow:none;opacity:1;border-radius:0;}
+body#dummybodyid .diigolet{color:#000;font:normal normal normal 13px arial,helvetica,clean,sans-serif;}
+body#dummybodyid .diigolet input[type=text],body#dummybodyid .diigolet textarea,body#dummybodyid .diigolet select,body#dummybodyid .diigolet fieldset{background-color:#FFF;border:1px #999 solid;padding:1px;font-size:11px;display:inline;}
+body#dummybodyid .diigolet input[type=text],body#dummybodyid .diigolet textarea{cursor:text;}
+body#dummybodyid .diigolet input[type="button"],body#dummybodyid .diigolet input[type="submit"],body#dummybodyid .diigolet input[type="reset"],body#dummybodyid .diigolet input[type="file"]{color:buttontext;cursor:default;padding:2px 5px;text-align:center;border:1px solid #ccc;background:#fff;border-radius:2px;background-image:-webkit-gradient(linear,0% 0,0% 100%,from(#f8f8f8),to(#d2d2d2));}
+body#dummybodyid .diigolet input[type="button"]:active,body#dummybodyid .diigolet input[type="submit"]:active,body#dummybodyid .diigolet input[type="reset"]:active,body#dummybodyid .diigolet input[type="file"]:active{background:#ddd;}
+body#dummybodyid .diigolet textarea{white-space:normal!important;}
+body#dummybodyid .diigolet input.diigo-check{border:none;vertical-align:middle;}
+body#dummybodyid .diigolet input.diigo-button{font-size:12px;font-weight:bold;margin-right:10px;padding:4px 8px;}
+body#dummybodyid .diigolet input.diigo-downlist{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/arrow-down.png) 50% 50% no-repeat,-webkit-gradient(linear,0% 0,0% 100%,from(#f8f8f8),to(#d2d2d2));width:12px;margin-left:-16px;}
+body#dummybodyid .diigolet input.diigo-downlist:active{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/arrow-down.png) 50% 50% no-repeat,#ddd;}
+body#dummybodyid .diigolet div.diigo-buttonswitchlist{padding:4px 2px;border:1px solid #ccc;position:absolute;right:72px;background:#fff;z-index:100000;}
+body#dummybodyid .diigolet div.diigo-buttonswitchlist ul li{padding:2px 6px;}
+body#dummybodyid .diigolet div.diigo-buttonswitchlist ul li:hover{background:#43658F;color:#fff;cursor:pointer;}
+body#dummybodyid #diigoletFNSubmit{width:50px;}
+body#dummybodyid .diigolet table{border-collapse:collapse;border-spacing:0;width:auto;}
+body#dummybodyid .diigolet label{cursor:pointer!important;display:inline;vertical-align:middle;}
+body#dummybodyid .diigolet fieldset,body#dummybodyid .diigolet img{border:0;}
+body#dummybodyid .diigolet address,body#dummybodyid .diigolet caption,body#dummybodyid .diigolet cite,body#dummybodyid .diigolet code,body#dummybodyid .diigolet dfn,body#dummybodyid .diigolet em,body#dummybodyid .diigolet strong,body#dummybodyid .diigolet th,body#dummybodyid .diigolet var{font-style:normal;font-weight:bold;}
+body#dummybodyid .diigolet ol,body#dummybodyid .diigolet ul,body#dummybodyid .diigolet li{list-style:none;display:block;}
+body#dummybodyid .diigolet caption,body#dummybodyid .diigolet th{text-align:left;}
+body#dummybodyid .diigolet h1,body#dummybodyid .diigolet h2,body#dummybodyid .diigolet h3,body#dummybodyid .diigolet h4,body#dummybodyid .diigolet h5,body#dummybodyid .diigolet h6{font-weight:bold;}
+body#dummybodyid .diigolet q:before,body#dummybodyid .diigolet q:after{content:'';}
+body#dummybodyid .diigolet abbr,body#dummybodyid .diigolet acronym{border:0;}
+body#dummybodyid .diigolet a:link,body#dummybodyid .diigolet a:visited,body#dummybodyid .diigolet a:hover,body#dummybodyid .diigolet a:active{text-decoration:none;color:#00F;cursor:pointer!important;}
+body#dummybodyid .diigolet a:hover{text-decoration:underline;}
+body#dummybodyid .diigolet a *{cursor:inherit;}
+body#dummybodyid #diigolet-tray{position:fixed;top:0;left:10;width:16px;height:16px;background:transparent url("chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/diigoletIconv3.gif") no-repeat left -4px;z-index:2147483646;}
+body#dummybodyid .diigolet a.diigolet-Help:link,body#dummybodyid .diigolet a.diigolet-Help:visited{color:#06F;}
+body#dummybodyid .diigolet a.diigolet-Help:hover,body#dummybodyid .diigo a.diigolet-Help:active{color:#00F;}
+body#dummybodyid .diigolet label{margin-left:3px;}
+body#dummybodyid .diigolet span.noComments{color:#AAA;font-size:10px;}
+body#dummybodyid #diigolet-toolbar{border:none;width:100%;position:absolute;top:0;left:0;z-index:2147483647;color:#333;}
+body#dummybodyid #diigolet-tb-content{padding:3px 5px;background:#EFEDDE url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/diigolet-toolbar-bg2.gif) repeat scroll 0;}
+body#dummybodyid #diigolet-tb-bar span,body#dummybodyid #diigolet-tb-bar div,body#dummybodyid #diigolet-tb-bar a,body#dummybodyid #diigolet-tb-bar em{line-height:24px;}
+body#dummybodyid #diigolet-tb-shadow{height:5px;background:transparent url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/diigolet-toolbar-shadow.png) repeat-x left top;}
+* html body#dummybodyid #diigolet-tb-shadow.ie6{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=scale,src="chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/diigolet-toolbar-shadow.png");overflow:hidden;background:none;}
+body#dummybodyid #diigolet-help{display:none;position:absolute;top:29px;right:10px;width:200px;border:1px #ccc solid;background-color:#FFC;padding:6px 16px 6px 6px;}
+body#dummybodyid .diigolet a.diigoletButton{height:24px;float:left;padding-right:4px;cursor:pointer!important;}
+body#dummybodyid .diigolet a.diigoletButton:hover{text-decoration:none;color:#000;background:transparent url("chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/diigoletBtn3_r.png") no-repeat right top;}
+body#dummybodyid .diigolet a.diigoletButton:active{background-position:right bottom;}
+body#dummybodyid .diigolet a.diigoletButton b{font-weight:normal;color:#000;line-height:24px;float:left;padding-left:4px;height:24px;}
+body#dummybodyid #diigolet-button-highlight-dropdown{width:8px;height:16px;margin-right:4px;background:transparent url('chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/down_arrow.gif') no-repeat scroll left 2px;}
+body#dummybodyid #diigolet-button-highlight-dropdown.mouseovered{border-left:1px solid #888;margin-right:0;text-decoration:none;width:11px;height:24px;background:transparent url("chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/diigoletBtn4.png") no-repeat left top!important;}
+body#dummybodyid #diigolet-button-highlight-dropdown.mouseoveredIe{border-left:1px solid #888;margin-right:1px;text-decoration:none;width:11px;height:24px;background:transparent url("chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/diigoletBtn4.png") no-repeat left top!important;}
+body#dummybodyid #diigolet-button-highlight-dropdown.checked{border-left:1px solid #888;margin-right:0;text-decoration:none;width:11px;height:24px;background:transparent url("chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/diigoletBtn4_s.png") no-repeat left top!important;}
+body#dummybodyid #diigolet-button-highlight.mouseovered{text-decoration:none;color:#000;background:transparent url("chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/diigoletBtn3_r.png") no-repeat right top!important;}
+body#dummybodyid #diigolet-button-highlight.mouseoveredIe{text-decoration:none;color:#000;background:transparent url("chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/diigoletBtn3_r.png") no-repeat right top!important;}
+body#dummybodyid #diigolet-button-highlight.mouseovered b.outer{background:transparent url('chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/diigoletBtn3.png') no-repeat left top;}
+body#dummybodyid #diigolet-button-highlight.mouseoveredIe b.outer{background:transparent url('chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/diigoletBtn3.png') no-repeat left top;}
+body#dummybodyid a#diigolet-button-highlight b.outer{padding-right:5px;}
+body#dummybodyid a#diigolet-button-highlight{padding-right:0!important;}
+body#dummybodyid a.diigoletButton:hover b.outer{background:transparent url('chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/diigoletBtn3.png') no-repeat left top;}
+body#dummybodyid a.diigoletButton:active b.outer{background-position:left bottom;}
+body#dummybodyid .diigolet a.diigoletButton b b{font-size:12px;padding-left:20px;background:transparent url("chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/diigoletIconv3.gif") no-repeat left 50%;}
+body#dummybodyid .diigolet a.diigoletButton:active b b{position:relative;top:1px;left:1px;}
+body#dummybodyid .diigolet a.diigoletButton.diigoletDisabled{cursor:default;}
+body#dummybodyid .diigolet a.diigoletButton.diigoletDisabled b b{color:#999;position:static;}
+body#dummybodyid .diigolet a.diigoletButton.diigoletDisabled:hover{background:none transparent;}
+body#dummybodyid .diigolet a.diigoletButton.diigoletDisabled:hover b.outer{background:none transparent;}
+body#dummybodyid .diigolet a.diigoletButton.checked{background:transparent url("chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/diigoletBtn3_r.png") no-repeat right top;background-position:right bottom;}
+body#dummybodyid .diigolet a.diigoletButton.checked b.outer{background:transparent url('chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/diigoletBtn3.png') no-repeat left top;background-position:left bottom;}
+body#dummybodyid .diigolet a.diigoletButton.checked b b{position:relative;top:1px;left:1px;}
+body#dummybodyid #diigolet-tb-btnSidebar b b{background-position:left -24px;}
+body#dummybodyid #diigolet-tb-btnSidebar.toClose b b{background-position:left -48px;}
+body#dummybodyid #diigolet-tb-btnBookmark b b{background-position:left -144px;}
+body#dummybodyid #diigolet-tb-btnBookmark.saved b b{background-position:left -120px;}
+body#dummybodyid #diigolet-button-highlight b b{background-position:left -72px;}
+body#dummybodyid #diigolet-button-highlight.dontShow b b{background-position:left -96px;}
+body#dummybodyid #diigolet-button-highlight.yellow b b{background-position:left -355px;}
+body#dummybodyid #diigolet-button-highlight.blue b b{background-position:left -375px;}
+body#dummybodyid #diigolet-button-highlight.green b b{background-position:left -395px;}
+body#dummybodyid #diigolet-button-highlight.pink b b{background-position:left -415px;}
+body#dummybodyid .diigolet .colorItem{padding-left:20px;height:16px;background:transparent url("chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/diigoletIconv3.gif") no-repeat left -440px;}
+body#dummybodyid #diigolet-context-yellow b,body#dummybodyid #diigolet-colorMenu-yellow b{background-position:left -440px;}
+body#dummybodyid #diigolet-context-blue b,body#dummybodyid #diigolet-colorMenu-blue b{background-position:left -460px;}
+body#dummybodyid #diigolet-context-green b,body#dummybodyid #diigolet-colorMenu-green b{background-position:left -480px;}
+body#dummybodyid #diigolet-context-pink b,body#dummybodyid #diigolet-colorMenu-pink b{background-position:left -500px;}
+body#dummybodyid #diigolet-context-yellow.colorchecked b,body#dummybodyid #diigolet-colorMenu-yellow.colorchecked b{background-position:left -520px;}
+body#dummybodyid #diigolet-context-blue.colorchecked b,body#dummybodyid #diigolet-colorMenu-blue.colorchecked b{background-position:left -540px;}
+body#dummybodyid #diigolet-context-green.colorchecked b,body#dummybodyid #diigolet-colorMenu-green.colorchecked b{background-position:left -560px;}
+body#dummybodyid #diigolet-context-pink.colorchecked b,body#dummybodyid #diigolet-colorMenu-pink.colorchecked b{background-position:left -580px;}
+body#dummybodyid #diigolet-tb-btnFloatNote b b{background-position:left -167px;}
+body#dummybodyid #diigolet-tb-btnTwitter b b{background:transparent url("http://twitter.com/favicon.ico") no-repeat left 50%;}
+body#dummybodyid #diigolet-tb-btnComment b b{background-position:left -192px;}
+body#dummybodyid #diigolet-tb-btnComment.commented b b{background-position:left -192px;}
+body#dummybodyid #diigolet-tb-btnMore b b{background-position:left 0;}
+body#dummybodyid #diigolet-tb-btnSignIn b b{background-position:left -264px;}
+body#dummybodyid #diigolet-tb-btnHide{float:right;height:24px;width:16px;background:transparent url("chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/diigoletIconv3.gif") no-repeat left -240px;}
+body#dummybodyid div.diigoIcon{cursor:pointer!important;margin:0;padding:0;position:absolute;display:none;width:24px!important;z-index:2147483643;height:23px!important;background:transparent url('chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/ietoolbar-images/edit-highlight.png') no-repeat left;}
+body#dummybodyid div.diigoIcon span{color:#000;display:block;font-family:Helvetica,Arial,sans-serif;font-size:13px;font-weight:700;line-height:18px;text-align:center;text-shadow:0 1px 1px #FFF;text-decoration:none;text-indent:0;}
+body#dummybodyid div.diigoHighlightcommented{display:block!important;}
+body#dummybodyid div.ImageIcon{background-color:transparent!important;}
+body#dummybodyid div.diigoIcon:hover{background-background:transparent!important;background-repeat:no-repeat!important;background-position:right!important;}
+body#dummybodyid div.diigoHighlightcommented.TextIcon{left:0;top:-8px;}
+body#dummybodyid div.diigoHighlightcommented.public{background:#FFF url('chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/ietoolbar-images/public-annotation.png') no-repeat left;}
+body#dummybodyid div.diigoHighlightcommented.private{background:#FFF url('chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/ietoolbar-images/private-annotation.png') no-repeat left;}
+body#dummybodyid div.diigoHighlightcommented.group{background:#FFF url('chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/ietoolbar-images/group-annotation.png') no-repeat left;}
+body#dummybodyid #diigolet-toolbar .dropdownMenu{display:none;border:1px solid #999;font:12px arial,helvetica,clean,sans-serif;background-color:Menu;padding:2px 0;z-index:2147483647;position:absolute;top:30px;width:140px;}
+body#dummybodyid #diigolet-toolbar .dropdownMenu a,body#dummybodyid #diigolet-toolbar .dropdownMenu a:link,body#dummybodyid #diigolet-toolbar .dropdownMenu a:visited,body#dummybodyid #diigolet-toolbar .dropdownMenu a:hover,body#dummybodyid #diigolet-toolbar .dropdownMenu a:active{display:block;padding:2px 12px;font-weight:normal;text-decoration:none;color:#000;background:#fff;cursor:default;}
+body#dummybodyid #diigolet-toolbar .dropdownMenu a:hover,body#dummybodyid #diigolet-toolbar .dropdownMenu a:active{color:#fff;background:#09f;}
+body#dummybodyid #diigolet-notify{display:none;position:absolute;top:33px;left:0;border:1px #ccc solid;background-color:#FFC;padding:6px 16px 6px 6px;z-index:2147483647;}
+body#dummybodyid #diigolet-notify.right{left:auto;right:0;text-align:right;}
+body#dummybodyid .diigolet .tagList{margin:2px 0;float:left;}
+body#dummybodyid .diigolet .tagList a{margin-right:6px;margin-bottom:4px;color:windowtext;text-decoration:none;border-bottom:1px solid #C9D7F1;border-right:1px solid #C9D7F1;border-top:1px solid #F5F5FA;border-left:1px solid #F5F5FA;padding:2px 3px;font-size:12px;height:15px;line-height:15px;overflow-y:hidden;overflow-x:hidden;display:block;float:left;cursor:default;background-color:#F5F5FA;}
+body#dummybodyid .diigolet .tagList a:link{color:windowtext;}
+body#dummybodyid .diigolet .tagList a:hover{border-width:1px;border-color:#04c;text-decoration:none;}
+body#dummybodyid .diigolet .tagList a.inused{color:#008000;}
+body#dummybodyid .diigolet .tagList a.selected{color:#fff;background-color:#06f;border-top:1px solid #06f;border-left:1px solid #06f;}
+body#dummybodyid .diigolet .tagList a span{display:inline;white-space:nowrap;}
+body#dummybodyid .diigolet .loading{display:none;}
+body#dummybodyid .diigolet .tagLoading a{display:none;margin-bottom:10px;}
+body#dummybodyid .diigolet .tagList.tagLoading .loading{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/ietoolbar-images/indicator.gif) no-repeat left top;height:16px;padding-left:22px;display:block;}
+body#dummybodyid .diigolet .tagLoading .tagListHeader{display:none;}
+body#dummybodyid .diigolet .tagListHeader{cursor:pointer;float:left;width:100px;line-height:23px;}
+body#dummybodyid .diigolet .tagListHeader:hover{text-decoration:underline;}
+body#dummybodyid .diigolet .tagList div{color:#666!important;font-size:12px!important;font-weight:bold!important;padding-right:5px!important;text-align:left!important;}
+body#dummybodyid #diigolet-twitter{background-color:threedface;font-family:Arial,sans-serif;font-size:13px;color:windowtext;padding:5px 5px;margin:0;left:0;top:30px;z-index:2147483646;width:380px;position:static;border:1px #09F solid;border-left-width:0;}
+body#dummybodyid #diigolet-twitter input{vertical-align:middle;}
+body#dummybodyid #diigolet-twitter input,body#dummybodyid textarea{font-family:Calibri,Arial,sans-serif;}
+body#dummybodyid .diigolet .twitterlogo{width:210px;height:49px;FILTER:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=scale,src="http://assets3.twitter.com/images/twitter.png");}
+body#dummybodyid #diigolet-tagForward{border:1px #9B9B9B solid;border-left-width:1;width:480px;position:static;right:5px;top:75px;z-index:2147483646;background-color:#EDEDED;border-top-right-radius:6px;border-top-left-radius:6px;-webkit-box-shadow:rgba(0,0,0,0.3) 2px 2px 6px;}
+body#dummybodyid #diigolet-tagForward .tabContainer{text-align:center;margin:5px;}
+body#dummybodyid #diigolet-tagForward .tab{margin-right:8px;margin-left:8px;padding:0 8px 2px 8px;font-weight:bold;}
+body#dummybodyid #diigolet-tagForward .tabContainer a:link,body#dummybodyid #diigolet-tagForward .tabContainer a:visited{padding:4px;border:1px #fff solid;font-weight:bold;color:#06c;text-decoration:none;}
+body#dummybodyid #diigolet-tagForward .tabContainer a.active:link,body#dummybodyid #diigolet-tagForward .tabContainer a.active:visited{border:none;background-color:#09f;color:#fff;padding:5px;}
+body#dummybodyid #diigolet-tagForward .tabContainer a:hover,body#dummybodyid #diigolet-tagForward .tabContainer a:active{border:1px #09f solid;}
+body#dummybodyid #diigolet-tagForward div.tabContent{display:none;}
+body#dummybodyid #diigolet-tagForward div.tabContent.active{display:block;}
+body#dummybodyid #diigolet-tagForward-caption{text-align:center;line-height:30px;font-size:14px;font-weight:bold;}
+body#dummybodyid #diigolet-tagForward-remove{color:#00F;text-decoration:underline;line-height:30px;font-size:11px;position:absolute;right:30px;top:0;}
+body#dummybodyid #diigolet-tagForward .diigo-hr{width:420px;border-top:1px #ccc solid;margin:0 auto;height:1px;overflow:hidden;}
+body#dummybodyid .diigolet .diigo-table{margin:10px 20px;}
+body#dummybodyid .diigolet .diigo-table td{padding:2px 0;}
+body#dummybodyid .diigolet .diigo-table th{color:#666;font-weight:bold;padding-right:5px;width:62px;text-align:left;font-size:12px;}
+body#dummybodyid .diigolet .diigolet-input{width:350px;padding:1px;font-size:11px;}
+body#dummybodyid #Diigo-Bookmark-Description,body#dummybodyid #Diigo-Forward-PS{width:350px;height:65px;margin:5px 0;}
+body#dummybodyid .diigolet .diigolet-submit{width:140px;height:25px;text-align:center;}
+body#dummybodyid #diigolet-txtPermalink{background-color:#eee;padding:3px;font-size:13px;}
+body#dummybodyid #diigolet-cross-promotion{font-family:arial,helvetica,sans-serif;font-size:12px;padding:10px;}
+body#dummybodyid #diigolet-cross-promotion a{background:whiteSmoke;border:1px solid #CCC;color:#06C;display:block;padding:3px 10px;text-align:center;text-decoration:none;-webkit-box-shadow:rgba(255,255,255,0.6) 0 1px 0;-webkit-border-radius:10px;-webkit-transition:all .25s linear;}
+body#dummybodyid #diigolet-cross-promotion a:hover{background:white;text-decoration:none;color:#04c;}
+body#dummybodyid .diigoletContexMenu{border:1px solid #999;font:12px arial,helvetica,clean,sans-serif;padding:2px;background-color:Menu;z-index:2147483645;max-width:250px;}
+body#dummybodyid #diigolet-csm{width:53px;padding:0!important;z-index:100000;}
+body#dummybodyid #diigolet-csm a:visited,body#dummybodyid #diigolet-csm a:link{padding:0!important;}
+body#dummybodyid #diigolet-csm-highlight{display:inline-block;height:22px!important;width:27px;background-image:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/highlight-large.png);}
+body#dummybodyid #diigolet-csm-highlight:hover{background-position:0 -22px;}
+body#dummybodyid #diigolet-csm-highlight:active{background-position:0 -44px;}
+body#dummybodyid #diigolet-csm-hightlight-container{height:19px;}
+body#dummybodyid #diigolet-csm-hightlight-more{display:inline-block;width:8px;background-image:url(../ext/diigolet/images/m-arrow.png);padding:5px;}
+body#dummybodyid #diigolet-csm-colorpanel{margin-left:9px;width:74px;height:14px;background-color:#f0f0f0;border:1px solid #2d8ce4;padding:6px;}
+body#dummybodyid #diigolet-csm-colorpanel-container{width:96px;height:26px;position:absolute;left:78px;top:-1px;}
+body#dummybodyid #diigolet-csm-colorpanel .colorItem{display:inline-block;padding:0!important;width:16px;cursor:pointer;color:blue;}
+body#dummybodyid #diigolet-blue{background-position:left -460px;}
+body#dummybodyid #diigolet-green{background-position:left -480px;}
+body#dummybodyid #diigolet-pink{background-position:left -500px;}
+body#dummybodyid #diigolet-csm-arrow{position:absolute;left:5px;top:10px;height:7px;width:6px;background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/l-arrow.png);}
+body#dummybodyid #diigolet-csm-highlight-icon{height:16px;width:16px;background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) 0 -32px no-repeat;margin-left:6px;margin-top:2px;}
+body#dummybodyid #diigolet-csm-search{display:inline-block;height:22px!important;width:26px;background-image:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/search-large.png);}
+body#dummybodyid #diigolet-csm-search:hover{background-position:0 -22px;}
+body#dummybodyid #diigolet-csm-search:active{background-position:0 -44px;}
+body#dummybodyid #diigolet-csm-search-icon{height:13px;width:12px;background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/search.png);margin-left:-4px;margin-top:4px;}
+body#dummybodyid #diigolet-csm-sep{width:25px;height:1px;background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/line.png);margin-top:2px;margin-bottom:2px;}
+body#dummybodyid #diigolet-annMenu-tip{text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
+body#dummybodyid .diigoletContexMenu a:link,body#dummybodyid .diigoletContexMenu a:visited{display:block;padding:2px 12px;text-decoration:none;color:#000;cursor:default;white-space:nowrap;}
+body#dummybodyid .diigoletContexMenu a:hover:not(.colorItem),body#dummybodyid .diigoletContexMenu a:active{color:#fff;background:#09f;}
+body#dummybodyid .diigoletContexMenu div.sep{line-height:0;border-top:1px solid #AAA;margin:3px 0;}
+body#dummybodyid *html .diigoletContexMenu ._selection a{width:45px;}
+body#dummybodyid *html .diigoletContexMenu ._highlight a{width:90px;}
+body#dummybodyid .diigolet.diigoletFN{z-index:2147483642;width:394px;}
+body#dummybodyid .diigolet.diigoletFN a:link,body#dummybodyid .diigolet.diigoletFN a:visited{color:#06c;}
+body#dummybodyid .diigolet.diigoletFN a:hover,body#dummybodyid .diigolet.diigoletFN a:active{color:#333;text-decoration:none;}
+body#dummybodyid .diigolet .diigoletFNL{width:23px;background:transparent url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/float_note_l.png) no-repeat left top;}
+body#dummybodyid .diigolet .diigoletFNT{height:32px;background:transparent url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/float_note_t.png) no-repeat right top;cursor:move!important;}
+body#dummybodyid .diigolet .diigoletFNR{width:16px;background:transparent url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/float_note_r.png) no-repeat left bottom;overflow:hidden;vertical-align:bottom;}
+body#dummybodyid .diigolet .diigoletFNB{height:34px;background:transparent url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/float_note_b.png) no-repeat left bottom;}
+body#dummybodyid .diigolet .diigoletFNTH{vertical-align:top;width:12px;}
+body#dummybodyid .diigolet .diigoletFNTH div{width:12px;height:12px;background:transparent url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/float_note_h_rt.gif) no-repeat right top;position:relative;top:5px;left:-22px;overflow:hidden;cursor:ne-resize!important;}
+body#dummybodyid .diigolet .diigoletFNB{vertical-align:top;overflow:hidden;}
+body#dummybodyid .diigolet .diigoletFNPosN .diigoletFNXjjR,body#dummybodyid .diigolet .diigoletFNPosN .diigoletFNXjjT,body#dummybodyid .diigolet .diigoletFNPosN .diigoletFNXjjB,body#dummybodyid .diigolet .diigoletFNPosN .diigoletFNTH div,body#dummybodyid .diigolet .diigoletFNPosN .diigoletFNB div{display:none;}
+body#dummybodyid .diigolet .diigoletFNT h1{font:12px/19px Arial,Helvetica,sans-serif;font-weight:bold;color:#666;margin:5px 0 0 5px;padding:0;}
+body#dummybodyid .diigolet .diigoletFNT div.menu{margin:3px 21px 10px 0;background-color:#fff9a4;border-right:1px solid #f2e984;border-left:1px solid #c9b822;}
+body#dummybodyid .diigolet .diigoletFNT div.menu a{display:block;line-height:19px;float:left;color:#666;padding:0 5px;border-right:1px solid #c9b822;text-decoration:none;}
+body#dummybodyid .diigolet .diigoletFNT div.menu a:hover,body#dummybodyid .diigolet .diigoletFNT div.menu a:active{background-color:#fff587;color:#333;}
+body#dummybodyid .diigolet .diigoletFNT div.menu a.diigoletFNOpt{background:transparent url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/float_note_downdot.gif) no-repeat right top;padding-right:14px;}
+body#dummybodyid .diigolet .diigoletFNT{font:12px/32px Arial,Helvetica,sans-serif;}
+body#dummybodyid .diigolet .diigoletFNContent,body#dummybodyid .diigolet .diigoletFNComment{background-color:#fff89f;color:#666;font-family:Arial,Helvetica,sans-serif;font-size:11px;overflow:auto;width:355px;zoom:1;border-bottom:1px solid #E0DB9D;}
+body#dummybodyid .diigolet .diigoletFNContent .diigoletFNAuthorP{font-size:10px;font-weight:normal;color:#666;margin:0 11px 5px 0;padding:2px 5px;line-height:100%;}
+body#dummybodyid .diigolet .diigoletFNContent .diigoletFNAuthorP .diigoletFNAuthor{border-bottom:1px dotted #ccc;color:#06c;}
+body#dummybodyid .diigolet .diigoletFNContent .diigoletFNAuthorP .diigoletFNAuthor:hover,body#dummybodyid .diigoletFNContent .diigoletFNAuthorP .diigoletFNAuthor:active{border-bottom:1px solid #ccc;color:#333;}
+body#dummybodyid .diigolet .diigoletFNContent .diigoletFNAuthorP a{color:#999;}
+body#dummybodyid .diigolet .diigoletFNContent .diigoletFNAuthorP a:hover,body#dummybodyid .diigoletFNContent .diigoletFNAuthorP a:active{color:#666;}
+body#dummybodyid .diigolet.diigoletFN blockquote{color:#333;font-size:12px;padding:0 5px;}
+body#dummybodyid .diigolet .diigoletFNComment select,body#dummybodyid .diigolet .diigoletFNComment input,body#dummybodyid .diigolet .diigoletFNComment textarea{font:11px/15px Verdana,Arial,Helvetica,sans-serif;}
+body#dummybodyid .diigolet .diigoletFNComment p{margin:5px 0;}
+body#dummybodyid .diigolet .diigoletFNTDiv{height:32px;overflow:hidden;}
+body#dummybodyid .diigolet.diigoletFN .menu{float:right;height:19px;overflow:hidden;}
+body#dummybodyid .diigolet .labelList label{margin-right:2px;background-color:#eee;color:#666;white-space:nowrap;font-weight:normal;font-size:9px;}
+body#dummybodyid .diigolet .labelList span{padding:0 2px;}
+body#dummybodyid .diigolet .labelList a{padding:0 2px;background-color:#ffe76a;}
+body#dummybodyid .diigolet .labelList a:hover{color:#fef5c7;text-decoration:none;}
+body#dummybodyid .diigolet .labelList a.del{border:none;padding-right:2px;font-weight:normal;}
+body#dummybodyid .diigolet a.del{cursor:pointer;background:url("chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/diigoletIconv3.gif") no-repeat left -343px;}
+body#dummybodyid .diigolet a.del:hover{filter:alpha(opacity=100);-moz-opacity:1;background-position:1px -342px;text-decoration:none;}
+body#dummybodyid .diigolet ul.diigoletFNDropdown{position:absolute;display:none;left:10px;background-color:#fff89f;border:1px solid #c9b822;z-index:2147483647;}
+body#dummybodyid .diigolet ul.diigoletFNDropdown li{padding-left:25px;}
+body#dummybodyid .diigolet ul.diigoletFNDropdown a:link,body#dummybodyid .diigolet ul.diigoletFNDropdown a:visited{color:#666;display:block;width:85px;font:11px Arial,Helvetica,sans-serif;}
+body#dummybodyid .diigolet ul.diigoletFNDropdown a:hover,body#dummybodyid .diigolet ul.diigoletFNDropdown a:active{background-color:#fff567;color:#333;}
+body#dummybodyid .diigolet.diigoletFNIEPatch .diigoletFNL{background:transparent url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/float_note_l.gif) no-repeat left top;}
+body#dummybodyid .diigolet.diigoletFNIEPatch .diigoletFNT{background:transparent url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/float_note_t.gif) no-repeat right top;}
+body#dummybodyid .diigolet.diigoletFNIEPatch .diigoletFNR{background:transparent url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/float_note_r.gif) no-repeat left bottom;}
+body#dummybodyid .diigolet.diigoletFNIEPatch .diigoletFNB{background:transparent url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/float_note_b.gif) no-repeat left bottom;}
+body#dummybodyid .diigolet.diigoletFNIEPatch .diigoletFNT{height:23px;}
+body#dummybodyid .diigolet.diigoletFNIEPatch .diigoletFNTDiv{height:23px;}
+body#dummybodyid .diigoletFN.editing .diigoletFNComment{display:block;}
+body#dummybodyid .personalText{color:#555!important;font-size:10px!important;display:inline-block;overflow:hidden!important;text-overflow:ellipsis!important;white-space:nowrap!important;width:343px!important;margin-top:4px!important;}
+body#dummybodyid .IconFeild{float:left!important;margin-left:8px!important;margin-top:5px!important;}
+body#dummybodyid .IconFeild:hover .editIcon{background-position:right!important;}
+body#dummybodyid .editIcon{cursor:pointer!important;width:24px!important;height:19px!important;background-image:url('chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/ietoolbar-images/edit-highlight-2.png')!important;background-attachment:no-repeat!important;background-color:transparent!important;background-position:left;}
+body#dummybodyid .multipalCol{padding-top:0!important;}
+body#dummybodyid .singleCol{padding-top:7px!important;}
+body#dummybodyid .myCommentSpan{margin-left:35px!important;}
+body#dummybodyid .notMyCommentSpan{margin-left:15px!important;}
+body#dummybodyid .footText{line-height:1.5;width:343px!important;}
+body#dummybodyid div.floatNote{position:absolute!important;width:29px;height:36px;text-align:center;background:transparent url('chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/float_icon.png') no-repeat 50% 50%!important;z-index:2147483643;}
+body#dummybodyid div.floatNote.diigoshow{-webkit-animation:bounceIn 400ms ease both;-webkit-animation-play-state:running;}
+body#dummybodyid div.floatNote.diigoadd{-webkit-animation:flipInY 600ms ease both;-webkit-animation-play-state:running;}
+body#dummybodyid div.floatNote span{color:#000;font:bold 13px Arial,Helvetica,sans-serif;cursor:default;line-height:37px;text-shadow:#fff 0 1px 0;}
+html body#dummybodyid div.floatNote{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=scale,src="chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/float_icon.png");overflow:hidden;background:none;}
+body#dummybodyid em.diigoHighlight{text-align:inherit;text-decoration:inherit;line-height:inherit;font:inherit;color:inherit;display:inline;position:relative;zoom:1;}
+body#dummybodyid em.diigoHighlight.diigoHighlightcommented{padding-left:25px;}
+body#dummybodyid em.diigoHighlight.mouseOvered{background-color:#ffc62a!important;}
+body#dummybodyid em.diigoHighlight.yellow{background-color:#FF9;}
+body#dummybodyid img.diigoHighlight.yellow{cursor:pointer;outline:2px solid #FF9!important;}
+body#dummybodyid em.diigoHighlight.blue{background-color:#ABD5FF;}
+body#dummybodyid img.diigoHighlight.blue{cursor:pointer;outline:2px solid #ABD5FF!important;}
+body#dummybodyid em.diigoHighlight.green{background-color:#B2E57E;}
+body#dummybodyid img.diigoHighlight.green{cursor:pointer;outline:2px solid #B2E57E!important;}
+body#dummybodyid em.diigoHighlight.pink{background-color:#fcc;}
+body#dummybodyid img.diigoHighlight.pink{cursor:pointer;outline:2px solid #fcc!important;}
+body#dummybodyid img.diigoHighlight.mouseOvered{cursor:pointer;outline:2px solid #ffc62a!important;}
+body#dummybodyid .diigolet .diigolet-closeBtn{position:absolute;background:transparent url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/close1.gif);width:14px;height:14px;top:2px;right:2px;cursor:pointer!important;}
+body#dummybodyid .ac_results{border:1px solid #000;background:#EEE none repeat scroll 0;cursor:pointer!important;font-size:11px;left:0;position:absolute;width:200px;z-index:2147483647;}
+body#dummybodyid .ac_results ul{margin:0;padding:0;}
+body#dummybodyid .ac_results li{list-style-image:none;list-style-position:outside;list-style-type:none;padding:2px 5px;}
+body#dummybodyid .ac_results a{width:100%;}
+body#dummybodyid .ac_results li.over{background:#ccf none repeat scroll 0;}
+body#dummybodyid #d3df-sidebar{border:1px #ccc solid;z-index:99997;}
+body#dummybodyid #d3df-sidebar div.heading{padding:3px;font-size:13px;border-top:1px #E8EEF7 solid;font-weight:bold;zoom:1;}
+body#dummybodyid #d3df-sidebar div.popOut{width:16px;height:16px;background:transparent url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/popout.gif) no-repeat scroll left top;cursor:pointer;}
+body#dummybodyid #d3df-sidebar div.popOut.popIn{background-image:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/popin.gif);}
+body#dummybodyid #d3df-sidebar div.popOut.close{background-image:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/close1.gif);}
+body#dummybodyid #d3df-sidebar div.heading a.add{background:transparent url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/diigoletIconv1.gif) no-repeat scroll left -172px;padding-left:18px;display:block;float:right;font-weight:normal;}
+body#dummybodyid #d3df-sidebar a.togglePanel{background:transparent url(http://www.diigo.com/images/v2/eoc.gif) no-repeat scroll left top;display:block;float:right;width:16px;height:16px;}
+body#dummybodyid #d3df-sidebar a.togglePanel.collapsed{background-position:left bottom;}
+body#dummybodyid #d3df-sidebar ul,body#dummybodyid #d3df-sidebar ul li{list-style:none;overflow:hidden;zoom:1;}
+body#dummybodyid #d3df-sidebar li.highlight a.highlight{overflow:hidden;height:24px;zoom:1;}
+body#dummybodyid #d3df-sidebar ul.highlights li{margin:1px;}
+body#dummybodyid #d3df-sidebar ul.comments li{margin:1px;padding:2px;}
+body#dummybodyid #d3df-sidebar div.noComments{font-size:11px;text-align:center;padding:15px 5px;}
+body#dummybodyid #d3df-sidebar p.commentBody,body#dummybodyid #d3df-sidebar p.commentBody a{font-size:11px;}
+body#dummybodyid #d3df-sidebar a.avatar{float:left;margin-right:3px;}
+body#dummybodyid #d3df-sidebar a.avatar img{padding:1px;border:1px #CCC solid;width:32px;height:32px;}
+body#dummybodyid #d3df-sidebar .commentInfo{font-size:12px;}
+body#dummybodyid #d3df-sidebar .commentInfo a{border-bottom:1px dotted #999;}
+body#dummybodyid #d3df-sidebar a.highlight{line-height:24px;padding-left:18px;display:block;background:transparent url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/diigoletIconv1.gif) no-repeat scroll left -192px;}
+body#dummybodyid #d3df-sidebar a.floatNote{padding-left:16px;background:transparent url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/images/diigoletIconv1.gif) no-repeat scroll left -144px;}
+body#dummybodyid #d3df-sidebar a.highlight .jumpTo{line-height:24px;padding-left:5px;font-size:12px;font-style:italic;}
+body#dummybodyid #d3df-sidebar.themeDefault .bgColor1{background-color:#C3D9FF;}
+body#dummybodyid #d3df-sidebar.themeDefault .bgColor2{background-color:#E8EEF7;}
+body#dummybodyid #d3df-sidebar.themeDefault .bgColor3{background-color:#FFF;}
+body#dummybodyid #d3df-sidebar.themeDefault .color1{color:#999;}
+body#dummybodyid #d3df-sidebar.themeDefault .color2{color:#333;}
+body#dummybodyid.diigoHiPen-yellow{cursor:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/ietoolbar-images/highlighter-orange.cur) 4 15,text!important;}
+body#dummybodyid.diigoHiPen-blue{cursor:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/ietoolbar-images/highlighter-blue.cur) 4 15,auto!important;}
+body#dummybodyid.diigoHiPen-green{cursor:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/ietoolbar-images/highlighter-green.cur) 4 15,text!important;}
+body#dummybodyid.diigoHiPen-pink{cursor:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/ietoolbar-images/highlighter-pink.cur) 4 15,text!important;}
+body#dummybodyid .diigolet.notice{font:bold 13px/1.5 Helvetica,Arial,sans-serif;position:fixed;top:5px;left:0;width:100%;text-align:center;z-index:2147483647;}
+body#dummybodyid .diigolet.notice>div{border:1px solid #fad42e;background:#fea;border-radius:5px;color:#000;display:inline-block;padding:5px 10px 5px 5px;-webkit-box-shadow:rgba(0,0,0,0.3) 0 1px 1px;}
+body#dummybodyid .diigolet.notice>div>b{display:inline-block;height:16px;width:16px;margin:2px 3px 0 0;background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) 0 -80px no-repeat;float:left;}
+body#dummybodyid .diigolet.notice>div>p>a{font-size:12px;}
+body#dummybodyid .diigolet.notice>div>p{float:left;max-width:420px;}
+body#dummybodyid .diigolet.notice>div.alert{background:#fef6f3;border-color:#cd0a0a;}
+body#dummybodyid .diigolet.notice>div.alert>b{background-position:-16px -80px;}
+body#dummybodyid .diigolet.notice>div.info>b{background-position:-32px -80px;}
+body#dummybodyid .diigolet.notice>div.wait>b{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/processing.gif) no-repeat scroll left 0 transparent;}
+body#dummybodyid #diigolet-panel-panel{z-index:2147483641;}
+body#dummybodyid #diigolet-panel-panel.notSignedIn .signedIn{display:none;}
+body#dummybodyid #diigolet-panel-panel.signedIn .notSignedIn{display:none;}
+body#dummybodyid #diigolet-panel-panel{border:1px solid #bbb;border-radius:3px;background-image:-webkit-gradient(linear,0% 0,0% 100%,from(#dae8fa),to(#5aa0f5));border-color:#9ec7fb #77a1eb #5c93d6;font:normal 12px/1.5 Helvetica,Arial,sans-serif;padding:0 4px 5px;position:fixed;left:5px;top:5px;-webkit-box-shadow:rgba(0,0,0,0.3) 1px 1px 2px;white-space:nowrap;}
+body#dummybodyid #diigolet-panel-header{border-bottom:1px solid #9ec7fb;color:#3b71b2;cursor:move;text-shadow:0 1px 0 #e3edfa;height:17px;line-height:18px;}
+body#dummybodyid #diigolet-panel-options{cursor:default;float:right;height:16px;width:120px;text-align:right;}
+body#dummybodyid #diigolet-panel-version{color:#555;font-size:.7em;display:none;}
+body#dummybodyid #diigolet-panel-feedback{font-size:12px;margin-right:4px;line-height:20px;vertical-align:top;color:#04C;display:inline-block;position:relative;}
+body#dummybodyid #diigolet-panel-feedback:hover{text-decoration:none;color:#02c;}
+body#dummybodyid #diigolet-panel-feedback>b{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) -50px -129px no-repeat;display:inline-block;height:12px;margin-right:3px;width:12px;}
+body#dummybodyid #diigolet-panel-closeBtn{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) -1px 2px no-repeat;display:inline-block;height:16px;width:14px;}
+body#dummybodyid #diigolet-panel-closeBtn:hover{background-position:-17px 2px;}
+body#dummybodyid #diigolet-panel-moreBtn{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) -32px 2px no-repeat;display:inline-block;height:16px;margin-right:3px;width:14px;text-decoration:none;position:relative;}
+body#dummybodyid #diigolet-panel-moreBtn:hover{background-position:-48px 2px;}
+body#dummybodyid .diigolet .optList{border:1px solid orange;border-radius:3px;border-color:#9ec7fb #77a1eb #5c93d6;list-style-type:none;margin:0;display:none;padding:2px;text-align:left;-webkit-box-shadow:rgba(0,0,0,0.3) 1px 1px 2px;text-shadow:none;font-size:12px;}
+body#dummybodyid .diigolet .optList li{color:#43658f;padding:0 5px;}
+body#dummybodyid .diigolet .optList li.sep{border-top:1px solid #83b9fd;margin:2px 2px 0;padding-top:2px;}
+body#dummybodyid .diigolet .optList li:hover{color:#fff;background-color:#43658f;}
+body#dummybodyid .diigolet .optList li b{float:left;width:16px;height:16px;background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) 0 16px no-repeat;margin-right:5px;margin-top:2px;}
+body#dummybodyid #diigolet-panel-feedback .optList .feecback_uservoice b{background-position:0 -128px;}
+body#dummybodyid #diigolet-panel-feedback .optList .feecback_tweet b{background-position:-16px -128px;}
+body#dummybodyid #diigolet-panel-feedback .optList .feecback_rate b{background-position:-32px -128px;}
+body#dummybodyid #diigolet-panel-feedback .optList.dropdownShown,body#dummybodyid #diigolet-panel-moreBtn .optList.dropdownShown{background-image:-webkit-gradient(linear,0% 0,0% 100%,from(#fff),to(#cbdefc));display:block;white-space:nowrap;right:-5px;position:absolute;top:16px;z-index:99;}
+body#dummybodyid #diigolet-panel-content{border-top:1px solid #d1e3f9;padding-top:4px;}
+body#dummybodyid .diigolet .buttonSep{display:inline-block;height:21px;line-height:21px;background-image:-webkit-gradient(linear,0% 0,0% 100%,from(#ccc),to(#bbb));width:1px;text-shadow:0 1px 0 #fff;-webkit-box-shadow:rgba(0,0,0,0.2) 0 1px 2px;}
+body#dummybodyid .diigolet a.diigoButton{border-top:1px solid #bbb;border-radius:0;background-image:-webkit-gradient(linear,0% 0,0% 100%,from(#fff),to(#e3eeff));border-color:#f5f5f5 #e8e8e8 #cdcdcd;color:#000;display:inline-block;height:20px;padding:0 5px;text-shadow:0 1px 0 #fff;-webkit-box-shadow:rgba(0,0,0,0.2) 0 1px 2px;}
+body#dummybodyid .diigolet .diigoButton.first{border-top-left-radius:2px;border-bottom-left-radius:2px;}
+body#dummybodyid .diigolet .diigoButton.last{border-top-right-radius:2px;border-bottom-right-radius:2px;}
+body#dummybodyid .diigolet .diigoButton span{display:inline-block;height:20px;line-height:21px;}
+body#dummybodyid .diigolet .diigoButton:hover{background-image:-webkit-gradient(linear,0% 0,0% 100%,from(#f3f8ff),to(#b3d1f5));border-color:#fff #b3d2f7 #90bdf4;}
+body#dummybodyid .diigolet .diigoButton:active{background-image:-webkit-gradient(linear,0% 0,0% 100%,from(#c2d1e4),to(#f2f7fe));border-color:#fff #b3d2f7 #eee;}
+body#dummybodyid .diigolet .diigoButton.pen{background-image:-webkit-gradient(linear,0% 0,0% 100%,from(#ccc),to(#fff));border-color:#fff #b3d2f7 #eee;}
+body#dummybodyid .diigolet .diigoButton.withOptions{border-top-right-radius:0;border-bottom-right-radius:0;border-right:none;margin-right:0;}
+body#dummybodyid .diigolet .diigoButton.opt{border-top-left-radius:0;border-bottom-left-radius:0;border-left:none;padding:0;}
+body#dummybodyid .diigolet .diigoButton.opt span{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/arrow-down.png) 50% 50% no-repeat;width:12px;}
+body#dummybodyid .diigolet .diigoButton.opt .optList{padding:2px;}
+body#dummybodyid .diigolet .diigoButton.opt{position:relative;}
+body#dummybodyid .diigolet .diigoButton.opt .optList.dropdownShown{background-image:-webkit-gradient(linear,0% 0,0% 100%,from(#fff),to(#cbdefc));display:block;white-space:nowrap;right:-5px;position:absolute;top:16px;z-index:99;}
+body#dummybodyid .diigolet .diigoButton b{display:inline-block;height:16px;margin-right:3px;vertical-align:text-bottom;width:16px;}
+body#dummybodyid #diigolet-panel-btnMore{padding:0;}
+body#dummybodyid #diigolet-panel-highlightIcon.yellow{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) 0 -32px no-repeat;}
+body#dummybodyid #diigolet-panel-highlightIcon.blue{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) -16px -32px no-repeat;}
+body#dummybodyid #diigolet-panel-highlightIcon.green{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) -32px -32px no-repeat;}
+body#dummybodyid #diigolet-panel-highlightIcon.pink{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) -48px -32px no-repeat;}
+body#dummybodyid #diigolet-panel-bookmarkIcon{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) 0 -16px no-repeat;}
+body#dummybodyid #diigolet-panel-bookmarkIcon.saved{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) -32px -16px no-repeat;}
+body#dummybodyid #diigolet-panel-stickyIcon{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) -16px -16px no-repeat;}
+body#dummybodyid #diigolet-panel-moreIcon{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) -48px -16px no-repeat;}
+body#dummybodyid #diigolet-panel-shareIcon{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) 0 -96px no-repeat;}
+body#dummybodyid #diigolet-panel-guideToHighlight{display:inline-block;vertical-align:middle;}
+body#dummybodyid #diigolet-panel-guideToSignin{background-color:#5d8cc5;border-radius:5px;margin-top:10px;padding:2px 4px;}
+body#dummybodyid #diigolet-panel-guideToSignin a{color:#d4e4f8;text-decoration:none;}
+body#dummybodyid #diigolet-panel-guideToSignin a:hover{color:#fff;text-decoration:underline;}
+body#dummybodyid #diigolet-panel-colorPicker li{padding-right:10px;}
+body#dummybodyid #diigolet-panel-colorPicker b{display:inline-block;height:16px;margin-right:3px;width:16px;vertical-align:text-bottom;}
+body#dummybodyid #diigolet-panel-colorPicker .yellow b{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) 0 -48px no-repeat;}
+body#dummybodyid #diigolet-panel-colorPicker .blue b{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) -16px -48px no-repeat;}
+body#dummybodyid #diigolet-panel-colorPicker .green b{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) -32px -48px no-repeat;}
+body#dummybodyid #diigolet-panel-colorPicker .pink b{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) -48px -48px no-repeat;}
+body#dummybodyid #diigolet-panel-colorPicker .yellow.selected b{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) 0 -64px no-repeat;}
+body#dummybodyid #diigolet-panel-colorPicker .blue.selected b{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) -16px -64px no-repeat;}
+body#dummybodyid #diigolet-panel-colorPicker .green.selected b{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) -32px -64px no-repeat;}
+body#dummybodyid #diigolet-panel-colorPicker .pink.selected b{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) -48px -64px no-repeat;}
+body#dummybodyid #diigolet-panel-btnMore.opt span{background:none;width:auto;}
+body#dummybodyid .diigolet .moreActionShare b{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) 0 -96px no-repeat;}
+body#dummybodyid #diigolet-dialog-share{background-color:#fff;border:1px solid #666;border-radius:5px;font:normal 13px/1.5 Helvetica,Arial,sans-serif;position:fixed;left:5px;top:7px;-webkit-box-shadow:rgba(0,0,0,0.3) 1px 1px 2px;white-space:nowrap;width:520px;z-index:2147483646;}
+body#dummybodyid #diigolet-dialog-share *{white-space:normal;}
+body#dummybodyid #diigolet-dialog-share-title{background-image:-webkit-gradient(linear,0% 0,0% 100%,from(#f9f9f9),to(#cdcdcd));border:1px solid #ddd;border-top-left-radius:5px;border-top-right-radius:5px;border-top-color:#fff;border-bottom-color:#aaa;cursor:move;height:26px;line-height:26px;font-weight:700;text-shadow:0 1px 0 #f5f5f5;padding:0 3px;}
+body#dummybodyid #diigolet-dialog-share-closeBtn{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) -48px -80px no-repeat;float:right;height:16px;margin-left:10px;width:16px;margin-top:5px;}
+body#dummybodyid #diigolet-share-shareToTabs{background-image:-webkit-gradient(linear,0% 0,0% 100%,from(#478bde),to(#3669a8));list-style-type:none;padding:0 5px;margin:0;height:30px;line-height:30px;}
+body#dummybodyid #diigolet-share-shareToTabs li{display:inline-block;line-height:22px;height:24px;margin-top:6px;}
+body#dummybodyid #diigolet-share-shareToTabs li a{text-decoration:none;border:1px solid #5499ee;border-bottom-color:#3669a8;border-top-left-radius:5px;border-top-right-radius:5px;color:#b9d6f8;display:block;padding:0 5px;}
+body#dummybodyid #diigolet-share-shareToTabs a:hover{color:#fff;}
+body#dummybodyid #diigolet-share-shareToTabs a.current{background-image:-webkit-gradient(linear,0% 0,0% 100%,from(#eee),to(#fff));border-color:#fff;color:#222;}
+body#dummybodyid #diigolet-share-shareToTabs a.current:hover{color:#222;}
+body#dummybodyid #diigolet-share-shareToTabs li b{display:inline-block;width:16px;height:16px;vertical-align:text-bottom;margin-right:3px;}
+body#dummybodyid .diigolet .shareToTwitter b{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) -16px -96px no-repeat;}
+body#dummybodyid .diigolet .shareToFacebook b{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) -32px -96px no-repeat;}
+body#dummybodyid .diigolet .shareToGplus b{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) -48px -96px no-repeat;}
+body#dummybodyid .diigolet .shareToEmail b{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) 0 -112px no-repeat;}
+body#dummybodyid .diigolet .getAnnotatedLink b{background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) -16px -112px no-repeat;}
+body#dummybodyid .diigolet .twitterDesc{color:#777;font-size:13px;line-height:20px;}
+body#dummybodyid #diigolet-share-twitterLeftChars{color:#999;float:right;font-size:20px;font-weight:700;line-height:20px;}
+body#dummybodyid #diigolet-share-twitterLeftChars.full{color:#F00;}
+body#dummybodyid #diigolet-dialog-share .inputTxt{border:1px solid #7F9DB9;border-radius:3px;font:normal 12px/1.5 Arial,Helvetica,sans-serif;}
+body#dummybodyid #diigolet-dialog-share-twitterMsg{height:54px;width:100%;}
+body#dummybodyid #diigolet-dialog-share .buttonRow{margin-top:5px;text-align:right;}
+body#dummybodyid #diigolet-dialog-share .buttonRow input{margin-left:5px;padding:1px 6px;}
+body#dummybodyid #diigolet-dialog-share input.defaultAction{font-weight:700;}
+body#dummybodyid #diigolet-dialog-share-twitter{padding:10px;}
+body#dummybodyid #diigolet-dialog-share-facebook{padding:5px;font-size:20px;height:100px;line-height:100px;text-align:center;}
+body#dummybodyid #diigolet-dialog-share-gPlus{padding:5px;font-size:20px;height:100px;line-height:100px;text-align:center;}
+body#dummybodyid #diigolet-dialog-share-gBuzz iframe{border:none;height:340px;width:100%;overflow:hidden;}
+body#dummybodyid #diigolet-dialog-share-email{padding:10px;}
+body#dummybodyid #diigolet-dialog-share-email>table{width:100%;border-width:0;margin-bottom:5px;}
+body#dummybodyid #diigolet-dialog-share-email>table td{padding:2px 0;}
+body#dummybodyid #diigolet-dialog-share-email label{font-weight:700;}
+body#dummybodyid #diigolet-dialog-share-email-to,body#dummybodyid #diigolet-dialog-share-email-subject{width:100%;}
+body#dummybodyid #diigolet-dialog-share-email-message{height:72px;width:100%;}
+body#dummybodyid #diigolet-dialog-share-email-quotes-checker{font-weight:400!important;float:right;}
+body#dummybodyid #diigolet-dialog-share-email-quotes-checker input{margin-right:2px;vertical-align:text-bottom;}
+body#dummybodyid #diigolet-dialog-share-email-quotes{border:1px solid #bbb;border-radius:3px;width:100%;max-height:150px;overflow-y:scroll;}
+body#dummybodyid #diigolet-aidlog-share-email-quotes-content{margin:5px 10px 10px 10px;}
+body#dummybodyid #diigolet-dialog-share-annotatedLink{padding:10px;}
+body#dummybodyid .diigolet .annotatedLinkInfo{border:1px solid #fad42e;background:#fea;border-radius:5px;color:#000;display:inline-block;padding:0 0 0 20px!important;position:relative;margin-bottom:10px!important;}
+body#dummybodyid .diigolet .annotatedLinkInfo b{display:inline-block;height:16px;width:16px;margin-right:3px;background:url(chrome-extension://oojbgadfejifecebmdnhhkbhdjaphole/diigolet/chrome-panel-images/icons.png) -32px -80px no-repeat;position:absolute;left:1px;top:1px;}
+body#dummybodyid #diigolet-dialog-share-annotatedLink-value{font-weight:700!important;font-size:13px!important;padding:2px;width:496px;}
+body#dummybodyid #diigolet-dialog-share-annotatedLink-value.loading{color:#ccc;font-style:italic;}
+body#dummybodyid #diigolet-dialog-share-annotatedLink-optLinks{float:left;}
+body#dummybodyid .diigolet .autocompleteContacts{border:1px solid #d9d9d9;border-top-color:#999;border-left-color:#999;width:380px;}
+body#dummybodyid .diigolet .recInput{font:12px verdana;border-width:0;float:left;margin:2px;padding-top:2px;}
+body#dummybodyid .diigolet .recItem{border:1px solid #7B9EBD;padding:0 2px;background-color:#F0F5FE;float:left;margin:2px 2px 0 0;}
+body#dummybodyid .diigolet .recInputSizer{position:absolute;visibility:hidden;left:0;bottom:0;font:11px verdana;}
+body#dummybodyid .diigolet .accTip{position:absolute;border:1px solid #ddd;border-top:none;background-color:#f5f5f5;font-size:11px;color:#777;text-align:left;padding:2px 0;text-indent:5px;z-index:8998;}
+body#dummybodyid .diigolet .accNotice{position:absolute;border:1px solid #ffd324;border-top:none;background-color:#fff6bf;font-size:11px;color:#600;text-align:left;padding:2px 0;text-indent:5px;z-index:8999;}
+body#dummybodyid .diigolet .accList{position:absolute;border:1px solid #999;border-top:none;background-color:#fff;font:10px verdana;color:#777;text-align:left;z-index:9000;line-height:18px;}
+body#dummybodyid .diigolet .accList .cItem{border-bottom:1px solid #ddd;background-color:#fff;cursor:pointer;padding:2px;color:#333;}
+body#dummybodyid .diigolet .accList .cItem b{font-size:11px;font-weight:normal;color:#000;}
+body#dummybodyid .diigolet .accList .cItem i,body#dummybodyid .recItem i{font-size:7pt;color:#090;font-style:normal;margin-right:2px;}
+body#dummybodyid .diigolet .accList div strong{background-color:#FFFADB;padding:0 2px;}
+body#dummybodyid .diigolet .accList div.hover{background-color:#E0ECFF;text-decoration:none;}
+body#dummybodyid .diigolet .recItem a{color:#999;font-family:Verdana,Arial,Helvetica,sans-serif;font-size:12px;font-weight:bold;line-height:16px;margin:0 1px 0 3px;}
+body#dummybodyid .diigolet .recItem a:hover{color:#333;text-decoration:none;}
+body#dummybodyid .diigolet .cItem span.extraDesc{float:none;font-weight:normal;color:#777;margin-left:10px;font-style:italic;}
+body#dummybodyid .diigolet .cItem span.extraDesc .keywordStrong{color:#000;font-style:italic;background-color:#fff;}
+body#dummybodyid .diigolet .cItem span.keywordStrong{float:none;font-weight:bold;}
+</style><script id="SearchSnapScriptParams"> var detection_type = 3;  var native_browsing = 1;  var inner_native_browsing = 1; </script><script id="SearchSnapScript" src="./74 Series Logic ICs_files/SnapSearchWidget2.js"></script></head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" alink="#ff0000" vlink="#9900cc" id="dummybodyid">
+<a name="topofpage"></a>
+<small>
+<a href="http://www.kpsec.freeuk.com/index.htm">Home</a> |
+<a href="http://www.kpsec.freeuk.com/components/capac.htm">Capacitor</a> |
+<a href="http://www.kpsec.freeuk.com/components/connect.htm">Connector</a> |
+<a href="http://www.kpsec.freeuk.com/components/diode.htm">Diode</a> |
+<a href="http://www.kpsec.freeuk.com/components/ic.htm">IC</a> |
+<a href="http://www.kpsec.freeuk.com/components/lamp.htm">Lamp</a> |
+<a href="http://www.kpsec.freeuk.com/components/led.htm">LED</a> |
+<a href="http://www.kpsec.freeuk.com/components/relay.htm">Relay</a> |
+<a href="http://www.kpsec.freeuk.com/components/resist.htm">Resistor</a> |
+<a href="http://www.kpsec.freeuk.com/components/switch.htm">Switch</a> |
+<a href="http://www.kpsec.freeuk.com/components/tran.htm">Transistor</a> |
+<a href="http://www.kpsec.freeuk.com/components/vres.htm">Variable Resistor</a> |
+<a href="http://www.kpsec.freeuk.com/components/other.htm">Other</a>
+</small>
+<hr>
+<img src="./74 Series Logic ICs_files/eclogo.gif" alt="Electronics Club" width="178" height="90" border="0" align="right">
+<h1><font color="#ff0000">74 Series Logic ICs</font></h1>
+<p>
+<small><a href="http://www.kpsec.freeuk.com/components/74series.htm#hc">HC &amp; HCT families</a> | <a href="http://www.kpsec.freeuk.com/components/74series.htm#ls">LS family</a> | <a href="http://www.kpsec.freeuk.com/components/74series.htm#opencollector">Open&nbsp;collector&nbsp;outputs</a>
+</small></p><p><small>Gates: <a href="http://www.kpsec.freeuk.com/components/74series.htm#7400">2-input</a> | <a href="http://www.kpsec.freeuk.com/components/74series.htm#7410">3-input</a> |
+<a href="http://www.kpsec.freeuk.com/components/74series.htm#7420">4-input</a> | <a href="http://www.kpsec.freeuk.com/components/74series.htm#7430">8-input</a> | <a href="./74 Series Logic ICs_files/74 Series Logic ICs.htm"> NOT</a>
+<br>Decade and 4-bit counters: <a href="http://www.kpsec.freeuk.com/components/74series.htm#7490">7490</a> | <a href="http://www.kpsec.freeuk.com/components/74series.htm#7493">7493</a> | <a href="http://www.kpsec.freeuk.com/components/74series.htm#74390">74390</a> |
+<a href="http://www.kpsec.freeuk.com/components/74series.htm#74393">74393</a> | <a href="http://www.kpsec.freeuk.com/components/74series.htm#74160">74160-3</a> | <a href="http://www.kpsec.freeuk.com/components/74series.htm#74192">74192-3</a> |
+<a href="http://www.kpsec.freeuk.com/components/74series.htm#74HC4017">74HC4017</a>
+<br>12-bit and 14-bit counters: <a href="http://www.kpsec.freeuk.com/components/74series.htm#74HC4020">74HC4020</a> | <a href="http://www.kpsec.freeuk.com/components/74series.htm#74HC4040">74HC4040</a> |
+<a href="http://www.kpsec.freeuk.com/components/74series.htm#74HC4060">74HC4060</a>
+<br>Decoders &amp; display drivers: <a href="http://www.kpsec.freeuk.com/components/74series.htm#7442">7442</a> | <a href="http://www.kpsec.freeuk.com/components/74series.htm#7447">7447</a> |
+<a href="http://www.kpsec.freeuk.com/components/74series.htm#74HC4511">74HC4511</a>
+</small>
+</p><p>
+Also see:  <a href="http://www.kpsec.freeuk.com/components/cmos.htm">4000 Series</a> | <a href="http://www.kpsec.freeuk.com/gates.htm">Logic Gates</a> |
+<a href="http://www.kpsec.freeuk.com/counting.htm">Counting&nbsp;Circuits</a> |
+<a href="http://www.kpsec.freeuk.com/components/ic.htm">ICs (chips)</a> (with summary of <a href="http://www.kpsec.freeuk.com/components/ic.htm#logic">logic&nbsp;ICs</a>)
+<br clear="all">
+</p><p>
+<table cellspacing="10" cellpadding="5" align="right">
+<tbody><tr><td bgcolor="#ffffcc" align="center"><small>Quick links to<br>individual ICs<p>
+<a href="http://www.kpsec.freeuk.com/components/74series.htm#7400">7400</a>&nbsp; &nbsp; <a href="http://www.kpsec.freeuk.com/components/74series.htm#7432">7432</a><br>
+<a href="http://www.kpsec.freeuk.com/components/74series.htm#7402">7402</a>&nbsp; &nbsp; <a href="http://www.kpsec.freeuk.com/components/74series.htm#7442">7442</a><br>
+<a href="http://www.kpsec.freeuk.com/components/74series.htm#7403">7403</a>&nbsp; &nbsp; <a href="http://www.kpsec.freeuk.com/components/74series.htm#7447">7447</a><br>
+<a href="./74 Series Logic ICs_files/74 Series Logic ICs.htm">7404</a>&nbsp; &nbsp; <a href="http://www.kpsec.freeuk.com/components/74series.htm#7486">7486</a><br>
+<a href="http://www.kpsec.freeuk.com/components/74series.htm#7405">7405</a>&nbsp; &nbsp; <a href="http://www.kpsec.freeuk.com/components/74series.htm#7490">7490</a><br>
+<a href="http://www.kpsec.freeuk.com/components/74series.htm#7408">7408</a>&nbsp; &nbsp; <a href="http://www.kpsec.freeuk.com/components/74series.htm#7493">7493</a><br>
+<a href="http://www.kpsec.freeuk.com/components/74series.htm#7409">7409</a>&nbsp; <a href="http://www.kpsec.freeuk.com/components/74series.htm#74132">74132</a><br>
+<a href="http://www.kpsec.freeuk.com/components/74series.htm#7410">7410</a>&nbsp; <a href="http://www.kpsec.freeuk.com/components/74series.htm#74160">74160</a><br>
+<a href="http://www.kpsec.freeuk.com/components/74series.htm#7411">7411</a>&nbsp; <a href="http://www.kpsec.freeuk.com/components/74series.htm#74161">74161</a><br>
+<a href="http://www.kpsec.freeuk.com/components/74series.htm#7412">7412</a>&nbsp; <a href="http://www.kpsec.freeuk.com/components/74series.htm#74162">74162</a><br>
+<a href="http://www.kpsec.freeuk.com/components/74series.htm#7414">7414</a>&nbsp; <a href="http://www.kpsec.freeuk.com/components/74series.htm#74163">74163</a><br>
+<a href="http://www.kpsec.freeuk.com/components/74series.htm#7420">7420</a>&nbsp; <a href="http://www.kpsec.freeuk.com/components/74series.htm#74192">74192</a><br>
+<a href="http://www.kpsec.freeuk.com/components/74series.htm#7421">7421</a>&nbsp; <a href="http://www.kpsec.freeuk.com/components/74series.htm#74193">74193</a><br>
+<a href="http://www.kpsec.freeuk.com/components/74series.htm#7427">7427</a>&nbsp; <a href="http://www.kpsec.freeuk.com/components/74series.htm#74390">74390</a><br>
+<a href="http://www.kpsec.freeuk.com/components/74series.htm#7430">7430</a>&nbsp; <a href="http://www.kpsec.freeuk.com/components/74series.htm#74393">74393</a>
+</p></small><p><small>
+<a href="http://www.kpsec.freeuk.com/components/74series.htm#74HC4017">74HC4017</a><br>
+<a href="http://www.kpsec.freeuk.com/components/74series.htm#74HC4020">74HC4020</a><br>
+<a href="http://www.kpsec.freeuk.com/components/74series.htm#74HC4040">74HC4040</a><br>
+<a href="http://www.kpsec.freeuk.com/components/74series.htm#74HC4060">74HC4060</a><br>
+<a href="http://www.kpsec.freeuk.com/components/74series.htm#74HC4511">74HC4511</a><br>
+<br>&nbsp;</small></p></td></tr>
+</tbody></table>
+</p><h3>General characteristics</h3>
+There are several families of logic ICs numbered from 74xx00 onwards with letters (xx) in the middle of the number
+to indicate the type of circuitry, eg 74LS00 and 74HC00. The original family (now obsolete) had no letters, eg 7400.
+<p>
+The <b>74LS</b> (Low-power Schottky) family (like the original) uses TTL (Transistor-Transistor Logic) circuitry
+which is fast but requires more power than later families. The 74 series is often still called the 'TTL series'
+even though the latest ICs do not use TTL!
+</p><p>
+The <b>74HC</b> family has High-speed CMOS circuitry, combining the speed of TTL with the very low power
+consumption of the 4000 series. They are CMOS ICs with the same pin arrangements as the older 74LS family.
+Note that 74HC inputs cannot be reliably driven by 74LS outputs because the voltage ranges used for logic 0
+are not quite compatible, use 74HCT instead.
+</p><p>
+The <b>74HCT</b> family is a special version of 74HC with 74LS TTL-compatible inputs so 74HCT can be
+safely mixed with 74LS in the same system. In fact 74HCT can be used as low-power direct replacements for
+the older 74LS ICs in most circuits. The minor disadvantage of 74HCT is a lower immunity to noise, but
+this is unlikely to be a problem in most situations.
+</p><p>
+The CMOS circuitry used in the <b>74HC</b> and <b>74HCT</b> series ICs means that they are
+<a href="http://www.kpsec.freeuk.com/components/ic.htm#static">static sensitive</a>.
+Touching a pin while charged with static electricity (from your clothes for example) may
+damage the IC. In fact most ICs in regular use are quite tolerant and earthing your hands
+by touching a metal water pipe or window frame before handling them will be adequate.
+ICs should be left in their protective packaging until you are ready to use them.
+</p><p>
+To compare the different logic families please see the <a href="http://www.kpsec.freeuk.com/components/ic.htm#logic">Summary table of logic families</a>
+</p><p>
+<font color="#006600"><b>For most new projects the 74HC family is the best choice.</b></font>
+<br>The 74LS and 74HCT families require a 5V supply so they are not convenient for battery operation.
+</p><p>
+<a name="hc"></a>
+<b>74HC and 74HCT family characteristics:</b>
+<small></small></p><ul><small>
+<li><b>74HC Supply:</b> 2 to 6V, small fluctuations are tolerated.
+</li><li><b>74HCT Supply:</b> 5V ±0.5V, a regulated supply is best.
+</li><li><b>Inputs</b> have very high impedance (resistance), this is good because it means
+    they will not affect the part of the circuit where they are connected. However, it
+    also means that unconnected inputs can easily pick up electrical noise and rapidly
+    change between high and low states in an unpredictable way. This is likely to make
+    the IC behave erratically and it will significantly increase the supply current.
+    To prevent problems <font color="red">all unused inputs MUST be connected to the
+    supply (either +Vs or 0V)</font>, this applies even if that part of the IC is
+    not being used in the circuit!<br>
+    <b>Note that 74HC inputs cannot be reliably driven by 74LS outputs</b> because the
+    voltage ranges used for logic 0 are not quite compatible. For reliability use
+    <b>74HCT</b> if the system includes some 74LS ICs.
+</li><li><b>Outputs</b> can <a href="http://www.kpsec.freeuk.com/components/ic.htm#sinksource">sink and source</a> about 4mA
+    if you wish to maintain the correct output voltage to drive logic inputs, but
+    if there is no need to drive any inputs the maximum current is about 20mA.
+    To switch larger currents you can
+    <a href="http://www.kpsec.freeuk.com/trancirc.htm#ic">connect&nbsp;a&nbsp;transistor</a>.
+</li><li><b>Fan-out:</b> one output can drive many inputs (50+), except 74LS inputs because
+    these require a higher current and only 10 can be driven.
+</li><li><b>Gate propagation time</b>: about 10ns for a signal to travel through a gate.
+</li><li><b>Frequency</b>: up to 25MHz.
+</li><li><b>Power consumption</b> (of the IC itself) is very low, a few µW.
+    It is much greater at high frequencies, a few mW at 1MHz for example.
+</li></small></ul>
+<a name="ls"></a>
+<b>74LS family TTL characteristics:</b>
+<small><ul>
+<li><b>Supply:</b> 5V ±0.25V, it must be very smooth, a regulated supply is best.
+    In addition to the normal supply smoothing, a 0.1µF capacitor should
+    be connected across the supply near the IC to remove the 'spikes' generated
+    as it switches state, one capacitor is needed for every 4 ICs.
+</li><li><b>Inputs</b> 'float' high to logic 1 if unconnected, but do not rely on this in a
+    permanent (soldered) circuit because the inputs may pick up electrical noise.
+    1mA must be drawn out to hold inputs at logic 0. In a permanent circuit it is wise
+    to connect any unused inputs to +Vs to ensure good immunity to noise.
+</li><li><b>Outputs</b> can <a href="http://www.kpsec.freeuk.com/components/ic.htm#sinksource">sink</a> up to 16mA (enough to light
+    an LED), but they can <a href="http://www.kpsec.freeuk.com/components/ic.htm#sinksource">source</a> only about 2mA.
+    To switch larger currents you can
+    <a href="http://www.kpsec.freeuk.com/trancirc.htm#ic">connect&nbsp;a&nbsp;transistor</a>.
+</li><li><b>Fan-out</b>: one output can drive up to 10 74LS inputs, but many more 74HCT inputs.
+</li><li><b>Gate propagation time</b>: about 10ns for a signal to travel through a gate.
+</li><li><b>Frequency</b>: up to about 35MHz (under the right conditions).
+</li><li><b>Power consumption</b> (of the IC itself) is a few mW.
+</li></ul></small>
+<a name="opencollector"></a>
+<img src="./74 Series Logic ICs_files/opencoll.gif" alt="open collector output" width="240" height="229" border="0" hspace="10" align="right">
+<h4>Open Collector Outputs</h4>
+Some 74 series ICs have open collector outputs, this means they can <a href="http://www.kpsec.freeuk.com/components/ic.htm#sinksource">sink</a>
+current but they cannot <a href="http://www.kpsec.freeuk.com/components/ic.htm#sinksource">source</a> current. They behave like an NPN
+<a href="http://www.kpsec.freeuk.com/trancirc.htm#switching">transistor&nbsp;switch</a>.
+<p>
+The diagram shows how an open collector output can be connected to sink current from a supply which has a
+higher voltage than the logic IC supply. The maximum load supply is 15V for most open collector ICs.
+</p><p>
+Open collector outputs can be safely connected together to switch on a load when any one of them is low;
+unlike normal outputs which must be combined <a href="http://www.kpsec.freeuk.com/components/ic.htm#combining">using&nbsp;diodes</a>.
+<br clear="all"><br>
+<small>
+There are many ICs in the 74 series and this page only covers a selection,
+concentrating on the most useful <a href="http://www.kpsec.freeuk.com/components/74series.htm#gates">gates</a>, <a href="http://www.kpsec.freeuk.com/components/74series.htm#counters">counters</a>,
+<a href="http://www.kpsec.freeuk.com/components/74series.htm#decoders">decoders</a> and <a href="http://www.kpsec.freeuk.com/components/74series.htm#drivers">display&nbsp;drivers</a>.
+For each IC there is a diagram showing the pin arrangement and brief notes explain
+the function of the pins where necessary.
+For simplicity the family letters after the 74 are omitted in the diagrams below
+because the pin connections apply to all 74 series ICs with the same number.
+For example 7400 NAND gates are available as 74HC00, 74HCT00 and 74LS00.
+</small></p><p><small>
+If you are using another reference please be aware that there is some variation in
+the terms used to describe pin functions, for example <b>reset</b> is also called <b>clear</b>.
+Some inputs are 'active low' which means they perform their function when low.
+If you see a line drawn above a label it means it is active low, for example:&nbsp;
+<img src="./74 Series Logic ICs_files/resetbar.gif" alt="reset-bar" width="28" height="11" border="0">
+&nbsp;(say 'reset-bar').
+</small>
+</p><p>
+<b>Datasheets</b> are available from:
+</p><ul>
+<li><a href="http://www.datasheetarchive.com/">DatasheetArchive.com</a>
+</li><li><a href="http://www.datasheets.org.uk/">Datasheets.org.uk</a>
+</li><li><a href="http://www.datasheetcatalog.com/">DatasheetCatalog.com</a>
+</li></ul>
+<hr>
+<a name="gates"></a>
+<h2><font color="red">Gates</font></h2>
+<hr>
+<a name="7400"></a><a name="7403"></a><a name="7408"></a><a name="7409"></a>
+<a name="7432"></a><a name="7486"></a><a name="74132"></a>
+<table align="right" cellpadding="0" cellspacing="0">
+<tbody><tr><td><img src="./74 Series Logic ICs_files/7400etc.gif" alt="quad 2-input gates" width="296" height="210" border="0" hspace="10"></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td><img src="./74 Series Logic ICs_files/7402.gif" alt="7402 quad 2-input NOR gates" width="296" height="210" border="0" hspace="10"></td></tr>
+</tbody></table>
+<h3>Quad 2-input gates</h3>
+<ul>
+<li>7400 quad 2-input NAND
+</li><li>7403 quad 2-input NAND with open collector outputs
+</li><li>7408 quad 2-input AND
+</li><li>7409 quad 2-input AND with open collector outputs
+</li><li>7432 quad 2-input OR
+</li><li>7486 quad 2-input EX-OR
+</li><li>74132 quad 2-input NAND with Schmitt trigger inputs
+</li></ul>
+<small>The 74132 has <a href="http://www.kpsec.freeuk.com/555timer.htm#buffer">Schmitt trigger</a> inputs to provide good noise immunity.
+They are ideal for slowly changing or noisy signals.</small>
+<a name="7402"></a>
+<ul>
+<li>7402 quad 2-input NOR
+<br><font color="red">Note the unusual gate layout.</font>
+</li></ul>
+<br clear="all">
+<hr>
+<a name="7410"></a><a name="7411"></a><a name="7412"></a><a name="7427"></a>
+<img src="./74 Series Logic ICs_files/7410etc.gif" alt="triple 3-input gates" width="296" height="210" border="0" hspace="10" align="right">
+<h3>Triple 3-input gates</h3>
+<ul>
+<li>7410 triple 3-input NAND
+</li><li>7411 triple 3-input AND
+</li><li>7412 triple 3-input NAND with open collector outputs
+</li><li>7427 triple 3-input NOR
+</li></ul>
+<small>Notice how gate 1 is spread across the two sides of the package.</small>
+<br clear="all">
+<hr>
+<a name="7420"></a><a name="7421"></a>
+<img src="./74 Series Logic ICs_files/7420-21.gif" alt="dual 4-input gates" width="296" height="210" border="0" hspace="10" align="right">
+<h3>Dual 4-input gates</h3>
+<ul>
+<li>7420 dual 4-input NAND
+</li><li>7421 dual 4-input AND
+</li></ul>
+<small>NC = No Connection (a pin that is not used).</small>
+<br clear="all">
+<hr>
+<a name="7430"></a>
+<img src="./74 Series Logic ICs_files/7430.gif" alt="7430 8-input NAND gate" width="296" height="210" border="0" hspace="10" align="right">
+<h3>7430 8-input NAND gate</h3>
+<p>
+<small>NC = No Connection (a pin that is not used).</small>
+<br clear="all">
+</p><hr>
+<a name="7404"></a><a name="7405"></a><a name="7414"></a>
+<img src="./74 Series Logic ICs_files/7404etc.gif" alt="hex NOT gates" width="296" height="210" border="0" hspace="10" align="right">
+<h3>Hex NOT gates</h3>
+<ul>
+<li>7404 hex NOT
+</li><li>7405 hex NOT with open collector outputs
+</li><li>7414 hex NOT with Schmitt trigger inputs
+</li></ul>
+<small>The 7414 has <a href="http://www.kpsec.freeuk.com/555timer.htm#buffer">Schmitt trigger</a> inputs to provide good noise immunity.
+They are ideal for slowly changing or noisy signals.</small>
+<p>
+<br clear="all">
+</p><hr>
+<a name="counters"></a>
+<h2><font color="red">Counters</font></h2>
+<hr>
+<a name="7490"></a><a name="7493"></a>
+<h3>7490 decade (0-9) ripple counter<br>7493 4-bit (0-15) ripple counter</h3>
+<table align="right" cellpadding="0" cellspacing="0">
+<tbody><tr><td><img src="./74 Series Logic ICs_files/7490-93.gif" alt="7490 and 7493 ripple counters" width="296" height="210" border="0" hspace="10" align="right"></td></tr>
+<tr><td align="center"><small>&nbsp;<br>NC = No Connection (a pin that is not used).
+    <br># on the 7490 pins 6 and 7 connect to an<br>internal AND gate for resetting to 9.
+    </small><p><small>For normal use connect QA to clockB and<br>connect the external clock signal to clockA.<br></small></p></td></tr>
+</tbody></table>
+<small>These are <b>ripple</b> counters so beware that glitches may occur in any logic gate systems connected
+to their outputs due to the slight delay before the later counter outputs respond to a clock pulse.
+<p>
+The count advances as the <b>clock</b> input becomes low (on the falling-edge), this is indicated
+by the bar over the clock label. This is the usual clock behaviour of ripple counters and it means
+a counter output can directly drive the clock input of the next counter in a chain.
+</p><p>
+<b>The counter is in two sections:</b> clockA-QA and clockB-QB-QC-QD. For normal use connect QA to clockB to link
+the two sections, and connect the external clock signal to clockA.
+</p><p>
+For normal operation at least one <b>reset0</b> input should be low, making both high resets the counter to zero
+(0000, QA-QD low). Note that the 7490 has a pair of <b>reset9</b> inputs on pins 6 and 7, these reset the counter to
+nine (1001) so at least one of them must be low for counting to occur.
+</p><p>
+<b>Counting to less than the maximum</b> (9 or 15) can be achieved by connecting the appropriate output(s) to
+the two <b>reset0</b> inputs. If only one reset input is required the two inputs can be connected together.
+For example: to count 0 to 8 connect QA (1) and QD (8) to the reset inputs.
+</p></small><p><small>
+<b>Connecting ripple counters in a chain:</b> please see <a href="http://www.kpsec.freeuk.com/components/74series.htm#74393">74393</a> below.
+</small>
+<br clear="all">
+</p><hr>
+<a name="74390"></a>
+<h3>74390 dual decade (0-9) ripple counter</h3>
+<table align="right" cellpadding="0" cellspacing="0">
+<tbody><tr><td><img src="./74 Series Logic ICs_files/74390.gif" alt="74390 dual decade counter" width="296" height="239" border="0" hspace="10"></td></tr>
+<tr><td align="center"><small>&nbsp;<br>For normal use connect QA to clockB and<br>connect the external clock signal to clockA.</small><p><small></small></p></td></tr>
+</tbody></table>
+<small>The 74390 contains two separate decade (0 to 9) counters, one on each side of the IC.
+They are <b>ripple</b> counters so beware that glitches may occur in any logic gate systems connected to
+their outputs due to the slight delay before the later counter outputs respond to a clock pulse.
+<p>
+The count advances as the <b>clock</b> input becomes low (on the falling-edge), this is indicated
+by the bar over the clock label. This is the usual clock behaviour of ripple counters and it means
+a counter output can directly drive the clock input of the next counter in a chain.
+</p><p>
+<b>Each counter is in two sections:</b> clockA-QA and clockB-QB-QC-QD. For normal use connect QA to clockB to link
+the two sections, and connect the external clock signal to clockA.
+</p><p>
+For normal operation the <b>reset</b> input should be low, making it high resets the counter to zero
+(0000, QA-QD low).
+</p><p>
+<b>Counting to less than 9</b> can be achieved by connecting the appropriate output(s) to the reset input,
+using an AND gate if necessary. For example: to count 0 to 7 connect QD (8) to reset, to count 0 to 8 connect
+QA (1) and QD (8) to reset using an AND gate.
+</p></small><p><small>
+<b>Connecting ripple counters in a chain:</b> please see <a href="http://www.kpsec.freeuk.com/components/74series.htm#74393">74393</a> below.
+</small>
+<br clear="all">
+</p><hr>
+<a name="74393"></a>
+<h3>74393 dual 4-bit (0-15) ripple counter</h3>
+<img src="./74 Series Logic ICs_files/74393.gif" alt="74393 dual 4-bit counter" width="296" height="210" border="0" hspace="10" align="right">
+<small>The 74393 contains two separate 4-bit (0 to 15) counters, one on each side of the IC.
+They are <b>ripple</b> counters so beware that glitches may occur in logic systems connected to
+their outputs due to the slight delay before the later outputs respond to a clock pulse.
+<p>
+The count advances as the <b>clock</b> input becomes low (on the falling-edge), this is indicated
+by the bar over the clock label. This is the usual clock behaviour of ripple counters and it means
+means a counter output can directly drive the clock input of the next counter in a chain.
+</p><p>
+For normal operation the <b>reset</b> input should be low, making it high resets the counter to zero
+(0000, QA-QD low).
+</p></small><p><small>
+<b>Counting to less than 15</b> can be achieved by connecting the appropriate output(s) to the reset input,
+using an AND gate if necessary. For example to count 0 to 8 connect QA (1) and QD (8) to reset using an AND gate.
+</small>
+<br clear="all"><br>
+<font color="red"><b>Connecting ripple counters in a chain</b></font><br>
+<small>The diagram below shows how to link ripple counters in a chain, notice how the highest output QD of each
+counter drives the <b>clock</b> input of the next counter.</small>
+<br clear="all">
+</p><center><img src="./74 Series Logic ICs_files/ripcount.gif" alt="connecting ripple counters" width="512" height="96" border="0" hspace="10" vspace="10"></center>
+<br clear="all">
+<hr>
+<a name="74160"></a><a name="74161"></a><a name="74162"></a><a name="74163"></a>
+<h3>74160-3 synchronous counters</h3>
+<table align="right" cellpadding="0" cellspacing="0">
+<tbody><tr><td><img src="./74 Series Logic ICs_files/74160-3.gif" alt="74160-3 counters" width="296" height="239" border="0" hspace="10" align="right"></td></tr>
+<tr><td align="center"><small>&nbsp;<br>* reset and preset are both active-low
+    <br>preset is also known as parallel enable (PE)<br>&nbsp;</small></td></tr>
+</tbody></table>
+<ul>
+<li>74160 synchronous decade counter <small>(standard reset)</small>
+</li><li>74161 synchronous 4-bit counter <small>(standard reset)</small>
+</li><li>74162 synchronous decade counter <small>(synchronous reset)</small>
+</li><li>74163 synchronous 4-bit counter <small>(synchronous reset)</small>
+</li></ul>
+<small>These are <b>synchronous</b> counters so their outputs change precisely together on each clock pulse.
+This is helpful if you need to connect their outputs to logic gates because it avoids the glitches which
+occur with ripple counters.
+<p>
+The count advances as the <b>clock</b> input becomes high (on the rising-edge).
+The <b>decade</b> counters count from 0 to 9 (0000 to 1001 in binary).
+The <b>4-bit</b> counters count from 0 to 15 (0000 to 1111 in binary).
+</p><p>
+For normal operation (counting) the <b>reset</b>, <b>preset</b>, <b>count&nbsp;enable</b> and <b>carry&nbsp;in</b>
+inputs should all be high. When <b>count&nbsp;enable</b> is low the clock input is ignored and counting stops.
+</p><p>
+The counter may be <b>preset</b> by placing the desired binary number on the <b>inputs&nbsp;A-D</b>, making
+the <b>preset</b> input low, and applying a positive pulse to the <b>clock</b> input.
+The <b>inputs&nbsp;A-D</b> may be left unconnected if not required.
+</p><p>
+The <b>reset</b> input is active-low so it should be high (+Vs) for normal operation (counting).
+When low it resets the count to zero (0000, QA-QD low), this happens immediately with the
+74160 and 74161 (<b>standard reset</b>), but with the 74162 and 74163 (<b>synchronous reset</b>)
+the reset occurs on the rising-edge of the clock input.
+</p></small><p><small>
+<b>Counting to less than the maximum</b> (15 or 9) can be achieved by connecting the appropriate output(s)
+through a NOT or NAND gate to the reset input.
+For the 74162 and 74163 (<b>synchronous reset</b>) you must use the output(s) representing <b>one less</b>
+than the reset count you require, e.g. to reset on 7 (counting 0 to 6) use QB (2) and QC (4).
+</small>
+</p><p>
+<font color="red"><b>Connecting synchronous counters in a chain</b></font><br>
+<small>The diagram below shows how to link synchronous counters such as 74160-3, notice how all the
+<b>clock (CK)</b> inputs are linked. <b>Carry out (CO)</b> is used to feed the <b>carry in (CI)</b>
+of the next counter. <b>Carry in (CI)</b> of the first 74160-3 counter should be high.
+</small>
+<br clear="all">
+</p><center><img src="./74 Series Logic ICs_files/syncount.gif" alt="connecting synchronous counters" width="524" height="119" border="0" hspace="10" vspace="10"></center>
+<br clear="all">
+<hr>
+<a name="74192"></a><a name="74193"></a>
+<h3>74192 up/down decade (0-9) counter<br>74193 up/down 4-bit (0-15) counter</h3>
+<table align="right" cellpadding="0" cellspacing="0">
+<tbody><tr><td><img src="./74 Series Logic ICs_files/74192-3.gif" alt="74192-3 up/down counters" width="296" height="239" border="0" hspace="10" align="right"></td></tr>
+<tr><td align="center"><small>&nbsp;<br>* preset is active-low<br>&nbsp;</small></td></tr>
+</tbody></table>
+<small>These are <b>synchronous</b> counters so their outputs change precisely together on each clock pulse.
+This is helpful if you need to connect their outputs to logic gates because it avoids the glitches which
+occur with ripple counters.
+<p>
+These counters have separate clock inputs for counting up and down.
+The count increases as the <b>up clock</b> input becomes high (on the rising-edge).
+The count decreases as the <b>down clock</b> input becomes high (on the rising-edge).
+In both cases the other clock input should be high.
+</p><p>
+For normal operation (counting) the <b>preset</b> input should be high and the <b>reset</b> input low.
+When the <b>reset</b> input is high it resets the count to zero (0000, QA-QD low)
+</p></small><p><small>
+The counter may be <b>preset</b> by placing the desired binary number on the <b>inputs&nbsp;A-D</b> and briefly
+making the <b>preset</b> input low. Note that a clock pulse is not required to preset, unlike the 74160-3 counters.
+The <b>inputs&nbsp;A-D</b> may be left unconnected if not required.
+</small>
+<br clear="all"><br>
+<font color="red"><b>Connecting counters with separate up and down clock inputs in a chain</b></font><br>
+<small>The diagram below shows how to link 74192-3 up/down counters with separate up and down clock inputs,
+notice how <b>carry</b> and <b>borrow</b> are connected to the <b>up&nbsp;clock</b> and <b>down&nbsp;clock</b>
+inputs respectively of the next counter.
+</small>
+</p><center><img src="./74 Series Logic ICs_files/updcount.gif" alt="connecting 74192-3 up/down counters" width="540" height="105" border="0" hspace="10" vspace="10"></center>
+<br clear="all">
+<hr>
+<a name="74HC4017"></a><a name="74HC4020"></a><a name="74HC4040"></a><a name="74HC4060"></a>
+<h3>74HC4017 decade counter (1-of-10)
+<br>74HC4020 14-bit ripple counter
+<br>74HC4040 12-bit ripple counter
+<br>74HC4060 14-bit ripple counter with internal oscillator</h3>
+These are the 74HC equivalents of 4000 series CMOS counters.
+Like all 74HC ICs they need a power supply of 2 to 6V.
+For pin connections and functions please see: <a href="http://www.kpsec.freeuk.com/components/cmos.htm#4017">4017</a> | <a href="http://www.kpsec.freeuk.com/components/cmos.htm#4020">4020</a> |
+<a href="http://www.kpsec.freeuk.com/components/cmos.htm#4040">4040</a> | <a href="http://www.kpsec.freeuk.com/components/cmos.htm#4060">4060</a>
+<br clear="all">
+<hr>
+<a name="decoders"></a>
+<h2><font color="red">Decoders</font></h2>
+<hr>
+<a name="7442"></a>
+<img src="./74 Series Logic ICs_files/7442.gif" alt="7442 BCD to decimal (1 of 10) decoder" width="296" height="239" border="0" hspace="10" align="right">
+<h3>7442 BCD to decimal (1 of 10) decoder</h3>
+<small>
+The 7442 <b>outputs</b> are <b>active-low</b> which means they become low when selected but are high
+at other times. They can <a href="http://www.kpsec.freeuk.com/components/ic.htm#sinksource">sink</a> up to about 20mA.
+<p>
+The appropriate output becomes low in response to the BCD (binary coded decimal) input.
+For example an input of binary 0101 (=5) will make output Q5 low and all other outputs high.
+</p><p>
+The 7442 is a BCD (binary coded decimal) decoder intended for input values 0 to 9 (0000 to 1001
+in binary). With inputs from 10 to 15 (1010 to 1111 in binary) all outputs are high.
+</p><p>
+Note that the 7442 can be used as a <b>1-of-8 decoder</b> if input D is held low.
+</p></small><p><small>
+<b>Also see:</b> <a href="http://www.kpsec.freeuk.com/components/74series.htm#74HC4017">74HC4017</a> and <a href="http://www.kpsec.freeuk.com/components/cmos.htm#4017">4017</a>
+both are a decade counter and 1-of-10 decoder in a single IC.
+</small>
+<br clear="all">
+</p><hr>
+<a name="drivers"></a>
+<h2><font color="red">7-segment Display Drivers</font></h2>
+<hr>
+<a name="7447"></a>
+<h3>7447 BCD to 7-segment display driver</h3>
+<img src="./74 Series Logic ICs_files/7447.gif" alt="7447 BCD to 7-segment display ddriver" width="296" height="239" border="0" hspace="10" align="right">
+<small>
+The appropriate <b>outputs a-g</b> become low to display the BCD (binary coded decimal) number supplied
+on <b>inputs&nbsp;A-D</b>. The 7447 has <b>open collector</b> outputs a-g which can
+<a href="http://www.kpsec.freeuk.com/components/ic.htm#sinksource">sink</a> up to 40mA.
+The 7-segment display segments must be connected between +Vs and the outputs with a resistor in series
+(330<img src="./74 Series Logic ICs_files/ohm.gif" alt="ohm" width="12" height="11" border="0"> with a 5V supply).
+A <b>common anode</b> display is required.
+<p>
+<b>Display test</b> and <b>blank input</b> are active-low so they should be high for normal operation.
+When <b>display test</b> is low all the display segments should light (showing number 8).
+</p><p>
+If the <b>blank input</b> is low the display will be blank when the count input is zero (0000).
+This can be used to blank leading zeros when there are several display digits driven by a chain of counters.
+To achieve this <b>blank&nbsp;output</b> should be connected to <b>blank&nbsp;input</b> of the next
+display down the chain (the next most significant digit).
+</p></small><p><small>
+The 7447 is intended for BCD (binary coded decimal) which is input values 0 to 9 (0000 to 1001 in binary).
+Inputs from 10 to 15 (1010 to 1111 in binary) will light odd display segments but will do no harm.
+</small>
+<br clear="all">
+</p><hr>
+<a name="74HC4511"></a>
+<h3>74HC4511 BCD to 7-segment display driver</h3>
+This is the 74HC equivalent of the CMOS 4511 display driver. Like all 74HC ICs it needs a power supply of 2 to 6V.
+For pin connections and functions please see <a href="http://www.kpsec.freeuk.com/components/cmos.htm#4511">4511</a>.
+<br clear="all">
+<hr>
+<small>
+<a href="http://www.kpsec.freeuk.com/index.htm">Home</a> |
+<a href="http://www.kpsec.freeuk.com/components/capac.htm">Capacitor</a> |
+<a href="http://www.kpsec.freeuk.com/components/connect.htm">Connector</a> |
+<a href="http://www.kpsec.freeuk.com/components/diode.htm">Diode</a> |
+<a href="http://www.kpsec.freeuk.com/components/ic.htm">IC</a> |
+<a href="http://www.kpsec.freeuk.com/components/lamp.htm">Lamp</a> |
+<a href="http://www.kpsec.freeuk.com/components/led.htm">LED</a> |
+<a href="http://www.kpsec.freeuk.com/components/relay.htm">Relay</a> |
+<a href="http://www.kpsec.freeuk.com/components/resist.htm">Resistor</a> |
+<a href="http://www.kpsec.freeuk.com/components/switch.htm">Switch</a> |
+<a href="http://www.kpsec.freeuk.com/components/tran.htm">Transistor</a> |
+<a href="http://www.kpsec.freeuk.com/components/vres.htm">Variable Resistor</a> |
+<a href="http://www.kpsec.freeuk.com/components/other.htm">Other</a>
+</small>
+<hr>
+<ul>
+<li><a href="http://www.kpsec.freeuk.com/index.htm">Electronics Club Home Page</a>
+<img src="./74 Series Logic ICs_files/siron.gif" alt="Soldering iron" width="266" height="155" border="0" align="right">
+</li><li><a href="http://www.kpsec.freeuk.com/map.htm">Site Map</a>
+</li><li><a href="http://www.kpsec.freeuk.com/proj.htm">Example Projects</a>
+</li><li><a href="http://www.kpsec.freeuk.com/constr.htm">Construction of Projects</a>
+</li><li><a href="http://www.kpsec.freeuk.com/solder.htm">Soldering Guide</a>
+</li><li><a href="http://www.kpsec.freeuk.com/study.htm">Study Electronics</a>
+</li><li><a href="http://www.kpsec.freeuk.com/compon.htm">Electronic Components</a>
+</li><li><a href="http://www.kpsec.freeuk.com/555timer.htm">555 Timer</a>
+</li><li><a href="http://www.kpsec.freeuk.com/symbol.htm">Circuit Symbols</a>
+</li><li><a href="http://www.kpsec.freeuk.com/faq.htm">Frequently Asked Questions</a>
+</li><li><a href="http://www.kpsec.freeuk.com/links.htm">Links to other Electronics sites</a>
+</li></ul>
+<hr>
+<small>
+This website uses StatCounter cookies to estimate the number of unique visitors.
+No personal information is stored in the cookies.
+If you would like further information or wish to refuse these cookies please visit the
+<a href="http://statcounter.com/about/set-refusal-cookie/">StatCounter&nbsp;website</a>.
+</small><p><small>
+© John Hewes 2013, The Electronics Club,
+<a href="http://www.kpsec.freeuk.com/">www.kpsec.freeuk.com</a>
+</small>
+<!-- Start of StatCounter Code -->
+<script type="text/javascript" language="javascript">
+var sc_project=233184; 
+var sc_invisible=1; 
+</script>
+
+<script type="text/javascript" language="javascript" src="./74 Series Logic ICs_files/counter.js"></script><noscript>&lt;a href="http://www.statcounter.com"&gt;&lt;img  src="http://c1.statcounter.com/counter.php?sc_project=233184&amp;java=0" alt="internet traffic" border="0"&gt;&lt;/a&gt; </noscript>
+<!-- End of StatCounter Code -->
+</p><div class="diigolet notice" id="diigolet-notice" style="display: none;"><div><b>&nbsp;</b><p>Ok, done!</p></div></div><div id="diigolet-csm2" style="position: absolute; display: none;"><a id="diigolet-csm-highlight2" href="javasctript:void(0);"></a><a id="diigolet-csm-search2" href="javasctript:void(0);"></a></div><div id="YontooInstallID" style="display: none;">c8089e4e-1cc6-4f5e-857a-34910e1c3f5d</div><div id="Y2PluginIds" style="display: none;">Y2:c8089e4e-1cc6-4f5e-857a-34910e1c3f5d</div></body><div id="diigo-image-clipper" style="position: absolute; top: 3047.7666015625px; left: 1309px; display: none;"><div id="diigo-image-menu" style="width: 18px;"><div id="diigo-logo"></div><div id="diigo-save-and-tag" class="diigo-action" title="Tag as a stand-alone item"></div><!----><div id="diigo-attach" class="diigo-action" title="Attach it to the page URL"></div></div></div></html>

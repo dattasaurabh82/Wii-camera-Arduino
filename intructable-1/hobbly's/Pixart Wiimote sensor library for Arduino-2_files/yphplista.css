@@ -1,0 +1,38 @@
+/* 
+Plugin Name: yPHPLista
+Plugin URI: http://www.social-ink.net
+Version: 1.1.1
+Author: <a href="http://yreinberg.net/">Yonatan Reinberg</a>
+Description: Plugin to integrate PHPList signup into your wordpress theme with funky AJAX.
+ 
+Copyright 2010-11  Yonatan Reinberg (email : yoni [a t ] s o cia l-ink DOT net)
+*/
+
+#yphplista_frame {
+	
+}
+
+	.yphplista_resultmsg {
+		border:1px solid #CCCCCC;
+		padding: 15px;
+		text-align: center;
+	}
+	
+		#yphplista_success {
+			border:1px solid #62EF4A;
+		}	
+		
+		#yphplista_failure {
+			border:1px solid #AF2A20;
+		}
+	
+	
+	
+	#yphp_email {
+		border:1px solid #CCCCCC;
+		padding:3px;	
+	}
+	
+	#yphp_submit {
+	
+	}

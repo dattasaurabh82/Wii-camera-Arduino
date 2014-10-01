@@ -1,0 +1,63 @@
+#carousel_inner {
+	float:left; 
+	width:598px; 
+	overflow: hidden;  
+	margin:10px 0 10px 37px;
+}
+
+#carousel_ul {
+	position:relative;
+	left:-210px;
+	list-style-type: none; 
+	margin: 0px;
+	padding: 0px;
+	width:9999px; 
+	padding-bottom:10px;
+}
+
+#carousel_ul li{
+	float: left;                                     
+	width:165px;
+	min-height:210px;
+	padding:10px 10px;
+	margin:10px 8px;
+	background: #f0f0f0 url(images/c-bg.png) repeat-x;
+	border:#dfdfdf solid 1px;
+}
+#carousel_ul li a
+{width:165px; text-align:center;
+}
+#carousel_ul li img {
+	margin-bottom:-4px;
+	cursor:pointer;
+	cursor: hand; 
+	border:0px; 
+}
+#left_scroll, #right_scroll{
+	float:left; 
+	height:130px; 
+	width:31px;
+	margin-top:110px;
+}
+#right_scroll{
+	float:right; margin-right:17px;
+}
+
+#left_scroll img, #right_scroll img{
+	border:0;
+	cursor: pointer;
+	cursor: hand;
+	margin-left:20px;
+}
+
+
+#carousel_inner_this{
+	float:left; 
+	width:839px; 
+	overflow: hidden;  
+	margin:15px 0 0 0px;
+}
+
+
+
+

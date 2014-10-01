@@ -1,0 +1,1820 @@
+<!DOCTYPE html>
+<html class="wf-bebasneue-n4-inactive wf-museoslab-n1-inactive wf-museoslab-n3-inactive wf-museoslab-n5-active wf-museoslab-n8-active wf-museoslab-n9-active wf-franklingothicurwcond-n5-active wf-franklingothicurwcond-n7-active wf-active" xmlns:fb="http://ogp.me/ns/fb#" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/ptrack_v16.js"></script><script src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/makezine.com"></script><script type="text/javascript" async="" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/2533.js"></script><script async="" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/cbgapi.loaded_0"></script><script type="text/javascript" async="" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/quant.js"></script><script type="text/javascript" async="" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/quant.js"></script><script src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/all_002.js" id="facebook-jssdk"></script><script src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/count" async="true" type="text/javascript"></script><script src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/count" async="true" type="text/javascript"></script><script src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/a_005.js" async="" type="text/javascript"></script><link href="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/buttons3.css" type="text/css" rel="stylesheet">
+		<meta charset="utf-8">
+		<title>MAKE |   Hacking the Wiimote IR camera</title>
+		<meta name="description" content="">
+
+		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		
+		<!-- Start: GPT Sync -->
+		<script src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/beacon.js" async=""></script><script src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/quant.js" async="" type="text/javascript"></script><script src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/p-9dsZX-5zhUuTg.js" async="" type="text/javascript"></script><script src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/beacon.js" async=""></script><script src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/a_007.js" async="" type="text/javascript"></script><script src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/a.js" async="" type="text/javascript"></script><script src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/a_003.js" type="text/javascript"></script><script src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/buttons.js" async="" type="text/javascript"></script><script src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/ga.js" async="" type="text/javascript"></script><script type="text/javascript">
+		(function(){
+		var useSSL = 'https:' == document.location.protocol;
+		var src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+		document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+		})();
+		</script><script src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/gpt.js"></script>
+
+		<script type="text/javascript">
+
+					var slot1= googletag.defineSlot('/11548178/Makezine/Blog/Arduino', [[728,90]],'div-gpt-ad-664089004995786621-1').addService(googletag.pubads()).setTargeting('pos', 'atf');
+			var slot2= googletag.defineSlot('/11548178/Makezine/Blog/Arduino', [[300,250],[300,600]],'div-gpt-ad-664089004995786621-2').addService(googletag.pubads()).setTargeting('pos', 'atf');
+			var slot3= googletag.defineSlot('/11548178/Makezine/Blog/Arduino', [[300,250],[300,600]],'div-gpt-ad-664089004995786621-3').addService(googletag.pubads()).setTargeting('pos', 'btf');
+			var slot4= googletag.defineSlot('/11548178/Makezine/Blog/Arduino', [[728,90]],'div-gpt-ad-664089004995786621-4').addService(googletag.pubads()).setTargeting('pos', 'btf');
+							
+			googletag.pubads().enableSingleRequest();
+						googletag.pubads().setTargeting('PageID',['59444']);
+			googletag.pubads().enableSyncRendering();
+			googletag.enableServices();
+
+		</script><script type="text/javascript" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/google_ads_gpt.js"></script>
+		<!-- End: GPT -->
+		<!-- Le fav and touch icons -->
+		<link rel="shortcut icon" href="http://1.gravatar.com/blavatar/dab43acfe30c0e28a023bb3b7a700440?s=14">
+		<script type="text/javascript" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/fzm8sgx.js"></script>
+		<style type="text/css">.tk-bebas-neue{font-family:"bebas-neue",sans-serif;}.tk-museo-slab{font-family:"museo-slab",serif;}.tk-franklin-gothic-urw-cond{font-family:"franklin-gothic-urw-cond",sans-serif;}</style><link href="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/fzm8sgx-d.css" rel="stylesheet"><script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+		<script type="text/javascript">
+
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-51157-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+
+		</script>
+
+		
+		
+<meta name="description" content="You can connect to the Wii remote over bluetooth or use an Arduino to send peripheral data to the Wiimote, but what if you want to interface directly with the Wiimote's IR camera? The sensor is particularly good at tracking coordinates for 1 to 4 points—it could be a simple way to add sophi...">
+<meta name="keywords" content="arduino, hacks, ">
+			<script data-cfasync="false" type="text/javascript">
+			    var contextly_post_object = {
+						post: {"ID":59444,"post_title":"Hacking the Wiimote IR camera","post_date":"2008-11-22 19:51:35","post_status":"publish","post_type":"post"},
+						post_tags: [],
+						blog_url: "http://makezineblog.wordpress.com",
+						blog_title: "MAKE",
+						page_permalink: "http://blog.makezine.com/2008/11/22/hacking-the-wiimote-ir-ca/",
+						author: {"id":"22845398","firstname":"","lastname":"","display_name":"jstriegel"},
+						admin: 0,
+						version: "1.0.70"
+			    };
+
+				var contextly_settings = [];
+			</script>
+			<script type="text/javascript">
+(function() {
+	var s = document.createElement('SCRIPT'), s1 = document.getElementsByTagName('SCRIPT')[0];
+	s.type = 'text/javascript';
+	s.async = true;
+	s.src = 'http://widgets.digg.com/buttons.js';
+	s1.parentNode.insertBefore(s, s1);
+})();
+</script>
+		<script src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/remote-login.php" type="text/javascript"></script>
+		<script type="text/javascript">
+		/* <![CDATA[ */
+			if ( 'function' === typeof WPRemoteLogin ) {
+				document.cookie = "wordpress_test_cookie=test; path=/";
+				if ( document.cookie.match( /(;|^)\s*wordpress_test_cookie\=/ ) ) {
+					WPRemoteLogin();
+				}
+			}
+		/* ]]> */
+		</script>
+		<link rel="alternate" type="application/rss+xml" title="MAKE » Feed" href="http://blog.makezine.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="MAKE » Comments Feed" href="http://blog.makezine.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="MAKE » Hacking the Wiimote IR&nbsp;camera Comments Feed" href="http://blog.makezine.com/2008/11/22/hacking-the-wiimote-ir-ca/feed/">
+<script type="text/javascript">
+/* <![CDATA[ */
+function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!='function'){window.onload=func;}else{window.onload=function(){oldonload();func();}}}
+/* ]]> */
+</script>
+<link rel="stylesheet" id="all-css-0" href="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/a_002.css" type="text/css" media="all">
+<link rel="stylesheet" id="screen-css-0" href="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/style_002.css" type="text/css" media="screen">
+<script type="text/javascript" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/jquery.js"></script>
+<script type="text/javascript" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/jquery_002.js"></script>
+<script type="text/javascript" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/a_002.js"></script>
+<script type="text/javascript" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/linker-plugin.js"></script>
+<link rel="stylesheet" id="all-css-0" href="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/style.css" type="text/css" media="all">
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='highlander-comments-ie7-css'  href='http://s2.wp.com/wp-content/mu-plugins/highlander-comments/style-ie7.css?m=1351637563g&#038;ver=20110606' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://makezineblog.wordpress.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://makezineblog.wordpress.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Make your own hot&nbsp;sauce…" href="http://blog.makezine.com/2008/11/22/make-your-own-hot-sauce/">
+<link rel="next" title="Best of&nbsp;CRAFT" href="http://blog.makezine.com/2008/11/23/best-of-craft-65/">
+<meta name="generator" content="WordPress.com">
+<link rel="canonical" href="http://blog.makezine.com/2008/11/22/hacking-the-wiimote-ir-ca/">
+<link rel="shortlink" href="http://wp.me/p22K2I-fsM">
+<link rel="alternate" type="application/json+oembed" href="http://public-api.wordpress.com/oembed/1.0/?format=json&amp;url=http%3A%2F%2Fblog.makezine.com%2F2008%2F11%2F22%2Fhacking-the-wiimote-ir-ca%2F&amp;for=wpcom-auto-discovery"><link rel="alternate" type="application/xml+oembed" href="http://public-api.wordpress.com/oembed/1.0/?format=xml&amp;url=http%3A%2F%2Fblog.makezine.com%2F2008%2F11%2F22%2Fhacking-the-wiimote-ir-ca%2F&amp;for=wpcom-auto-discovery">
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hacking the Wiimote IR camera">
+<meta property="og:url" content="http://blog.makezine.com/2008/11/22/hacking-the-wiimote-ir-ca/">
+<meta property="og:description" content="You can connect to the Wii remote over bluetooth or use an Arduino to send peripheral data to the Wiimote, but what if you want to interface directly with the Wiimote’s IR camera? The sensor ...">
+<meta property="og:site_name" content="MAKE">
+<meta property="og:image" content="http://i2.wp.com/s0.wp.com/wp-content/themes/vip/plugins/lazy-load/images/1x1.trans.gif?fit=400%2C400">
+<meta property="og:image" content="http://i2.wp.com/makezine.com/hackszine/wiimoteir_20081122.jpg?fit=400%2C400">
+<meta name="twitter:site" content="@make">
+<meta name="twitter:image" content="http://i2.wp.com/s0.wp.com/wp-content/themes/vip/plugins/lazy-load/images/1x1.trans.gif">
+<meta name="twitter:card" content="summary">
+<link rel="openid.server" href="http://makezineblog.wordpress.com/?openidserver=1">
+<link rel="openid.delegate" href="http://makezineblog.wordpress.com/">
+<link rel="search" type="application/opensearchdescription+xml" href="http://blog.makezine.com/osd.xml" title="MAKE">
+<link rel="search" type="application/opensearchdescription+xml" href="http://wordpress.com/opensearch.xml" title="WordPress.com">
+		<style>
+		/* <![CDATA[ */
+		/* Block: reblog */
+		
+		.reblog-from img                   { margin: 0 10px 0 0; vertical-align: middle; padding: 0; border: 0; }
+		.reblogger-note img.avatar         { float: left; padding: 0; border: 0; }
+		.reblogger-note-content            { margin: 0 0 20px; }
+		.reblog-post .wpcom-enhanced-excerpt-content { border-left: 3px solid #eee; padding-left: 15px; }
+		.reblog-post ul.thumb-list         { display: block; list-style: none; margin: 2px 0; padding: 0; clear: both; }
+		.reblog-post ul.thumb-list li      { display: inline; margin: 0; padding: 0 1px; border: 0; }
+		.reblog-post ul.thumb-list li a    { margin: 0; padding: 0; border: 0; }
+		.reblog-post ul.thumb-list li img  { margin: 0; padding: 0; border: 0; }
+		
+		.reblog-post .wpcom-enhanced-excerpt { clear: both; }
+		
+		.reblog-post .wpcom-enhanced-excerpt address,
+		.reblog-post .wpcom-enhanced-excerpt li,
+		.reblog-post .wpcom-enhanced-excerpt h1,
+		.reblog-post .wpcom-enhanced-excerpt h2,
+		.reblog-post .wpcom-enhanced-excerpt h3,
+		.reblog-post .wpcom-enhanced-excerpt h4,
+		.reblog-post .wpcom-enhanced-excerpt h5,
+		.reblog-post .wpcom-enhanced-excerpt h6,
+		.reblog-post .wpcom-enhanced-excerpt p { font-size: 100% !important; }
+		
+		.reblog-post .wpcom-enhanced-excerpt blockquote,
+		.reblog-post .wpcom-enhanced-excerpt pre,
+		.reblog-post .wpcom-enhanced-excerpt code,
+		.reblog-post .wpcom-enhanced-excerpt q { font-size: 98% !important; }
+		
+
+		/* ]]> */		
+		</style>
+		<!-- wp-parsely Plugin Version 1.4 -->
+<meta name="wp-parsely_version" id="wp-parsely_version" content="1.4">
+<meta name="parsely-page" id="parsely-page" content="{&quot;title&quot;:&quot;Hacking the Wiimote IR&nbsp;camera&quot;,&quot;link&quot;:&quot;http:\/\/blog.makezine.com\/2008\/11\/22\/hacking-the-wiimote-ir-ca\/&quot;,&quot;image_url&quot;:&quot;&quot;,&quot;type&quot;:&quot;post&quot;,&quot;post_id&quot;:&quot;59444&quot;,&quot;pub_date&quot;:&quot;2008-11-22T13:51:35Z&quot;,&quot;section&quot;:&quot;Arduino&quot;,&quot;author&quot;:&quot;jstriegel&quot;,&quot;tags&quot;:[]}">
+<meta name="application-name" content="MAKE"><meta name="msapplication-window" content="width=device-width;height=device-height"><meta name="msapplication-tooltip" content="DIY projects, how-tos, and inspiration from geeks, makers, and hackers"><meta name="msapplication-task" content="name=Subscribe;action-uri=http://blog.makezine.com/feed/;icon-uri=http://1.gravatar.com/blavatar/14b3aa835e1ef41047dacf9a29aabb6f?s=16"><script type="text/javascript">window.fbAsyncInit=function(){FB.init({"appId":"216859768380573","channelUrl":"http:\/\/makezineblog.wordpress.com\/?fb-channel-file=1","status":true,"cookie":true,"xfbml":true,"oauth":true});}</script>		<link rel="stylesheet" id="custom-css-css" type="text/css" href="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/a.css">
+		
+	<script src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/osd.js" type="text/javascript"></script><link href="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/template-wired-theme.css" type="text/css" media="screen" rel="stylesheet"><style type="text/css">#linker_widget { text-shadow:none;}#linker_widget .link a{font-family: Arial}#linker_widget .link a{font-size: 115%}</style><link rel="stylesheet" type="text/css" id="gravatar-card-css" href="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/hovercard.css"><link rel="stylesheet" type="text/css" id="gravatar-card-services-css" href="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/services.css"><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}
+.fb_invisible{display:none}
+.fb_reset{background:none;border-spacing:0;border:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}
+.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}
+.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}
+.fb_dialog_content{background:#fff;color:#333}
+.fb_dialog_close_icon{background:url(http://m-static.ak.fbcdn.net/rsrc.php/v2/yA/x/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://m-static.ak.fbcdn.net/rsrc.php/v2/y6/x/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px;top:8px\9;right:7px\9}
+.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}
+.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}
+.fb_dialog_close_icon:hover{background:url(http://m-static.ak.fbcdn.net/rsrc.php/v2/yA/x/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://m-static.ak.fbcdn.net/rsrc.php/v2/y6/x/s816eWC-2sl.gif)}
+.fb_dialog_close_icon:active{background:url(http://m-static.ak.fbcdn.net/rsrc.php/v2/yA/x/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://m-static.ak.fbcdn.net/rsrc.php/v2/y6/x/s816eWC-2sl.gif)}
+.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}
+.fb_dialog_top_left,
+.fb_dialog_top_right,
+.fb_dialog_bottom_left,
+.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}
+/* @noflip */
+.fb_dialog_top_left{background:url(http://m-static.ak.fbcdn.net/rsrc.php/v2/yR/x/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}
+/* @noflip */
+.fb_dialog_top_right{background:url(http://m-static.ak.fbcdn.net/rsrc.php/v2/yR/x/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}
+/* @noflip */
+.fb_dialog_bottom_left{background:url(http://m-static.ak.fbcdn.net/rsrc.php/v2/yR/x/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}
+/* @noflip */
+.fb_dialog_bottom_right{background:url(http://m-static.ak.fbcdn.net/rsrc.php/v2/yR/x/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right,
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right{width:10px;height:100%}
+.fb_dialog_vert_left{margin-left:-10px}
+.fb_dialog_vert_right{right:0;margin-right:-10px}
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{width:100%;height:10px}
+.fb_dialog_horiz_top{margin-top:-10px}
+.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}
+.fb_dialog_iframe{line-height:0}
+.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}
+.fb_dialog_content .dialog_title > span{background:url(http://m-static.ak.fbcdn.net/rsrc.php/v2/yD/x/Cou7n-nqK52.gif)
+no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}
+body.fb_hidden{-webkit-transform:none;height:100%;margin:0;left:-10000px;overflow:visible;position:absolute;top:-10000px;width:100%
+}
+.fb_dialog.fb_dialog_mobile.loading{background:url(http://m-static.ak.fbcdn.net/rsrc.php/v2/yc/x/3rhSv5V8j3o.gif)
+white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}
+.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}
+#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}
+#fb-root #fb_dialog_ipad_overlay.hidden{display:none}
+.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}
+.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0 0, 0 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}
+.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%
+}
+.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0 0, 0 100%, from(#4966A6),
+color-stop(0.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset,
+rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}
+.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}
+.fb_dialog_content .dialog_content{background:url(http://m-static.ak.fbcdn.net/rsrc.php/v2/yJ/x/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}
+.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}
+#fb_dialog_loader_close{float:left}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{position:relative;display:-moz-inline-block;display:inline-block}
+.fb_iframe_widget iframe{position:absolute}
+.fb_iframe_widget_lift{z-index:1}
+.fb_iframe_widget span{position:relative;display:inline-block;vertical-align:text-bottom;text-align:justify}
+.fb_hide_iframes iframe{position:relative;left:-10000px}
+.fb_iframe_widget_loader{position:relative;display:inline-block}
+.fb_iframe_widget_fluid{display:inline}
+.fb_iframe_widget_fluid span{width:100%}
+.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}
+.fb_iframe_widget_loader .FB_Loader{background:url(http://m-static.ak.fbcdn.net/rsrc.php/v2/yJ/x/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_button_simple,
+.fb_button_simple_rtl{background-image:url(http://m-static.ak.fbcdn.net/rsrc.php/v2/yH/x/eIpbnVKI9lR.png);background-repeat:no-repeat;cursor:pointer;outline:none;text-decoration:none}
+.fb_button_simple_rtl{background-position:right 0}
+.fb_button_simple .fb_button_text{margin:0 0 0 20px;padding-bottom:1px}
+.fb_button_simple_rtl .fb_button_text{margin:0 10px 0 0}
+a.fb_button_simple:hover .fb_button_text,
+a.fb_button_simple_rtl:hover .fb_button_text,
+.fb_button_simple:hover .fb_button_text,
+.fb_button_simple_rtl:hover .fb_button_text{text-decoration:underline}
+.fb_button,
+.fb_button_rtl{background:#29447e url(http://m-static.ak.fbcdn.net/rsrc.php/v2/yl/x/FGFbc80dUKj.png);background-repeat:no-repeat;cursor:pointer;display:inline-block;padding:0 0 0 1px;text-decoration:none;outline:none}
+.fb_button .fb_button_text,
+.fb_button_rtl .fb_button_text{background:#5f78ab url(http://m-static.ak.fbcdn.net/rsrc.php/v2/yl/x/FGFbc80dUKj.png);border-top:solid 1px #879ac0;border-bottom:solid 1px #1a356e;color:#fff;display:block;font-family:"lucida grande",tahoma,verdana,arial,sans-serif;font-weight:bold;padding:2px 6px 3px 6px;margin:1px 1px 0 21px;text-shadow:none}
+a.fb_button,
+a.fb_button_rtl,
+.fb_button,
+.fb_button_rtl{text-decoration:none}
+a.fb_button:active .fb_button_text,
+a.fb_button_rtl:active .fb_button_text,
+.fb_button:active .fb_button_text,
+.fb_button_rtl:active .fb_button_text{border-bottom:solid 1px #29447e;border-top:solid 1px #45619d;background:#4f6aa3;text-shadow:none}
+.fb_button_xlarge,
+.fb_button_xlarge_rtl{background-position:left -60px;font-size:24px;line-height:30px}
+.fb_button_xlarge .fb_button_text{padding:3px 8px 3px 12px;margin-left:38px}
+a.fb_button_xlarge:active{background-position:left -99px}
+.fb_button_xlarge_rtl{background-position:right -268px}
+.fb_button_xlarge_rtl .fb_button_text{padding:3px 8px 3px 12px;margin-right:39px}
+a.fb_button_xlarge_rtl:active{background-position:right -307px}
+.fb_button_large,
+.fb_button_large_rtl{background-position:left -138px;font-size:13px;line-height:16px}
+.fb_button_large .fb_button_text{margin-left:24px;padding:2px 6px 4px 6px}
+a.fb_button_large:active{background-position:left -163px}
+.fb_button_large_rtl{background-position:right -346px}
+.fb_button_large_rtl .fb_button_text{margin-right:25px}
+a.fb_button_large_rtl:active{background-position:right -371px}
+.fb_button_medium,
+.fb_button_medium_rtl{background-position:left -188px;font-size:11px;line-height:14px}
+a.fb_button_medium:active{background-position:left -210px}
+.fb_button_medium_rtl{background-position:right -396px}
+.fb_button_text_rtl,
+.fb_button_medium_rtl .fb_button_text{padding:2px 6px 3px 6px;margin-right:22px}
+a.fb_button_medium_rtl:active{background-position:right -418px}
+.fb_button_small,
+.fb_button_small_rtl{background-position:left -232px;font-size:10px;line-height:10px}
+.fb_button_small .fb_button_text{padding:2px 6px 3px;margin-left:17px}
+a.fb_button_small:active,
+.fb_button_small:active{background-position:left -250px}
+.fb_button_small_rtl{background-position:right -440px}
+.fb_button_small_rtl .fb_button_text{padding:2px 6px;margin-right:18px}
+a.fb_button_small_rtl:active{background-position:right -458px}
+.fb_share_count_wrapper{position:relative;float:left}
+.fb_share_count{background:#b0b9ec none repeat scroll 0 0;color:#333;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;text-align:center}
+.fb_share_count_inner{background:#e8ebf2;display:block}
+.fb_share_count_right{margin-left:-1px;display:inline-block}
+.fb_share_count_right .fb_share_count_inner{border-top:solid 1px #e8ebf2;border-bottom:solid 1px #b0b9ec;margin:1px 1px 0 1px;font-size:10px;line-height:10px;padding:2px 6px 3px;font-weight:bold}
+.fb_share_count_top{display:block;letter-spacing:-1px;line-height:34px;margin-bottom:7px;font-size:22px;border:solid 1px #b0b9ec}
+.fb_share_count_nub_top{border:none;display:block;position:absolute;left:7px;top:35px;margin:0;padding:0;width:6px;height:7px;background-repeat:no-repeat;background-image:url(http://m-static.ak.fbcdn.net/rsrc.php/v2/yP/x/bSOHtKbCGYI.png)}
+.fb_share_count_nub_right{border:none;display:inline-block;padding:0;width:5px;height:10px;background-repeat:no-repeat;background-image:url(http://m-static.ak.fbcdn.net/rsrc.php/v2/yL/x/i_oIVTKMYsL.png);vertical-align:top;background-position:right 5px;z-index:10;left:2px;margin:0 2px 0 0;position:relative}
+.fb_share_no_count{display:none}
+.fb_share_size_Small .fb_share_count_right .fb_share_count_inner{font-size:10px}
+.fb_share_size_Medium .fb_share_count_right .fb_share_count_inner{font-size:11px;padding:2px 6px 3px;letter-spacing:-1px;line-height:14px}
+.fb_share_size_Large .fb_share_count_right .fb_share_count_inner{font-size:13px;line-height:16px;padding:2px 6px 4px;font-weight:normal;letter-spacing:-1px}
+.fb_share_count_hidden .fb_share_count_nub_top,
+.fb_share_count_hidden .fb_share_count_top,
+.fb_share_count_hidden .fb_share_count_nub_right,
+.fb_share_count_hidden .fb_share_count_right{visibility:hidden}
+.fb_connect_bar_container div,
+.fb_connect_bar_container span,
+.fb_connect_bar_container a,
+.fb_connect_bar_container img,
+.fb_connect_bar_container strong{background:none;border-spacing:0;border:0;direction:ltr;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;vertical-align:baseline}
+.fb_connect_bar_container{position:fixed;left:0 !important;right:0 !important;height:42px !important;padding:0 25px !important;margin:0 !important;vertical-align:middle !important;border-bottom:1px solid #333 !important;background:#3b5998 !important;z-index:99999999 !important;overflow:hidden !important}
+.fb_connect_bar_container_ie6{position:absolute;top:expression(document.compatMode=="CSS1Compat"? document.documentElement.scrollTop+"px":body.scrollTop+"px")}
+.fb_connect_bar{position:relative;margin:auto;height:100%;width:100%;padding:6px 0 0 0 !important;background:none;color:#fff !important;font-family:"lucida grande", tahoma, verdana, arial, sans-serif !important;font-size:13px !important;font-style:normal !important;font-variant:normal !important;font-weight:normal !important;letter-spacing:normal !important;line-height:1 !important;text-decoration:none !important;text-indent:0 !important;text-shadow:none !important;text-transform:none !important;white-space:normal !important;word-spacing:normal !important}
+.fb_connect_bar a:hover{color:#fff}
+.fb_connect_bar .fb_profile img{height:30px;width:30px;vertical-align:middle;margin:0 6px 5px 0}
+.fb_connect_bar div a,
+.fb_connect_bar span,
+.fb_connect_bar span a{color:#bac6da;font-size:11px;text-decoration:none}
+.fb_connect_bar .fb_buttons{float:right;margin-top:7px}
+.fb_edge_widget_with_comment{position:relative;*z-index:1000}
+.fb_edge_widget_with_comment span.fb_edge_comment_widget{position:absolute}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget{z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget .FB_Loader{left:0;top:1px;margin-top:6px;margin-left:0;background-position:50% 50%;background-color:#fff;height:150px;width:394px;border:1px #666 solid;border-bottom:2px solid #283e6c;z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.dark .FB_Loader{background-color:#000;border-bottom:2px solid #ccc}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.siderender
+.FB_Loader{margin-top:0}
+.fbpluginrecommendationsbarleft,
+.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}
+/* @noflip */
+.fbpluginrecommendationsbarleft{left:10px}
+/* @noflip */
+.fbpluginrecommendationsbarright{right:10px}</style><style type="text/css">a.PIN_1358098428597_pin_it_button {  background-image: url(http://passets-cdn.pinterest.com/images/pidgets/bps1.png)!important; background-repeat: none!important; background-size: 40px 60px!important; display: inline-block!important; height: 20px!important; margin: 0!important; position: relative!important; padding: 0!important; vertical-align: baseline!important; text-decoration: none!important; width: 40px!important; background-position: 0 -20px }
+a.PIN_1358098428597_pin_it_button:hover { background-position: 0 0px}
+a.PIN_1358098428597_pin_it_button:active, a.PIN_1358098428597_pin_it_button.PIN_1358098428597_hazClick { background-position: 0 -40px}
+a.PIN_1358098428597_pin_it_button span.PIN_1358098428597_pin_it_button_count { position: absolute!important; color: #777!important; text-align: center!important;  }
+a.PIN_1358098428597_pin_it_above span.PIN_1358098428597_pin_it_button_count { background: transparent url(http://passets-cdn.pinterest.com/images/pidgets/fpa1.png) 0 0 no-repeat!important; background-size: 40px 29px!important; position: absolute!important; bottom: 21px!important; left: 0px!important; height: 29px!important; width: 40px!important; font: 12px Arial, Helvetica, sans-serif!important; line-height: 24px!important; }
+a.PIN_1358098428597_pin_it_beside span.PIN_1358098428597_pin_it_button_count, a.PIN_1358098428597_pin_it_beside span.PIN_1358098428597_pin_it_button_count i { background-color: transparent!important; background-repeat: no-repeat!important; background-image: url(http://passets-cdn.pinterest.com/images/pidgets/fpb1.png)!important; }
+a.PIN_1358098428597_pin_it_beside span.PIN_1358098428597_pin_it_button_count { padding: 0 3px 0 10px!important; background-size: 45px 20px!important; background-position: 0 0!important; position: absolute!important; top: 0!important; left: 41px!important; height: 20px!important; font: 10px Arial, Helvetica, sans-serif!important; line-height: 20px!important; }
+a.PIN_1358098428597_pin_it_beside span.PIN_1358098428597_pin_it_button_count i { background-position: 100% 0!important; position: absolute!important; top: 0!important; right: -2px!important; height: 20px!important; width: 2px!important; }
+a.PIN_1358098428597_pin_it_button.PIN_1358098428597_pin_it_above { margin-top: 20px!important; }
+a.PIN_1358098428597_follow_me_button, a.PIN_1358098428597_follow_me_button i { background: transparent url(http://passets-cdn.pinterest.com/images/pidgets/bfs1.png) 0 0 no-repeat }
+a.PIN_1358098428597_follow_me_button { color: #444!important; display: inline-block!important; font: bold normal normal 11px/20px "Helvetica Neue",helvetica,arial,san-serif!important; height: 20px!important; margin: 0!important; padding: 0!important; position: relative!important; text-decoration: none!important; text-indent: 19px!important; vertical-align: baseline!important;}
+a.PIN_1358098428597_follow_me_button:hover { background-position: 0 -20px}
+a.PIN_1358098428597_follow_me_button:active  { background-position: 0 -40px}
+a.PIN_1358098428597_follow_me_button b { position: absolute!important; top: 3px!important; left: 3px!important; height: 14px!important; width: 14px!important; background-size: 14px 14px!important; background-image: url(http://passets-cdn.pinterest.com/images/pidgets/log1.png)!important; }
+a.PIN_1358098428597_follow_me_button i { position: absolute!important; top: 0!important; right: -4px!important; height: 20px!important; width: 4px!important; background-position: 100% 0px!important; }
+a.PIN_1358098428597_follow_me_button:hover i { background-position: 100% -20px!important;  }
+a.PIN_1358098428597_follow_me_button:active i { background-position: 100% -40px!important; }
+span.PIN_1358098428597_embed_pin { display: inline-block!important; padding: 15px 0!important; text-align: center!important; width: 225px!important; }
+span.PIN_1358098428597_embed_pin.PIN_1358098428597_fancy { background: #fff!important; box-shadow: 0 0 3px #aaa!important; border-radius: 3px!important; }
+span.PIN_1358098428597_embed_pin a.PIN_1358098428597_embed_pin_link { display: block!important;  margin: 0 auto 10px!important; padding: 0!important; position: relative!important;  line-height: 0!important;}
+span.PIN_1358098428597_embed_pin a.PIN_1358098428597_embed_pin_link img.PIN_1358098428597_embed_pin_img { box-shadow: 0 0 1px #aaa!important; margin: 0!important;}
+span.PIN_1358098428597_embed_pin a.PIN_1358098428597_embed_pin_link img.PIN_1358098428597_embed_pin_video { left: 50%!important; margin-left: -25px!important; margin-top: -25px!important; position: absolute!important; top: 50%!important; }
+span.PIN_1358098428597_embed_pin span.PIN_1358098428597_embed_pin_attrib, span.PIN_1358098428597_embed_pin span.PIN_1358098428597_embed_pin_description { display: block!important; font: normal 11px/14.85px "Helvetica Neue", arial, sans-serif!important; margin: 0 15px!important; text-align: left!important; }
+span.PIN_1358098428597_embed_pin span.PIN_1358098428597_embed_pin_attrib { color: #ad9c9c!important; margin-bottom: 10px!important; height: 16px!important; line-height: 16px!important;}
+span.PIN_1358098428597_embed_pin span.PIN_1358098428597_embed_pin_attrib a.PIN_1358098428597_embed_pin_attrib_author { color: #ad9c9c!important; font-weight: bold!important; text-decoration: none!important; }
+span.PIN_1358098428597_embed_pin span.PIN_1358098428597_embed_pin_attrib a.PIN_1358098428597_embed_pin_attrib_author:hover { text-decoration: underline!important; }
+span.PIN_1358098428597_embed_pin span.PIN_1358098428597_embed_pin_attrib img.PIN_1358098428597_embed_pin_attrib_icon { margin: 0 5px 0 0!important; height: 16px!important; width: 16px!important; vertical-align: middle!important; display: inline-block!important; }
+span.PIN_1358098428597_embed_board { display: inline-block!important; margin: 0!important; padding:10px 0!important; position: relative!important; text-align: center}
+span.PIN_1358098428597_embed_board.PIN_1358098428597_fancy { background: #fff!important; box-shadow: 0 0 3px #aaa!important; border-radius: 3px!important; }
+span.PIN_1358098428597_embed_board span.PIN_1358098428597_embed_board_hd { display: block!important; margin: 0 10px!important; padding: 0!important; line-height: 20px!important; height: 25px!important; position: relative!important;  }
+span.PIN_1358098428597_embed_board span.PIN_1358098428597_embed_board_hd a { cursor: pointer!important; background: inherit!important; text-decoration: none!important; width: 48%!important; white-space: nowrap!important; position: absolute!important; top: 0!important; overflow: hidden!important;  text-overflow: ellipsis!important; }
+span.PIN_1358098428597_embed_board span.PIN_1358098428597_embed_board_hd a:hover { text-decoration: none!important; background: inherit!important; }
+span.PIN_1358098428597_embed_board span.PIN_1358098428597_embed_board_hd a:active { text-decoration: none!important; background: inherit!important; }
+span.PIN_1358098428597_embed_board span.PIN_1358098428597_embed_board_hd a.PIN_1358098428597_embed_board_title { width: 100%!important; position: absolute!important; left: 0!important; text-align: left!important; font-family: Georgia!important; font-size: 16px!important; color:#2b1e1e!important;}
+span.PIN_1358098428597_embed_board span.PIN_1358098428597_embed_board_hd a.PIN_1358098428597_embed_board_name { position: absolute!important; left: 0!important; text-align: left!important; font-family: Georgia!important; font-size: 16px!important; color:#2b1e1e!important;}
+span.PIN_1358098428597_embed_board span.PIN_1358098428597_embed_board_hd a.PIN_1358098428597_embed_board_author { position: absolute!important; right: 0!important; text-align: right!important; font-family: Helvetica!important; font-size: 11px!important; color: #746d6a!important; font-weight: bold!important;}
+span.PIN_1358098428597_embed_board span.PIN_1358098428597_embed_board_hd a.PIN_1358098428597_embed_board_author::before { content:"by "!important; font-weight: normal!important; }
+span.PIN_1358098428597_embed_board span.PIN_1358098428597_embed_board_bd { display:block!important; margin: 0 10px!important; overflow: hidden!important; border-radius: 2px!important; position: relative!important; }
+span.PIN_1358098428597_embed_board span.PIN_1358098428597_embed_board_bd a.PIN_1358098428597_embed_board_th { cursor: pointer!important; display: inline-block!important; position: absolute!important; overflow: hidden!important; }
+span.PIN_1358098428597_embed_board span.PIN_1358098428597_embed_board_bd a.PIN_1358098428597_embed_board_th::before { position: absolute!important; content:""!important; z-index: 2!important; top: 0!important; left: 0!important; right: 0!important; bottom: 0!important; box-shadow: inset 0 0 2px #888!important; }
+span.PIN_1358098428597_embed_board span.PIN_1358098428597_embed_board_bd a.PIN_1358098428597_embed_board_th img.PIN_1358098428597_embed_board_img { position: absolute!important; top: 50%!important; left: 0!important; }
+a.PIN_1358098428597_embed_board_ft { text-shadow: 0 1px #fff!important; display: block!important; text-align: center!important; border: 1px solid #ccc!important; margin: 10px 10px 0!important; height: 31px!important; line-height: 30px!important;border-radius: 2px!important; text-decoration: none!important; font-family: Helvetica!important; font-weight: bold!important; font-size: 13px!important; color: #746d6a!important; background: #f4f4f4 url(http://passets-cdn.pinterest.com/images/pidgets/board_button_link.png) 0 0 repeat-x}
+a.PIN_1358098428597_embed_board_ft:hover { text-decoration: none!important; background: #fefefe url(http://passets-cdn.pinterest.com/images/pidgets/board_button_hover.png) 0 0 repeat-x}
+a.PIN_1358098428597_embed_board_ft:active { text-decoration: none!important; background: #e4e4e4 url(http://passets-cdn.pinterest.com/images/pidgets/board_button_active.png) 0 0 repeat-x}
+a.PIN_1358098428597_embed_board_ft span.PIN_1358098428597_embed_board_ft_logo { vertical-align: top!important; display: inline-block!important; margin-left: 2px!important; height: 30px!important; width: 66px!important; background: transparent url(http://passets-cdn.pinterest.com/images/pidgets/board_button_logo.png) 50% 48% no-repeat!important; }
+.PIN_1358098428597_hidden { display:none!important; }</style></head>
+
+	<body class="single single-post postid-59444 single-format-standard typekit-enabled highlander-enabled highlander-light">
+
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<div class="pull-left">
+						<ul class="nav">
+							<li class="active"><a href="http://makezine.com/">MAKE</a></li>
+							<li class=""><a href="http://blog.makezine.com/">Blog</a></li>
+							<li class=""><a href="http://makezine.com/magazine">Magazine</a></li>
+							<li class=""><a href="http://makerfaire.com/">Maker Faire</a></li>
+							<li class=""><a href="http://makeprojects.com/">Make: Projects</a></li>
+							<li class=""><a href="http://makershed.com/">Maker Shed</a></li>
+							<li class=""><a href="http://kits.makezine.com/">Kits</a></li>
+						</ul>
+					</div>
+					<div class="pull-right">
+						<form action="http://blog.makezine.com/search/" class="form navbar-search">
+							<input class="span2 search-query" name="q" placeholder="" type="text">
+							<input class="btn btn-primary" style="height: 28px;" value="Search" type="submit">
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="fix">
+
+			<div id="header">
+				
+				<div class="container">
+					
+					<div class="row">
+
+						<div class="span topad">
+							
+							<!-- Beginning Sync AdSlot 1 for Ad unit header ### size: [[728,90]]  -->
+							<div id="div-gpt-ad-664089004995786621-1">
+								<script type="text/javascript">
+									googletag.display('div-gpt-ad-664089004995786621-1');
+								</script><script type="text/javascript" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/ads"></script><div id="div-gpt-ad-664089004995786621-1_ad_container"><!-- FM Leaderboard 1 Zone -->
+<script type="text/javascript" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/274.js"></script><script type="text/javascript" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/a_008.js"></script><!-- FM c-49859 p-161237 b-73306 --><script type="text/javascript" language="JavaScript" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/274"></script><a href="https://remnant.fmpub.net/click/73304?r=http://www.makershed.com/?Click=19210" target="_blank" onmouseover="self.status='http://www.makershed.com/?Click=19210'; return true;" onmouseout="self.status='';return true;"><img src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/mshed_make_728X90.gif" alt="" title="" border="0" height="90" width="728"></a>
+
+
+<script type="text/javascript" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/surly.js"></script><img style="margin: 0pt; padding: 0pt;" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/4.gif" id="bap-pixel-14437" border="0" height="0" width="0"><script>(function(){if(d.getElementById('ba.js'))return;d.write('<sc'+'ript id="ba.js" type="text/javascript" src="http://c.betrad.com/geo/ba.js?r756"></scr'+'ipt>');})();</script><script id="ba.js" type="text/javascript" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/ba.js"></script><script>d.write('<sc'+'ript>try{BAP.start(_bao);}catch(e){var _bab = _bab||[];var ob={}; for (var p in _bao) {ob[p]=_bao[p]}_bab.push(ob);}</sc'+'ript>');</script><script>try{BAP.start(_bao);}catch(e){var _bab = _bab||[];var ob={}; for (var p in _bao) {ob[p]=_bao[p]}_bab.push(ob);}</script><div style="position:absolute;left:0px;top:0px;visibility:hidden;"><img src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/view.gif" alt="" style="width: 0px; height: 0px;" height="0" width="0"></div><script type="text/javascript" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/makezine"></script><script type="text/javascript" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/blog_wijits"></script><script src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/lite.js"></script><script src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/ip.htm"></script>
+<!-- FM Leaderboard 1 Zone -->
+
+</div>
+
+							</div>
+							<!-- End AdSlot 1 -->
+							
+						</div>
+
+						<div class="biggins">
+
+							<a href="https://readerservices.makezine.com/mk/subscribe.aspx?PC=MK&amp;PK=M3ANEWT"><img data-lazy-loaded="true" style="display: inline;" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/new_subscribe1.png" class="attachment-house-ad wp-post-image" alt="Subscribe to MAKE magazine!" height="170" width="279"><noscript><img width="279" height="170" src="http://makezineblog.files.wordpress.com/2012/10/new_subscribe1.png?w=279&amp;h=170&amp;crop=1" class="attachment-house-ad wp-post-image" alt="Subscribe to MAKE magazine!" /></noscript></a>
+						</div>
+
+					</div>
+
+					<div class="clear"></div>
+
+					<h1><a href="http://makezine.com/"><img src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/make.png" alt="MAKE" title="MAKE"></a></h1>
+
+					<ul class="navi">
+						
+						<li class="active"><a href="http://blog.makezine.com/">Blog</a></li>
+						<li><a href="http://makezine.com/magazine">Magazine</a></li>
+						<li><a href="http://makeprojects.com/">Projects</a></li>
+						<li><a href="http://kits.makezine.com/">Reviews</a></li>
+						<li><a href="http://makershed.com/">Shop</a></li>
+
+					</ul>
+
+				</div>
+
+			</div>
+
+			<div class="header-bottom">
+
+				<div class="container">
+
+					<div class="topics">
+
+						<h5 class="blue">Hot Topics:</h5>
+
+						<ul class="terms">
+	<li><a href="http://blog.makezine.com/arduino/">Arduino</a></li>
+	<li><a href="http://blog.makezine.com/volume/make-ultimate-guide-to-3d-printing/">3D Printing Guide</a></li>
+	<li><a href="http://blog.makezine.com/category/electronics/raspberry-pi/">Raspberry Pi</a></li>
+	<li><a href="http://blog.makezine.com/craftzine">Craft</a></li>
+        <li><a href="http://blog.makezine.com/category/maker-pro/">Maker Pro</a></li>
+	<li><a href="http://blog.makezine.com/kids">Kids &amp; Family</a></li>
+</ul>
+					</div>
+
+					<div class="pull-right">
+
+						<a href="http://blog.makezine.com/topics"><img src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/see_all_topics.png" alt="See All Topics" class="see pull-right"></a><!--  -->
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div><img src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/pixel.gif" height="0" width="0">
+		
+		<div class="clear"></div>
+
+		<div class="sand">
+
+			<div class="container">
+
+				<div class="row">
+
+					<div class="span8">
+
+						<ul class="breadcrumb">
+		
+							<!-- Breadcrumb NavXT 3.1.0 -->
+<li><a title="Go to Home." href="http://blog.makezine.com/">Home</a></li><span class="divider">&nbsp;/&nbsp;</span><a title="Go to the Projects, Hacks &amp; Mods category archives." href="http://blog.makezine.com/category/projects-hacks-mods/">Projects, Hacks &amp; Mods</a><span class="divider">&nbsp;/&nbsp;</span><a title="Go to the Hacks category archives." href="http://blog.makezine.com/category/projects-hacks-mods/hacks/">Hacks</a><span style="display: none;" class="divider">&nbsp;/&nbsp;</span><li style="display: none;" class="current">Hacking the Wiimote IR&nbsp;camera</li>									
+						</ul>
+
+						<div class="content">
+
+
+							 			
+								<article class="post-59444 post type-post status-publish format-standard hentry category-arduino category-hacks">
+
+									<!--<p class="categories"><a href="http://blog.makezine.com/category/microcontrollers-2/arduino/" title="View all posts in Arduino" rel="category tag">Arduino</a>, <a href="http://blog.makezine.com/category/projects-hacks-mods/hacks/" title="View all posts in Hacks" rel="category tag">Hacks</a></p>-->
+
+									<h1><a href="http://blog.makezine.com/2008/11/22/hacking-the-wiimote-ir-ca/">Hacking the Wiimote IR&nbsp;camera</a></h1>
+
+									<p class="meta top">By <a href="http://blog.makezine.com/author/jstriegel/" title="Posts by jstriegel" rel="author">jstriegel</a> , 2008/11/22 @ 7:51 pm</p>
+
+									<div class="social"></div>
+
+									<div class="sharedaddy sd-sharing-enabled">
+<div class="robots-nocontent sd-block sd-social sd-social-official sd-sharing">
+<h3 class="sd-title">Share this:</h3>
+<div class="sd-content">
+<ul>
+<li class="share-stumbleupon">
+<div class="stumbleupon_button"><iframe src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/a_002.htm" style="border: medium none; overflow: hidden; width: 74px; height: 18px;" allowtransparency="true" frameborder="0" scrolling="no"></iframe></div>
+</li>
+<li class="share-google-plus-1">
+<div class="googleplus1_button">
+<div id="___plusone_0" style="height: 20px; width: 90px; display: inline-block; text-indent: 0pt; margin: 0pt; padding: 0pt; background: none repeat scroll 0% 0% transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline;"><iframe title="+1" data-gapiattached="true" allowtransparency="true" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/fastbutton.htm" name="I0_1358098414973" id="I0_1358098414973" vspace="0" tabindex="0" style="position: static; top: 0pt; width: 90px; margin: 0px; border-style: none; left: 0pt; visibility: visible; height: 20px;" marginwidth="0" marginheight="0" hspace="0" frameborder="0" scrolling="no" width="100%"></iframe></div>
+</div>
+</li>
+<li class="share-twitter">
+<div class="twitter_button"><iframe allowtransparency="true" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/tweet_button_002.htm" style="width: 101px; height: 20px;" frameborder="0" scrolling="no"></iframe></div>
+</li>
+<li class="share-facebook">
+<div class="like_button"><iframe src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/like_002.htm" style="border: medium none; overflow: hidden; width: 96px; height: 21px;" allowtransparency="true" frameborder="0" scrolling="no"></iframe></div>
+</li>
+<li class="share-pinterest">
+<div class="pinterest_button"><a data-pin-config="beside" data-pin-aha="button_pinit" class="PIN_1358098428597_pin_it_button PIN_1358098428597_pin_it_beside" href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fblog.makezine.com%2Farchive%2F2008%2F11%2Fhacking-the-wiimote-ir-ca.html&amp;description=Hacking%20the%20Wiimote%20IR%20camera&amp;media=http%3A%2F%2Fmakezine.com%2Fhackszine%2Fwiimoteir_20081122.jpg"><span id="PIN_1358098428597_pin_count_0" class="PIN_1358098428597_hidden"><i></i></span></a></div>
+</li>
+<li><a href="#" class="sharing-anchor sd-button share-more"><span>More</span></a></li>
+<li class="share-end"></li>
+</ul>
+<div class="sharing-hidden">
+<div class="inner" style="display: none;">
+<ul>
+<li class="share-email share-service-visible"><a rel="nofollow" class="share-email sd-button" href="http://blog.makezine.com/archive/2008/11/hacking-the-wiimote-ir-ca.html?share=email&amp;nb=1" target="_blank" title="Click to email this to a friend"><span>Email</span></a></li>
+<li class="share-reddit">
+<div class="reddit_button"><iframe src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/button1_002.htm" frameborder="0" height="22" scrolling="no" width="120"></iframe></div>
+</li>
+<li class="share-end"></li>
+<li class="share-tumblr"><a target="_blank" href="http://www.tumblr.com/share/link/?url=http%3A%2F%2Fblog.makezine.com%2Farchive%2F2008%2F11%2Fhacking-the-wiimote-ir-ca.html&amp;name=Hacking%20the%20Wiimote%20IR%20camera" title="Share on Tumblr" style="display: inline-block; text-indent: -9999px; overflow: hidden; width: 62px; height: 20px; background: url(&quot;http://platform.tumblr.com/v1/share_2.png&quot;) no-repeat scroll left top transparent;">Share on Tumblr</a></li>
+<li class="share-digg">
+<div class="digg_button"><span class="db-wrapper db-clear db-compact"><span><span class="db-container db-submit"><span class="db-body db-compact"><span class="db-count"></span><span class="db-copy"></span><a class="db-anchor">digg</a></span></span></span></span></div>
+</li>
+<li class="share-end"></li>
+<li class="share-end"></li>
+</ul>
+</div>
+</div>
+<div class="sharing-clear"></div>
+</div>
+</div>
+</div>
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><img data-lazy-loaded="true" alt="wiimoteir_20081122.jpg" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/wiimoteir_20081122.htm" class="mt-image-none" style="display: inline;" height="225" width="600"><noscript><img alt="wiimoteir_20081122.jpg" src="http://makezine.com/hackszine/wiimoteir_20081122.jpg" width="600" height="225" class="mt-image-none" style="" /></noscript></span></p>
+<p>You can connect to the Wii remote over bluetooth or use an Arduino to
+ send peripheral data to the Wiimote, but what if you want to interface 
+directly with the Wiimote’s IR camera?  The sensor is particularly good 
+at tracking coordinates for 1 to 4 points—it could be a simple way to 
+add sophisticated tracking capabilities to your own project.</p>
+<p>David Cranor writes,</p>
+<blockquote><p>There is a great site about hacking the wiimote IR camera
+ to interface it with a computer – but it’s all in Japanese!  Perhaps 
+you could post these links and see if anybody could translate it?</p>
+<p><a href="http://www.kako.com/neta/2007-001/2007-001.html">This page</a>
+ details how to desolder the camera itself and build a standalone 
+circuit for it so that it can be connected to an I2C bus, and 
+subsequently a computer (i think, anyway – the schematics are in 
+English, and there’s a video).</p>
+<p>And <a href="http://www.kako.com/neta/2008-009/2008-009.html">this page</a> talks about how to connect the camera to an Arduino via some of I2C shield that he’s built.</p>
+<p>I’d really like to have access to this information for my projects, 
+so if somebody would be able to translate these pages, that would be 
+awesome!</p></blockquote>
+<p>A quick run through Google’s Japanese to English translator yielded a reasonably understandable result:</p>
+<p><a href="http://translate.google.com/translate?u=http%3A%2F%2Fwww.kako.com%2Fneta%2F2007-001%2F2007-001.html&amp;hl=en&amp;ie=UTF-8&amp;sl=ja&amp;tl=en">Wii IR sensor connection details</a><br>
+<a href="http://translate.google.com/translate?u=http%3A%2F%2Fwww.kako.com%2Fneta%2F2008-009%2F2008-009.html&amp;hl=en&amp;ie=UTF-8&amp;sl=ja&amp;tl=en">Connecting the Wii IR sensor to Arduino</a></p>
+<p>The second link contains a wealth of information on talking to the IR
+ sensor over I2C, including some details on adjusting sensitivity 
+parameters.  The translation is a little rough, but combined with some 
+of the sample code, I think I have the gist of it:</p>
+<p>To initialize the IR camera, you have two options: 1) a simple, 
+default initialization or 2) an initialization that allows you to 
+specify 4 configuration parameters that affect the sensitivity of the 
+device.</p>
+<p><b>Simple Initialization:</b><br>
+Just write the following byte sequences, with a small delay between 
+writes (assumes a successful ACK).  The first byte on each line is the 
+register you are writing to.<br>
+0×30 0×01<br>
+0×30 0×08<br>
+0×06 0×90<br>
+0×08 0xC0<br>
+0x1A 0×40<br>
+0×33 0×33</p>
+<p><b>Initialization with sensitivity setting:</b><br>
+The author defined 5 sensitivity levels, and there are four parameters 
+(p0, p1, p2, p3) that are adjusted for each level.  Here are the 
+settings:</p>
+<p>Level 1: p0 = 0×72, p1 = 0×20, p2 = 0x1F, p3 = 0×03<br>
+Level 2: p0 = 0xC8, p1 = 0×36, p2 = 0×35, p3 = 0×03<br>
+Level 3: p0 = 0xAA, p1 = 0×64, p2 = 0×63, p3 = 0×03<br>
+Level 4: p0 = 0×96, p1 = 0xB4, p2 = 0xB3, p3 = 0×04<br>
+Level 5: p0 = 0×96, p1 = 0xFE, p2 = 0xFE, p3 = 0×05</p>
+<p>Quoting the <a href="http://wiki.wiimoteproject.com/IR_Sensor">Wiimote Wiki IR sensor page</a>, these parameters correspond to:<br>
+p0: MAXSIZE: Maximum blob size. Wii uses values from 0×62 to 0xc8<br>
+p1: GAIN: Sensor Gain. Smaller values = higher gain<br>
+p2: GAINLIMIT: Sensor Gain Limit. Must be less than GAIN for camera to function. No other effect?<br>
+p3: MINSIZE: Minimum blob size. Wii uses values from 3 to 5</p>
+<p>Either pick your own custom settings for the parameters, or choose 
+them from one of the 5 levels above, then send the following data to the
+ device:</p>
+<p>0×30, 0×01<br>
+0×00, 0×02, 0×00, 0×00, 0×71, 0×01, 0×00, p0<br>
+0×07, 0×00, p1<br>
+0x1A, p2, p3<br>
+0×33, 0×03<br>
+0×30, 0×08</p>
+<p>The author also links to the following source, which serves as a helloworld for reading sensor data directly from the IR camera:</p>
+<p><a href="http://www.kako.com/neta/2008-009/wii_remote_ir_sensor_sample.zip">Wii Remote IR sensor test for Arduino</a><br>
+<a href="http://www.kako.com/neta/2008-009/wii_remote_ir_sensor_sample2.zip">Wii Remote IR sensor test  for ATMEGA168</a></p>
+<p>Finally, since the IR sensor is a 3.3v device, you’ll want to do a 
+little voltage conversion before interfacing it directly with a 5v 
+device like your typical Arduino (Arduino Pro users don’t have to do a 
+thing). Sparkfun has a guide for <a href="http://www.sparkfun.com/commerce/tutorial_info.php?tutorials_id=65">using 3.3v electronics with 5v microcontrollers</a>, which should be all you need.  It makes me wonder if anyone sells a pre-built 3.3v shield.</p>
+<p>Hopefully this is all you’ll need to get things working. Make sure to
+ send us a tip if you make something cool using the Wii IR sensor.</p>
+<p><b>Previously:</b><br>
+<a href="http://blog.makezine.com/archive/2007/09/howto_make_a_wiimote_periphera.html">HOWTO: Make a Wiimote peripheral</a><br>
+<a href="http://blog.makezine.com/archive/2007/06/hook_your_wii_nunchuck_up_to_a.html">Hook your Wii nunchuck up to an Arduino</a>
+</p>
+<div id="jp-post-flair" class="sharedaddy sd-like-enabled sd-sharing-enabled"><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-official sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-stumbleupon"><div class="stumbleupon_button"><iframe src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/a_002.htm" style="border: medium none; overflow: hidden; width: 74px; height: 18px;" allowtransparency="true" frameborder="0" scrolling="no"></iframe></div></li><li class="share-google-plus-1"><div class="googleplus1_button"><div id="___plusone_1" style="height: 20px; width: 90px; display: inline-block; text-indent: 0pt; margin: 0pt; padding: 0pt; background: none repeat scroll 0% 0% transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline;"><iframe title="+1" data-gapiattached="true" allowtransparency="true" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/fastbutton_002.htm" name="I1_1358098414982" id="I1_1358098414982" vspace="0" tabindex="0" style="position: static; top: 0pt; width: 90px; margin: 0px; border-style: none; left: 0pt; visibility: visible; height: 20px;" marginwidth="0" marginheight="0" hspace="0" frameborder="0" scrolling="no" width="100%"></iframe></div></div></li><li class="share-twitter"><div class="twitter_button"><iframe allowtransparency="true" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/tweet_button_002.htm" style="width: 101px; height: 20px;" frameborder="0" scrolling="no"></iframe></div></li><li class="share-facebook"><div class="like_button"><iframe src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/like_002.htm" style="border: medium none; overflow: hidden; width: 96px; height: 21px;" allowtransparency="true" frameborder="0" scrolling="no"></iframe></div></li><li class="share-pinterest"><div class="pinterest_button"><a data-pin-config="beside" data-pin-aha="button_pinit" class="PIN_1358098428597_pin_it_button PIN_1358098428597_pin_it_beside" href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fblog.makezine.com%2Farchive%2F2008%2F11%2Fhacking-the-wiimote-ir-ca.html&amp;description=Hacking%20the%20Wiimote%20IR%20camera&amp;media=http%3A%2F%2Fmakezine.com%2Fhackszine%2Fwiimoteir_20081122.jpg"><span id="PIN_1358098428597_pin_count_1" class="PIN_1358098428597_hidden"><i></i></span></a></div></li><li><a href="#" class="sharing-anchor sd-button share-more"><span>More</span></a></li><li class="share-end"></li></ul><div class="sharing-hidden"><div class="inner" style="display: none;"><ul><li class="share-email share-service-visible"><a rel="nofollow" class="share-email sd-button" href="http://blog.makezine.com/archive/2008/11/hacking-the-wiimote-ir-ca.html?share=email&amp;nb=1" target="_blank" title="Click to email this to a friend"><span>Email</span></a></li><li class="share-reddit"><div class="reddit_button"><iframe src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/button1_002.htm" frameborder="0" height="22" scrolling="no" width="120"></iframe></div></li><li class="share-end"></li><li class="share-tumblr"><a target="_blank" href="http://www.tumblr.com/share/link/?url=http%3A%2F%2Fblog.makezine.com%2Farchive%2F2008%2F11%2Fhacking-the-wiimote-ir-ca.html&amp;name=Hacking%20the%20Wiimote%20IR%20camera" title="Share on Tumblr" style="display: inline-block; text-indent: -9999px; overflow: hidden; width: 62px; height: 20px; background: url(&quot;http://platform.tumblr.com/v1/share_2.png&quot;) no-repeat scroll left top transparent;">Share on Tumblr</a></li><li class="share-digg"><div class="digg_button"><span class="db-wrapper db-clear db-compact"><span><span class="db-container db-submit"><span class="db-body db-compact"><span class="db-count"></span><span class="db-copy"></span><a class="db-anchor">digg</a></span></span></span></span></div></li><li class="share-end"></li><li class="share-end"></li></ul></div></div><div class="sharing-clear"></div></div></div></div><div class="wpl-likebox sd-block sd-like"><h3 class="sd-title">Like this:</h3><div class="sd-content"><div id="like-59444" class="wpl-button "><a href="http://blog.makezine.com/archive/2008/11/hacking-the-wiimote-ir-ca.html?like=1&amp;source=post_flair&amp;_wpnonce=0df65f7478" title="I like this." class="like needs-login sd-button" rel="nofollow"><span>Like</span></a></div><div class="wpl-count sd-like-count">Be the first to like this.</div></div></div></div>
+									<div class="clear"></div>
+
+									<div class="row">
+
+										<div class="postmeta">
+		
+											<div class="span-thumb thumbnail">
+											
+												<img data-lazy-loaded="true" style="display: block;" alt="" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/9dea6a9b687880a9e9d5d9c56e0df6f6.jpg" class="avatar avatar-72" height="72" width="72"><noscript><img alt='' src="http://0.gravatar.com/avatar/9dea6a9b687880a9e9d5d9c56e0df6f6?s=72&amp;d=retro&amp;r=G" class='avatar avatar-72' height='72' width='72' /></noscript>											
+											</div>
+											
+											<div class="span-well well">
+											
+												<p>Posted by 
+													<a href="http://blog.makezine.com/author/jstriegel/" title="Posts by jstriegel" rel="author">jstriegel</a> | <a href="http://blog.makezine.com/2008/11/22/hacking-the-wiimote-ir-ca/">Saturday November 22nd, 2008 7:51 PM</a></p>
+												<p>Categories: <a href="http://blog.makezine.com/category/microcontrollers-2/arduino/" title="View all posts in Arduino" rel="category tag">Arduino</a>, <a href="http://blog.makezine.com/category/projects-hacks-mods/hacks/" title="View all posts in Hacks" rel="category tag">Hacks</a> | <a href="http://blog.makezine.com/2008/11/22/hacking-the-wiimote-ir-ca/#comments" title="Comment on Hacking the Wiimote IR&nbsp;camera">7 Comments</a> </p>
+
+											</div>
+
+										</div>
+										
+									</div>
+								
+								<div id="linker_widget"><span class="contextly_above_related">Popular on MAKE</span><ul class="linker_tabs"><li id="linker_tab_interesting" class="active"><a href="javascript:;" onclick="contextly_switch_tab('interesting')"><span>You Might Like</span></a></li><li><span class="contextly_related"><a href="http://contextly.com/">Related Links by Contextly</a></span></li></ul><div id="linker_content_interesting" class="linker_content" style="display: block;"><ul class="link linker_images square45x45"><li><ul class="horizontal-line" style="height: 45px; padding-bottom: 10px;"><li style="width: 53px;"><a class="title" title="MAKE at CES 2013: Lego Previews Mindstorms EV3" href="http://blog.makezine.com/2013/01/11/make-at-ces-2013-lego-previews-mindstorms-ev3/" onmousedown="this.href='http://contextly.com/redirect/?id=fGTeco0mil:59444:247'" onclick="javascript:return(true)"><img src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/2228836_square45x45.jpg"></a><!--[if lte ie 7]><b></b><![endif]--></li><li><a class="title" title="MAKE at CES 2013: Lego Previews Mindstorms EV3" href="http://blog.makezine.com/2013/01/11/make-at-ces-2013-lego-previews-mindstorms-ev3/" onmousedown="this.href='http://contextly.com/redirect/?id=fGTeco0mil:59444:247'" onclick="javascript:return(true)">MAKE at CES 2013: Lego Previews Mindstorms EV3</a><!--[if lte ie 7]><b></b><![endif]--></li></ul></li><li><ul class="horizontal-line" style="height: 45px; padding-bottom: 10px;"><li style="width: 53px;"><a class="title" title="MAKE at CES 2013: Hands on with the Leap Motion Controller" href="http://blog.makezine.com/2013/01/12/make-at-ces-2013-leap-motion-controller-hands-on/" onmousedown="this.href='http://contextly.com/redirect/?id=4c1E3nu0B0:59444:247'" onclick="javascript:return(true)"><img src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/2229881_square45x45.jpg"></a><!--[if lte ie 7]><b></b><![endif]--></li><li><a class="title" title="MAKE at CES 2013: Hands on with the Leap Motion Controller" href="http://blog.makezine.com/2013/01/12/make-at-ces-2013-leap-motion-controller-hands-on/" onmousedown="this.href='http://contextly.com/redirect/?id=4c1E3nu0B0:59444:247'" onclick="javascript:return(true)">MAKE at CES 2013: Hands on with the Leap Motion Controller</a><!--[if lte ie 7]><b></b><![endif]--></li></ul></li><li><ul class="horizontal-line" style="height: 45px; padding-bottom: 10px;"><li style="width: 53px;"><a class="title" title="Raspberry Pi Wardriving Rig" href="http://blog.makezine.com/2013/01/11/raspberry-pi-wardriving-rig/" onmousedown="this.href='http://contextly.com/redirect/?id=FjftDssnMc:59444:247'" onclick="javascript:return(true)"><img src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/2228848_square45x45.jpg"></a><!--[if lte ie 7]><b></b><![endif]--></li><li><a class="title" title="Raspberry Pi Wardriving Rig" href="http://blog.makezine.com/2013/01/11/raspberry-pi-wardriving-rig/" onmousedown="this.href='http://contextly.com/redirect/?id=FjftDssnMc:59444:247'" onclick="javascript:return(true)">Raspberry Pi Wardriving Rig</a><!--[if lte ie 7]><b></b><![endif]--></li></ul></li><li><ul class="horizontal-line" style="height: 45px; padding-bottom: 10px;"><li style="width: 53px;"><a class="title" title="Making as Learning" href="http://blog.makezine.com/2013/01/10/making-as-learning/" onmousedown="this.href='http://contextly.com/redirect/?id=wYLoujVbJU:59444:247'" onclick="javascript:return(true)"><img src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/2228204_square45x45.jpg"></a><!--[if lte ie 7]><b></b><![endif]--></li><li><a class="title" title="Making as Learning" href="http://blog.makezine.com/2013/01/10/making-as-learning/" onmousedown="this.href='http://contextly.com/redirect/?id=wYLoujVbJU:59444:247'" onclick="javascript:return(true)">Making as Learning</a><!--[if lte ie 7]><b></b><![endif]--></li></ul></li><li><ul class="horizontal-line" style="height: 45px; "><li style="width: 53px;"><a class="title" title="MakerBot Changes the Name of Thingiverse to MakerBot Thingiverse" href="http://blog.makezine.com/2013/01/12/makerbot-changes-the-name-of-thingiverse-to-makerbot-thingiverse/" onmousedown="this.href='http://contextly.com/redirect/?id=ru0D8fUTnm:59444:247'" onclick="javascript:return(true)"><img src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/2230282_square45x45.jpg"></a><!--[if lte ie 7]><b></b><![endif]--></li><li><a class="title" title="MakerBot Changes the Name of Thingiverse to MakerBot Thingiverse" href="http://blog.makezine.com/2013/01/12/makerbot-changes-the-name-of-thingiverse-to-makerbot-thingiverse/" onmousedown="this.href='http://contextly.com/redirect/?id=ru0D8fUTnm:59444:247'" onclick="javascript:return(true)">MakerBot Changes the Name of Thingiverse to MakerBot Thingiverse</a><!--[if lte ie 7]><b></b><![endif]--></li></ul></li></ul></div></div></article>
+
+									
+							<div class="breadcrumb">
+								<div class="pull-left">←&nbsp;<a href="http://blog.makezine.com/2008/11/22/make-your-own-hot-sauce/" rel="prev">Make your own hot&nbsp;sauce…</a></div>
+								
+								<div class="pull-right"><a href="http://blog.makezine.com/2008/11/23/best-of-craft-65/" rel="next">Best of&nbsp;CRAFT</a>&nbsp;→ </div>
+								
+								<div class="clear"></div>
+							</div>
+							
+							
+<div class="features well">
+
+<h3>In the <a href="http://www.makershed.com/?Click=107309">Maker Shed</a></h3>
+
+
+	<div class="twenty-five">
+
+	<a href="http://www.makershed.com/ProductDetails.asp?&amp;Click=107309&amp;ProductCode=MKBK2">
+		<img src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/MKBK2-2T.jpg" alt="Make: Electronics Book">	</a>
+	
+	<div class="clear"></div>
+	
+	<div class="blurb">
+	
+		<h4><a href="http://www.makershed.com/ProductDetails.asp?&amp;Click=107309&amp;ProductCode=MKBK2">Make: Electronics Book</a></h4>
+	
+	</div>
+	
+	</div>
+
+
+
+<div class="twenty-five">
+
+	<a href="http://www.makershed.com/ProductDetails.asp?&amp;Click=107309&amp;ProductCode=MKSP11">
+		<img src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/MKSP11-2T.jpg" alt="Arduino Uno Revision 3 (Current Version)">	</a>
+	
+<div class="clear"></div>
+
+<div class="blurb">
+
+	<h4><a href="http://www.makershed.com/ProductDetails.asp?&amp;Click=107309&amp;ProductCode=MKSP11">Arduino Uno Revision 3 (Current Version)</a></h4>
+
+</div>
+
+</div>
+
+
+
+	<div class="twenty-five">
+	
+	<a href="http://www.makershed.com/ProductDetails.asp?&amp;Click=107309&amp;ProductCode=MSGSWS">
+		<img src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/MSGSWS-2T.jpg" alt="Getting Started with Soldering">	</a>
+	
+	<div class="clear"></div>
+	
+	<div class="blurb">
+	
+		<h4><a href="http://www.makershed.com/ProductDetails.asp?&amp;Click=107309&amp;ProductCode=MSGSWS">Getting Started with Soldering</a></h4>
+		
+	</div>
+	
+	</div>
+	
+
+
+<div class="twenty-five">
+
+	<a href="http://www.makershed.com/ProductDetails.asp?&amp;Click=107309&amp;ProductCode=MSTIN2">
+		<img src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/MSTIN2-2T.jpg" alt="Getting Started with Soldering">	</a>
+	
+<div class="clear"></div>
+
+<div class="blurb">
+
+	<h4><a href="http://www.makershed.com/ProductDetails.asp?&amp;Click=107309&amp;ProductCode=MSTIN2">Mintronics: Survival Pack</a></h4>
+	
+</div>
+
+</div>
+
+
+<div class="clear"></div>
+
+</div>
+
+<div class="clear"></div>
+
+						
+							<div class="comments">
+								
+
+<!-- don't display comments on protected posts -->
+			<div id="comments" class="">
+
+
+
+			<h3 id="comments-title">7 Responses to <em>Hacking the Wiimote IR&nbsp;camera</em></h3>
+
+
+			<ol class="commentlist">
+					<li class="comment even thread-even depth-1 highlander-comment" id="li-comment-303776">
+		<div id="comment-303776" class="comment">
+			<div class="comment-meta">
+				<div class="comment-author vcard">
+					<img data-lazy-loaded="true" style="display: block;" alt="" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/0d46bd3b10ca5b1985c3947553552e96.jpg" class="avatar avatar-68" height="68" width="68"><noscript><img alt='' src="http://0.gravatar.com/avatar/0d46bd3b10ca5b1985c3947553552e96?s=68&amp;d=retro&amp;r=G" class='avatar avatar-68' height='68' width='68' /></noscript><span class="fn">David Cranor</span> on <a href="http://blog.makezine.com/2008/11/22/hacking-the-wiimote-ir-ca/#comment-303776"><time pubdate="" datetime="2008-11-23T01:39:28+00:00">November 23rd, 2008 at 1:39 am</time></a> <span class="says">said:</span>
+									</div><!-- .comment-author .vcard -->
+
+				
+			
+
+			<div class="comment-content"><p>Thanks! You guys are awesome!</p>
+<p>-David (:</p>
+</div>
+
+			<div class="reply">
+				<a class="comment-reply-link" href="http://blog.makezine.com/2008/11/22/hacking-the-wiimote-ir-ca/?replytocom=303776#respond" onclick='return addComment.moveForm("comment-303776", "303776", "respond", "59444")'>Reply <span>↓</span></a>			</div><!-- .reply -->
+		<!-- #comment-## -->
+
+	</div></div></li>
+	<li class="comment odd alt thread-odd thread-alt depth-1 highlander-comment" id="li-comment-303777">
+		<div id="comment-303777" class="comment">
+			<div class="comment-meta">
+				<div class="comment-author vcard">
+					<img data-lazy-loaded="true" style="display: block;" alt="" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/a.png" class="avatar avatar-68" height="68" width="68"><noscript><img alt='' src="http://0.gravatar.com/avatar/?s=68&amp;d=retro&amp;r=G" class='avatar avatar-68' height='68' width='68' /></noscript><span class="fn">Evil Paul</span> on <a href="http://blog.makezine.com/2008/11/22/hacking-the-wiimote-ir-ca/#comment-303777"><time pubdate="" datetime="2008-11-23T02:13:43+00:00">November 23rd, 2008 at 2:13 am</time></a> <span class="says">said:</span>
+									</div><!-- .comment-author .vcard -->
+
+				
+			
+
+			<div class="comment-content"><p>Great post Jason. It’s nice to see 
+something a bit meatier for the Arduino fans to play with. I need to do 
+some 3.3v interfacing and this is handy info. </p>
+</div>
+
+			<div class="reply">
+				<a class="comment-reply-link" href="http://blog.makezine.com/2008/11/22/hacking-the-wiimote-ir-ca/?replytocom=303777#respond" onclick='return addComment.moveForm("comment-303777", "303777", "respond", "59444")'>Reply <span>↓</span></a>			</div><!-- .reply -->
+		<!-- #comment-## -->
+
+	</div></div></li>
+	<li class="comment even thread-even depth-1 highlander-comment" id="li-comment-303778">
+		<div id="comment-303778" class="comment">
+			<div class="comment-meta">
+				<div class="comment-author vcard">
+					<img alt="" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/1x1.gif" data-lazy-src="http://0.gravatar.com/avatar/c88d8a99aea49e80f702569bf76dcd24?s=68&amp;d=retro&amp;r=G" class="avatar avatar-68" height="68" width="68"><noscript><img alt='' src="http://0.gravatar.com/avatar/c88d8a99aea49e80f702569bf76dcd24?s=68&amp;d=retro&amp;r=G" class='avatar avatar-68' height='68' width='68' /></noscript><span class="fn">Nicky</span> on <a href="http://blog.makezine.com/2008/11/22/hacking-the-wiimote-ir-ca/#comment-303778"><time pubdate="" datetime="2009-04-15T03:42:51+00:00">April 15th, 2009 at 3:42 am</time></a> <span class="says">said:</span>
+									</div><!-- .comment-author .vcard -->
+
+				
+			
+
+			<div class="comment-content"><p>Does anyone know the part number (or supplier) of the IR camera that is uesed in WII? Or was it developed for WII only?</p>
+</div>
+
+			<div class="reply">
+				<a class="comment-reply-link" href="http://blog.makezine.com/2008/11/22/hacking-the-wiimote-ir-ca/?replytocom=303778#respond" onclick='return addComment.moveForm("comment-303778", "303778", "respond", "59444")'>Reply <span>↓</span></a>			</div><!-- .reply -->
+		<!-- #comment-## -->
+
+	<ul class="children">
+	<li class="comment odd alt depth-2 highlander-comment" id="li-comment-303779">
+		<div id="comment-303779" class="comment">
+			<div class="comment-meta">
+				<div class="comment-author vcard">
+					<img alt="" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/1x1.gif" data-lazy-src="http://2.gravatar.com/avatar/2c40cf463fb415fed577e6a23c887353?s=39&amp;d=retro&amp;r=G" class="avatar avatar-39" height="39" width="39"><noscript><img alt='' src="http://2.gravatar.com/avatar/2c40cf463fb415fed577e6a23c887353?s=39&amp;d=retro&amp;r=G" class='avatar avatar-39' height='39' width='39' /></noscript><span class="fn">Anonymous</span> on <a href="http://blog.makezine.com/2008/11/22/hacking-the-wiimote-ir-ca/#comment-303779"><time pubdate="" datetime="2009-12-30T16:50:05+00:00">December 30th, 2009 at 4:50 pm</time></a> <span class="says">said:</span>
+									</div><!-- .comment-author .vcard -->
+
+				
+			
+
+			<div class="comment-content"><p>I have been looking for this exact 
+same thing too. As far as I found out so far is that I think Foxconn is 
+the OEM reseller (or maker) of the Wiimote camera, and the actual maker 
+of the camera is a company called Pixart. But everything I have found 
+points in the direction of it only being available for the Wii, I have 
+not found a reseller just yet..</p>
+</div>
+
+			<div class="reply">
+				<a class="comment-reply-link" href="http://blog.makezine.com/2008/11/22/hacking-the-wiimote-ir-ca/?replytocom=303779#respond" onclick='return addComment.moveForm("comment-303779", "303779", "respond", "59444")'>Reply <span>↓</span></a>			</div><!-- .reply -->
+		<!-- #comment-## -->
+
+	</div></div></li>
+</ul>
+</div></div></li>
+	<li class="comment even thread-odd thread-alt depth-1 highlander-comment" id="li-comment-412552">
+		<div id="comment-412552" class="comment">
+			<div class="comment-meta">
+				<div class="comment-author vcard">
+					<img alt="" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/1x1.gif" data-lazy-src="http://0.gravatar.com/avatar/fc704a9750ac3dc2a1ee926c9d642348?s=68&amp;d=retro&amp;r=G" class="avatar avatar-68" height="68" width="68"><noscript><img alt='' src="http://0.gravatar.com/avatar/fc704a9750ac3dc2a1ee926c9d642348?s=68&amp;d=retro&amp;r=G" class='avatar avatar-68' height='68' width='68' /></noscript><span class="fn">Mohamed Safaa</span> on <a href="http://blog.makezine.com/2008/11/22/hacking-the-wiimote-ir-ca/#comment-412552"><time pubdate="" datetime="2012-04-05T08:22:11+00:00">April 5th, 2012 at 8:22 am</time></a> <span class="says">said:</span>
+									</div><!-- .comment-author .vcard -->
+
+				
+			
+
+			<div class="comment-content"><p>Hey, I’m working on the same project 
+but using Arduino uno ATMEGA 328, we don’t use I2C as Arduino chip 
+supports 3.3 volt so we connects it directly to the camera and awfully 
+we have no output of the camera, the output of the camera coordinates is
+ just zeros..<br>
+My question here, should I use I2C, or may I use pin 3.3 volt in Arduino?<br>
+Another question if I have LTC 4300A is it an alternative for LTC 4301 L ?<br>
+How to check that Wii camera sensor is still not dead?</p>
+</div>
+
+			<div class="reply">
+				<a class="comment-reply-link" href="http://blog.makezine.com/2008/11/22/hacking-the-wiimote-ir-ca/?replytocom=412552#respond" onclick='return addComment.moveForm("comment-412552", "412552", "respond", "59444")'>Reply <span>↓</span></a>			</div><!-- .reply -->
+		<!-- #comment-## -->
+
+	<ul class="children">
+	<li class="comment odd alt depth-2 highlander-comment" id="li-comment-635548">
+		<div id="comment-635548" class="comment">
+			<div class="comment-meta">
+				<div class="comment-author vcard">
+					<img alt="" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/1x1.gif" data-lazy-src="http://1.gravatar.com/avatar/a6c538c7819fe65b62933cd4e23d2b90?s=39&amp;d=retro&amp;r=G" class="avatar avatar-39" height="39" width="39"><noscript><img alt='' src="http://1.gravatar.com/avatar/a6c538c7819fe65b62933cd4e23d2b90?s=39&amp;d=retro&amp;r=G" class='avatar avatar-39' height='39' width='39' /></noscript><span class="fn">Lucas G</span> on <a href="http://blog.makezine.com/2008/11/22/hacking-the-wiimote-ir-ca/#comment-635548"><time pubdate="" datetime="2012-07-02T11:48:19+00:00">July 2nd, 2012 at 11:48 am</time></a> <span class="says">said:</span>
+									</div><!-- .comment-author .vcard -->
+
+				
+			
+
+			<div class="comment-content"><p>Hey!<br>
+ if I don’t misunderstand what you’re saying… you must use the I2C 
+lines, otherwise… where you will get the data from the sensor?  I think 
+you have to use the I2C lines for data comunication and the 3.3 is the 
+power supply of the sensor, so arduino I2c pins (analog 4 and 5, look at
+ the hardware part on the arduino page for more info) to get data from 
+the sensor (correctly connected, I was looking around, and looks like 
+you need to “reduce” the arduino I2c voltage, as it works with 5v, but 
+maybe i’m wrong so look carefully) and the 3.3 pin on arduino to power 
+up the sensor…<br>
+I hope this can help a bit, sorry if I misunderstood, and just in case 
+(it’s possible that I write no so correct information) read all you can 
+and make sure about it…<br>
+Have a Nice day, and good luck with that!!!</p>
+<p>(sorry for my english… isn’t my “default” language)</p>
+</div>
+
+			<div class="reply">
+				<a class="comment-reply-link" href="http://blog.makezine.com/2008/11/22/hacking-the-wiimote-ir-ca/?replytocom=635548#respond" onclick='return addComment.moveForm("comment-635548", "635548", "respond", "59444")'>Reply <span>↓</span></a>			</div><!-- .reply -->
+		<!-- #comment-## -->
+
+	</div></div></li>
+</ul>
+</div></div></li>
+	<li class="comment even thread-even depth-1 highlander-comment" id="li-comment-420913">
+		<div id="comment-420913" class="comment">
+			<div class="comment-meta">
+				<div class="comment-author vcard">
+					<img alt="" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/1x1.gif" data-lazy-src="http://i0.wp.com/a0.twimg.com/profile_images/1116515973/4510784179_e701e59dc8_t_normal.jpg?resize=68%2C68" class="avatar avatar-68" height="68" width="68"><noscript><img alt='' src="http://i0.wp.com/a0.twimg.com/profile_images/1116515973/4510784179_e701e59dc8_t_normal.jpg?resize=68%2C68" class='avatar avatar-68' height='68' width='68' /></noscript><span class="fn"><a href="http://twitter.com/NewYorkBrass" rel="external nofollow" class="url">Danny Flam (@NewYorkBrass)</a></span> on <a href="http://blog.makezine.com/2008/11/22/hacking-the-wiimote-ir-ca/#comment-420913"><time pubdate="" datetime="2012-04-10T22:52:36+00:00">April 10th, 2012 at 10:52 pm</time></a> <span class="says">said:</span>
+									</div><!-- .comment-author .vcard -->
+
+				
+			
+
+			<div class="comment-content"><p>Been using several cameras on a board
+ i built with a 25mhz resonator and directly to the arduino 5v i2c 
+lines, with 2k pullups (pulldowns really)  to 3.3V with no problem 
+neither on arduino or any other device – even when 3 devices on same 
+bus.</p>
+</div>
+
+			<div class="reply">
+				<a class="comment-reply-link" href="http://blog.makezine.com/2008/11/22/hacking-the-wiimote-ir-ca/?replytocom=420913#respond" onclick='return addComment.moveForm("comment-420913", "420913", "respond", "59444")'>Reply <span>↓</span></a>			</div><!-- .reply -->
+		<!-- #comment-## -->
+
+	</div></div></li>
+			</ol>
+
+
+								<div class="js" id="respond">
+				<h3 id="reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="http://blog.makezine.com/2008/11/22/hacking-the-wiimote-ir-ca/#respond" style="display: none;">Cancel reply</a></small></h3>
+									<form action="http://blog.makezine.com/wp-comments-post.php" method="post" id="commentform">
+																										
+
+
+												
+<input name="hc_post_as" id="hc_post_as" value="guest" type="hidden">
+
+<div class="comment-form-field comment-textarea">
+	
+	<div id="comment-form-comment"><textarea tabindex="-1" style="height: 40px; resize: none; overflow-y: hidden; position: absolute; top: 0px; left: -9999px; width: 576px; line-height: 20px; text-decoration: none; letter-spacing: 0px;" placeholder="Enter your comment here..."></textarea><textarea style="height: 40px; resize: none; overflow-y: hidden;" placeholder="Enter your comment here..." id="comment" name="comment"></textarea></div>
+</div>
+
+<div style="display: none;" id="comment-form-identity">
+
+	<div id="comment-form-nascar">
+		<p>Fill in your details below or click an icon to log in:</p>
+		<ul>
+			<li class="selected" style="display:none;">
+				<a href="#comment-form-guest" id="postas-guest" title="Guest">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="#comment-form-load-service:WordPress.com" id="postas-wordpress" title="WordPress.com">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="#comment-form-load-service:Twitter" id="postas-twitter" title="Twitter">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="#comment-form-load-service:Facebook" id="postas-facebook" title="Facebook">
+					<span></span>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	<div id="comment-form-guest" class="comment-form-service selected">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+<a href="https://gravatar.com/site/signup/" target="_blank">				<img src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/ad516503a11cd5ca435acc9bb6523536.png" alt="Gravatar" class="no-grav" width="25">
+</a>			</div>
+
+				<div class="comment-form-fields">
+				<div class="comment-form-field comment-form-email">
+					<label for="email">Email <span class="required">(required)</span> <span class="nopublish">(Address never made public)</span></label>
+					<div class="comment-form-input"><input id="email" name="email" type="email"></div>
+				</div>
+				<div class="comment-form-field comment-form-author">
+					<label for="author">Name <span class="required">(required)</span></label>
+					<div class="comment-form-input"><input id="author" name="author" type="text"></div>
+				</div>
+				<div class="comment-form-field comment-form-url">
+					<label for="url">Website</label>
+					<div class="comment-form-input"><input id="url" name="url" type="text"></div>
+				</div> 
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-wordpress" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/wplogo.png" alt="WordPress.com Logo" class="no-grav" width="25">
+			</div>
+
+				<div class="comment-form-fields">
+				<input name="wp_avatar" id="wordpress-avatar" class="comment-meta-wordpress" value="" type="hidden">
+				<input name="wp_user_id" id="wordpress-user_id" class="comment-meta-wordpress" value="" type="hidden">
+				<input name="wp_access_token" id="wordpress-access_token" class="comment-meta-wordpress" value="" type="hidden">
+				<p class="comment-form-posting-as pa-wordpress"><strong></strong> You are commenting using your WordPress.com account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout(%20'wordpress'%20);">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-twitter" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/ad516503a11cd5ca435acc9bb6523536.png" alt="Twitter picture" class="no-grav" width="25">
+			</div>
+
+				<div class="comment-form-fields">
+				<input name="twitter_avatar" id="twitter-avatar" class="comment-meta-twitter" value="" type="hidden">
+				<input name="twitter_user_id" id="twitter-user_id" class="comment-meta-twitter" value="" type="hidden">
+				<input name="twitter_access_token" id="twitter-access_token" class="comment-meta-twitter" value="" type="hidden">
+				<p class="comment-form-posting-as pa-twitter"><strong></strong> You are commenting using your Twitter account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout(%20'twitter'%20);">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-facebook" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/ad516503a11cd5ca435acc9bb6523536.png" alt="Facebook photo" class="no-grav" width="25">
+			</div>
+
+				<div class="comment-form-fields">
+				<input name="fb_avatar" id="facebook-avatar" class="comment-meta-facebook" value="" type="hidden">
+				<input name="fb_user_id" id="facebook-user_id" class="comment-meta-facebook" value="" type="hidden">
+				<input name="fb_access_token" id="facebook-access_token" class="comment-meta-facebook" value="" type="hidden">
+				<p class="comment-form-posting-as pa-facebook"><strong></strong> You are commenting using your Facebook account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout(%20'facebook'%20);">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+
+	<div id="comment-form-load-service" class="comment-form-service">
+		<div class="comment-form-posting-as-cancel"><a href="javascript:HighlanderComments.cancelExternalWindow();">Cancel</a></div>
+		<p>Connecting to %s</p>
+	</div>
+	
+	
+</div>
+
+<script type="text/javascript">
+jQuery(document).ready(function(){
+	var input = document.createElement( 'input' ),
+	    comment = jQuery( '#comment' );
+
+	if ( 'placeholder' in input ) {
+		comment.attr( 'placeholder', jQuery( '.comment-textarea label' ).remove().text() );
+	}
+
+	// Expando Mode: start small, then auto-resize on first click + text length
+	jQuery( '#comment-form-identity' ).hide();
+	jQuery( '#comment-form-subscribe' ).hide();
+	jQuery( '#commentform .form-submit' ).hide();
+
+	comment.css( { 'height':'10px' } ).one( 'focus', function() {
+		var timer = setInterval( HighlanderComments.resizeCallback, 10 )
+		jQuery( this ).animate( { 'height': HighlanderComments.initialHeight } ).delay( 100 ).queue( function(n) { clearInterval( timer ); HighlanderComments.resizeCallback(); n(); } );
+		jQuery( '#comment-form-identity' ).slideDown();
+		jQuery( '#comment-form-subscribe' ).slideDown();
+		jQuery( '#commentform .form-submit' ).slideDown();
+	});
+});
+</script>
+
+<div style="display: none;" id="comment-form-subscribe"> 
+	<p class="comment-subscription-form"><input name="subscribe" id="subscribe" value="subscribe" style="width: auto;" tabindex="6" type="checkbox"> <label class="subscribe-label" id="subscribe-label" for="subscribe" style="display: inline;">Notify me of follow-up comments via email.</label></p><p class="post-subscription-form"><input name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto;" tabindex="7" type="checkbox"> <label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog" style="display: inline;">Notify me of new posts via email.</label></p></div>
+
+												<p style="display: none;" class="form-submit">
+							<input name="submit" id="comment-submit" value="Post Comment" type="submit">
+							<input name="comment_post_ID" value="59444" id="comment_post_ID" type="hidden">
+<input name="comment_parent" id="comment_parent" value="0" type="hidden">
+						</p>
+						
+<input name="genseq" value="1358098366" type="hidden">
+<p style="display: none;"><input id="akismet_comment_nonce" name="akismet_comment_nonce" value="4d5bf9197c" type="hidden"></p><script type="text/javascript" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/form.js"></script>
+<p style="display: none;"><input id="ak_js" name="ak_js" value="1358098418113" type="hidden"></p>					</form>
+							</div><!-- #respond -->
+			<div style="clear: both"></div>			
+</div><!-- #comments -->							</div>
+							
+							
+						</div>
+
+					</div>
+
+										<div class="span4 sidebar">
+
+						<div class="sidebar-ad">
+
+							<!-- Beginning Sync AdSlot 2 for Ad unit header ### size: [[300,250]]  -->
+							<div id="div-gpt-ad-664089004995786621-2">
+								<script type="text/javascript">
+									googletag.display('div-gpt-ad-664089004995786621-2');
+								</script><div id="div-gpt-ad-664089004995786621-2_ad_container"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-1711976718738240";
+/* MZ_Blog_300x250 */
+google_ad_slot = "9702824919";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/show_ads.js">
+</script><ins style="display:inline-table;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px"><ins id="aswift_0_anchor" style="display:block;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px"><iframe allowtransparency="true" hspace="0" marginwidth="0" marginheight="0" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){w.location.replace(h)}}" vspace="0" id="aswift_0" name="aswift_0" style="left: 0pt; position: absolute; top: 0pt;" frameborder="0" height="250" scrolling="no" width="300"></iframe></ins></ins>
+
+</div>
+
+							</div>
+							<!-- End AdSlot 2 -->
+
+						</div>
+
+						<div class="blue-box">
+
+							<h3>Get Free Exclusive Content!</h3>
+
+							<form class="form-inline" action="http://makermedia.createsend.com/t/r/s/jjuylk/" method="post" id="subForm">
+								<input name="cm-jjuylk-jjuylk" id="jjuylk-jjuylk" class="input" placeholder="Enter your email" type="text">
+								<button type="submit" class="btn btn-danger">GO!</button>
+							</form>
+
+
+							<p><strong>Join the <span class="red">Make:</span> newsletter and receive exclusive discounts and news!</strong></p>
+
+						</div>
+
+						<div class="categories">
+
+							<div class="row">
+
+								<div class="span2">
+
+									<ul>
+										<li><a href="http://blog.makezine.com/category/art-design/">Art &amp; Design</a></li>
+										<li><a href="http://blog.makezine.com/category/computers-mobile/">Computers &amp; Mobile</a></li>
+										<li><a href="http://blog.makezine.com/category/craft/">Craft</a></li>
+										<li><a href="http://blog.makezine.com/category/desktop-manufacturing-2/">Desktop Manufacturing</a></li>
+										<li><a href="http://blog.makezine.com/category/electronics/">Electronics</a></li>
+										<li><a href="http://blog.makezine.com/category/energy/">Energy</a></li>
+										<li><a href="http://blog.makezine.com/category/events-holidays/">Events &amp; Holidays</a></li>
+										<li><a href="http://blog.makezine.com/category/flight-projectiles/">Flight &amp; Projectiles</a></li>
+										<li><a href="http://blog.makezine.com/category/green/">Green</a></li>
+										<li><a href="http://blog.makezine.com/category/home-and-garden/">Home &amp; Garden</a></li>
+										
+									</ul>
+
+								</div>
+
+								<div class="span2">
+
+									<ul>
+										<li><a href="http://blog.makezine.com/category/imaging/">Imaging</a></li>
+										<li><a href="http://blog.makezine.com/category/kids-family/">Kids</a></li>
+										<li><a href="http://blog.makezine.com/category/makers/">Makers</a></li>
+										<li><a href="http://blog.makezine.com/category/microcontrollers-2/">Microcontrollers</a></li>
+										<li><a href="http://blog.makezine.com/category/recreation-entertainment/">Recreation &amp; Entertainment</a></li>
+										<li><a href="http://blog.makezine.com/category/robotics/">Robots</a></li>
+										<li><a href="http://blog.makezine.com/category/science/">Science</a></li>
+										<li><a href="http://blog.makezine.com/category/shop-craft/">Shop Craft</a></li>
+										<li><a href="http://blog.makezine.com/category/toys_and_games/">Toys &amp; Games</a></li>
+										<li><a href="http://blog.makezine.com/category/workshop-tools/">Workshops &amp; Tools</a></li>
+										<li><a href="http://blog.makezine.com/category/vehicles-2/">Vehicles</a></li>
+									</ul>
+
+								</div>
+
+							</div>
+
+						</div>	
+
+						<div class="new-dotw">
+
+							<a href="http://www.makershed.com/Getting_Started_with_Arduino_Kit_V3_0_p/msgsa.htm?Click=64206"><img data-lazy-loaded="true" style="display: inline;" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/makershedad_dotw_arduinokitnfreepdf.png" class="attachment-ftms-thumb wp-post-image" alt="Makershedad_DOTW_ArduinoKitNfreepdf" height="305" width="300"><noscript><img width="300" height="305" src="http://makezineblog.files.wordpress.com/2013/01/makershedad_dotw_arduinokitnfreepdf.png?w=300" class="attachment-ftms-thumb wp-post-image" alt="Makershedad_DOTW_ArduinoKitNfreepdf" /></noscript></a>
+						</div>
+						
+						<div class="tabbable content">
+							<ul class="nav nav-pills">
+								<li class="active"><a href="#1" data-toggle="tab">Trending</a></li>
+								<li><a href="#2" data-toggle="tab">Shared</a></li>
+								<li class=""><a href="#3" data-toggle="tab">Commented</a></li>
+							</ul>
+							<div class="tab-content">
+								<div class="tab-pane active" id="1">
+									<h3>// What's Trending</h3>
+									<div class="row-fluid item"><div class="span4"><a href="http://blog.makezine.com/2013/01/12/makerbot-changes-the-name-of-thingiverse-to-makerbot-thingiverse/"><img src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/medium_620072fa2db1269e21674c31daa209b84f30d3c0.jpg" class="thumbnail" alt="MakerBot Changes the Name of Thingiverse to MakerBot Thingiverse"></a></div><div class="span8"><h5><a href="http://blog.makezine.com/2013/01/12/makerbot-changes-the-name-of-thingiverse-to-makerbot-thingiverse/">MakerBot Changes the Name of Thingiverse to MakerBot Thingiverse</a></h5><ul class="unstyled"><li>By: moverstreet007</li><li>Hits: <span class="badge badge-info">1900</span></li></ul></div></div><div class="row-fluid item"><div class="span4"><a href="http://blog.makezine.com/craft/paint_chip_rainbow_wall/"><img src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/medium_1240a5506b2a6980618f31d156f36861d0a91367.jpg" class="thumbnail" alt="Paint Chip Rainbow Wall"></a></div><div class="span8"><h5><a href="http://blog.makezine.com/craft/paint_chip_rainbow_wall/">Paint Chip Rainbow Wall</a></h5><ul class="unstyled"><li>By: Arwen O'Reilly Griffith</li><li>Hits: <span class="badge badge-info">1818</span></li></ul></div></div><div class="row-fluid item"><div class="span4"><a href="http://blog.makezine.com/2012/01/19/play-the-rings-of-a-tree-trunk-like-a-record/"><img src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/medium_bbdf6945c5418904b294efabeb0e714aa529bce9.jpg" class="thumbnail" alt="Play the Rings of a Tree Trunk Like a Record"></a></div><div class="span8"><h5><a href="http://blog.makezine.com/2012/01/19/play-the-rings-of-a-tree-trunk-like-a-record/">Play the Rings of a Tree Trunk Like a Record</a></h5><ul class="unstyled"><li>By: Matt Richardson</li><li>Hits: <span class="badge badge-info">1721</span></li></ul></div></div><div class="row-fluid item"><div class="span4"><a href="http://blog.makezine.com/2010/03/08/how-to-cut-a-wine-bottle-in-30-seco/"><img src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/medium_10ed2be33f384f5574e154c6f593ae4499a52f31.jpg" class="thumbnail" alt="How-To: Cut a Wine Bottle in 30 Seconds"></a></div><div class="span8"><h5><a href="http://blog.makezine.com/2010/03/08/how-to-cut-a-wine-bottle-in-30-seco/">How-To: Cut a Wine Bottle in 30 Seconds</a></h5><ul class="unstyled"><li>By: Adam Flaherty</li><li>Hits: <span class="badge badge-info">1660</span></li></ul></div></div><div class="row-fluid item"><div class="span4"><a href="http://blog.makezine.com/2011/03/11/make-projects-doortop-stash/"><img src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/medium_b3457dbb3bf51295f4ae02858a3a71dcbc170ed0.jpg" class="thumbnail" alt="Make: Projects – Doortop Stash"></a></div><div class="span8"><h5><a href="http://blog.makezine.com/2011/03/11/make-projects-doortop-stash/">Make: Projects – Doortop Stash</a></h5><ul class="unstyled"><li>By: Sean Ragan</li><li>Hits: <span class="badge badge-info">1640</span></li></ul></div></div><div class="row-fluid item"><div class="span4"><a href="http://blog.makezine.com/2013/01/11/raspberry-pi-wardriving-rig/"><img src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/medium_bc404cafc057dd57341ef5ce2b88aee6be8bb78a.jpg" class="thumbnail" alt="Raspberry Pi Wardriving Rig"></a></div><div class="span8"><h5><a href="http://blog.makezine.com/2013/01/11/raspberry-pi-wardriving-rig/">Raspberry Pi Wardriving Rig</a></h5><ul class="unstyled"><li>By: John Baichtal</li><li>Hits: <span class="badge badge-info">1306</span></li></ul></div></div><div class="row-fluid item"><div class="span4"><a href="http://blog.makezine.com/2009/06/17/how-to-frabjous-cardboard-geometry/"><img src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/medium_087805e1587b13063a3264abcd4c8491702c8085.jpg" class="thumbnail" alt="How-To: Frabjous Cardboard Geometry Sculpture"></a></div><div class="span8"><h5><a href="http://blog.makezine.com/2009/06/17/how-to-frabjous-cardboard-geometry/">How-To: Frabjous Cardboard Geometry Sculpture</a></h5><ul class="unstyled"><li>By: Becky Stern</li><li>Hits: <span class="badge badge-info">1302</span></li></ul></div></div>								</div>
+								<div class="tab-pane" id="2">
+									<h3>// What's Shared</h3>
+									<div class="row-fluid item"><div class="span4"><a href="http://blog.makezine.com/2012/04/09/9-year-olds-diy-cardboard-arcade/"><img src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/medium_8d92919bd77a70ac858ba939c1857b10fbaf2895.jpg" class="thumbnail" alt="9-Year-Old’s DIY Cardboard Arcade Gets Flashmobbed"></a></div><div class="span8"><h5><a href="http://blog.makezine.com/2012/04/09/9-year-olds-diy-cardboard-arcade/">9-Year-Old’s DIY Cardboard Arcade Gets Flashmobbed</a></h5><ul class="unstyled"><li>By: Mark Frauenfelder</li><li>Shares: <span class="badge badge-info">7974</span></li></ul></div></div><div class="row-fluid item"><div class="span4"><a href="http://blog.makezine.com/2012/01/19/play-the-rings-of-a-tree-trunk-like-a-record/"><img src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/medium_bbdf6945c5418904b294efabeb0e714aa529bce9.jpg" class="thumbnail" alt="Play the Rings of a Tree Trunk Like a Record"></a></div><div class="span8"><h5><a href="http://blog.makezine.com/2012/01/19/play-the-rings-of-a-tree-trunk-like-a-record/">Play the Rings of a Tree Trunk Like a Record</a></h5><ul class="unstyled"><li>By: Matt Richardson</li><li>Shares: <span class="badge badge-info">6247</span></li></ul></div></div><div class="row-fluid item"><div class="span4"><a href="http://blog.makezine.com/2013/01/02/star-wars-barrel-organ-made-of-20000-lego-bricks/"><img src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/medium_bd5251b2eda4f593d9c8cec2c2dbb82c1130cdd5.jpg" class="thumbnail" alt="Star Wars Barrel Organ Made of 20,000 Lego Bricks"></a></div><div class="span8"><h5><a href="http://blog.makezine.com/2013/01/02/star-wars-barrel-organ-made-of-20000-lego-bricks/">Star Wars Barrel Organ Made of 20,000 Lego Bricks</a></h5><ul class="unstyled"><li>By: Goli Mohammadi</li><li>Shares: <span class="badge badge-info">5917</span></li></ul></div></div><div class="row-fluid item"><div class="span4"><a href="http://blog.makezine.com/2012/07/05/how-to-make-a-chocolate-bowl-using-a-balloon/"><img src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/medium_f565566b03695c42a1852afbd63c846b88c0c6e7.jpg" class="thumbnail" alt="How-To: Make a Chocolate Bowl Using a Balloon"></a></div><div class="span8"><h5><a href="http://blog.makezine.com/2012/07/05/how-to-make-a-chocolate-bowl-using-a-balloon/">How-To: Make a Chocolate Bowl Using a Balloon</a></h5><ul class="unstyled"><li>By: Gareth Branwyn</li><li>Shares: <span class="badge badge-info">3717</span></li></ul></div></div><div class="row-fluid item"><div class="span4"><a href="http://blog.makezine.com/2012/08/10/snake-cake-run-for-your-lives/"><img src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/medium_1244bfdb9a9edf4bea134307eb079151d0d71fcf.jpg" class="thumbnail" alt="Snake Cake! Run for Your Lives!"></a></div><div class="span8"><h5><a href="http://blog.makezine.com/2012/08/10/snake-cake-run-for-your-lives/">Snake Cake! Run for Your Lives!</a></h5><ul class="unstyled"><li>By: Gareth Branwyn</li><li>Shares: <span class="badge badge-info">3556</span></li></ul></div></div><div class="row-fluid item"><div class="span4"><a href="http://blog.makezine.com/craft/how-to-bite-sized-gingerbread-houses/"><img src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/medium_9ff8fd49222e6fd5a69bb41c24cc3a689da25642.jpg" class="thumbnail" alt="How-To: Bite-Sized Gingerbread Houses"></a></div><div class="span8"><h5><a href="http://blog.makezine.com/craft/how-to-bite-sized-gingerbread-houses/">How-To: Bite-Sized Gingerbread Houses</a></h5><ul class="unstyled"><li>By: Andrew Salomone</li><li>Shares: <span class="badge badge-info">3425</span></li></ul></div></div><div class="row-fluid item"><div class="span4"><a href="http://blog.makezine.com/2012/12/07/star-wars-snowflakes/"><img src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/medium_aaa48d69646fd3d14a8ae6196e27328a9c953e1d.jpg" class="thumbnail" alt="Star Wars Snowflakes"></a></div><div class="span8"><h5><a href="http://blog.makezine.com/2012/12/07/star-wars-snowflakes/">Star Wars Snowflakes</a></h5><ul class="unstyled"><li>By: Goli Mohammadi</li><li>Shares: <span class="badge badge-info">2904</span></li></ul></div></div>								</div>
+								<div class="tab-pane" id="3">
+									<h3>// Most Commented</h3>
+											<div class="row-fluid item">
+			<div class="span4">
+				<a href="http://blog.makezine.com/2013/01/08/make-asks-cable-management/">
+					<img data-lazy-loaded="true" style="display: block;" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/makeaskssquare.png" class="thumbnail wp-post-image" alt="makeaskssquare" height="70" width="70"><noscript><img width="70" height="70" src="http://makezineblog.files.wordpress.com/2013/01/makeaskssquare.png?w=70&amp;h=70&amp;crop=1" class="thumbnail wp-post-image" alt="makeaskssquare" /></noscript>				</a>
+			</div>
+			<div class="span8">
+				<h5><a href="http://blog.makezine.com/2013/01/08/make-asks-cable-management/">MAKE Asks: Cable&nbsp;Management</a></h5>
+				<ul class="unstyled">
+					<li>By: Michael Colombo</li>
+					<li>Comments: <span class="badge badge-info">20</span></li>
+				</ul>
+			</div>
+		</div>
+			<div class="row-fluid item">
+			<div class="span4">
+				<a href="http://blog.makezine.com/2013/01/12/makerbot-changes-the-name-of-thingiverse-to-makerbot-thingiverse/">
+					<img data-lazy-loaded="true" style="display: block;" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/mbthingiverse_2.jpg" class="thumbnail wp-post-image" alt="MBthingiverse_2" height="70" width="70"><noscript><img width="70" height="70" src="http://makezineblog.files.wordpress.com/2013/01/mbthingiverse_2.jpg?w=70&amp;h=70&amp;crop=1" class="thumbnail wp-post-image" alt="MBthingiverse_2" /></noscript>				</a>
+			</div>
+			<div class="span8">
+				<h5><a href="http://blog.makezine.com/2013/01/12/makerbot-changes-the-name-of-thingiverse-to-makerbot-thingiverse/">MakerBot Changes the Name of Thingiverse to MakerBot&nbsp;Thingiverse</a></h5>
+				<ul class="unstyled">
+					<li>By: Michael Overstreet</li>
+					<li>Comments: <span class="badge badge-info">22</span></li>
+				</ul>
+			</div>
+		</div>
+			<div class="row-fluid item">
+			<div class="span4">
+				<a href="http://blog.makezine.com/2013/01/02/diresta-tool-bag/">
+					<img data-lazy-loaded="true" style="display: block;" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/tool-bag.jpg" class="thumbnail wp-post-image" alt="tool bag" height="70" width="70"><noscript><img width="70" height="70" src="http://makezineblog.files.wordpress.com/2013/01/tool-bag.jpg?w=70&amp;h=70&amp;crop=1" class="thumbnail wp-post-image" alt="tool bag" /></noscript>				</a>
+			</div>
+			<div class="span8">
+				<h5><a href="http://blog.makezine.com/2013/01/02/diresta-tool-bag/">DiResta: Tool&nbsp;Bag</a></h5>
+				<ul class="unstyled">
+					<li>By: Gareth Branwyn</li>
+					<li>Comments: <span class="badge badge-info">18</span></li>
+				</ul>
+			</div>
+		</div>
+			<div class="row-fluid item">
+			<div class="span4">
+				<a href="http://blog.makezine.com/2013/01/08/make-at-ces-2013-makerbot-unveils-replicator-2x-parametric-design-tool/">
+					<img data-lazy-loaded="true" style="display: block;" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/bremakerbot.jpg" class="thumbnail wp-post-image" alt="BreMakerBot" height="70" width="70"><noscript><img width="70" height="70" src="http://makezineblog.files.wordpress.com/2013/01/bremakerbot.jpg?w=70&amp;h=70&amp;crop=1" class="thumbnail wp-post-image" alt="BreMakerBot" /></noscript>				</a>
+			</div>
+			<div class="span8">
+				<h5><a href="http://blog.makezine.com/2013/01/08/make-at-ces-2013-makerbot-unveils-replicator-2x-parametric-design-tool/">MAKE at CES 2013: MakerBot Unveils Replicator 2X and Parametric Design&nbsp;Tool</a></h5>
+				<ul class="unstyled">
+					<li>By: Matt Richardson</li>
+					<li>Comments: <span class="badge badge-info">13</span></li>
+				</ul>
+			</div>
+		</div>
+			<div class="row-fluid item">
+			<div class="span4">
+				<a href="http://blog.makezine.com/2013/01/03/best-of-2012-3d-printed-objects/">
+					<img data-lazy-loaded="true" style="display: block;" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/screen-shot-2012-12-21-at-11-15-41-am.png" class="thumbnail wp-post-image" alt="Screen Shot 2012-12-21 at 11.15.41 AM" height="70" width="70"><noscript><img width="70" height="70" src="http://makezineblog.files.wordpress.com/2012/12/screen-shot-2012-12-21-at-11-15-41-am.png?w=70&amp;h=70&amp;crop=1" class="thumbnail wp-post-image" alt="Screen Shot 2012-12-21 at 11.15.41 AM" /></noscript>				</a>
+			</div>
+			<div class="span8">
+				<h5><a href="http://blog.makezine.com/2013/01/03/best-of-2012-3d-printed-objects/">Best of 2012: 3D Printed&nbsp;Objects</a></h5>
+				<ul class="unstyled">
+					<li>By: Stett Holbrook</li>
+					<li>Comments: <span class="badge badge-info">11</span></li>
+				</ul>
+			</div>
+		</div>
+			<div class="row-fluid item">
+			<div class="span4">
+				<a href="http://blog.makezine.com/2013/01/07/rainbow-igloo-rocks/">
+					<img data-lazy-loaded="true" style="display: block;" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/rainbow-igloo1.jpg" class="thumbnail wp-post-image" alt="rainbow igloo1" height="70" width="70"><noscript><img width="70" height="70" src="http://makezineblog.files.wordpress.com/2013/01/rainbow-igloo1.jpg?w=70&amp;h=70&amp;crop=1" class="thumbnail wp-post-image" alt="rainbow igloo1" /></noscript>				</a>
+			</div>
+			<div class="span8">
+				<h5><a href="http://blog.makezine.com/2013/01/07/rainbow-igloo-rocks/">Rainbow Igloo&nbsp;Rocks</a></h5>
+				<ul class="unstyled">
+					<li>By: Goli Mohammadi</li>
+					<li>Comments: <span class="badge badge-info">8</span></li>
+				</ul>
+			</div>
+		</div>
+			<div class="row-fluid item">
+			<div class="span4">
+				<a href="http://blog.makezine.com/2013/01/03/best-of-2012-raspberry-pi-projects/">
+					<img data-lazy-loaded="true" style="display: block;" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/raspberry_pi_logo1.png" class="thumbnail wp-post-image" alt="Raspberry_Pi_Logo" height="70" width="70"><noscript><img width="70" height="70" src="http://makezineblog.files.wordpress.com/2012/07/raspberry_pi_logo1.png?w=70&amp;h=70&amp;crop=1" class="thumbnail wp-post-image" alt="Raspberry_Pi_Logo" /></noscript>				</a>
+			</div>
+			<div class="span8">
+				<h5><a href="http://blog.makezine.com/2013/01/03/best-of-2012-raspberry-pi-projects/">Best of 2012: Raspberry Pi&nbsp;Projects</a></h5>
+				<ul class="unstyled">
+					<li>By: Matt Richardson</li>
+					<li>Comments: <span class="badge badge-info">8</span></li>
+				</ul>
+			</div>
+		</div>
+			<div class="row-fluid item">
+			<div class="span4">
+				<a href="http://blog.makezine.com/2013/01/04/ford-transit-connect-profile-kevin-hornby/">
+					<img data-lazy-loaded="true" style="display: block;" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/img_4904.jpg" class="thumbnail wp-post-image" alt="img_4904" height="70" width="70"><noscript><img width="70" height="70" src="http://makezineblog.files.wordpress.com/2012/12/img_4904.jpg?w=70&amp;h=70&amp;crop=1" class="thumbnail wp-post-image" alt="img_4904" /></noscript>				</a>
+			</div>
+			<div class="span8">
+				<h5><a href="http://blog.makezine.com/2013/01/04/ford-transit-connect-profile-kevin-hornby/">Ford Transit Connect Profile: Kevin&nbsp;Hornby</a></h5>
+				<ul class="unstyled">
+					<li>By: Stett Holbrook</li>
+					<li>Comments: <span class="badge badge-info">8</span></li>
+				</ul>
+			</div>
+		</div>
+	
+	
+								</div>
+							</div>
+						</div>
+						
+						<div class="sidebar-ad">
+
+							<!-- Beginning Sync AdSlot 3 for Ad unit header ### size: [[300,250]]  -->
+							<div id="div-gpt-ad-664089004995786621-23">
+								<script type="text/javascript">
+									googletag.display('div-gpt-ad-664089004995786621-3');
+								</script><div id="div-gpt-ad-664089004995786621-3_ad_container"><!-- FM Medium Rectangle 1 Zone -->
+<script type="text/javascript" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/581.js"></script><script type="text/javascript" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/a_004.js"></script><!-- FM c-49859 p-162134 b-75259 --><script type="text/javascript" language="JavaScript" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/581"></script><!-- no fm remnant ad to serve: L1 -->
+<!-- FM Medium Rectangle 1 Zone -->
+
+</div>
+
+							</div>
+							<!-- End AdSlot 3 -->
+
+						</div>
+
+
+				</div>
+							</div>
+				
+				<div class="footer-ad" style="margin-top:30px;clear:both;">
+				
+					<div class="" style="width:728px; margin:0 auto;">
+
+						<!-- Beginning Sync AdSlot 4 for Ad unit header ### size: [[728,90]]  -->
+						<div id="div-gpt-ad-664089004995786621-4">
+							<script type="text/javascript">
+								googletag.display('div-gpt-ad-664089004995786621-4');
+							</script><div id="div-gpt-ad-664089004995786621-4_ad_container">
+<ins style="width: 728px; height: 90px; display: inline-table; position: relative; border: 0pt none;"><ins style="width: 728px; height: 90px; display: block; position: relative; border: 0pt none;"><iframe style="border: 0pt none; position: absolute; top: 0pt; left: 0pt;" marginheight="0" marginwidth="0" name="google_ads_iframe_/11548178/Makezine/Blog/Arduino_3" id="google_ads_iframe_/11548178/Makezine/Blog/Arduino_3" frameborder="0" height="90" scrolling="no" width="728"></iframe></ins></ins></div>
+<script>googletag.impl.pubads.createDomIframe("div-gpt-ad-664089004995786621-4_ad_container" ,"/11548178/Makezine/Blog/Arduino_3",false,undefined);</script>
+						</div>
+						<!-- End AdSlot 4 -->
+						
+					</div>
+
+				</div>
+			
+			</div>
+		
+		</div><iframe src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/beacon.htm" style="border: 0pt none; width: 1px; height: 1px; display: none;"></iframe>
+	<div class="new-footer">
+		<div class="container">
+			<img src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/make-160-footer.png" alt="MAKE">
+			<div class="row">
+				<div class="span main">
+					<div class="span trending">
+						<h5>Trending Topics</h5>
+						<ul class="terms">
+	<li><a href="http://blog.makezine.com/arduino/">Arduino</a></li>
+	<li><a href="http://blog.makezine.com/volume/make-ultimate-guide-to-3d-printing/">3D Printing Guide</a></li>
+	<li><a href="http://blog.makezine.com/category/electronics/raspberry-pi/">Raspberry Pi</a></li>
+	<li><a href="http://blog.makezine.com/craftzine">Craft</a></li>
+        <li><a href="http://blog.makezine.com/category/maker-pro/">Maker Pro</a></li>
+	<li><a href="http://blog.makezine.com/kids">Kids &amp; Family</a></li>
+</ul>					<!-- END span trending -->
+					</div>
+					<div class="span newsletter">
+						<h5>Get our Newsletters</h5>  
+						<form action="http://makermedia.createsend.com/t/r/s/jrourr/" method="post" id="subForm">
+							<fieldset>
+								<div class="control-group">
+								<label class="control-label" for="optionsCheckbox">Sign up to receive exclusive content and offers.</label>
+									<div class="controls">
+										<label for="MAKENewsletter">
+										<input name="cm-ol-jjuylk" id="MAKENewsletter" type="checkbox"> MAKE Newsletter
+										</label>
+										<label for="CRAFTNewsletter">
+										<input name="cm-ol-jjurhj" id="CRAFTNewsletter" type="checkbox"> CRAFT Newsletter
+										</label>
+										<label for="MakerFaireNewsletter">
+										<input name="cm-ol-jjuruj" id="MakerFaireNewsletter" type="checkbox"> Maker Faire Newsletter
+										</label>
+										<label for="MakerShed-MasterList">
+										<input name="cm-ol-tyvyh" id="MakerShed-MasterList" type="checkbox"> Maker Shed
+										</label> 
+									<!-- END controls -->
+									</div>
+								<!-- control-group -->
+								</div>
+								<div class="input-append control-group email-area">
+									<input class="span2" id="appendedInputButton" name="cm-jrourr-jrourr" placeholder="Enter your email" type="text">
+									<button class="btn" type="button">JOIN</button>
+								<!-- control-group email-area -->
+								</div>
+							</fieldset>
+						</form>
+					<!-- END span newsletter -->
+					</div>
+					<div class="span about-us">
+						<h5>About Us</h5>
+						<div class="span about-column-01">
+							<ul>
+								<li><a href="http://makezine.com/help/index.html">Help</a></li>
+								<li><a href="http://makezine.com/contact.html">Contact</a></li>
+								<li><a href="http://www.makezine.com/go/subscribe2make">Subscribe</a></li>
+								<li><a href="http://makezine.com/advertise/index.html">Advertise</a></li> 
+								<li><a href="http://www.oreillynet.com/pub/a/mediakit/privacy.html">Privacy</a></li>
+							</ul>
+						<!-- END span about-column-01 --></div>
+						<div class="span about-column-02">
+							<ul>
+								<li><a href="http://makezine.com/about/index.html">About Us</a></li>
+								<li><a href="http://makezine.com/faq/index.html">FAQ</a></li>
+								<li><a href="http://makezine.com/community/index.html">Forums</a></li>
+								<li><a href="http://blog.makezine.com/contribute/">Write for MAKE</a></li>
+							</ul>
+						<!-- END span about-column-02 -->
+						</div>
+						<div class="clearfix"></div>
+						<div class="span socialArea">
+							<p class="links">
+								<span class="soci"><a href="http://twitter.com/make"><img src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/twitter.png" alt="Make on Twitter"></a></span>
+								<span class="soci"><a href="http://youtube.com/make"><img src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/youtube.png" alt="Make on YouTube"></a></span>
+								<span class="soci"><a href="http://pinterest.com/makemagazine/"><img src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/pinterest.png" alt="Make on Pintrest"></a></span>
+								<span class="soci"><a href="http://www.flickr.com/groups/make/"><img src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/flickr.png" alt="Make on Flickr"></a></span>
+								<span class="soci"><a href="http://facebook.com/makemagazine"><img src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/facebook.png" alt="Make on Facebook"></a></span>
+								<span class="soci"><a href="http://www.stumbleupon.com/to/stumble/stumblethru:makezine.com?utm_source=Makezine&amp;utm_medium=StumbleThru&amp;utm_campaign=StumbleThruButton"><img src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/stumbleupon.png" alt="Stumble Make Magazine"></a></span>
+								<span class="soci"><a href="http://instagram.com/makemagazine"><img src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/instagram.png" alt="MAKE on Instagram"></a></span>
+								<span class="soci"><a href="https://google.com/+MAKE/"><img src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/google-plus.png" alt="MAKE on Google+"></a></span>
+							</p>
+						<!-- END socialArea -->
+						</div> 
+					<!-- END span3 about-us -->
+					</div>
+					<div class="span subscribe">
+						<a href="https://readerservices.makezine.com/mk/subscribe.aspx?PC=MK&amp;PK=M3ANEWB">
+							<img src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/33.jpg" alt="MAKE Magazine Cover" id="mag-cover" height="163" width="115">
+						</a>
+						<img src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/arrow-footer.png" id="mag-arrow" height="48" width="80">
+						<h5>Subscribe<br> to MAKE!</h5>
+						<p>Get the print and digital versions when you subscribe</p>
+						<hr>
+					<!-- END span subscribe -->
+					</div>
+				<!-- END MAIN span (main) -->
+				</div>
+			<!-- END MAIN row (main) -->
+			</div>
+		<!-- END container -->
+		</div>
+	<!-- END new-footer -->
+	</div>
+	
+	
+
+
+		<!-- Le javascript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script>jQuery(".entry-content:odd").addClass('odd');</script>
+
+		<div class=" fb_reset" id="fb-root"><div style="position: absolute; top: -10000px; height: 0pt; width: 0pt;"><div><iframe tabindex="-1" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/xd_arbiter.htm" name="fb_xdm_frame_http" id="fb_xdm_frame_http"></iframe><iframe tabindex="-1" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/xd_arbiter_002.htm" name="fb_xdm_frame_https" id="fb_xdm_frame_https"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0pt; width: 0pt;"><div></div></div></div>
+		<script>
+		(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=216859768380573";
+			fjs.parentNode.insertBefore(js, fjs);
+			}
+		(document, 'script', 'facebook-jssdk'));
+		</script>
+
+		<script type="text/javascript">
+		jQuery(document).ready(function(){
+			jQuery(".scroll").click(function(event){
+				//prevent the default action for the click event
+				event.preventDefault();
+		 
+				//get the full url - like mysitecom/index.htm#home
+				var full_url = this.href;
+		 
+				//split the url by # and get the anchor target name - home in mysitecom/index.htm#home
+				var parts = full_url.split("#");
+				var trgt = parts[1];
+		 
+				//get the top offset of the target anchor
+				var target_offset = jQuery("#"+trgt).offset();
+				var target_top = target_offset.top;
+		 
+				//goto that anchor by setting the body scroll top to anchor top
+				jQuery('html, body').animate({scrollTop:target_top - 30}, 1000);
+
+				//Style the pagination links
+
+				jQuery('a span.badge').addClass('badge-info');
+				
+			});
+			jQuery('.hide-thumbnail').removeClass('thumbnail');
+		});
+		</script>
+
+		<script type="text/javascript">
+			setTimeout(function(){var a=document.createElement("script");
+			var b=document.getElementsByTagName("script")[0];
+			a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0013/2533.js?"+Math.floor(new Date().getTime()/3600000);
+			a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+		</script>
+
+
+		
+<script type="text/javascript">
+var _qevents = _qevents || [], wpcomQuantcastData = {"qacct":"p-18-mFEk4J448M","labels":",language.en,type.wpcom,vip.makezineblog"};
+function wpcomQuantcastPixel( labels, options ) {
+	var i, defaults = wpcomQuantcastData, data = { event: 'ajax' };
+
+	labels  = labels  || '';
+	options = options || {};
+
+	if ( typeof labels != 'string' )
+		options = labels;
+
+	for ( i in defaults ) {
+		data[i] = defaults[i];
+	}
+
+	for ( i in options ) {
+		data[i] = options[i];
+	}
+
+	if ( data.labels ) {
+		data.labels += ',' + labels;
+	} else {
+		data.labels = labels;
+	}
+
+	_qevents.push( data );
+};
+(function() {var elem = document.createElement('script');elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";elem.async = true;elem.type = "text/javascript";var scpt = document.getElementsByTagName('script')[0];scpt.parentNode.insertBefore(elem, scpt);  })();
+_qevents.push( wpcomQuantcastData );
+</script>
+<noscript><div style="display: none;"><img src="//pixel.quantserve.com/pixel/p-18-mFEk4J448M.gif?labels=%2Clanguage.en%2Ctype.wpcom%2Cvip.makezineblog" height="1" width="1" alt="" /></div></noscript>
+
+
+	<script type="text/javascript">
+	/* <![CDATA[ */
+	(function($){
+		$(document).on( 'ready post-load', function() {
+
+			// Remove the login box when clicking the page
+			$( document ).mousedown( function( e ) {
+				if ( null == $( e.target ).closest( '#wpl-mustlogin' ).get( 0 ) ) {
+					$( '#wpl-mustlogin' ).remove();
+				}
+			});
+
+			// Handle clicking the like button itself
+			$('.wpl-button > a.like').click( function(e) {
+				e.preventDefault();
+
+				var postid = $(this).parent().attr('id').split('like-')[1];
+				$.post( 'http://blog.makezine.com/wp-admin/admin-ajax.php', {
+					'action': 'wpl_record_stat',
+					'stat_name': 'loggedout_like_click'
+				} );
+
+				var tenMins = new Date();
+				tenMins.setTime( tenMins.getTime() + 600000 );
+				document.cookie = 'wpl_rand=5cfafb5bec; expires=' + tenMins.toGMTString() + '; domain=wordpress.com; path=/;';
+
+				$(this).parent().siblings('.wpl-count').after( '\
+					<div id="wpl-mustlogin"> \
+						<form action="https://makezineblog.wordpress.com/wp-login.php" method="post"> \
+							<p>Just one more step to like this:</p> \
+							<label><span>Username</span> <input type="text" name="log" id="user_login" class="input" value="" size="20" tabindex="80" /></label> \
+							<label><span>Password</span> <input type="password" name="pwd" id="user_pass" class="input" value="" size="20" tabindex="81" /></label> \
+							<input type="submit" name="wp-submit" id="wp-submit" class="button-primary" value="Log In" tabindex="82" /> \
+							<input type="hidden" name="postid" value="' + postid + '" /> \
+							<input type="hidden" name="redirect_to" value="http://blog.makezine.com/2008/11/22/hacking-the-wiimote-ir-ca?year=2008&#038;monthnum=11&#038;day=22&#038;name=hacking-the-wiimote-ir-ca&#038;like=1" /> \
+							<input type="hidden" name="wpl_rand" value="5cfafb5bec" /> \
+							<p>Not a member yet? <a href="http://wordpress.com/signup/?ref=likebox&user=1" id="wpl-signup-link">Sign up with WordPress.com for free</a></p> \
+						</form> \
+					</div> \
+				');
+
+				$('#wpl-mustlogin').hide().slideDown('fast');
+			} );
+
+			$('#wpl-mustlogin input.input').live( 'focus', function() {
+				$(this).prev().hide();
+			}).live( 'blur', function() {
+				if ( $(this).val() == '' ) {
+					$(this).prev().show();
+				}
+			});
+
+			$('#wpl-mustlogin input#wp-submit').live( 'click', function(e) {
+				e.preventDefault();
+
+				$.post( 'http://blog.makezine.com/wp-admin/admin-ajax.php', {
+					'action': 'wpl_record_stat',
+					'stat_name': 'loggedout_login_submit'
+				}, function() {
+					$('#wpl-mustlogin form').submit();
+				} );
+			});
+
+			$('#wpl-mustlogin a#wpl-signup-link').live( 'click', function(e) {
+				e.preventDefault();
+
+				var link = $(this).attr('href');
+
+				$.post( 'http://blog.makezine.com/wp-admin/admin-ajax.php', {
+					'action': 'wpl_record_stat',
+					'stat_name': 'loggedout_signup_click'
+				}, function() {
+					location.href = link;
+				} );
+			});
+		})
+	})(jQuery);
+	/* ]]> */
+	</script>
+		<!-- Quantcast Tag -->
+		<script type="text/javascript">
+			var _qevents = _qevents || [];
+
+			(function() {
+				var elem = document.createElement('script');
+				elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+				elem.async = true;
+				elem.type = "text/javascript";
+				var scpt = document.getElementsByTagName('script')[0];
+				scpt.parentNode.insertBefore(elem, scpt);
+			})();
+
+			_qevents.push({
+				qacct:"p-c0y51yWFFvFCY"
+			});
+		</script>
+
+		<noscript>
+			<div style="display:none;">
+				<img src="//pixel.quantserve.com/pixel/p-c0y51yWFFvFCY.gif" border="0" height="1" width="1" alt="Quantcast"/>
+			</div>
+		</noscript>
+		<!-- End Quantcast tag -->
+
+		<script>
+			jQuery(document).ready(function(){
+				jQuery("span.divider").eq(-1).hide();
+				jQuery(".current").hide();
+			});
+		</script>
+
+	
+
+<!-- START Parse.ly Include: Standard -->
+<div id="parsely-root" style="display: none">
+  <div id="parsely-cfg" data-parsely-site="makezine.com"></div>
+<script src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/p.js" async="" id="parsely-script"></script></div>
+<script>
+(function(s, p, d) {
+  var h=d.location.protocol, i=p+"-"+s,
+      e=d.getElementById(i), r=d.getElementById(p+"-root"),
+      u=h==="https:"?"d1z2jf7jlzjs58.cloudfront.net"
+      :"static."+p+".com";
+  if (e) return;
+  e = d.createElement(s); e.id = i; e.async = true;
+  e.src = h+"//"+u+"/p.js"; r.appendChild(e);
+})("script", "parsely", document);
+</script>
+<!-- END Parse.ly Include: Standard -->
+
+<script type="text/javascript" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/gprofiles.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/wpgroho.js"></script>
+<script>jQuery(document).ready(function($){ Gravatar.profile_cb = function( h, d ) { WPGroHo.syncProfileData( h, d );	}; Gravatar.my_hash = WPGroHo.my_hash; Gravatar.init( 'body', '#wp-admin-bar-my-account' ); });</script>	<div style="display:none">
+	<div class="grofile-hash-map-9dea6a9b687880a9e9d5d9c56e0df6f6">
+	</div>
+	<div class="grofile-hash-map-0d46bd3b10ca5b1985c3947553552e96">
+	</div>
+	<div class="grofile-hash-map-d41d8cd98f00b204e9800998ecf8427e">
+	</div>
+	<div class="grofile-hash-map-c88d8a99aea49e80f702569bf76dcd24">
+	</div>
+	<div class="grofile-hash-map-2c40cf463fb415fed577e6a23c887353">
+	</div>
+	<div class="grofile-hash-map-fc704a9750ac3dc2a1ee926c9d642348">
+	</div>
+	<div class="grofile-hash-map-a6c538c7819fe65b62933cd4e23d2b90">
+	</div>
+	<div class="grofile-hash-map-77cf20eb4232fc52323f8e5369d0fe9e">
+	</div>
+	</div>
+<script type="text/javascript">
+/* <![CDATA[ */
+var HighlanderComments = {"loggingInText":"Logging In\u2026","submittingText":"Posting Comment\u2026","postCommentText":"Post Comment","connectingToText":"Connecting to %s","commentingAsText":"%1$s: You are commenting using your %2$s account.","logoutText":"Log Out","loginText":"Log In","connectURL":"http:\/\/makezineblog.wordpress.com\/public.api\/connect\/?action=request","logoutURL":"http:\/\/makezineblog.wordpress.com\/wp-login.php?action=logout&_wpnonce=28660b61a3","homeURL":"http:\/\/blog.makezine.com\/","postID":"59444","gravDefault":"retro","enterACommentError":"Please enter a comment","enterEmailError":"Please enter your email address here","invalidEmailError":"Invalid email address","enterAuthorError":"Please enter your name here","gravatarFromEmail":"This picture will show whenever you leave a comment. Click to customize it.","logInToExternalAccount":"Log in to use details from one of these accounts.","change":"Change","changeAccount":"Change Account","comment_registration":"","userIsLoggedIn":"","isJetpack":"0"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/script.js"></script>
+<script type="text/javascript" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/sharing.js"></script>
+			<script type="text/javascript" charset="utf-8">
+				function sharing_plusone( obj ) {
+					jQuery.ajax( {
+						url: 'http://blog.makezine.com/2008/11/22/hacking-the-wiimote-ir-ca/?share=google-plus-1',
+						type: 'POST',
+						data: obj
+					} );
+				}
+				jQuery( document.body ).on( 'post-load', function() {
+					gapi.plusone.go();
+				});
+			</script>
+			<script gapi_processed="true" type="text/javascript" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/plusone.js"></script> 		<script type="text/javascript" charset="utf-8">
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-twitter' ).on( 'click', function() {
+				window.open( jQuery(this).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript" charset="utf-8">
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-facebook' ).on( 'click', function() {
+				window.open( jQuery(this).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+		});
+		</script>
+			<script type="text/javascript">
+	function pinterest_async_load() {
+		var s = document.createElement("script");
+		s.type = "text/javascript";
+		s.async = true;
+		s.src = window.location.protocol + "//assets.pinterest.com/js/pinit.js";
+		var x = document.getElementsByTagName("script")[0];
+		x.parentNode.insertBefore(s, x);
+	}
+	jQuery(document).on('ready post-load', function() {
+        	pinterest_async_load();
+	});
+	</script>
+	<div id="sharing_email" style="display: none;">
+		<form action="" method="post">
+			<label for="target_email">Send to Email Address</label>
+			<input name="target_email" id="target_email" type="text">
+
+			
+				<label for="source_name">Your Name</label>
+				<input name="source_name" id="source_name" type="text">
+
+				<label for="source_email">Your Email Address</label>
+				<input name="source_email" id="source_email" type="text">
+
+			
+			<div class="recaptcha" id="sharing_recaptcha"></div><input name="recaptcha_public_key" id="recaptcha_public_key" value="6LcYW8MSAAAAADBAuEH9yaPcF7lWh11Iq62ZKtoo" type="hidden">
+			<img style="float: right; display: none;" class="loading" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/loading.gif" alt="loading" height="16" width="16">
+			<input value="Send Email" class="sharing_send" type="submit">
+			<a href="#cancel" class="sharing_cancel">Cancel</a>
+
+			<div class="errors errors-1" style="display: none;">
+				Post was not sent - check your email addresses!			</div>
+
+			<div class="errors errors-2" style="display: none;">
+				Email check failed, please try again			</div>
+
+			<div class="errors errors-3" style="display: none;">
+				Sorry, your blog cannot share posts by email.			</div>
+		</form>
+	</div>
+<script type="text/javascript" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/share.js"></script><div id="fb-root"></div><script type="text/javascript" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/a_006.js"></script>
+<script type="text/javascript" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/all.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script><script src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/w.js" type="text/javascript"></script>
+<script type="text/javascript">
+st_go({'blog':'30206320','v':'wpcom','tz':'-8','user_id':'0','post':'59444','subd':'makezineblog'});
+function st_vt() {var x=document.createElement("img");x.src="http://stats.wordpress.com/g.gif?blog=30206320&v=wpcomvt&tz=-8&user_id=0&post=59444&subd=makezineblog&rand="+Math.random();}
+ex_go({'crypt':'UE40eW5QN0p8M2Y/RE1BNmNJfGhxNCVxUDExYmtib2E/SzdEJm0lUEtbdFU0fFk4cHZvcUFrZT90Tn4yQm1+R3NyNTdzOG40QltTQl9ZOWxIRHFLNFg4Qy9Lb1RMZHgzY0F+fDJjaFBjMXpjNXBPcm10NHNWLzE0S2ZBXTIsZ2NhV1pVU0xFYmMsVV05cHVVWGpEMX5KMEEmLVFXSjIxN0pbLX5fZ18mJj9fNEFud2hnTDNTb3kyPz1dVW5OLDVOSTkuR3FfQks0SHo1d3Mvel96JUpmZXl8Ukt8Vzk2cmRJRWpqQVtaZUw0anRsKzU='});
+addLoadEvent(function(){linktracker_init('30206320',59444);});
+	</script><img id="wpstats" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/g_002.gif" alt=""><img id="wpstats2" src="MAKE%20_%20Hacking%20the%20Wiimote%20IR%20camera_files/g.gif" alt="" style="display: none;">
+<noscript><img src="http://stats.wordpress.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /></noscript>
+		
+	
+
+<div style="display: none;" id="YontooInstallID">9c990aec-5b77-4d55-9e52-3419ce7c112d</div><div style="display: none;" id="Y2PluginIds">Y2:9c990aec-5b77-4d55-9e52-3419ce7c112d</div></body></html>

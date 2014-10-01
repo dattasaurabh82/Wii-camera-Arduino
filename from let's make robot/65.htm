@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html><head>
+
+    <!--
+        ___                _   ___
+       / __|_ __  __ _ _ _| |_| __|  _ _ _
+       \__ \ '_ \/ _` | '_| / / _| || | ' \
+       |___/ .__/\__,_|_| |_\_\_| \_,_|_||_|
+           |_|
+
+      Url gurer, pbqr crrcre! Lbh zhfg or n erny areq!
+
+      Gb fubj bhe fhccbeg, hfr pbqr VFNJLBHEFBHEPR ng purpxbhg sbe 10% bss lbhe arkg beqre.
+      Qba'g gryy nalbar, jr jnag gb fnir guvf fcrpvny pbqr sbe fcrpvny crbcyr jub ivrj fbhepr :)
+
+      Unir n avpr ivfvg!
+    -->
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="google-site-verification" content="XUb2UlchrvwCWWyhXksBlqQy1STYtTEN_M0-tgQRHRs">
+    <meta name="google-site-verification" content="gRUAvzBJ_533b-AGTmldOJfByU6TkojfUbWovB2wKJo">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@sparkfun">
+    <meta name="twitter:url" content="http://www.sparkfun.com/tutorials/65">
+    <meta name="twitter:title" content="Sensor Interfacing">
+    <meta name="twitter:description" content="Some basic techniques to get a 3.3V sensor hooked up to a 5V micro.">
+        <meta name="twitter:image" content="https://dlnmh9ip6v2uc.cloudfront.net/images/th_ST-5-Mini.jpg">
+        <title>Sensor Interfacing - SparkFun Electronics</title>
+    <link rel="stylesheet" href="65_files/screen.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="65_files/print.css" type="text/css" media="print">
+    <link rel="stylesheet" href="65_files/fancybox.css" type="text/css" media="screen">
+    <!-- IE is the bane of my existence. -->
+    <!--[if IE]><link rel="stylesheet" href="/css/ie.css" type="text/css" media="screen" /><![endif]-->
+    <!--[if lte IE 7]><link rel="stylesheet" href="/css/ie7.css" type="text/css" media="screen" /><![endif]-->
+    <link rel="alternate" type="application/rss+xml" title="All News" href="http://www.sparkfun.com/feeds/news/">
+    <link rel="alternate" type="application/rss+xml" title="New Products" href="http://www.sparkfun.com/feeds/products/">
+    <link rel="alternate" type="application/rss+xml" title="All Product Changes" href="http://www.sparkfun.com/feeds/changes/">
+    <link rel="alternate" type="application/rss+xml" title="All Comments" href="http://www.sparkfun.com/feeds/comments/">
+    <link rel="alternate" type="application/rss+xml" title="Videos" href="http://gdata.youtube.com/feeds/base/users/sparkfun/uploads?alt=rss&amp;v=2&amp;orderby=published">
+     
+    <link rel="apple-touch-icon" href="http://www.sparkfun.com/fanboy.png">
+    <link rev="canonical" type="text/html" href="http://sfe.io/t65"> 
+    <script src="65_files/sounds.js" defer="true" async=""></script><script src="65_files/ga.js" async="" type="text/javascript"></script><script>
+            var SFECONFIG = {
+        currencies: {"USD":{"code":"USD","title":"US Dollar","symbol_left":"$","symbol_right":"","decimal_point":".","thousands_point":",","decimal_places":"2","value":"1.0000"},"CAD":{"code":"CAD","title":"Canadian Dollar","symbol_left":"$","symbol_right":null,"decimal_point":".","thousands_point":",","decimal_places":"2","value":"1.0243"},"AUD":{"code":"AUD","title":"Australian Dollar","symbol_left":"$","symbol_right":null,"decimal_point":".","thousands_point":",","decimal_places":"2","value":"0.9936"},"GBP":{"code":"GBP","title":"British Pound","symbol_left":"&pound;","symbol_right":null,"decimal_point":".","thousands_point":",","decimal_places":"2","value":"0.6417"},"EUR":{"code":"EUR","title":"Euro","symbol_left":"&euro;","symbol_right":null,"decimal_point":".","thousands_point":",","decimal_places":"2","value":"0.7954"}},
+        preferred_currency: 'USD',
+        http_server: 'http://www.sparkfun.com',
+        https_server: 'https://www.sparkfun.com',
+        http_static: 'http://dlnmh9ip6v2uc.cloudfront.net',
+        base_url: '/',
+        url: '/',
+        controller: 'tutorials',
+        action: 'view',
+        entity_id: '65',
+        auth: false,
+        customers_id: 0,
+        customers_name: "",
+        customers_email: "",
+        sparkrev: '1357949665'
+      };
+
+    </script>
+    <script src="65_files/require-jquery.js"></script>
+    <script type="text/javascript">
+      require.config({
+        paths: {
+          'sfe': '/js/sfe-built',
+          'jqueryui': 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min'
+        },
+        baseUrl: '/js/',
+        urlArgs: "sparkrev=" + SFECONFIG.sparkrev
+      });
+      require(['sfe', 'jqueryui'], function() {
+        $.sfe();
+      });
+
+      $(document).bind('loaded', function() {
+        $('*[data="fancybox"]').fancybox('fancybox', { speedIn: 10, speedOut: 10 });
+        $("img.lazyload").lazyload('lazyload', { placeholder: "http://dlnmh9ip6v2uc.cloudfront.net/images/framework/blank.gif" });
+      });
+    </script>
+  <script src="65_files/sfe-built.js" data-requiremodule="sfe" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="65_files/jquery-ui.js" data-requiremodule="jqueryui" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script defer="defer" async="" src="65_files/application.js"></script><style type="text/css">.olark-key,#hbl_code,#olark-data{display: none !important;}</style><link href="65_files/90c680e19f249504beb5cec5c67b92a7.css" rel="stylesheet" type="text/css" id="habla_style_div"><style type="text/css">@media print {#habla_beta_container_do_not_rely_on_div_classes_or_names {display: none !important}}</style></head>
+  <body class="no-type"><div id="olark" style="display: none;"><olark><iframe id="olark-loader" frameborder="0"></iframe></olark></div>
+
+    <div id="user" class="clearfix">
+  <div class="inner">
+      <div class="header-menu-item" id="cart-menu-item" title="Shopping Cart">
+      <a href="https://www.sparkfun.com/cart">
+        <span class="cart"> </span>
+        <span id="items_in_cart">0</span> items in cart
+      </a>
+    </div>
+
+    
+    <input id="preferred_currency" value="USD" type="hidden">
+    <div class="header-menu-item" id="currency-menu">
+      <a href="https://www.sparkfun.com/account/currencies" onclick="$(this).next('.header-sub-menu').toggle(); $(this).parent().toggleClass('active'); return false;">$ USD</a>
+      <ul style="display:none;" id="currency_menu_list" class="header-sub-menu">
+                  <li>
+            <a id="currency_USD" onclick="$('#airlock').currency('change', 'USD'); return(false);" href="#">
+                          <img src="65_files/icon_radio_checked.gif">
+                        US Dollar            </a>
+        </li>
+                  <li>
+            <a id="currency_CAD" onclick="$('#airlock').currency('change', 'CAD'); return(false);" href="#">
+                          <img src="65_files/icon_radio_unchecked.gif">
+                        Canadian Dollar            </a>
+        </li>
+                  <li>
+            <a id="currency_AUD" onclick="$('#airlock').currency('change', 'AUD'); return(false);" href="#">
+                          <img src="65_files/icon_radio_unchecked.gif">
+                        Australian Dollar            </a>
+        </li>
+                  <li>
+            <a id="currency_GBP" onclick="$('#airlock').currency('change', 'GBP'); return(false);" href="#">
+                          <img src="65_files/icon_radio_unchecked.gif">
+                        British Pound            </a>
+        </li>
+                  <li>
+            <a id="currency_EUR" onclick="$('#airlock').currency('change', 'EUR'); return(false);" href="#">
+                          <img src="65_files/icon_radio_unchecked.gif">
+                        Euro            </a>
+        </li>
+                <li><a href="https://www.sparkfun.com/account/currencies">More Currencies...</a></li>
+      </ul>
+    </div>
+
+    <div class="header-menu-item">
+      <a href="https://www.sparkfun.com/wish_lists">Wish Lists</a>    </div>
+
+    <div class="header-display-item">
+      You are <b>not</b> logged in.
+    </div>
+
+    <div class="header-menu-item">
+      <a id="btn_show_login_form" href="https://www.sparkfun.com/account/login" onclick="$(this).next('.header-sub-menu').toggle(); $(this).parent().toggleClass('active');; $('#user_login').focus(); return false;">log in</a>
+      <div class="header-sub-menu login-form" id="login-form" style="display: none;">
+        <form action="https://www.sparkfun.com/account/login" id="login" method="post">
+          <div class="row">
+            <label for="user_login">email</label><br>
+            <input id="user_login" tabindex="1" name="user" type="text"><br>
+          </div>
+          <div class="row">
+            <label for="user_password">password</label><br>
+            <input id="user_password" tabindex="2" name="passwd" type="password"><br>
+          </div>
+          <div class="row">
+            <p class="right"><input value="log in" class="button" type="submit"></p>
+          </div>
+          <div class="row">
+            <p>
+              <a href="https://www.sparkfun.com/account/forgot_password">Forgot your password</a>?
+            </p><p>
+              No account? <a id="btn_register_account" href="https://www.sparkfun.com/account/make">Register one</a>!
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+    </div>
+</div>
+
+    <div id="airlock" class="clearfix">
+      
+<div id="header">
+  <a href="http://www.sparkfun.com/" id="logo" class="hidetext"><span>SparkFun Electronics</span></a>
+
+  <a href="#products_menu" class="skip"><span>Skip to products menu</span></a>
+  <a href="#content" class="skip"><span>Skip to content</span></a>
+
+    <div id="banner" class="clearfix">
+    <div id="banner-nav" style="display: none;">
+      <div class="sprites" id="banner-goprev" style="height: 23px; width: 23px; background-position: -23px -0px;">&nbsp;</div>
+      <a href="http://www.sparkfun.com/banners/"><div class="sprites" id="banner-all" style="height: 23px; width: 23px; background-position: -0px -0px;">&nbsp;</div></a>
+      <div class="sprites" id="banner-gonext" style="height: 23px; width: 23px; background-position: -46px -0px;">&nbsp;</div>
+    </div>
+    <a id="banner-link" href="http://www.sparkfun.com/search/results?term=alphanumeric+display&amp;what=products" onclick="$(this).sfeutil('track_link', this,'Banners','clicked','banner-36');return false;">
+      <img id="banner-img" src="65_files/SFE03.jpg" alt="" height="105" width="978">
+    </a>
+  </div>
+  <script type="text/javascript">
+    $('#airlock').bind('loaded', function() {
+      $(this).banner({id: 36});
+    });
+  </script>
+
+  <div id="header-menu">
+    <ul>
+      <li class="first "><a href="https://www.sparkfun.com/categories">Products</a></li>
+      <li><a href="https://www.sparkfun.com/static/customer_service">Support</a></li>
+      <li class="active"><a href="http://www.sparkfun.com/tutorials">Tutorials</a></li>
+      <li><a href="http://www.sparkfun.com/distributors">Distributors</a></li>
+      <li><a href="https://www.sparkfun.com/static/about">About Us</a></li>
+      <li><a href="https://www.sparkfun.com/static/contact">Contact</a></li>
+      <li class="last">
+        <form class="search" style="display: block" action="https://www.sparkfun.com/search/results" id="search_form" method="get">
+          <div class="ui-widget">
+            <input aria-haspopup="true" aria-autocomplete="list" role="textbox" autocomplete="off" name="term" id="global-search" class="search-term ui-autocomplete-input" results="5" autosave="sfe_product_search" placeholder="search..." type="text">
+          </div>
+          <input name="what" value="products" type="hidden">
+          <input value="Go" id="search-go" type="submit">
+        </form>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="site-notices">
+  </div>
+
+      <div id="left">
+        <h2 class="sidebar sidebar-bottom" id="products_menu">Categories</h2>
+        
+<ul id="category_menu_list" class="sidebar sidebar-bottom" style="display: block">
+  <li id="menu_category_new_products"><span class="arrow"></span><a href="https://www.sparkfun.com/categories/new_products">New Products</a></li>
+  <li id="menu_category_top"><span class="arrow"></span><a href="https://www.sparkfun.com/categories/top">Top Sellers</a></li>
+  <li id="menu_category_featured"><span class="arrow"></span><a href="https://www.sparkfun.com/categories/featured">Staff Picks</a></li>
+    <li id="menu_category_gift_certificates"><span class="arrow"></span><a href="https://www.sparkfun.com/gift_certificates">Gift Certificates</a></li>
+  <li id="menu_category_events"><span class="arrow"></span><a href="http://learn.sparkfun.com/events">Classes &amp; Events</a></li>
+  <li><hr></li>
+  <li id="menu_category_176"><span class="arrow"></span><a href="https://www.sparkfun.com/categories/176">Books</a></li><li id="menu_category_20"><span class="arrow"></span><a href="https://www.sparkfun.com/categories/20">Breakout Boards</a></li><li id="menu_category_70"><span class="arrow">►</span><a href="https://www.sparkfun.com/categories/70">Cables</a><ul style="display:none;"><li id="menu_category_140"><a href="https://www.sparkfun.com/categories/140">Audio</a></li><li id="menu_category_150"><a href="https://www.sparkfun.com/categories/150">Ethernet</a></li><li id="menu_category_72"><a href="https://www.sparkfun.com/categories/72">Hook Up</a></li><li id="menu_category_75"><a href="https://www.sparkfun.com/categories/75">Parallel</a></li><li id="menu_category_74"><a href="https://www.sparkfun.com/categories/74">Serial</a></li><li id="menu_category_71"><a href="https://www.sparkfun.com/categories/71">USB</a></li><li id="menu_category_234"><a href="https://www.sparkfun.com/categories/234">Video</a></li></ul></li><li id="menu_category_66"><span class="arrow">►</span><a href="https://www.sparkfun.com/categories/66">Cellular</a><ul style="display:none;"><li id="menu_category_67"><a href="https://www.sparkfun.com/categories/67">Antennas</a></li><li id="menu_category_69"><a href="https://www.sparkfun.com/categories/69">Eval Boards</a></li><li id="menu_category_68"><a href="https://www.sparkfun.com/categories/68">Modules</a></li></ul></li><li id="menu_category_51"><span class="arrow">►</span><a href="https://www.sparkfun.com/categories/51">Components</a><ul style="display:none;"><li id="menu_category_21"><a href="https://www.sparkfun.com/categories/21">AVR Microcontrollers</a></li><li id="menu_category_145"><a href="https://www.sparkfun.com/categories/145">Buttons/Switches</a></li><li id="menu_category_226"><a href="https://www.sparkfun.com/categories/226">EL</a></li><li id="menu_category_60"><a href="https://www.sparkfun.com/categories/60">General</a></li><li id="menu_category_90"><a href="https://www.sparkfun.com/categories/90">General ICs</a></li><li id="menu_category_89"><a href="https://www.sparkfun.com/categories/89">LEDs</a><ul><li id="menu_category_173"><a href="https://www.sparkfun.com/categories/173">10mm</a></li><li id="menu_category_171"><a href="https://www.sparkfun.com/categories/171">3mm</a></li><li id="menu_category_172"><a href="https://www.sparkfun.com/categories/172">5mm</a></li><li id="menu_category_170"><a href="https://www.sparkfun.com/categories/170">7-Segment</a></li><li id="menu_category_175"><a href="https://www.sparkfun.com/categories/175">Other</a></li><li id="menu_category_174"><a href="https://www.sparkfun.com/categories/174">SMD</a></li></ul></li><li id="menu_category_88"><a href="https://www.sparkfun.com/categories/88">Oscillators</a></li><li id="menu_category_22"><a href="https://www.sparkfun.com/categories/22">PIC Microcontrollers</a></li><li id="menu_category_124"><a href="https://www.sparkfun.com/categories/124">PICAXE Microcontrollers</a></li><li id="menu_category_29"><a href="https://www.sparkfun.com/categories/29">SMD ICs</a></li></ul></li><li id="menu_category_2"><span class="arrow">►</span><a href="https://www.sparkfun.com/categories/2">Development Tools</a><ul style="display:none;"><li id="menu_category_184"><a href="https://www.sparkfun.com/categories/184">.NET</a></li><li id="menu_category_93"><a href="https://www.sparkfun.com/categories/93">ADuC</a></li><li id="menu_category_218"><a href="https://www.sparkfun.com/categories/218">Android</a></li><li id="menu_category_103"><a href="https://www.sparkfun.com/categories/103">Arduino</a></li><li id="menu_category_219"><a href="https://www.sparkfun.com/categories/219">ARM</a></li><li id="menu_category_10"><a href="https://www.sparkfun.com/categories/10">AVR</a></li><li id="menu_category_164"><a href="https://www.sparkfun.com/categories/164">Beagle</a></li><li id="menu_category_187"><a href="https://www.sparkfun.com/categories/187">Chumby</a></li><li id="menu_category_136"><a href="https://www.sparkfun.com/categories/136">FPGA</a></li><li id="menu_category_235"><a href="https://www.sparkfun.com/categories/235">Gadgeteer</a></li><li id="menu_category_101"><a href="https://www.sparkfun.com/categories/101">iPod</a></li><li id="menu_category_25"><a href="https://www.sparkfun.com/categories/25">LPC</a></li><li id="menu_category_230"><a href="https://www.sparkfun.com/categories/230">mbed</a></li><li id="menu_category_11"><a href="https://www.sparkfun.com/categories/11">MSP</a></li><li id="menu_category_9"><a href="https://www.sparkfun.com/categories/9">PIC</a></li><li id="menu_category_125"><a href="https://www.sparkfun.com/categories/125">PICAXE</a></li><li id="menu_category_137"><a href="https://www.sparkfun.com/categories/137">PSoC</a></li><li id="menu_category_233"><a href="https://www.sparkfun.com/categories/233">Raspberry Pi</a></li><li id="menu_category_104"><a href="https://www.sparkfun.com/categories/104">Roomba</a></li><li id="menu_category_94"><a href="https://www.sparkfun.com/categories/94">SAM</a></li><li id="menu_category_95"><a href="https://www.sparkfun.com/categories/95">ST</a></li><li id="menu_category_167"><a href="https://www.sparkfun.com/categories/167">STAMP</a></li><li id="menu_category_107"><a href="https://www.sparkfun.com/categories/107">Wiring</a></li><li id="menu_category_169"><a href="https://www.sparkfun.com/categories/169">WIZnet</a></li></ul></li><li id="menu_category_100"><span class="arrow"></span><a href="https://www.sparkfun.com/categories/100">Dings and Dents</a></li><li id="menu_category_204"><span class="arrow">►</span><a href="https://www.sparkfun.com/categories/204">E-Textiles</a><ul style="display:none;"><li id="menu_category_205"><a href="https://www.sparkfun.com/categories/205">Aniomagic</a></li><li id="menu_category_210"><a href="https://www.sparkfun.com/categories/210">fabrickit</a></li><li id="menu_category_135"><a href="https://www.sparkfun.com/categories/135">LilyPad</a></li><li id="menu_category_206"><a href="https://www.sparkfun.com/categories/206">Materials</a></li></ul></li><li id="menu_category_232"><span class="arrow"></span><a href="https://www.sparkfun.com/categories/232">Educators</a></li><li id="menu_category_4"><span class="arrow">►</span><a href="https://www.sparkfun.com/categories/4">GPS</a><ul style="display:none;"><li id="menu_category_18"><a href="https://www.sparkfun.com/categories/18">Antennas</a></li><li id="menu_category_86"><a href="https://www.sparkfun.com/categories/86">Eval Boards</a></li><li id="menu_category_17"><a href="https://www.sparkfun.com/categories/17">Modules</a></li></ul></li><li id="menu_category_157"><span class="arrow"></span><a href="https://www.sparkfun.com/categories/157">Kits</a></li><li id="menu_category_76"><span class="arrow">►</span><a href="https://www.sparkfun.com/categories/76">LCDs</a><ul style="display:none;"><li id="menu_category_147"><a href="https://www.sparkfun.com/categories/147">Color</a></li><li id="menu_category_148"><a href="https://www.sparkfun.com/categories/148">Monochrome</a></li></ul></li><li id="menu_category_96"><span class="arrow"></span><a href="https://www.sparkfun.com/categories/96">Port-O-Rotary</a></li><li id="menu_category_1"><span class="arrow">►</span><a href="https://www.sparkfun.com/categories/1">Programmers</a><ul style="display:none;"><li id="menu_category_26"><a href="https://www.sparkfun.com/categories/26">ARM</a></li><li id="menu_category_7"><a href="https://www.sparkfun.com/categories/7">AVR</a></li><li id="menu_category_37"><a href="https://www.sparkfun.com/categories/37">MAXQ</a></li><li id="menu_category_6"><a href="https://www.sparkfun.com/categories/6">PIC</a></li><li id="menu_category_126"><a href="https://www.sparkfun.com/categories/126">PICAXE</a></li></ul></li><li id="menu_category_53"><span class="arrow">►</span><a href="https://www.sparkfun.com/categories/53">Prototyping</a><ul style="display:none;"><li id="menu_category_54"><a href="https://www.sparkfun.com/categories/54">Batteries</a></li><li id="menu_category_149"><a href="https://www.sparkfun.com/categories/149">Boards</a></li><li id="menu_category_91"><a href="https://www.sparkfun.com/categories/91">Connectors</a></li><li id="menu_category_182"><a href="https://www.sparkfun.com/categories/182">Enclosures</a></li><li id="menu_category_55"><a href="https://www.sparkfun.com/categories/55">General</a></li><li id="menu_category_155"><a href="https://www.sparkfun.com/categories/155">Hardware</a></li><li id="menu_category_92"><a href="https://www.sparkfun.com/categories/92">Sockets</a></li><li id="menu_category_116"><a href="https://www.sparkfun.com/categories/116">Solar</a></li><li id="menu_category_141"><a href="https://www.sparkfun.com/categories/141">Wire</a></li></ul></li><li id="menu_category_207"><span class="arrow">►</span><a href="https://www.sparkfun.com/categories/207">Retail</a><ul style="display:none;"><li id="menu_category_212"><a href="https://www.sparkfun.com/categories/212">Arduino</a></li><li id="menu_category_216"><a href="https://www.sparkfun.com/categories/216">Components</a></li><li id="menu_category_213"><a href="https://www.sparkfun.com/categories/213">Kits</a></li><li id="menu_category_211"><a href="https://www.sparkfun.com/categories/211">Materials</a></li><li id="menu_category_215"><a href="https://www.sparkfun.com/categories/215">Prototyping</a></li><li id="menu_category_214"><a href="https://www.sparkfun.com/categories/214">Sensors</a></li><li id="menu_category_217"><a href="https://www.sparkfun.com/categories/217">Tools</a></li><li id="menu_category_220"><a href="https://www.sparkfun.com/categories/220">Wireless</a></li></ul></li><li id="menu_category_134"><span class="arrow">►</span><a href="https://www.sparkfun.com/categories/134">Retired</a><ul style="display:none;"><li id="menu_category_231"><a href="https://www.sparkfun.com/categories/231">Books</a></li><li id="menu_category_194"><a href="https://www.sparkfun.com/categories/194">Breakout Boards</a></li><li id="menu_category_203"><a href="https://www.sparkfun.com/categories/203">Cables</a></li><li id="menu_category_228"><a href="https://www.sparkfun.com/categories/228">Cellular</a></li><li id="menu_category_200"><a href="https://www.sparkfun.com/categories/200">Classes</a></li><li id="menu_category_192"><a href="https://www.sparkfun.com/categories/192">Components</a></li><li id="menu_category_191"><a href="https://www.sparkfun.com/categories/191">Development Tools</a></li><li id="menu_category_225"><a href="https://www.sparkfun.com/categories/225">Ding and Dent</a></li><li id="menu_category_227"><a href="https://www.sparkfun.com/categories/227">E-Textiles</a></li><li id="menu_category_188"><a href="https://www.sparkfun.com/categories/188">GPS</a></li><li id="menu_category_190"><a href="https://www.sparkfun.com/categories/190">Kits</a></li><li id="menu_category_196"><a href="https://www.sparkfun.com/categories/196">LCD</a></li><li id="menu_category_201"><a href="https://www.sparkfun.com/categories/201">Programmers</a></li><li id="menu_category_195"><a href="https://www.sparkfun.com/categories/195">Prototyping</a></li><li id="menu_category_236"><a href="https://www.sparkfun.com/categories/236">Retail</a></li><li id="menu_category_197"><a href="https://www.sparkfun.com/categories/197">Robotics</a></li><li id="menu_category_189"><a href="https://www.sparkfun.com/categories/189">Sensors</a></li><li id="menu_category_208"><a href="https://www.sparkfun.com/categories/208">SFE Widgets</a></li><li id="menu_category_198"><a href="https://www.sparkfun.com/categories/198">Swag</a></li><li id="menu_category_193"><a href="https://www.sparkfun.com/categories/193">Tools</a></li><li id="menu_category_199"><a href="https://www.sparkfun.com/categories/199">Wireless</a></li></ul></li><li id="menu_category_31"><span class="arrow">►</span><a href="https://www.sparkfun.com/categories/31">Robotics</a><ul style="display:none;"><li id="menu_category_179"><a href="https://www.sparkfun.com/categories/179">Drivers</a></li><li id="menu_category_181"><a href="https://www.sparkfun.com/categories/181">Kits</a></li><li id="menu_category_178"><a href="https://www.sparkfun.com/categories/178">Motors</a></li><li id="menu_category_202"><a href="https://www.sparkfun.com/categories/202">Other</a></li><li id="menu_category_180"><a href="https://www.sparkfun.com/categories/180">Wheels</a></li></ul></li><li id="menu_category_185"><span class="arrow"></span><a href="https://www.sparkfun.com/categories/185">Sale</a></li><li id="menu_category_23"><span class="arrow">►</span><a href="https://www.sparkfun.com/categories/23">Sensors</a><ul style="display:none;"><li id="menu_category_80"><a href="https://www.sparkfun.com/categories/80">Accelerometers</a><ul><li id="menu_category_161"><a href="https://www.sparkfun.com/categories/161">1-axis</a></li><li id="menu_category_163"><a href="https://www.sparkfun.com/categories/163">3-axis</a></li></ul></li><li id="menu_category_146"><a href="https://www.sparkfun.com/categories/146">Biometrics</a></li><li id="menu_category_117"><a href="https://www.sparkfun.com/categories/117">Capacitive</a></li><li id="menu_category_151"><a href="https://www.sparkfun.com/categories/151">Current</a></li><li id="menu_category_143"><a href="https://www.sparkfun.com/categories/143">Flex / Force</a></li><li id="menu_category_85"><a href="https://www.sparkfun.com/categories/85">Gyros</a><ul><li id="menu_category_159"><a href="https://www.sparkfun.com/categories/159">2-axis</a></li><li id="menu_category_183"><a href="https://www.sparkfun.com/categories/183">3-axis</a></li></ul></li><li id="menu_category_144"><a href="https://www.sparkfun.com/categories/144">ID</a></li><li id="menu_category_160"><a href="https://www.sparkfun.com/categories/160">IMU</a></li><li id="menu_category_139"><a href="https://www.sparkfun.com/categories/139">Infrared</a></li><li id="menu_category_102"><a href="https://www.sparkfun.com/categories/102">Light / Imaging</a></li><li id="menu_category_83"><a href="https://www.sparkfun.com/categories/83">Magneto</a></li><li id="menu_category_84"><a href="https://www.sparkfun.com/categories/84">Proximity</a></li><li id="menu_category_165"><a href="https://www.sparkfun.com/categories/165">Radiation</a></li><li id="menu_category_186"><a href="https://www.sparkfun.com/categories/186">Sound</a></li><li id="menu_category_82"><a href="https://www.sparkfun.com/categories/82">Temperature</a></li><li id="menu_category_152"><a href="https://www.sparkfun.com/categories/152">Weather</a></li></ul></li><li id="menu_category_130"><span class="arrow"></span><a href="https://www.sparkfun.com/categories/130">Swag</a></li><li id="menu_category_46"><span class="arrow">►</span><a href="https://www.sparkfun.com/categories/46">Tools</a><ul style="display:none;"><li id="menu_category_47"><a href="https://www.sparkfun.com/categories/47">Hand Tools</a></li><li id="menu_category_48"><a href="https://www.sparkfun.com/categories/48">Hot-Air Rework</a></li><li id="menu_category_177"><a href="https://www.sparkfun.com/categories/177">Instruments</a></li><li id="menu_category_221"><a href="https://www.sparkfun.com/categories/221">Organization</a></li><li id="menu_category_28"><a href="https://www.sparkfun.com/categories/28">Power Supplies</a></li><li id="menu_category_49"><a href="https://www.sparkfun.com/categories/49">Soldering</a></li></ul></li><li id="menu_category_97"><span class="arrow"></span><a href="https://www.sparkfun.com/categories/97">Widgets</a></li><li id="menu_category_16"><span class="arrow">►</span><a href="https://www.sparkfun.com/categories/16">Wireless</a><ul style="display:none;"><li id="menu_category_78"><a href="https://www.sparkfun.com/categories/78">Antennas</a></li><li id="menu_category_115"><a href="https://www.sparkfun.com/categories/115">Bluetooth</a></li><li id="menu_category_79"><a href="https://www.sparkfun.com/categories/79">General</a></li><li id="menu_category_113"><a href="https://www.sparkfun.com/categories/113">Modem</a></li><li id="menu_category_114"><a href="https://www.sparkfun.com/categories/114">Nordic</a></li><li id="menu_category_112"><a href="https://www.sparkfun.com/categories/112">WiFi</a></li><li id="menu_category_111"><a href="https://www.sparkfun.com/categories/111">ZigBee &amp; 802.15.4</a><ul><li id="menu_category_222"><a href="https://www.sparkfun.com/categories/222">900MHz</a></li><li id="menu_category_223"><a href="https://www.sparkfun.com/categories/223">Series 1 (802.15.4)</a></li><li id="menu_category_224"><a href="https://www.sparkfun.com/categories/224">Series 2 (ZigBee)</a></li></ul></li></ul></li></ul>
+      </div>
+
+      <div id="center-left">
+
+        
+        <a name="content" id="content"></a>
+        
+<h1 class="red-header">
+    <a href="http://www.sparkfun.com/">Home</a>
+  <span class="breadcrumb-separator"> | </span>  <a href="http://www.sparkfun.com/tutorials/">Tutorials</a>
+  <span class="breadcrumb-separator"> | </span>  Sensor Interfacing 
+
+  <div class="fr">
+      <img src="65_files/icon_print_black.png" alt="Print View" onclick="window.print(); return(false);">
+  </div>
+</h1>
+
+<div class="news">
+  <img class="avatar" src="65_files/1ff6ad39b8c242a14296a76845e116cd.jpg" height="30" width="30">
+  <h2>
+    <a class="title" href="http://www.sparkfun.com/tutorials/65">Sensor Interfacing</a>  </h2>
+
+  <p class="subheader">
+          by <a href="http://www.sparkfun.com/users/7185">Nate</a> |
+        June 04, 2007 | <i><a href="#comments" onclick="javascript: if(!$('#comments').is(':visible')) { $('#comments_header').sfeutil('toggle_collapsible'); } $('#comments_header').scrollTo(); return false;">32 comments</a></i>
+    <span class="skill">
+      Skill Level: 
+              <img class="star" src="65_files/icon_skill_beginner.gif">
+        Beginner
+          </span>
+  </p>
+
+  <hr>
+
+  <p>
+<!--title:How do I connect my 3.3V device to my 5V microcontroller?--></p>
+
+
+<p style="margin-bottom: 0in;">
+    If you've ever tried to hook up a 3.3V sensor to a 5V micro, you 
+know what I'm talking about - connecting these two can be a problem! 
+There are several ways in which a 3.3V device can be safely connected to
+ a 5v microcontroller. This tutorial will detail a few ways in which 
+this can be accomplished.</p>
+
+
+<p style="margin-bottom: 0in;">
+    Below is an example of how NOT to connect a 3.3V device (like the <a href="http://www.sparkfun.com/commerce/product_info.php?products_id=8161" target="_blank"> SCP1000-D01</a>
+ pressure sensor with SPI interface) to a 5V microcontroller (like a PIC
+ or AVR running at 5V). Although you may experience normal operating 
+conditions, the lifespan of your 3.3V device will be dramatically 
+shortened.</p>
+
+
+<p style="margin-bottom: 0in;" align="center">
+    <img alt="" src="65_files/ST-1.jpg" style="border-width: 0px; border-style: solid;"></p>
+
+
+<p style="margin-bottom: 0in;">
+    Directly connecting the devices together (see above) will overstress the 3.3V device and eventually lead to device failure.</p>
+
+
+<p style="margin-bottom: 0in;">
+    In general, there are many ways to interface these two SPI 
+components together. There are many ICs available on the market that are
+ specifically designed to translate between logic levels. We've never 
+used any of them! Historically they've been very difficult to source and
+ there are a few methods below that make interfacing logic levels fairly
+ simple.</p>
+
+
+<hr width="80%">
+
+
+<p style="margin-bottom: 0in;">
+    <br>
+    <b><font size="4">Inline Resistor -</font></b></p>
+
+
+<p style="margin-bottom: 0in;">
+    This is the easiest and most rudimentary way to connect your devices
+ together. Below is a generalized diagram using the inline resistor 
+method.</p>
+
+
+<p style="margin-bottom: 0in;" align="center">
+    <img alt="" src="65_files/ST-2.jpg" style="border-width: 0px; border-style: solid;"></p>
+
+
+<p style="margin-bottom: 0in;">
+    <b>R7 and R8</b> : 10K resistors are placed between the MOSI (Master
+ Output Slave Input) line as well as the SCK (clock) line. These 
+resistors will decrease the amount of current flowing into the 3.3V 
+device. The internal clamping diodes within the 3.3V device will attempt
+ to clamp the incoming signal to 3.3V thus protecting the rest of the 
+3.3V device. Clamping diodes are normally found on the input lines of 
+low voltage devices.</p>
+
+
+<p style="margin-bottom: 0in;">
+    A clamping diode is a diode used to limit the peak voltage on a line
+ to a pre-determined maximum voltage. The resistor reduces the amount of
+ current flowing through the diode by several orders of magnitude. 
+Limiting the current will reduce the chances of the clamping diode being
+ permanently damage. Without the resistors in place, much higher current
+ will flow through the diode. These levels could destroy the clamping 
+diode and in turn, damage the device.</p>
+
+
+<p style="margin-bottom: 0in;">
+    Caution is needed with this approach as it is not guaranteed that 
+your 3.3V device will contain clamping diodes. Although most devices 
+have clamping diodes, if your device does not, then this inline resistor
+ method will not work to reduce the voltage input.</p>
+
+
+<p style="margin-bottom: 0in;">
+    <b>MISO </b>: You should notice that there is no resistor on the 
+output of the 3.3V device (MISO). You shouldn’t need any circuitry 
+between these lines to connect with your 5V device.</p>
+
+
+<p align="center">
+    <img alt="" src="65_files/ST-4.jpg" style="border-width: 0px; border-style: solid;"></p>
+
+
+<p align="left">
+    Here at the DC characteristics of the ATmega8. We need to check to 
+see what the minimum voltage is for a digital '1', and the maximum 
+voltage for a digital '0'.</p>
+
+
+<p align="left">
+    If our micro is powered by 5V, we see that the max for VIL is 0.2*5V
+ = 1V. So anything less than 1V the ATmega8 will consider a logic '0'.</p>
+
+
+<p align="left">
+    5V * 0.6 = 3V. So anything about 3V the ATmega8 will consider a 
+logic '1'. What happens when you're in between these two voltages? It's a
+ bit unknown. When in doubt, test to see if your micro can correctly 
+interpret the incoming signals. As long as the 3.3V device can output a 
+3.0V signal (for logic '1') the ATmega8 should be able to listen without
+ any other circuitry.</p>
+
+
+<p align="left">
+    You should check the datasheet for your given 5V device to ensure 
+the digital threshold voltages are within a range your 3.3V device can 
+output.</p>
+
+
+<p style="margin-bottom: 0in;">
+    <b>R5 </b>: A 1K resistor can be seen on the CS line - this is intentional! These two resistors form a <a href="http://en.wikipedia.org/wiki/Voltage_divider" target="_blank">voltage divider</a> on the CS line going into the 3.3V Device. Three cases are possible:</p>
+
+
+<ol>
+    <li>
+        <p style="margin-bottom: 0in;">
+            The 5V device is in reset and CS will be pulled high through R4</p>
+    </li>
+    <li>
+        <p style="margin-bottom: 0in;">
+            The 5V devise asserts CS, current is limited through R5, and the 3.3V device should see 3.3-3.8V on the CS pin</p>
+    </li>
+    <li>
+        <p style="margin-bottom: 0in;">
+            The 5V device sets the CS line to low then the 3.3V device will see 0.33V on the CS line. (See <a href="http://en.wikipedia.org/wiki/Voltage_divider" target="_blank">voltage divider</a>).</p>
+    </li>
+</ol>
+
+
+<p style="margin-bottom: 0in;">
+    Say for sake of argument that R5 was 10k. If we re-work the voltage 
+divider formula, we find that the 3.3V device would see (10k/20k) * 3.3V
+ = 1.65V when CS line is pulled low by the 5V device. 1.65V is not a 0 
+or a 1 according to the 3.3V device. It's right in the middle! The 3.3V 
+device would be completely confused! This is why we use a 1k inline and a
+ 10k pull up.</p>
+
+
+<hr width="80%">
+
+
+<p>
+    <br>
+    <font size="4"><b>Diode</b></font><b><font size="4"> -</font></b></p>
+
+
+<p style="margin-bottom: 0in;">
+    This method is considered a 'safer' solution than the inline 
+resistor. This method will work regardless of whether the 3.3V device 
+has clamping diodes or not.</p>
+
+
+<p style="margin-bottom: 0in;" align="center">
+    <img alt="" src="65_files/ST-3.jpg" style="border-width: 0px; border-style: solid;"></p>
+
+
+<p style="margin-bottom: 0in;">
+    When the 5V device transmits a digital high the diode blocks any 
+current flowing through to the 3.3V device. The 3.3V device sees no 
+change and therefore will still be pulled up to 3.3V through the 10k 
+resistor.</p>
+
+
+<p style="margin-bottom: 0in;">
+    When the 5V device transmits a digital low the diode will be tied to
+ ground. This will allow current to flow through the diode from the 3.3V
+ line. The input line into the 3.3V device will see the forward voltage 
+drop across the diode - instead of a solid 0V on the MOSI pin, the 3.3V 
+device would have 0.6V applied to MOSI pin. 0.6V is low enough to be 
+considered a digital '0' on many devices.</p>
+
+
+<p style="margin-bottom: 0in;">
+    Standard silicon diodes have a forward voltage drop of around 0.6V. 
+The lower the forward voltage drop the better for this application 
+therefore you may want to consider using a Schottky diode. These diodes 
+have forward voltage drops of around 0.2V.</p>
+
+
+<hr width="80%">
+
+
+<p style="margin-bottom: 0in;">
+    <br>
+    <b><font size="4">MOSFET -</font></b></p>
+
+
+<p style="margin-bottom: 0in;">
+    This is a more complex solution but it will allow you to interface a
+ lower voltage signal pin to a high voltage signal pin. If 3V is too low
+ of a voltage to register as a digital '1' into the 5V device, this 
+MOSFET configuration will help.</p>
+
+
+<p style="margin-bottom: 0in;" align="center">
+    <img alt="" src="65_files/ST-5.jpg" style="border-width: 0px; border-style: solid;"></p>
+
+
+<p style="margin-bottom: 0in;">
+    In this schematic, the 3.3V device is transmitting into the 5V 
+device. When the 3.3V device transmits a '1' (3V), the MOSFET is tied 
+high, and the TX-5V pin sees 5V through the R3 pull-up resistor. When 
+the 3.3V device transmits a '0' (0V), the MOSFET is grounded and the 
+TX-5V pin sees 0V. This circuit is a great way to interface a low 
+voltage to a high voltage. Just be sure that the lower voltage device is
+ on the left side of the MOSFET. This circuit will not work the other 
+direction (high voltage to low voltage) because of the internal diode 
+within the MOSFET will forward bias.</p>
+
+
+<p style="margin-bottom: 0in;">
+    Here are some links to additional documents that show how this 
+MOSFET circuit can be used to interface different voltage devices on an 
+I2C bus:</p>
+
+
+<ul>
+    <li>
+        <p style="margin-bottom: 0in;">
+            <a href="http://wwwasic.kip.uni-heidelberg.de/lhcb/Publications/external/AN97055.pdf" target="_blank"> Bi-directional level shifter</a></p>
+    </li>
+    <li>
+        <p style="margin-bottom: 0in;">
+            <a href="http://delphys.net/d.holmes/hardware/levelshift.html" target="_blank"> d.holmes page on level shifting</a></p>
+    </li>
+</ul>
+
+
+<hr width="80%">
+
+
+<p style="margin-bottom: 0in;">
+    I would first recommend trying to get all your devices onto the same
+ power bus. If you've got a 3.3V sensor, can you get your micro to run 
+at 3.3V as well? If not, for prototyping purposes, a resistor inline or a
+ diode should be all you need!</p>
+
+
+<p>
+    June 4th, 2007</p>
+</div>
+
+<div id="comments_container">
+  
+<h2 id="comments_header" class="collapsible grey big">
+  <span class="arrow visible">▼ </span>Comments
+  <span class="count">
+    32 comments     <a href="http://www.sparkfun.com/tutorials/65/comments.rss"><img src="65_files/rss.gif" style="vertical-align: top; margin-top: -1px;"></a>  </span>
+</h2>
+<div id="comments" class="collapsible white">
+  <div>  <div class="login text-center padtwenty">
+    <b>
+      <a href="http://www.sparkfun.com/account/login" class="toggle-login">Login</a> or
+      <a href="http://www.sparkfun.com/account/make">register</a> to post comments.
+    </b>
+  </div>
+</div>
+  <div id="comment-reply-form" style="display: none">  <div class="text-center padtwenty">
+    <b>
+      <a href="http://www.sparkfun.com/account/login" class="toggle-login">Login</a> or
+      <a href="http://www.sparkfun.com/account/make">register</a> to post comments.
+    </b>
+  </div>
+</div>
+  <div id="comment-edit-form" style="display: none">  <div style="text-align: center">
+    <b><a href="https://www.sparkfun.com/account/login">Log in</a> to post comments.</b>
+  </div>
+</div>
+  <ul class="comments">
+    <li id="comment-4eaad83e757b7fd3510002da" class=" comment">
+<div class="clearfix tagline">
+
+  <div class="comment-info">
+    <img class="avatar" src="65_files/anon.png">            <a href="http://www.sparkfun.com/users/50860">Ad</a>
+    <span class="wide">|</span>
+    <span title="Wednesday, 22-Oct-08 09:39:05 MDT" class="date"><a href="http://www.sparkfun.com/tutorials/65#comment-4eaad83e757b7fd3510002da">about 4 years ago</a></span>
+    
+    <span class="rating-star">
+              <span title="Please login to up-vote comments" class="star-dark"> </span>
+          </span>
+
+    <span class="rating" id="comment-rating-4eaad83e757b7fd3510002da">
+      <a class="text-grey" data="fancybox" href="http://www.sparkfun.com/static/comment_help">2</a>
+    </span>
+  </div>
+
+  <div class="actions">
+      </div>
+
+</div>
+
+<div class="comment-text">
+  <p>Thanks for writing this. Are these precautions necessary if you are just reading from a sensor and not writing anything to it?<br>
+i.e I have the analogue output of a 3.3V maxbotix proximity sensor 
+(thanks sparkfun!) connected directly to a PIC analog input. Is this a 
+bad idea? The only other thing connected to the sensor is power.</p></div>
+<ul class="comments"><li id="comment-4eaad857757b7fd35100af38" class=" comment">
+<div class="clearfix tagline">
+
+  <div class="comment-info">
+    <img class="avatar" src="65_files/anon.png">            <a href="http://www.sparkfun.com/users/144493">baum</a>
+    <span class="wide">|</span>
+    <span title="Saturday, 20-Aug-11 11:01:04 MDT" class="date"><a href="http://www.sparkfun.com/tutorials/65#comment-4eaad857757b7fd35100af38">about a year ago</a></span>
+    
+    <span class="rating-star">
+              <span title="Please login to up-vote comments" class="star-dark"> </span>
+          </span>
+
+    <span class="rating" id="comment-rating-4eaad857757b7fd35100af38">
+      <a class="text-grey" data="fancybox" href="http://www.sparkfun.com/static/comment_help">1</a>
+    </span>
+  </div>
+
+  <div class="actions">
+      </div>
+
+</div>
+
+<div class="comment-text">
+  <p>I don’t think so. As long as you are using the 3.3V pin to power it, you’ll be fine.</p></div>
+</li></ul></li><li id="comment-4eaad850757b7fd35100810f" class=" comment">
+<div class="clearfix tagline">
+
+  <div class="comment-info">
+    <img class="avatar" src="65_files/anon.png">            <a href="http://www.sparkfun.com/users/50099">rmackay9</a>
+    <span class="wide">|</span>
+    <span title="Sunday, 27-Mar-11 07:20:53 MDT" class="date"><a href="http://www.sparkfun.com/tutorials/65#comment-4eaad850757b7fd35100810f">about 2 years ago</a></span>
+    
+    <span class="rating-star">
+              <span title="Please login to up-vote comments" class="star-dark"> </span>
+          </span>
+
+    <span class="rating" id="comment-rating-4eaad850757b7fd35100810f">
+      <a class="text-grey" data="fancybox" href="http://www.sparkfun.com/static/comment_help">2</a>
+    </span>
+  </div>
+
+  <div class="actions">
+      </div>
+
+</div>
+
+<div class="comment-text">
+  <p>I used the inline resistor method and I’ve found that at least with
+ one sensor (ADNS3080) and using an Arduino ATMeg1280, that the 10k 
+resistors on the SCK and MOSI pins were too large.  This sensor I was 
+using apparently had internal pull-up resistors (also of 10k) and it 
+meant that the arduino was unable to properly control the voltage.  To 
+fix the problem I had to use 1K resistors on SCK and MOSI pins and then 
+it all worked great!</p></div>
+<ul class="comments"><li id="comment-5054d5c2757b7f951b000000" class=" comment">
+<div class="clearfix tagline">
+
+  <div class="comment-info">
+    <img class="avatar" src="65_files/anon.png">            <a href="http://www.sparkfun.com/users/295533">pkshima</a>
+    <span class="wide">|</span>
+    <span title="Saturday, 15-Sep-12 13:23:46 MDT" class="date"><a href="http://www.sparkfun.com/tutorials/65#comment-5054d5c2757b7f951b000000">about 4 months ago</a></span>
+    
+    <span class="rating-star">
+              <span title="Please login to up-vote comments" class="star-dark"> </span>
+          </span>
+
+    <span class="rating" id="comment-rating-5054d5c2757b7f951b000000">
+      <a class="text-grey" data="fancybox" href="http://www.sparkfun.com/static/comment_help">1</a>
+    </span>
+  </div>
+
+  <div class="actions">
+      </div>
+
+</div>
+
+<div class="comment-text">
+  <p>You are the Man !!!
+The exact same issue was giving me a headache since 3 weeks.
+10k is too high for interfacing PIC18F2525 to CC2500 also.
+I tried 1k and I am back in the game !</p></div>
+</li></ul></li><li id="comment-4eaad83d757b7fd351000217" class=" comment">
+<div class="clearfix tagline">
+
+  <div class="comment-info">
+    <img class="avatar" src="65_files/anon.png">            <a href="http://www.sparkfun.com/users/48485">djodin</a>
+    <span class="wide">|</span>
+    <span title="Sunday, 28-Sep-08 12:57:08 MDT" class="date"><a href="http://www.sparkfun.com/tutorials/65#comment-4eaad83d757b7fd351000217">about 4 years ago</a></span>
+    
+    <span class="rating-star">
+              <span title="Please login to up-vote comments" class="star-dark"> </span>
+          </span>
+
+    <span class="rating" id="comment-rating-4eaad83d757b7fd351000217">
+      <a class="text-grey" data="fancybox" href="http://www.sparkfun.com/static/comment_help">1</a>
+    </span>
+  </div>
+
+  <div class="actions">
+      </div>
+
+</div>
+
+<div class="comment-text">
+  <p>Thanks for this great article.</p></div>
+</li><li id="comment-4eaad83e757b7fd351000471" class=" comment">
+<div class="clearfix tagline">
+
+  <div class="comment-info">
+    <img class="avatar" src="65_files/anon.png">            <a href="http://www.sparkfun.com/users/24980">p07gbar</a>
+    <span class="wide">|</span>
+    <span title="Wednesday, 03-Dec-08 12:59:51 MST" class="date"><a href="http://www.sparkfun.com/tutorials/65#comment-4eaad83e757b7fd351000471">about 4 years ago</a></span>
+    
+    <span class="rating-star">
+              <span title="Please login to up-vote comments" class="star-dark"> </span>
+          </span>
+
+    <span class="rating" id="comment-rating-4eaad83e757b7fd351000471">
+      <a class="text-grey" data="fancybox" href="http://www.sparkfun.com/static/comment_help">1</a>
+    </span>
+  </div>
+
+  <div class="actions">
+      </div>
+
+</div>
+
+<div class="comment-text">
+  <p>What is the best way to interface a I2C device with a 5V device? I don’t think the device is 5V tolerant.</p></div>
+<ul class="comments"><li id="comment-4eaad83f757b7fd351000eb1" class=" comment">
+<div class="clearfix tagline">
+
+  <div class="comment-info">
+    <img class="avatar" src="65_files/anon.png">            <a href="http://www.sparkfun.com/users/72551">Manuel</a>
+    <span class="wide">|</span>
+    <span title="Tuesday, 09-Jun-09 15:00:39 MDT" class="date"><a href="http://www.sparkfun.com/tutorials/65#comment-4eaad83f757b7fd351000eb1">about 4 years ago</a></span>
+    
+    <span class="rating-star">
+              <span title="Please login to up-vote comments" class="star-dark"> </span>
+          </span>
+
+    <span class="rating" id="comment-rating-4eaad83f757b7fd351000eb1">
+      <a class="text-grey" data="fancybox" href="http://www.sparkfun.com/static/comment_help">1</a>
+    </span>
+  </div>
+
+  <div class="actions">
+      </div>
+
+</div>
+
+<div class="comment-text">
+  <p>What about optical isolation? I’d try an 4N25 if the device isn’t 
+5V tolerant. The only problem is that the 4N25 needs something like 50mA
+ to work and maybe you’d need a transistor before to get that much 
+current. Anyway, I don’t know if it will work for I2C, I made it work 
+with serial communication.</p></div>
+</li><li id="comment-4eaad841757b7fd351001ca6" class=" comment">
+<div class="clearfix tagline">
+
+  <div class="comment-info">
+    <img class="avatar" src="65_files/anon.png">            <a href="http://www.sparkfun.com/users/88587">santiagordgz</a>
+    <span class="wide">|</span>
+    <span title="Thursday, 03-Dec-09 20:28:00 MST" class="date"><a href="http://www.sparkfun.com/tutorials/65#comment-4eaad841757b7fd351001ca6">about 3 years ago</a></span>
+    
+    <span class="rating-star">
+              <span title="Please login to up-vote comments" class="star-dark"> </span>
+          </span>
+
+    <span class="rating" id="comment-rating-4eaad841757b7fd351001ca6">
+      <a class="text-grey" data="fancybox" href="http://www.sparkfun.com/static/comment_help">1</a>
+    </span>
+  </div>
+
+  <div class="actions">
+      </div>
+
+</div>
+
+<div class="comment-text">
+  <p>I just pull both lines to 3.3V and that’s it. As in I2C floating is
+ 1 and pulling it low is 0. PICs are happy working with 3.3v logic.<br>
+I know it’s been more than a year…</p></div>
+<ul class="comments"><li id="comment-4eaad841757b7fd351001ca7" class=" comment">
+<div class="clearfix tagline">
+
+  <div class="comment-info">
+    <img class="avatar" src="65_files/anon.png">            <a href="http://www.sparkfun.com/users/88587">santiagordgz</a>
+    <span class="wide">|</span>
+    <span title="Thursday, 03-Dec-09 20:35:21 MST" class="date"><a href="http://www.sparkfun.com/tutorials/65#comment-4eaad841757b7fd351001ca7">about 3 years ago</a></span>
+    
+    <span class="rating-star">
+              <span title="Please login to up-vote comments" class="star-dark"> </span>
+          </span>
+
+    <span class="rating" id="comment-rating-4eaad841757b7fd351001ca7">
+      <a class="text-grey" data="fancybox" href="http://www.sparkfun.com/static/comment_help">1</a>
+    </span>
+  </div>
+
+  <div class="actions">
+      </div>
+
+</div>
+
+<div class="comment-text">
+  <p>When interfacing 3.3 to 5 I always use a voltage divider on lines 
+going form high (5) to low (3.3) voltage and a series resistor on the 
+opposite direction when I cannot guarantee high impedance (eg. on some 
+MCUs after reset). It’s cheap and as far as I know safe.</p></div>
+</li></ul></li></ul></li><li id="comment-4eaad83e757b7fd35100062d" class=" comment">
+<div class="clearfix tagline">
+
+  <div class="comment-info">
+    <img class="avatar" src="65_files/anon.png">            <a href="http://www.sparkfun.com/users/49608">armaniake</a>
+    <span class="wide">|</span>
+    <span title="Monday, 19-Jan-09 16:14:32 MST" class="date"><a href="http://www.sparkfun.com/tutorials/65#comment-4eaad83e757b7fd35100062d">about 4 years ago</a></span>
+    
+    <span class="rating-star">
+              <span title="Please login to up-vote comments" class="star-dark"> </span>
+          </span>
+
+    <span class="rating" id="comment-rating-4eaad83e757b7fd35100062d">
+      <a class="text-grey" data="fancybox" href="http://www.sparkfun.com/static/comment_help">1</a>
+    </span>
+  </div>
+
+  <div class="actions">
+      </div>
+
+</div>
+
+<div class="comment-text">
+  <p>Hi,<br>
+You are saying:<br>
+This circuit will not work the other direction (high voltage to low 
+voltage) because of the internal diode within the MOSFET will forward 
+bias.<br>
+But the AppNote you are pointing too explain in chapter 2.3.1 that the 
+circuitry can be used as a bidirectional shifter… They are saying that a
+ level 0 on the TX-5V side will forward conduct the internal diode, and 
+this will start to raise Vgs to the point it will start to conduct and 
+drive the TX-3.3V node to 0V.<br>
+Could you comment?<br>
+Thanks</p></div>
+</li><li id="comment-4eaad83e757b7fd351000823" class=" comment">
+<div class="clearfix tagline">
+
+  <div class="comment-info">
+    <img class="avatar" src="65_files/anon.png">            <a href="http://www.sparkfun.com/users/61414">Nullified</a>
+    <span class="wide">|</span>
+    <span title="Wednesday, 18-Feb-09 15:47:07 MST" class="date"><a href="http://www.sparkfun.com/tutorials/65#comment-4eaad83e757b7fd351000823">about 4 years ago</a></span>
+    
+    <span class="rating-star">
+              <span title="Please login to up-vote comments" class="star-dark"> </span>
+          </span>
+
+    <span class="rating" id="comment-rating-4eaad83e757b7fd351000823">
+      <a class="text-grey" data="fancybox" href="http://www.sparkfun.com/static/comment_help">1</a>
+    </span>
+  </div>
+
+  <div class="actions">
+      </div>
+
+</div>
+
+<div class="comment-text">
+  <p>Is there any reason for not simply using a 3.3V Zener diode?  I’m 
+interfacing a XBee to an AVR, and I simply put a 3.3V Zener diode on all
+ the signal lines between the two, I can’t think of any reasons why this
+ wouldn’t be enough, but please correct me if I’m wrong.</p></div>
+</li><li id="comment-4eaad83f757b7fd351000eb0" class=" comment">
+<div class="clearfix tagline">
+
+  <div class="comment-info">
+    <img class="avatar" src="65_files/anon.png">            <a href="http://www.sparkfun.com/users/72551">Manuel</a>
+    <span class="wide">|</span>
+    <span title="Tuesday, 09-Jun-09 14:53:57 MDT" class="date"><a href="http://www.sparkfun.com/tutorials/65#comment-4eaad83f757b7fd351000eb0">about 4 years ago</a></span>
+    
+    <span class="rating-star">
+              <span title="Please login to up-vote comments" class="star-dark"> </span>
+          </span>
+
+    <span class="rating" id="comment-rating-4eaad83f757b7fd351000eb0">
+      <a class="text-grey" data="fancybox" href="http://www.sparkfun.com/static/comment_help">1</a>
+    </span>
+  </div>
+
+  <div class="actions">
+      </div>
+
+</div>
+
+<div class="comment-text">
+  <p>Hi there! I’d go with the MOSFET. In a recent project I used a BJT in a similar configuration and worked perfectly fine.</p></div>
+</li><li id="comment-4eaad83f757b7fd35100110e" class=" comment">
+<div class="clearfix tagline">
+
+  <div class="comment-info">
+    <img class="avatar" src="65_files/anon.png">            <a href="http://www.sparkfun.com/users/25023">dstahlke</a>
+    <span class="wide">|</span>
+    <span title="Thursday, 16-Jul-09 10:54:05 MDT" class="date"><a href="http://www.sparkfun.com/tutorials/65#comment-4eaad83f757b7fd35100110e">about 4 years ago</a></span>
+    
+    <span class="rating-star">
+              <span title="Please login to up-vote comments" class="star-dark"> </span>
+          </span>
+
+    <span class="rating" id="comment-rating-4eaad83f757b7fd35100110e">
+      <a class="text-grey" data="fancybox" href="http://www.sparkfun.com/static/comment_help">1</a>
+    </span>
+  </div>
+
+  <div class="actions">
+      </div>
+
+</div>
+
+<div class="comment-text">
+  <p>You can also use any logic chip from the 74HC series, such as the 
+74HC244 octal buffer.  Just power the chip with 3.3v and use a 1K 
+resistor on each of its inputs.  It is not bidirectional, but usually 
+connecting a 3.3v output to a 5v input is not a problem anyway.</p></div>
+</li><li id="comment-4eaad840757b7fd35100129d" class=" comment">
+<div class="clearfix tagline">
+
+  <div class="comment-info">
+    <img class="avatar" src="65_files/anon.png">            <a href="http://www.sparkfun.com/users/63091">Matt</a>
+    <span class="wide">|</span>
+    <span title="Saturday, 15-Aug-09 12:25:36 MDT" class="date"><a href="http://www.sparkfun.com/tutorials/65#comment-4eaad840757b7fd35100129d">about 3 years ago</a></span>
+    
+    <span class="rating-star">
+              <span title="Please login to up-vote comments" class="star-dark"> </span>
+          </span>
+
+    <span class="rating" id="comment-rating-4eaad840757b7fd35100129d">
+      <a class="text-grey" data="fancybox" href="http://www.sparkfun.com/static/comment_help">1</a>
+    </span>
+  </div>
+
+  <div class="actions">
+      </div>
+
+</div>
+
+<div class="comment-text">
+  <p>Regarding using a 74HC125 for 5-&gt;3.3V transition: do you really need any serial resisters on the 125’s inputs?</p></div>
+</li><li id="comment-4eaad843757b7fd3510027dc" class=" comment">
+<div class="clearfix tagline">
+
+  <div class="comment-info">
+    <img class="avatar" src="65_files/anon.png">            <a href="http://www.sparkfun.com/users/115841">rebechs</a>
+    <span class="wide">|</span>
+    <span title="Friday, 05-Feb-10 03:22:37 MST" class="date"><a href="http://www.sparkfun.com/tutorials/65#comment-4eaad843757b7fd3510027dc">about 3 years ago</a></span>
+    
+    <span class="rating-star">
+              <span title="Please login to up-vote comments" class="star-dark"> </span>
+          </span>
+
+    <span class="rating" id="comment-rating-4eaad843757b7fd3510027dc">
+      <a class="text-grey" data="fancybox" href="http://www.sparkfun.com/static/comment_help">1</a>
+    </span>
+  </div>
+
+  <div class="actions">
+      </div>
+
+</div>
+
+<div class="comment-text">
+  <p>Regarding the second schematic “Inline Resistor”:</p>
+
+<blockquote><ol>
+<li>The 5V devise asserts CS, current is limited through R5, and the<br>
+3.3V device should see 3.3-3.8V on the CS pin</li>
+<li>The 5V device sets the CS line to low then the 3.3V device will see 0.33V on the CS line. (See voltage divider).<br>
+To #2: Don’t we also have a voltage divider?<br>
+3.3v —— 10K (R4) —— CS-Pin —— 1K (R5) —— 5V (powered on by 5V Device)<br>
+Voltage difference between 3.3 and 5.0 of 1.7 Volt:<br>
+Voltage over both contacts of the 10K resistor is<br>
+1.7V<em>10K/(10K+1K) = 1.55<br>
+1K resistor:<br>
+1.7V</em>1K/(10K+1K) = 0.15<br>
+Now stack this additional Voltage at the 10K resistor (1.55V) on top of the 3.3V:<br>
+3.3V + 1.55V = 4.85V<br>
+This 4.85V are at “3.3V Device” CS input in my opinion.<br>
+To #3:<br>
+3.3v —— 10K —— 1K —— 0V<br>
+Voltage over both contacts of the 1K resistor is<br>
+3.3V*1K/(10K+1K) = 0.30V<br>
+So at the “3.3V Device” CS input in my opinion lie 3.0V instead of 3.3<br>
+I could be terribly wrong with all that, please let me know.</li>
+</ol>
+</blockquote></div>
+<ul class="comments"><li id="comment-4eaad848757b7fd351004dce" class=" comment">
+<div class="clearfix tagline">
+
+  <div class="comment-info">
+    <img class="avatar" src="65_files/anon.png">            <a href="http://www.sparkfun.com/users/158197">adwin</a>
+    <span class="wide">|</span>
+    <span title="Sunday, 24-Oct-10 22:03:04 MDT" class="date"><a href="http://www.sparkfun.com/tutorials/65#comment-4eaad848757b7fd351004dce">about 2 years ago</a></span>
+    
+    <span class="rating-star">
+              <span title="Please login to up-vote comments" class="star-dark"> </span>
+          </span>
+
+    <span class="rating" id="comment-rating-4eaad848757b7fd351004dce">
+      <a class="text-grey" data="fancybox" href="http://www.sparkfun.com/static/comment_help">1</a>
+    </span>
+  </div>
+
+  <div class="actions">
+      </div>
+
+</div>
+
+<div class="comment-text">
+  <p>Yes even I have the same doubt as you,<br>
+Can someone clarify</p></div>
+</li></ul></li><li id="comment-4eaad843757b7fd3510027dd" class=" comment">
+<div class="clearfix tagline">
+
+  <div class="comment-info">
+    <img class="avatar" src="65_files/anon.png">            <a href="http://www.sparkfun.com/users/115841">rebechs</a>
+    <span class="wide">|</span>
+    <span title="Friday, 05-Feb-10 03:40:00 MST" class="date"><a href="http://www.sparkfun.com/tutorials/65#comment-4eaad843757b7fd3510027dd">about 3 years ago</a></span>
+    
+    <span class="rating-star">
+              <span title="Please login to up-vote comments" class="star-dark"> </span>
+          </span>
+
+    <span class="rating" id="comment-rating-4eaad843757b7fd3510027dd">
+      <a class="text-grey" data="fancybox" href="http://www.sparkfun.com/static/comment_help">1</a>
+    </span>
+  </div>
+
+  <div class="actions">
+      </div>
+
+</div>
+
+<div class="comment-text">
+  <blockquote><p>So at the “3.3V Device” CS input in my<br>
+opinion lie 3.0V instead of 3.3<br>
+Sorry! I meant:<br>
+So at the “3.3V Device” CS input in my opinion lie 0.30V instead of 0.33V.</p></blockquote></div>
+</li><li id="comment-4eaad847757b7fd351004548" class=" comment">
+<div class="clearfix tagline">
+
+  <div class="comment-info">
+    <img class="avatar" src="65_files/anon.png">            <a href="http://www.sparkfun.com/users/130102">EternityForest</a>
+    <span class="wide">|</span>
+    <span title="Tuesday, 31-Aug-10 00:14:12 MDT" class="date"><a href="http://www.sparkfun.com/tutorials/65#comment-4eaad847757b7fd351004548">about 2 years ago</a></span>
+    
+    <span class="rating-star">
+              <span title="Please login to up-vote comments" class="star-dark"> </span>
+          </span>
+
+    <span class="rating" id="comment-rating-4eaad847757b7fd351004548">
+      <a class="text-grey" data="fancybox" href="http://www.sparkfun.com/static/comment_help">1</a>
+    </span>
+  </div>
+
+  <div class="actions">
+      </div>
+
+</div>
+
+<div class="comment-text">
+  <p>@Ad<br>
+I don’t see any problem with your setup at all.<br>
+But i would like to point out that if you use a SPI connection, you are 
+always “writing” something to the sensor(the clock line of course) so 
+the precautions are needed.</p></div>
+</li><li id="comment-4eaad850757b7fd351008450" class=" comment">
+<div class="clearfix tagline">
+
+  <div class="comment-info">
+    <img class="avatar" src="65_files/anon.png">            <a href="http://www.sparkfun.com/users/92195">Gigawatts</a>
+    <span class="wide">|</span>
+    <span title="Monday, 04-Apr-11 12:16:55 MDT" class="date"><a href="http://www.sparkfun.com/tutorials/65#comment-4eaad850757b7fd351008450">about 2 years ago</a></span>
+    
+    <span class="rating-star">
+              <span title="Please login to up-vote comments" class="star-dark"> </span>
+          </span>
+
+    <span class="rating" id="comment-rating-4eaad850757b7fd351008450">
+      <a class="text-grey" data="fancybox" href="http://www.sparkfun.com/static/comment_help">1</a>
+    </span>
+  </div>
+
+  <div class="actions">
+      </div>
+
+</div>
+
+<div class="comment-text">
+  <p>Could the OP please fix the image file permissions on this tutorial? I am getting 403’s for all the image links.</p></div>
+</li><li id="comment-4eaad854757b7fd351009b3c" class=" comment">
+<div class="clearfix tagline">
+
+  <div class="comment-info">
+    <img class="avatar" src="65_files/anon.png">            <a href="http://www.sparkfun.com/users/231905">MWalker</a>
+    <span class="wide">|</span>
+    <span title="Tuesday, 14-Jun-11 07:25:12 MDT" class="date"><a href="http://www.sparkfun.com/tutorials/65#comment-4eaad854757b7fd351009b3c">about 2 years ago</a></span>
+     *
+    <span class="rating-star">
+              <span title="Please login to up-vote comments" class="star-dark"> </span>
+          </span>
+
+    <span class="rating" id="comment-rating-4eaad854757b7fd351009b3c">
+      <a class="text-grey" data="fancybox" href="http://www.sparkfun.com/static/comment_help">1</a>
+    </span>
+  </div>
+
+  <div class="actions">
+      </div>
+
+</div>
+
+<div class="comment-text">
+  <p>Hello!<br>
+One question and it’s kind of urgent.<br>
+The diode should be inserted also on SCK and CS line or only in MOSI line?<br>
+Thanks! ;)</p></div>
+<ul class="comments"><li id="comment-4eaad857757b7fd35100af42" class=" comment">
+<div class="clearfix tagline">
+
+  <div class="comment-info">
+    <img class="avatar" src="65_files/anon.png">            <a href="http://www.sparkfun.com/users/144493">baum</a>
+    <span class="wide">|</span>
+    <span title="Saturday, 20-Aug-11 15:27:50 MDT" class="date"><a href="http://www.sparkfun.com/tutorials/65#comment-4eaad857757b7fd35100af42">about a year ago</a></span>
+    
+    <span class="rating-star">
+              <span title="Please login to up-vote comments" class="star-dark"> </span>
+          </span>
+
+    <span class="rating" id="comment-rating-4eaad857757b7fd35100af42">
+      <a class="text-grey" data="fancybox" href="http://www.sparkfun.com/static/comment_help">1</a>
+    </span>
+  </div>
+
+  <div class="actions">
+      </div>
+
+</div>
+
+<div class="comment-text">
+  <p>You should put diodes + pull ups on all High to Low lines. (High to
+ Low lines are all lines in which the 5V part sends a signal to the 3V3 
+part) In your case, yes, SCK, CS, and MOSI should have diodes + pull 
+ups.</p></div>
+<ul class="comments"><li id="comment-5009a724ce395f986d000000" class=" comment">
+<div class="clearfix tagline">
+
+  <div class="comment-info">
+    <img class="avatar" src="65_files/anon.png">            <a href="http://www.sparkfun.com/users/260422">Maxwellfire</a>
+    <span class="wide">|</span>
+    <span title="Friday, 20-Jul-12 12:44:52 MDT" class="date"><a href="http://www.sparkfun.com/tutorials/65#comment-5009a724ce395f986d000000">about 6 months ago</a></span>
+    
+    <span class="rating-star">
+              <span title="Please login to up-vote comments" class="star-dark"> </span>
+          </span>
+
+    <span class="rating" id="comment-rating-5009a724ce395f986d000000">
+      <a class="text-grey" data="fancybox" href="http://www.sparkfun.com/static/comment_help">1</a>
+    </span>
+  </div>
+
+  <div class="actions">
+      </div>
+
+</div>
+
+<div class="comment-text">
+  <p>why does the diagram not show that?</p></div>
+</li></ul></li></ul></li><li id="comment-4eaad858757b7fd35100b5d2" class=" comment">
+<div class="clearfix tagline">
+
+  <div class="comment-info">
+    <img class="avatar" src="65_files/anon.png">            <a href="http://www.sparkfun.com/users/252727">stevemarple</a>
+    <span class="wide">|</span>
+    <span title="Monday, 19-Sep-11 13:47:03 MDT" class="date"><a href="http://www.sparkfun.com/tutorials/65#comment-4eaad858757b7fd35100b5d2">about a year ago</a></span>
+     *
+    <span class="rating-star">
+              <span title="Please login to up-vote comments" class="star-dark"> </span>
+          </span>
+
+    <span class="rating" id="comment-rating-4eaad858757b7fd35100b5d2">
+      <a class="text-grey" data="fancybox" href="http://www.sparkfun.com/static/comment_help">1</a>
+    </span>
+  </div>
+
+  <div class="actions">
+      </div>
+
+</div>
+
+<div class="comment-text">
+  <p>There’s no protection on the MISO pin of the 3.3V device, 
+unnecessary when only 3.3V slave devices are used. However, when  mixing
+ 3.3V SPI slave devices with 5V slave devices there will be 5V signals 
+on MISO. What is the best way to protect the 3.3V devices in this case?</p></div>
+<ul class="comments"><li id="comment-4eaad85a757b7fd35100bf44" class=" comment">
+<div class="clearfix tagline">
+
+  <div class="comment-info">
+    <img class="avatar" src="65_files/anon.png">            <a href="http://www.sparkfun.com/users/252727">stevemarple</a>
+    <span class="wide">|</span>
+    <span title="Sunday, 23-Oct-11 09:52:26 MDT" class="date"><a href="http://www.sparkfun.com/tutorials/65#comment-4eaad85a757b7fd35100bf44">about a year ago</a></span>
+    
+    <span class="rating-star">
+              <span title="Please login to up-vote comments" class="star-dark"> </span>
+          </span>
+
+    <span class="rating" id="comment-rating-4eaad85a757b7fd35100bf44">
+      <a class="text-grey" data="fancybox" href="http://www.sparkfun.com/static/comment_help">1</a>
+    </span>
+  </div>
+
+  <div class="actions">
+      </div>
+
+</div>
+
+<div class="comment-text">
+  <p>I’m now using a 74LVC244 to translate the MOSI, SCK and CS signals 
+to 3.3V levels. The 75LVC244 is powered from 3.3V with the output enable
+ pins permanently grounded. I chose this device because the data sheet 
+states its inputs allow 5V logic levels when powered from 3.3V, and it 
+is also available in a DIP package.<br>
+For each 3.3V SPI slave I’m using one gate from a 74HCT125 quad buffer 
+to protect MISO from 5V SPI slaves. The buffer’s output enable pin is 
+connected to the slave’s (active-low) CS input. The 74HCT125 is powered 
+from 5V.<br>
+This set up properly protects both inputs and outputs of 3.3V devices. 
+It still works if the 5V logic levels are replaced by 3.3V ones, 
+allowing custom Arduino shields to be used on both 5V and 3.3V Arduinos.</p></div>
+</li></ul></li><li id="comment-4f353a30757b7f205d000000" class=" comment">
+<div class="clearfix tagline">
+
+  <div class="comment-info">
+    <img class="avatar" src="65_files/anon.png">            <a href="http://www.sparkfun.com/users/53147">Kdiggity</a>
+    <span class="wide">|</span>
+    <span title="Friday, 10-Feb-12 08:39:28 MST" class="date"><a href="http://www.sparkfun.com/tutorials/65#comment-4f353a30757b7f205d000000">last year</a></span>
+    
+    <span class="rating-star">
+              <span title="Please login to up-vote comments" class="star-dark"> </span>
+          </span>
+
+    <span class="rating" id="comment-rating-4f353a30757b7f205d000000">
+      <a class="text-grey" data="fancybox" href="http://www.sparkfun.com/static/comment_help">1</a>
+    </span>
+  </div>
+
+  <div class="actions">
+      </div>
+
+</div>
+
+<div class="comment-text">
+  <p>Good article, it worked on my sensor interface. I have done 
+something similar to this with AC line. I used 3 high valued resistors 
+to reduce current and then clamp the voltage to logic levels via 
+internal clamp diodes. With three resistors, one capacitor, and a 
+microcontroller I made a basic touch interface.</p></div>
+</li><li id="comment-4f78dc09757b7f194a000000" class=" comment">
+<div class="clearfix tagline">
+
+  <div class="comment-info">
+    <img class="avatar" src="65_files/anon.png">            <a href="http://www.sparkfun.com/users/252727">stevemarple</a>
+    <span class="wide">|</span>
+    <span title="Sunday, 01-Apr-12 16:51:53 MDT" class="date"><a href="http://www.sparkfun.com/tutorials/65#comment-4f78dc09757b7f194a000000">about 10 months ago</a></span>
+    
+    <span class="rating-star">
+              <span title="Please login to up-vote comments" class="star-dark"> </span>
+          </span>
+
+    <span class="rating" id="comment-rating-4f78dc09757b7f194a000000">
+      <a class="text-grey" data="fancybox" href="http://www.sparkfun.com/static/comment_help">1</a>
+    </span>
+  </div>
+
+  <div class="actions">
+      </div>
+
+</div>
+
+<div class="comment-text">
+  <p>When a pull-up is used with the simple inline resistor method shown
+ above the 5V device sources current to the 3.3V supply. If we assume 
+the internal clamping diode of the 3.3V device clamps CS to 4V 
+(3.3+0.7V) then 70uA (0.7V/10k) of current flows to the 3V3 supply. If 
+the load on the 3V3 supply is less than 70uA (in this case) the voltage 
+regulator must sink current – its normal application is to source 
+current.</p>
+
+<p>I inadvertantly recreated this scenario using a 74LVC244 
+level-shifter by wiring a pull-up to 3.3V instead of 5V. The TC1262 
+regulator couldn’t sink the 17uA of current and the 3.3V supply 
+gradually increased to 5V. I didn’t observe this problem with either the
+ LD1117-3.3 or MCP1702 regulators so they seem to be able sink 17uA 
+without problems.</p></div>
+</li><li id="comment-4ffae9d6ce395f5965000000" class=" comment">
+<div class="clearfix tagline">
+
+  <div class="comment-info">
+    <img class="avatar" src="65_files/anon.png">            <a href="http://www.sparkfun.com/users/315722">marciomaiajr</a>
+    <span class="wide">|</span>
+    <span title="Monday, 09-Jul-12 08:25:26 MDT" class="date"><a href="http://www.sparkfun.com/tutorials/65#comment-4ffae9d6ce395f5965000000">about 7 months ago</a></span>
+    
+    <span class="rating-star">
+              <span title="Please login to up-vote comments" class="star-dark"> </span>
+          </span>
+
+    <span class="rating" id="comment-rating-4ffae9d6ce395f5965000000">
+      <a class="text-grey" data="fancybox" href="http://www.sparkfun.com/static/comment_help">1</a>
+    </span>
+  </div>
+
+  <div class="actions">
+      </div>
+
+</div>
+
+<div class="comment-text">
+  <p>In the first example. Why do you put a 10k R4 resistor in the csb?</p></div>
+</li><li id="comment-5009a1c5757b7f656b000000" class=" comment">
+<div class="clearfix tagline">
+
+  <div class="comment-info">
+    <img class="avatar" src="65_files/anon.png">            <a href="http://www.sparkfun.com/users/260422">Maxwellfire</a>
+    <span class="wide">|</span>
+    <span title="Friday, 20-Jul-12 12:21:57 MDT" class="date"><a href="http://www.sparkfun.com/tutorials/65#comment-5009a1c5757b7f656b000000">about 6 months ago</a></span>
+    
+    <span class="rating-star">
+              <span title="Please login to up-vote comments" class="star-dark"> </span>
+          </span>
+
+    <span class="rating" id="comment-rating-5009a1c5757b7f656b000000">
+      <a class="text-grey" data="fancybox" href="http://www.sparkfun.com/static/comment_help">1</a>
+    </span>
+  </div>
+
+  <div class="actions">
+      </div>
+
+</div>
+
+<div class="comment-text">
+  <p>what should i do if i’m trying to interface to a microSD card?</p></div>
+</li><li id="comment-5009aad2ce395f446e000000" class=" comment">
+<div class="clearfix tagline">
+
+  <div class="comment-info">
+    <img class="avatar" src="65_files/anon.png">            <a href="http://www.sparkfun.com/users/260422">Maxwellfire</a>
+    <span class="wide">|</span>
+    <span title="Friday, 20-Jul-12 13:00:34 MDT" class="date"><a href="http://www.sparkfun.com/tutorials/65#comment-5009aad2ce395f446e000000">about 6 months ago</a></span>
+     *
+    <span class="rating-star">
+              <span title="Please login to up-vote comments" class="star-dark"> </span>
+          </span>
+
+    <span class="rating" id="comment-rating-5009aad2ce395f446e000000">
+      <a class="text-grey" data="fancybox" href="http://www.sparkfun.com/static/comment_help">1</a>
+    </span>
+  </div>
+
+  <div class="actions">
+      </div>
+
+</div>
+
+<div class="comment-text">
+  <p>should i use the second method?</p></div>
+</li><li id="comment-5024c9ffce395f9e5a000001" class=" comment">
+<div class="clearfix tagline">
+
+  <div class="comment-info">
+    <img class="avatar" src="65_files/anon.png">            <a href="http://www.sparkfun.com/users/344447">Member #344447</a>
+    <span class="wide">|</span>
+    <span title="Friday, 10-Aug-12 02:44:47 MDT" class="date"><a href="http://www.sparkfun.com/tutorials/65#comment-5024c9ffce395f9e5a000001">about 6 months ago</a></span>
+    
+    <span class="rating-star">
+              <span title="Please login to up-vote comments" class="star-dark"> </span>
+          </span>
+
+    <span class="rating" id="comment-rating-5024c9ffce395f9e5a000001">
+      <a class="text-grey" data="fancybox" href="http://www.sparkfun.com/static/comment_help">1</a>
+    </span>
+  </div>
+
+  <div class="actions">
+      </div>
+
+</div>
+
+<div class="comment-text">
+  <p>Good tutorial but this statement is definitely wrong at MOSFET 
+part: “This circuit will not work the other direction (high voltage to 
+low voltage) because of the internal diode within the MOSFET will 
+forward bias.”</p></div>
+</li><li id="comment-507e6066ce395f6c4b000001" class=" comment">
+<div class="clearfix tagline">
+
+  <div class="comment-info">
+    <img class="avatar" src="65_files/anon.png">            <a href="http://www.sparkfun.com/users/370561">Member #370561</a>
+    <span class="wide">|</span>
+    <span title="Wednesday, 17-Oct-12 01:38:14 MDT" class="date"><a href="http://www.sparkfun.com/tutorials/65#comment-507e6066ce395f6c4b000001">about 3 months ago</a></span>
+    
+    <span class="rating-star">
+              <span title="Please login to up-vote comments" class="star-dark"> </span>
+          </span>
+
+    <span class="rating" id="comment-rating-507e6066ce395f6c4b000001">
+      <a class="text-grey" data="fancybox" href="http://www.sparkfun.com/static/comment_help">1</a>
+    </span>
+  </div>
+
+  <div class="actions">
+      </div>
+
+</div>
+
+<div class="comment-text">
+  <p>Hello.. I want to make general port (using Atmega8). this port 
+should accept any sensor. some sensors are 3.3v and others are 5v… etc..
+ how can I connect these sensors??? thanx..</p></div>
+</li><li id="comment-50e9c258757b7f0918000001" class=" comment">
+<div class="clearfix tagline">
+
+  <div class="comment-info">
+    <img class="avatar" src="65_files/anon.png">            <a href="http://www.sparkfun.com/users/332272">ke4ukz</a>
+    <span class="wide">|</span>
+    <span title="Sunday, 06-Jan-13 11:28:40 MST" class="date"><a href="http://www.sparkfun.com/tutorials/65#comment-50e9c258757b7f0918000001">about a week ago</a></span>
+    
+    <span class="rating-star">
+              <span title="Please login to up-vote comments" class="star-dark"> </span>
+          </span>
+
+    <span class="rating" id="comment-rating-50e9c258757b7f0918000001">
+      <a class="text-grey" data="fancybox" href="http://www.sparkfun.com/static/comment_help">1</a>
+    </span>
+  </div>
+
+  <div class="actions">
+      </div>
+
+</div>
+
+<div class="comment-text">
+  <p>I don’t think anyone has mentioned it here, but the <a href="http://www.sparkfun.com/products/8745">SparkFun Logic Level Converter</a>
+ does this with practically no pain.  It’s good for two channels, and 
+it’s pretty cheap.  I’ve used one to connect my Arduino UNO (5V) to an 
+iPod (3.3V).</p></div>
+</li>  </ul>
+</div>
+<br>
+
+</div>
+      </div>
+    </div>
+
+    <div id="footer" class="clearfix">
+
+  <div class="clearfix">
+    <div id="sharing-ingenuity" class="hidetext"><span>Sharing Ingenuity</span></div>
+    <div id="social-spew">
+      <ul>
+        <li class="github"><a href="http://www.github.com/sparkfun" target="_blank" class="hidetext"><span>GitHub</span></a></li>
+        <li class="youtube"><a href="http://www.youtube.com/sparkfun" target="_blank" class="hidetext"><span>YouTube</span></a></li>
+        <li class="vimeo"><a href="http://www.vimeo.com/sparkfun" target="_blank" class="hidetext"><span>Vimeo</span></a></li>
+        <li class="gplus"><a href="https://plus.google.com/106084846822083498483/" target="_blank" class="hidetext"><span>Google Plus</span></a></li>
+        <li class="facebook"><a href="http://www.facebook.com/SparkFun" target="_blank" class="hidetext"><span>Facebook</span></a></li>
+        <li class="flickr"><a href="http://www.flickr.com/photos/sparkfun/" target="_blank" class="hidetext"><span>Flickr</span></a></li>
+        <li class="twitter"><a href="https://twitter.com/#%21/sparkfun" target="_blank" class="hidetext"><span>Twitter</span></a></li>
+        <li class="rss"><a href="http://www.sparkfun.com/feeds" class="hidetext"><span>RSS</span></a></li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+  <div id="subfooter">
+    <div class="clearfix" id="footer-cols">
+      <div class="col">
+        <h2>SparkFun?</h2>
+        <p>
+          SparkFun is an online retail store that sells the bits and pieces to
+          make your electronics projects possible. Whether it's a robot that can
+          cook your breakfast or a GPS cat tracking device, our products and
+          resources are designed to make the world of electronics more accessible
+          to the average person. In addition to products, SparkFun also offers
+          classes and a number of online tutorials designed to help educate
+          individuals in the wonderful world of embedded electronics.
+        </p>
+      </div>
+      <div class="col">
+        <h2>Resources</h2>
+        <ul class="resources">
+          <li>
+            <a title="RSS Feeds" href="http://www.sparkfun.com/feeds">Feeds</a><img src="65_files/rss-noborder.png">
+          </li>
+          <li><a href="http://forum.sparkfun.com/">Forum</a></li>
+          <li><a href="http://learn.sparkfun.com/">SparkFun Education</a></li>
+          <li><a href="http://www.sparkfun.com/news/263">SparkFun IRC Channel</a></li>
+          <li><a href="http://www.batchpcb.com/" title="Custom PCB fabrication">BatchPCB</a></li>
+          <li><a href="https://www.sparkfun.com/jobs">Jobs @ SparkFun</a></li>
+          <li><a href="http://www.sparkfun.com/tutorials/315">Sell Your Widget on SparkFun</a></li>
+          <li><a href="http://www.sparkfun.com/distributors/apply">Become a SparkFun Distributor</a></li>
+          <li><a href="http://www.sparkfun.com/sponsor/index">Request SparkFun Sponsorship</a></li>
+          <li><a href="http://www.sparkfun.com/quiz">Take the SparkFun Quiz</a></li>
+          <li><a href="http://www.sparkfun.com/project_calls">Tell us about a project</a></li>
+          <li><a href="http://www.kickstarter.com/pages/sparkfun">SparkFun Kickstarter Projects</a></li>
+                  </ul>
+      </div>
+      <div class="col col-wide">
+        <h2>Feedback</h2>
+        <form id="feedback" action="/feedback/mind.json" method="POST">
+  <input name="sparkaptcha" id="sparkaptcha" value="1" type="hidden">
+  <div class="error" id="error_feedback" style="display: none; color: #F03528; font-weight: bold; margin-bottom: 5px;"></div>
+  <label for="feedback_textarea" style="font-weight: bold">What's on your mind?</label>
+  <br>
+  <textarea id="feedback_textarea" name="feedback_text"></textarea>
+  <div class="error" id="error_feedback_text" style="display: none; color: #F03528; font-weight: bold; padding-left: 2px;"></div>
+  <br>
+  <label for="dest">For which department?</label><br>
+  <select name="dest" id="feedback_dest" style="width: 99%">
+    <option selected="selected" value="general">General</option>
+    <option value="cust">Customer Service</option>
+    <option value="tech">Tech Support</option>
+  </select>
+  <br><br>
+  <label for="feedback_email">Please include your email address if you'd like us to respond to a specific question.</label>
+  <br>
+  <br>
+  <input id="feedback_email" name="email" type="text">
+  <div class="error" id="error_feedback_email" style="display: none; color: #F03528; font-weight: bold; padding-left: 2px; margin-bottom: 5px;"></div>
+  <input onclick="$(this).sfeutil('mind_feedback'); return(false);" class="button" value="Submit" type="button">
+</form>
+<script>
+  $(document).bind('loaded', function() {
+    $('#sparkaptcha').val(1);
+  });
+</script>
+      </div>
+    </div>
+  </div>
+
+<div id="copyleft">
+  <p>
+    SparkFun Electronics <a href="http://www.sparkfun.com/news/300">®</a>    <span class="wide">|</span>
+    <a href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=6175+Longbow+Dr,+Boulder,+CO+80301&amp;sll=40.006234,-105.224915&amp;sspn=0.012113,0.020192&amp;ie=UTF8&amp;hq=&amp;hnear=6175+Longbow+Dr,+Boulder,+Colorado+80301&amp;t=h&amp;z=16">Boulder, Colorado</a>
+    <span class="wide">|</span>
+    <a href="https://www.sparkfun.com/static/customer_service">Customer Service</a>
+  </p>
+</div>
+
+        <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-3404365-1']);
+      _gaq.push(['_trackPageview']);
+      _gaq.push(['_trackPageLoadTime']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    
+    <script data-cfasync="false" type="text/javascript">/*{literal}<![CDATA[*/
+    window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){f[z]=function(){(a.s=a.s||[]).push(arguments)};var a=f[z]._={},q=c.methods.length;while(q--){(function(n){f[z][n]=function(){f[z]("call",n,arguments)}})(c.methods[q])}a.l=c.loader;a.i=nt;a.p={0:+new Date};a.P=function(u){a.p[u]=new Date-a.p[0]};function s(){a.P(r);f[z](r)}f.addEventListener?f.addEventListener(r,s,false):f.attachEvent("on"+r,s);var ld=function(){function p(hd){hd="head";return["<",hd,"></",hd,"><",i,' onl' + 'oad="var d=',g,";d.getElementsByTagName('head')[0].",j,"(d.",h,"('script')).",k,"='",l,"//",a.l,"'",'"',"></",i,">"].join("")}var i="body",m=d[i];if(!m){return setTimeout(ld,100)}a.P(1);var j="appendChild",h="createElement",k="src",n=d[h]("div"),v=n[j](d[h](z)),b=d[h]("iframe"),g="document",e="domain",o;n.style.display="none";m.insertBefore(n,m.firstChild).id=z;b.frameBorder="0";b.id=z+"-loader";if(/MSIE[ ]+6/.test(navigator.userAgent)){b.src="javascript:false"}b.allowTransparency="true";v[j](b);try{b.contentWindow[g].open()}catch(w){c[e]=d[e];o="javascript:var d="+g+".open();d.domain='"+d.domain+"';";b[k]=o+"void(0);"}try{var t=b.contentWindow[g];t.write(p());t.close()}catch(x){b[k]=o+'d.write("'+p().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}a.P(2)};ld()};nt()})({loader: "static.olark.com/jsclient/loader0.js",name:"olark",methods:["configure","extend","declare","identify"]});
+    olark.identify('4728-501-10-9212');/*]]>{/literal}*/</script><noscript><a href="https://www.olark.com/site/4728-501-10-9212/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a></noscript>
+
+  
+
+
+<div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div><ul style="z-index: 51; top: 0px; left: 0px; display: none;" aria-activedescendant="ui-active-menuitem" role="listbox" class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all"></ul><span style="display: none;"><iframe src="65_files/storage.htm" style="display: none ! important;" id="framesocket58774" onload="try{window.framesocket58774()}catch(e){framesocket58774()}"></iframe></span><div class="habla-browser-firefox habla-desktop olrk-noquirks" id="habla_beta_container_do_not_rely_on_div_classes_or_names"><div class="olrk-away" id="hbl_operator_state_div"><div class="olrk-normal" id="hbl_region"><div class=" olrk-state-compressed" id="habla_window_state_div"><div class="habla_window_div_base hbl_pal_main_width olrk-fixed-bottom olrk-fixed-right " style="margin: 0px 20px; bottom: 0px; right: 0px; display: none; position: fixed;" id="habla_window_div"><div style="display: none;" id="habla_compressed_div"></div><div class="habla_panel_border hbl_pal_main_bg hbl_pal_panel_border hbl_pal_main_font_family hbl_pal_main_font_size " style="display: none;" id="habla_panel_div"><div style="display: none;" id="habla_both_div"><div class="habla_topbar_div_normal habla_topbar_clickable hbl_pal_title_fg hbl_pal_title_bg habla_topbar_div_expanded " id="habla_topbar_div"><a class="habla_button habla_button_a_normal hbl_pal_header_font_size hbl_pal_main_font_family hbl_pal_button_bg hbl_pal_button_fg " id="habla_closebutton_a">x</a><a class="habla_button habla_button_a_normal hbl_pal_header_font_size hbl_pal_main_font_family hbl_pal_button_bg hbl_pal_button_fg " id="habla_sizebutton_a">^</a><a class="habla_oplink_a_normal hbl_pal_header_font_size hbl_pal_title_fg " id="habla_oplink_a">Contact us!</a></div></div><div style="display: none;" id="habla_expanded_div"><div id="habla_middle_div"><div id="habla_middle_wrapper_div"><div class="hbl_panel habla_conversation_div hbl_pal_main_height hbl_pal_control_border hbl_pal_main_fg hbl_pal_main_bg     habla_conversation_message_on " style="height: 150px; overflow: hidden; display: block;" id="habla_conversation_div"><span id="hbl_body_message">We're not around, but we'd love to chat another time.</span></div><div class="hbl_panel habla_offline_message_sent_div hbl_pal_main_height hbl_pal_control_border hbl_pal_main_fg " style="display: none;" id="habla_offline_message_sent_div">Thanks for your message!  We'll get back to you shortly.</div><div class="hbl_panel habla_offline_message_div hbl_pal_control_border hbl_pal_main_fg " style="display: none;" id="habla_offline_message_div"><span id="habla_offline_message_span"></span><div class="hbl_txt_wrapper"><textarea placeholder="&lt;click here&gt; and type your Name" class="habla_wcsend_field habla_wcsend_input_pre habla_wcsend_input_normal hbl_pal_input_pre_fg hbl_pal_main_font_family hbl_pal_input_font_size hbl_pal_control_border " style="height: 20px; display: block;" name="habla_name_input" id="habla_name_input"></textarea></div><div class="hbl_txt_wrapper"><textarea placeholder="&lt;click here&gt; and type your Email" class="habla_wcsend_field habla_wcsend_input_pre habla_wcsend_input_normal hbl_pal_input_pre_fg hbl_pal_main_font_family hbl_pal_input_font_size hbl_pal_control_border " style="height: 20px; display: block;" name="habla_offline_email_input" id="habla_offline_email_input"></textarea></div><div class="hbl_txt_wrapper"><textarea placeholder="We're not around but we still want to hear from you!  Leave us a note:" class="habla_wcsend_field habla_wcsend_input_pre habla_wcsend_input_normal hbl_pal_input_pre_fg hbl_pal_main_font_family hbl_pal_input_font_size hbl_pal_control_border " style="height: 65px; display: block;" name="habla_offline_body_input" id="habla_offline_body_input"></textarea></div><span class="habla_offline_error_span " id="habla_offline_error_span"></span><input style="display: block;" value="Send" class="habla_offline_submit_input hbl_pal_offline_submit_fg hbl_pal_control_border hbl_pal_offline_submit_bg " name="habla_offline_submit_input" id="habla_offline_submit_input" type="submit"><div class="clear_style " id="habla_offline_clear_div"></div></div><div class="hbl_panel habla_pre_chat_div hbl_pal_main_height hbl_pal_main_fg " style="display: none; height: 150px;" id="habla_pre_chat_div"><span id="habla_pre_chat_span">Hi, we have an operator online, click 'start chatting' to contact us in real-time.</span><div class="hbl_txt_wrapper"><textarea placeholder="&lt;click here&gt; and type your Name" class="habla_wcsend_field habla_wcsend_input_pre habla_wcsend_input_normal hbl_pal_input_pre_fg hbl_pal_main_font_family hbl_pal_input_font_size hbl_pal_control_border " style="height: 20px; line-height: 20px;" name="habla_pre_chat_name_input" id="habla_pre_chat_name_input"></textarea></div><div class="hbl_txt_wrapper"><textarea placeholder="&lt;click here&gt; and type your Email" class="habla_wcsend_field habla_wcsend_input_pre habla_wcsend_input_normal hbl_pal_input_pre_fg hbl_pal_main_font_family hbl_pal_input_font_size hbl_pal_control_border " style="height: 20px; line-height: 20px;" name="habla_pre_chat_email_input" id="habla_pre_chat_email_input"></textarea></div><div style="display: none;" class="hbl_txt_wrapper"><textarea placeholder="&lt;click here&gt; and type your Phone" class="habla_wcsend_field habla_wcsend_input_pre habla_wcsend_input_normal hbl_pal_input_pre_fg hbl_pal_main_font_family hbl_pal_input_font_size hbl_pal_control_border " style="height: 20px; line-height: 20px; display: none;" name="habla_pre_chat_phone_input" id="habla_pre_chat_phone_input"></textarea></div><span id="habla_pre_chat_error_span"></span><input value="Click here to start chatting" class="habla_pre_chat_form_field habla_offline_submit_input hbl_pal_offline_submit_fg hbl_pal_control_border hbl_pal_offline_submit_bg " name="habla_pre_chat_submit_input" id="habla_pre_chat_submit_input" type="submit"><div class="clear_style " id="habla_pre_chat_clear_div"></div></div></div><form class="habla_chatform_form " autocomplete="off" method="GET" action="#" id="habla_chatform_form"><div class="habla_input_div " id="habla_input_div"><div class="hbl_txt_wrapper"><textarea disabled="disabled" placeholder="Type here and hit &lt;enter&gt; to chat" class="habla_wcsend_field habla_wcsend_input_pre habla_wcsend_input_normal hbl_pal_input_pre_fg hbl_pal_main_font_family hbl_pal_input_font_size hbl_pal_control_border " style="line-height: 20px; height: 20px; display: none;" size="undefined" name="habla_wcsend_input" id="habla_wcsend_input"></textarea></div></div></form></div><div style="padding: 3px 0pt 5px ! important; font-family: helvetica,sans-serif; text-align: center; text-transform: uppercase; font-size: 9px; letter-spacing: 2px; font-weight: bold; color: rgb(170, 170, 170) ! important; clear: both;"><span style="display:none"><a style="font-family: helvetica,sans-serif; text-transform: uppercase; font-size: 9px ! important; letter-spacing: 2px; font-weight: bold; color: rgb(231, 89, 23) ! important;" id="hblink9"></a>http://www.olark.com</span></div></div></div><div style="display: none;" id="habla_closed_div"></div></div></div></div></div></div></body></html>

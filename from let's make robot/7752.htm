@@ -1,0 +1,488 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html class="js" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><!--
+This site is powered by
+ ____                         _
+|  _ \ _ __ _   _ _ __   __ _| |
+| | | | '__| | | | '_ \ / _` | |
+| |_| | |  | |_| | |_) | (_| | |
+|____/|_|   \__,_| .__/ \__,_|_|
+                 |_|
+Free and Open Source content management system/framework.
+
+Drupal is extremely flexible and very powerful. It has a large and active
+community and powers tens of thousands of sites websites across the globe.
+
+For more information, visit http://drupal.org/
+
+Drupal is a registered trademark of Dries Buytaert.
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Wii IR camera as standalone sensor | Let's Make Robots!</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="shortcut icon" href="http://letsmakerobots.com/files/lmr_favicon.ico" type="image/x-icon">
+<style type="text/css" media="all">@import "/files/css/5bd3ea3a65a47018e6b356272f0962a4.css";</style>
+<style type="text/css" media="print">@import "/files/css/4c23a8bd62b8b996de0b736e81ef7b38.css";</style>
+<style type="text/css" media="screen">@import "/files/css/06fc3bce2c63d5fafff8fa6782d19eb2.css";</style>
+<script type="text/javascript" src="7752_files/jquery.js"></script>
+<script type="text/javascript" src="7752_files/drupal.js"></script>
+<script type="text/javascript" src="7752_files/compat.js"></script>
+<script type="text/javascript" src="7752_files/lmr_chill.js"></script>
+<script type="text/javascript" src="7752_files/lmr_components.js"></script>
+<script type="text/javascript" src="7752_files/panels.js"></script>
+<script type="text/javascript" src="7752_files/collapse.js"></script>
+<script type="text/javascript" src="7752_files/lmr.js"></script>
+<script type="text/javascript" src="7752_files/openid.js"></script>
+<script type="text/javascript" src="7752_files/jquery_002.js"></script>
+<script type="text/javascript">Drupal.extend({ settings: { "googleanalytics": { "trackOutgoing": 1, "trackMailto": 1, "trackDownload": 1, "trackDownloadExtensions": "7z|aac|avi|csv|doc|exe|flv|gif|gz|jpe?g|js|mp(3|4|e?g)|mov|pdf|phps|png|ppt|rar|sit|tar|torrent|txt|wma|wmv|xls|xml|zip", "LegacyVersion": 0 } } });</script>
+
+  <script type="text/javascript"> </script>
+    <meta name="description" content="At Let's Make Robots, you can share your homemade robots with the world. Share your cool ideas and stunning designs here or see the clever inventions of others">
+  <meta name="keywords" content="robots, homemade robots, ambient intelligence, ubiquitous computing, internet of things, Everyware, Context-aware computing, Mobile computing, Wearable computing, Embedded computing, Augmented reality, Pervasive computing">
+  <link rel="shortcut icon" href="http://letsmakerobots.com/favicon.ico">
+  </head>
+
+<body id="letsmakerobots.com" class="not-front not-logged-in node-type-robot_tip one-sidebar sidebar-right page-node-7752 section-node">
+<!--?php/* if($_SERVER['SERVER_NAME'] == 'test-812.letsmakerobots.com'){
+echo 'memory_get_usage() says: ' . memory_get_usage() . " (don't worry, this is only on test-812)";
+}*/ ?-->
+  <div id="doc4" class="yui-t4">
+    <div id="hd">
+      
+
+			      <div class="cz-toplink">
+
+
+
+		      <a href="http://letsmakerobots.com/chill" title="Chillout Zone: "><img src="7752_files/v3frontchill.png" alt="Chillout Zone"></a>
+			
+
+
+            </div>
+	
+            <div id="site-name">
+         <a href="http://letsmakerobots.com/" title="Let's Make Robots!" rel="home"><img src="7752_files/v3topbanner.png" alt="Let's Make Robots!" title="Let's Make Robots!" height="59" width="335"></a>
+      </div>
+
+      <div id="navbar-top"><ul class="links-menu">
+<li><a href="http://letsmakerobots.com/start" title="Are you new to robot building? This may be a good tutorial for you to get started on your first robot.">Start Here</a></li>
+<li><a href="http://letsmakerobots.com/lmr/rules" title="DOs and DONTs on LetsMakeRobots">Rules</a></li>
+<li><a href="http://letsmakerobots.com/view/tip/list" title="LMR's Epic Walk Throughs">Tips</a></li>
+<li><a href="http://letsmakerobots.com/view/node/list/robot" title="List of all robots">Robots</a></li>
+<li><a href="http://letsmakerobots.com/view/node/list/something_else">Something else</a></li>
+<li><a href="http://letsmakerobots.com/blog" title="Users blogs">Blogs</a></li>
+<li><a href="http://letsmakerobots.com/taxonomy/term/7610" title="Reviews for components, components for reviews!">Reviews</a></li>
+<li><a href="http://letsmakerobots.com/view/challenges/list">Challenges</a></li>
+<li><a href="http://letsmakerobots.com/forum">Forums</a></li>
+<li><a href="http://letsmakerobots.com/shops">Shop</a></li>
+<li><a href="http://letsmakerobots.com/tracker">Recent</a></li>
+<li><a href="http://letsmakerobots.com/lmr" title="About LetsMakeRobots">About</a></li>
+<li><a href="http://letsmakerobots.com/donate" title="Donation page">Donate</a></li>
+</ul></div>
+      <div class="breadcrumb"><a href="http://letsmakerobots.com/">Home</a></div>    </div>
+    <div id="bd">
+      <div id="yui-main">
+        <div class="yui-b first" id="main-content">
+                          <div id="content-header">
+			                                    <h1 class="title title-link-options" id="links-7752">Wii IR camera as standalone sensor</h1>
+            
+                                  </div> <!-- /#content-header -->
+                  <div id="content-area">
+            
+
+      <div class="links hide" id="hide-links-7752">
+      <ul class="links inline"><li class="first comment_forbidden"><span class="comment_forbidden"><a href="http://letsmakerobots.com/user/login?destination=node/7752%2523comment-form">Login</a> or <a href="http://letsmakerobots.com/user/register?destination=node/7752%2523comment-form">register</a> to post comments</span></li>
+<li class="bio"><a href="http://letsmakerobots.com/node/2471" title="View RobotFreak's Profile." class="bio">by RobotFreak</a></li>
+<li class="last collectedby"><a href="http://letsmakerobots.com/node/7752/who" title="Collected by 27 users" class="collectedby">Collected by 27 users</a></li>
+</ul>    </div>
+  <div class="node node-full node-type-robot_tip" id="node-7752"><div class="node-inner">
+
+  <div class="node-full-badge">
+          <div class="taxonomy floating-taxonomy">
+      <a href="http://letsmakerobots.com/taxonomy/term/126" rel="tag" title="">Arduino</a>, <a href="http://letsmakerobots.com/taxonomy/term/3662" rel="tag" title="">Wii Remote</a>, <a href="http://letsmakerobots.com/taxonomy/term/3663" rel="tag" title="">Wii IR camera</a>      </div>
+    
+  
+    <div class="lmr-nodetype-badge robot_tip"><a href="http://letsmakerobots.com/view/node/list/robot_tip">Tip/walkthrough</a></div>&nbsp;
+  </div>
+
+  <div id="robot_infosidebar">
+    <div id="robot-submitdata" class="clear-block">
+      <div class="picture"><a href="http://letsmakerobots.com/user/1433" title="View user profile."><img src="7752_files/picture-1433.jpg" alt="RobotFreak's picture" title="RobotFreak's picture"></a></div>              <span class="submitted">
+          By <a href="http://letsmakerobots.com/user/1433" title="RobotFreak" class="">RobotFreak</a><br> @ June 1, 2009        </span>
+          </div>
+    <div id="robot_what_does_it_do">Using the Wii Remote IR camera directly with an Arduino </div><div class="field field-type-number-decimal field-field-time-to-build"><div class="field-label">Time to build:&nbsp;</div><div class="field-items"><div class="field-item odd">3 hours</div></div></div><div class="field field-type-link field-field-url-more-info"><div class="field-label">URL to more information:&nbsp;</div><div class="field-items"><div class="field-item odd"><a href="http://blog.makezine.com/archive/2008/11/hacking_the_wiimote_ir_ca.html" target="_blank">http://blog.makezine.com/archive/2008/11/hack...</a></div><div class="field-item even"><a href="http://www.sparkfun.com/commerce/tutorial_info.php?tutorials_id=43&amp;page=" target="_blank">http://www.sparkfun.com/commerce/tutorial_inf...</a></div><div class="field-item odd"><a href="http://translate.google.de/translate?u=http%3A%2F%2Fwww.cc-zwei.de%2Fwiki%2Findex.php%2FATM18%3A%3AProjekt%3A%3AWii_Remote_IR_Sensor&amp;sl=de&amp;tl=en&amp;hl=de&amp;ie=UTF-8" target="_blank">http://translate.google.de/translate?u=http%3...</a></div><div class="field-item even"><a href="http://www.flickr.com/search/?s=int&amp;w=23913470%40N00&amp;q=%22wii+ir+camera%22&amp;m=text" target="_blank">http://www.flickr.com/search/?s=int&amp;w=2391347...</a></div></div></div><div class="field field-type-number-decimal field-field-cost-to-build"><div class="field-label">Cost to build:&nbsp;</div><div class="field-items"><div class="field-item odd">$40</div></div></div><ul class="taxonomy_list"><li>Actuators / output devices: <a href="http://letsmakerobots.com/taxonomy/term/3680" rel="tag" title="">PC</a></li><li>Control method: <a href="http://letsmakerobots.com/taxonomy/term/3671" rel="tag" title="">Arduino Duemilanove via USB currently</a></li><li>CPU: <a href="http://letsmakerobots.com/taxonomy/term/3681" rel="tag" title="">Atmel ATmega328</a></li><li>Power source: <a href="http://letsmakerobots.com/taxonomy/term/1093" rel="tag" title="">USB</a></li><li>Programming language: <a href="http://letsmakerobots.com/taxonomy/term/1267" rel="tag" title="">Arduino C</a></li><li>Sensors / input devices: <a href="http://letsmakerobots.com/taxonomy/term/3682" rel="tag" title="">Wii IR camera</a></li><li>Target environment: <a href="http://letsmakerobots.com/taxonomy/term/468" rel="tag" title="">indoor flat surfaces</a></li></ul><div class="lmrFavs"></div>  </div><!-- /#robot_infosidebar -->
+
+
+
+  
+    <div class="field-primary-image">
+      <a href="http://letsmakerobots.com/files/field_primary_image/IMG_0889.JPG?"><img src="7752_files/IMG_0889.JPG" alt="" title="" class="imagecache imagecache-robot_fullpage_header"></a>    </div>
+  
+
+
+  <div class="robot-embedded-videos"><a id="robot_em_video"><p>&nbsp;</p></a><a name="vid-GUZFKgFJXR0">        <div id="video_cck_youtube_flash_wrapper_1"><object type="application/x-shockwave-flash" data="7752_files/GUZFKgFJXR0rel0fs1.swf" id="video-cck-youtube-flash-1" height="350" width="425">
+          <param name="movie" value="http://www.youtube.com/v/GUZFKgFJXR0&amp;rel=0&amp;fs=1">
+          <param name="allowScriptAcess" value="sameDomain">
+          <param name="quality" value="best">
+          <param name="bgcolor" value="#FFFFFF">
+          <param name="scale" value="noScale">
+          <param name="salign" value="TL">
+          <param name="FlashVars" value="playerMode=embedded">
+          <param name="wmode" value="transparent">
+        </object></div><div style=" width: 425px; text-align: right;"></div></a></div><a name="vid-GUZFKgFJXR0">
+  <table id="attachments">
+ <thead><tr><th>Attachment</th><th>Size</th> </tr></thead>
+<tbody>
+ <tr class="odd"><td><a href="http://letsmakerobots.com/files/Wii-IR-Camera-schem.pdf">Wii-IR-Camera-schem.pdf</a></td><td>11.63 KB</td> </tr>
+ <tr class="even"><td><a href="http://letsmakerobots.com/files/Wii-IR-Camera-board.pdf">Wii-IR-Camera-board.pdf</a></td><td>11.3 KB</td> </tr>
+ <tr class="odd"><td><a href="http://letsmakerobots.com/files/wii_remote_ir_sensor_sample.pde">wii_remote_ir_sensor_sample.pde</a></td><td>2.5 KB</td> </tr>
+</tbody>
+</table>
+
+    
+
+    <br>
+  </a><div id="tip_body_text"><a name="vid-GUZFKgFJXR0">
+    <p>The Wii Remote became a very intersting tool for hacking and 
+other uses where it not has been mentioned for. After the first hacks 
+appears in the internet a lot of people are doing great stuff with it.</p></a><p><a name="vid-GUZFKgFJXR0">This
+ tip&amp;walkthrough is about&nbsp; using the IR camera from the Wii 
+Remote as a standalone sensor. It is based on hack of a japanese guy 
+named </a><a href="http://translate.google.com/translate?u=http%3A%2F%2Fwww.kako.com%2Fneta%2F2007-001%2F2007-001.html&amp;hl=en&amp;ie=UTF-8&amp;sl=ja&amp;tl=en">kako</a>. There also exists a <a href="http://blog.makezine.com/archive/2008/11/hacking_the_wiimote_ir_ca.html">Make article</a></p><p>This
+ sensor is great for tracking infrared sources. It can track upto 4 
+sources independently and give out the coordinates and the strength ob 
+each tracked object. The IR camera has an I2C interface which can be 
+easy accessed by a microcontroller. Here an Arduino board has been 
+used.&nbsp; </p><p><img src="7752_files/3625806085_61cc9ba881.jpg" alt="3625806085_61cc9ba881.jpg" height="375" width="500"></p><p><b>Wii Remote disassembling: </b></p><p>To
+ get the IR camera out of the Wii Remote, the Wiimote must be 
+disassembled. A Tri-Wing screw driver has been used for this task. The 
+IR camera is on the front of the board. To get the IR sensor out a hot 
+air gun is been usefull. &nbsp; </p><p>This walkthrough only works for 
+an original Wii Remote. There exists some Wii Remote clones, which are 
+cheaper than the original one but they have different sensors with 
+unknown pinout, so be warned!</p><p><b>Schematic:</b></p><p>The schematic slightly differs from Kako's aproach, it has been taken form the <a href="http://translate.google.de/translate?u=http%3A%2F%2Fwww.cc-zwei.de%2Fwiki%2Findex.php%2FATM18%3A%3AProjekt%3A%3AWii_Remote_IR_Sensor&amp;sl=de&amp;tl=en&amp;hl=de&amp;ie=UTF-8">CC2 ATM18 project</a>.
+ A quartz oscillator has been used. A frequency bettween 20..25MHz will 
+work. Unfortunately the sensr is a 3.3V device. Some level conversion 
+must be done before connecting it to a 5V Arduino board. The sensor gets
+ it power source from 2 diodes in series with a 5V from the arduino 
+board which give roughly 3.6V. 2 pullup resistors on the I2C pins limits
+ the voltage down to 3.6.</p><p>Schematic and a board layout is atached to this article. </p><p>&nbsp;</p><p><b>Partlist:</b></p><ul><li><span>Wii Remote IR Camera</span> (from a original Wii Remote, not a clone!!)</li><li> <span><span class="google-src-text" style="text-align:left;">24Mhz</span> quartz oscillator (or 25MHz, but not a resonator!)</span> </li><li> <span><span class="google-src-text" style="text-align:left;">2x </span>diode 1N4148 or equivalent</span> </li><li> <span><span class="google-src-text" style="text-align:left;">2x elecrolytic capacitor 10uF</span></span></li><li> <span><span class="google-src-text" style="text-align:left;">1x ceramic capacitor 100nF</span> </span></li><li> <span><span class="google-src-text" style="text-align:left;">2x </span>resistor 2.2</span>kOhm </li><li><span><span class="google-src-text" style="text-align:left;">1x </span>resistor 22kOhm</span></li><li><span>perf board 60 x 25 mm</span></li><li><span>pin bar 1x4</span></li><li><span>pin bar 2x4</span></li><li><span>bar jack 2x4<br></span></li></ul><p>&nbsp;</p><p><b>Software: </b></p><p>The
+ Arduino control software is also based on Kako's sources. It simply 
+initialise the IR camera sensor and sends the readed blob information to
+ a PC: The sourcecode has been slightly modified to work with the PC 
+software.</p><p>The PC software is also taken from the <a href="http://translate.google.de/translate?u=http%3A%2F%2Fwww.cc-zwei.de%2Fwiki%2Findex.php%2FATM18%3A%3AProjekt%3A%3AWii_Remote_IR_Sensor&amp;sl=de&amp;tl=en&amp;hl=de&amp;ie=UTF-8">CC2 ATM18 project</a> and can be downloaded <a href="http://www.cczwei.de/atm18_downloads/Wii-BlobTrack.zip">here</a>. </p><p>An
+ Arduino sketch is attached to this article. At the moment I am working 
+on a processing sketch for graphical represantation of the Wii IR Camera
+ output.</p><p>&nbsp;</p><p>&nbsp;</p><p>To be continued... </p><p><b>&nbsp;</b></p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>  </div>
+  
+
+
+
+
+
+
+
+
+
+
+  
+</div></div> <!-- /node-inner, /node -->
+<div id="comments"><form action="/node/7752" accept-charset="UTF-8" method="post" id="comment-controls">
+<div><div class="box">
+
+  <h2>Comment viewing options</h2>
+
+  <div class="content"><div class="container-inline"><input name="form_id" id="edit-comment-controls" value="comment_controls" type="hidden">
+<div class="form-item" id="edit-mode-wrapper">
+ <select name="mode" class="form-select" id="edit-mode"><option value="1">Flat list - collapsed</option><option value="2">Flat list - expanded</option><option value="3">Threaded list - collapsed</option><option value="4" selected="selected">Threaded list - expanded</option></select>
+</div>
+<div class="form-item" id="edit-order-wrapper">
+ <select name="order" class="form-select" id="edit-order"><option value="1" selected="selected">Date - newest first</option><option value="2">Date - oldest first</option></select>
+</div>
+<div class="form-item" id="edit-comments-per-page-wrapper">
+ <select name="comments_per_page" class="form-select" id="edit-comments-per-page"><option value="10" selected="selected">10 comments per page</option><option value="30">30 comments per page</option><option value="50">50 comments per page</option><option value="70">70 comments per page</option><option value="90">90 comments per page</option><option value="150">150 comments per page</option><option value="200">200 comments per page</option><option value="250">250 comments per page</option><option value="300">300 comments per page</option></select>
+</div>
+<input name="op" id="edit-submit" value="Save settings" class="form-submit" type="submit">
+</div><div class="description">Select your preferred way to display the comments and click "Save settings" to activate your changes.</div></div>
+</div>
+
+</div></form>
+<a id="comment-87965"></a>
+<div class="comment odd">
+  <div class="comment-inner clear-block">
+    <div class="submitted">
+      By <a href="http://letsmakerobots.com/user/18490" title="fusedotcore" class="">fusedotcore</a><br> @ Wed, 2012-06-27 18:25    </div>
+    <div class="picture"><a href="http://letsmakerobots.com/user/18490"><img alt="" src="7752_files/lmr_placeholder_userpic.png"></a></div>              <h3 class="title title-link-options" id="links-comment-87965"><a href="http://letsmakerobots.com/node/7752#comment-87965" class="active">Laser pointer</a></h3>
+    
+          <div class="links hide" id="hide-links-comment-87965">
+      <ul class="links"><li class="first last comment_forbidden"><span class="comment_forbidden"><a href="http://letsmakerobots.com/user/login?destination=node/7752%2523comment-form">Login</a> or <a href="http://letsmakerobots.com/user/register?destination=node/7752%2523comment-form">register</a> to post comments</span></li>
+</ul>    </div>
+  
+    <div class="content">
+      <p>Do you think it's possible to track a laser pointer with this?<br>I'm think of buying a 808nm 300mW laser for the brightness or a 980nm 50 mW laser for the closer wavelength.<br>I also saw somewhere that it has a limit of 2 meters?</p><p>I'm just trying to make an arduino powered turret that will aim at the dot of a laser pointer so I have a remote of sorts. :)<br><br></p><p>- Michel :)</p>    </div>
+  </div><!-- /comment-inner -->
+
+</div><!-- /comment -->
+<div class="indented"><a id="comment-87989"></a>
+<div class="comment even">
+  <div class="comment-inner clear-block">
+    <div class="submitted">
+      By <a href="http://letsmakerobots.com/user/15192" title="trandi" class="">trandi</a><br> @ Thu, 2012-06-28 09:36    </div>
+    <div class="picture"><a href="http://letsmakerobots.com/user/15192"><img alt="" src="7752_files/lmr_placeholder_userpic.png"></a></div>              <h3 class="title title-link-options" id="links-comment-87989"><a href="http://letsmakerobots.com/node/7752#comment-87989" class="active">tank / turret</a></h3>
+    
+          <div class="links hide" id="hide-links-comment-87989">
+      <ul class="links"><li class="first last comment_forbidden"><span class="comment_forbidden"><a href="http://letsmakerobots.com/user/login?destination=node/7752%2523comment-form">Login</a> or <a href="http://letsmakerobots.com/user/register?destination=node/7752%2523comment-form">register</a> to post comments</span></li>
+</ul>    </div>
+  
+    <div class="content">
+      <p>Here's my version of an Arduino / Lego NXT powered tank (and turret) using this I2C camera:</p><p><a href="http://trandi.wordpress.com/2011/05/14/tiger-1-bb-airsoft-rc-tank-%E2%80%93-v3/">http://trandi.wordpress.com/2011/05/14/tiger-1-bb-airsoft-rc-tank-%E2%80%93-v3/</a></p><p>&nbsp;</p><p>Not
+ exactly what you're looking for, as it's using IR LED as target, but 
+similar concept of having a turrent equipped with this camera to follow 
+something...</p><p>&nbsp;</p><p>Dan</p><p>&nbsp;</p>    </div>
+  </div><!-- /comment-inner -->
+
+</div><!-- /comment -->
+<a id="comment-87975"></a>
+<div class="comment odd comment-by-author">
+  <div class="comment-inner clear-block">
+    <div class="submitted">
+      By <a href="http://letsmakerobots.com/user/1433" title="RobotFreak" class="">RobotFreak</a><br> @ Thu, 2012-06-28 11:46    </div>
+    <div class="picture"><a href="http://letsmakerobots.com/user/1433" title="View user profile."><img src="7752_files/picture-1433.jpg" alt="RobotFreak's picture" title="RobotFreak's picture"></a></div>              <h3 class="title title-link-options" id="links-comment-87975"><a href="http://letsmakerobots.com/node/7752#comment-87975" class="active">I think Gareth has done some</a></h3>
+    
+          <div class="links hide" id="hide-links-comment-87975">
+      <ul class="links"><li class="first last comment_forbidden"><span class="comment_forbidden"><a href="http://letsmakerobots.com/user/login?destination=node/7752%2523comment-form">Login</a> or <a href="http://letsmakerobots.com/user/register?destination=node/7752%2523comment-form">register</a> to post comments</span></li>
+</ul>    </div>
+  
+    <div class="content">
+      <p>I think Gareth has done some experiments with laser pointer and Wiimote, look <a href="http://letsmakerobots.com/node/13383">here</a>.
+ My experiences wasn't good. Only on a short distance the Wiimote could 
+detect the reflected light of the laser pointer from a white wall.</p>    </div>
+  </div><!-- /comment-inner -->
+
+</div><!-- /comment -->
+</div><a id="comment-86051"></a>
+<div class="comment even">
+  <div class="comment-inner clear-block">
+    <div class="submitted">
+      By <a href="http://letsmakerobots.com/user/18307" title="epsilon" class="">epsilon</a><br> @ Sat, 2012-05-26 14:07    </div>
+    <div class="picture"><a href="http://letsmakerobots.com/user/18307"><img alt="" src="7752_files/lmr_placeholder_userpic.png"></a></div>              <h3 class="title title-link-options" id="links-comment-86051"><a href="http://letsmakerobots.com/node/7752#comment-86051" class="active">I2C voltage converter</a></h3>
+    
+          <div class="links hide" id="hide-links-comment-86051">
+      <ul class="links"><li class="first last comment_forbidden"><span class="comment_forbidden"><a href="http://letsmakerobots.com/user/login?destination=node/7752%2523comment-form">Login</a> or <a href="http://letsmakerobots.com/user/register?destination=node/7752%2523comment-form">register</a> to post comments</span></li>
+</ul>    </div>
+  
+    <div class="content">
+      <p>Hi, it's necessary to shift the I2C voltage between 5 and 3.3 V? I've been looking and a lot of people, including <a href="http://translate.google.com/translate?u=http%3A%2F%2Fwww.kako.com%2Fneta%2F2007-001%2F2007-001.html&amp;amp;hl=en&amp;amp;ie=UTF-8&amp;amp;sl=ja&amp;amp;tl=en">kaku</a>, use a converter like LTC4031L, and it makes me think I'm missing something.</p>    </div>
+  </div><!-- /comment-inner -->
+
+</div><!-- /comment -->
+<div class="indented"><a id="comment-86080"></a>
+<div class="comment odd comment-by-author">
+  <div class="comment-inner clear-block">
+    <div class="submitted">
+      By <a href="http://letsmakerobots.com/user/1433" title="RobotFreak" class="">RobotFreak</a><br> @ Sat, 2012-05-26 22:15    </div>
+    <div class="picture"><a href="http://letsmakerobots.com/user/1433" title="View user profile."><img src="7752_files/picture-1433.jpg" alt="RobotFreak's picture" title="RobotFreak's picture"></a></div>              <h3 class="title title-link-options" id="links-comment-86080"><a href="http://letsmakerobots.com/node/7752#comment-86080" class="active">IMHO a level shifter for I2C</a></h3>
+    
+          <div class="links hide" id="hide-links-comment-86080">
+      <ul class="links"><li class="first last comment_forbidden"><span class="comment_forbidden"><a href="http://letsmakerobots.com/user/login?destination=node/7752%2523comment-form">Login</a> or <a href="http://letsmakerobots.com/user/register?destination=node/7752%2523comment-form">register</a> to post comments</span></li>
+</ul>    </div>
+  
+    <div class="content">
+      <p>IMHO a level shifter for I2C isn't necessary. The I2C 
+specification says: all outputs must be open collector. The output can 
+only be driven LOW by the controller or the I2C device. Driving HIGH is 
+only done by floating outputs, using the pullup resistor to reach HIGH 
+level. The pullup resistors connected to SCL,SDA and 3.3V VCC should be 
+ok.</p>    </div>
+  </div><!-- /comment-inner -->
+
+</div><!-- /comment -->
+<div class="indented"><a id="comment-86086"></a>
+<div class="comment even">
+  <div class="comment-inner clear-block">
+    <div class="submitted">
+      By <a href="http://letsmakerobots.com/user/5528" title="botthoughts" class="">botthoughts</a><br> @ Sun, 2012-05-27 05:33    </div>
+    <div class="picture"><a href="http://letsmakerobots.com/user/5528" title="View user profile."><img src="7752_files/picture-5528.jpg" alt="botthoughts's picture" title="botthoughts's picture"></a></div>              <h3 class="title title-link-options" id="links-comment-86086"><a href="http://letsmakerobots.com/node/7752#comment-86086" class="active">So if you put the pullups on</a></h3>
+    
+          <div class="links hide" id="hide-links-comment-86086">
+      <ul class="links"><li class="first last comment_forbidden"><span class="comment_forbidden"><a href="http://letsmakerobots.com/user/login?destination=node/7752%2523comment-form">Login</a> or <a href="http://letsmakerobots.com/user/register?destination=node/7752%2523comment-form">register</a> to post comments</span></li>
+</ul>    </div>
+  
+    <div class="content">
+      <p>So if you put the pullups on the 3.3V side the 5V device will 
+probably register a logic high at 3.3V (or even much less; the datasheet
+ usually will tell you)</p>    </div>
+  </div><!-- /comment-inner -->
+
+</div><!-- /comment -->
+</div></div><a id="comment-83759"></a>
+<div class="comment odd">
+  <div class="comment-inner clear-block">
+    <div class="submitted">
+      By <a href="http://letsmakerobots.com/user/17222" title="NilsB" class="">NilsB</a><br> @ Wed, 2012-04-18 23:47    </div>
+    <div class="picture"><a href="http://letsmakerobots.com/user/17222" title="View user profile."><img src="7752_files/picture-17222.jpg" alt="NilsB's picture" title="NilsB's picture"></a></div>              <h3 class="title title-link-options" id="links-comment-83759"><a href="http://letsmakerobots.com/node/7752#comment-83759" class="active">Wii Remote IR Camera Hacks</a></h3>
+    
+          <div class="links hide" id="hide-links-comment-83759">
+      <ul class="links"><li class="first last comment_forbidden"><span class="comment_forbidden"><a href="http://letsmakerobots.com/user/login?destination=node/7752%2523comment-form">Login</a> or <a href="http://letsmakerobots.com/user/register?destination=node/7752%2523comment-form">register</a> to post comments</span></li>
+</ul>    </div>
+  
+    <div class="content">
+      <p>Here Johnny Lee shows how he used the Wii Remote IR Camera:</p><p><a href="http://www.ted.com/talks/johnny_lee_demos_wii_remote_hacks.html">http://www.ted.com/talks/johnny_lee_demos_wii_remote_hacks.html</a></p><p><a href="http://www.johnnylee.net/projects/wii/">http://www.johnnylee.net/projects/wii/</a></p><p>&nbsp;</p>    </div>
+  </div><!-- /comment-inner -->
+
+</div><!-- /comment -->
+<a id="comment-82007"></a>
+<div class="comment even">
+  <div class="comment-inner clear-block">
+    <div class="submitted">
+      By <a href="http://letsmakerobots.com/user/6411" title="Lasrin" class="">Lasrin</a><br> @ Mon, 2012-03-19 16:37    </div>
+    <div class="picture"><a href="http://letsmakerobots.com/user/6411" title="View user profile."><img src="7752_files/picture-6411.jpg" alt="Lasrin's picture" title="Lasrin's picture"></a></div>              <h3 class="title title-link-options" id="links-comment-82007"><a href="http://letsmakerobots.com/node/7752#comment-82007" class="active">connector ports</a></h3>
+    
+          <div class="links hide" id="hide-links-comment-82007">
+      <ul class="links"><li class="first last comment_forbidden"><span class="comment_forbidden"><a href="http://letsmakerobots.com/user/login?destination=node/7752%2523comment-form">Login</a> or <a href="http://letsmakerobots.com/user/register?destination=node/7752%2523comment-form">register</a> to post comments</span></li>
+</ul>    </div>
+  
+    <div class="content">
+      <p>I'm a little off-topic with this question, but this seems to be the most logical place to put this question.</p><p>Has anyone found a source for the female port of the wii remote control?</p><p>&nbsp;</p><p>I've
+ built an adapter to allow me to use the nunchuck as a USB mouse, and 
+I'd like a more stable connector port than the breakout boards that are 
+available..</p>    </div>
+  </div><!-- /comment-inner -->
+
+</div><!-- /comment -->
+<a id="comment-77327"></a>
+<div class="comment odd">
+  <div class="comment-inner clear-block">
+    <div class="submitted">
+      By <a href="http://letsmakerobots.com/user/16967" title="amundsen" class="">amundsen</a><br> @ Sat, 2011-12-10 17:15    </div>
+    <div class="picture"><a href="http://letsmakerobots.com/user/16967"><img alt="" src="7752_files/lmr_placeholder_userpic.png"></a></div>              <h3 class="title title-link-options" id="links-comment-77327"><a href="http://letsmakerobots.com/node/7752#comment-77327" class="active">New sensor, this time data are coming, but all zeros</a></h3>
+    
+          <div class="links hide" id="hide-links-comment-77327">
+      <ul class="links"><li class="first last comment_forbidden"><span class="comment_forbidden"><a href="http://letsmakerobots.com/user/login?destination=node/7752%2523comment-form">Login</a> or <a href="http://letsmakerobots.com/user/register?destination=node/7752%2523comment-form">register</a> to post comments</span></li>
+</ul>    </div>
+  
+    <div class="content">
+      <p>Hello,</p><p>I've managed to dismantle another Wiimote properly and have soldered the sensor to a piece of perfboard.</p><p>This
+ time, instead of having nothing, I have data flowing on my serial 
+monitor but there are only zeroes. I have moved an IR led in front of 
+the sensor but it doesn't change anything.</p><p>I have no oscilloscope,
+ so I can't check precisely what's coming from the sensor. All I could 
+achieve was a test to know if there was some voltage coming out from 
+pins 5 to 8 and there is indeed.</p><p>I have checked the circuit and I think everything is connected correctly.</p><p>What and how can I test to ensure it's not the sensor which is broken again ? :-(</p>    </div>
+  </div><!-- /comment-inner -->
+
+</div><!-- /comment -->
+<div class="indented"><a id="comment-77365"></a>
+<div class="comment even">
+  <div class="comment-inner clear-block">
+    <div class="submitted">
+      By <a href="http://letsmakerobots.com/user/16890" title="FehnrirX" class="">FehnrirX</a><br> @ Sun, 2011-12-11 04:44    </div>
+    <div class="picture"><a href="http://letsmakerobots.com/user/16890"><img alt="" src="7752_files/lmr_placeholder_userpic.png"></a></div>              <h3 class="title title-link-options" id="links-comment-77365"><a href="http://letsmakerobots.com/node/7752#comment-77365" class="active">zero data flows means :1.</a></h3>
+    
+          <div class="links hide" id="hide-links-comment-77365">
+      <ul class="links"><li class="first last comment_forbidden"><span class="comment_forbidden"><a href="http://letsmakerobots.com/user/login?destination=node/7752%2523comment-form">Login</a> or <a href="http://letsmakerobots.com/user/register?destination=node/7752%2523comment-form">register</a> to post comments</span></li>
+</ul>    </div>
+  
+    <div class="content">
+      <p>zero data flows means :</p><p>1. the clock is not sufficient to
+ drive the camera ( in my case, using 24mhz crystal, kako schematic, 
+74ls14, just got 3 MHz), fixed by using 74HC04 and got around 22 Mhz 
+with 15pF capacitor, 18Mhz using 22pF</p><p>2. the reset is not 
+correctly connected ( it's happen too. make sure you use the right 22k 
+or 30k for reset and it got 3.3v ), fixed by make another pcb, but 
+stilll cannot detected by wiiblobtrack, but read the position of IR 
+correct</p><p>3. if SDA and SCL line pull up by 3.3v, use 2k2, but if 
+5v, use 4k7 ( yup... it happen that the data is still logic 0 because 
+the pull-up is not sufficient )</p><p>this is my case so far about zero data flow.</p><p>to
+ test the sensor, is put back the sensor to wiimote again... i did it 
+about 7 times.. just solder all 8 pins, not the side pin, and test it 
+again. hope it works</p><p>o yeah. i test it using PC, connect using bluetooth, wii whiteboard v 0.3 from johnny lee</p><p><a href="http://johnnylee.net/projects/wii/WiimoteWhiteboardv03.zip">http://johnnylee.net/projects/wii/WiimoteWhiteboardv03.zip</a></p>    </div>
+  </div><!-- /comment-inner -->
+
+</div><!-- /comment -->
+</div><div class="pager"><span class="pager-list"><strong class="pager-current">1</strong><a href="http://letsmakerobots.com/node/7752?page=1" class="pager-next active" title="Go to page 2">2</a><a href="http://letsmakerobots.com/node/7752?page=2" class="pager-next active" title="Go to page 3">3</a><a href="http://letsmakerobots.com/node/7752?page=3" class="pager-next active" title="Go to page 4">4</a><a href="http://letsmakerobots.com/node/7752?page=4" class="pager-next active" title="Go to page 5">5</a><a href="http://letsmakerobots.com/node/7752?page=5" class="pager-next active" title="Go to page 6">6</a><a href="http://letsmakerobots.com/node/7752?page=6" class="pager-next active" title="Go to page 7">7</a><a href="http://letsmakerobots.com/node/7752?page=7" class="pager-next active" title="Go to page 8">8</a><a href="http://letsmakerobots.com/node/7752?page=8" class="pager-last active" title="Go to page 9">9</a></span><a href="http://letsmakerobots.com/node/7752?page=1" class="pager-next active" title="Go to next page">next ›</a><a href="http://letsmakerobots.com/node/7752?page=8" class="pager-last active" title="Go to last page">last »</a></div></div>          </div><!-- /#content-area -->
+                  </div><!-- /.yui-b -->
+      </div><!-- /#yui-main -->
+      <div id="sidebar-right" class="yui-b">
+        <div id="block-block-7" class="block block-block">
+
+  <h2>Search</h2>
+
+  <div class="content"><p align="center"><a href="http://letsmakerobots.com/node/29856">Search page</a></p>
+</div>
+</div>
+<div id="block-user-0" class="block block-user">
+
+  <h2>User login</h2>
+
+  <div class="content"><form action="/node/7752?destination=node%2F7752" accept-charset="UTF-8" method="post" id="user-login-form">
+<div><div class="form-item" id="edit-openid-identifier-wrapper">
+ <label for="edit-openid-identifier">Log in using OpenID: </label>
+ <input maxlength="255" name="openid_identifier" id="edit-openid-identifier" size="13" class="form-text" type="text">
+ <div class="description"><a href="http://openid.net/">What is OpenID?</a></div>
+</div>
+<div id="edit-name-wrapper"><div class="form-item" id="edit-name-wrapper">
+ <label for="edit-name">Username: <span class="form-required" title="This field is required.">*</span></label>
+ <input maxlength="60" name="name" id="edit-name" size="15" class="form-text required" type="text">
+</div>
+</div><div id="edit-pass-wrapper"><div class="form-item" id="edit-pass-wrapper">
+ <label for="edit-pass">Password: <span class="form-required" title="This field is required.">*</span></label>
+ <input name="pass" id="edit-pass" maxlength="60" size="15" class="form-text required" type="password">
+</div>
+</div><input name="op" id="edit-submit" value="Log in" class="form-submit" type="submit">
+<div class="item-list"><ul><li><a href="http://letsmakerobots.com/user/register" title="Create a new user account.">Create new account</a></li><li><a href="http://letsmakerobots.com/user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div><input name="form_id" id="edit-user-login-block" value="user_login_block" type="hidden">
+<a href="http://letsmakerobots.com/%2523" class="openid-link">Log in using OpenID</a><a href="http://letsmakerobots.com/%2523" class="user-link">Cancel OpenID login</a><input name="openid.return_to" id="edit-openid.return-to" value="http://letsmakerobots.com/openid/authenticate?destination=node%2F7752" type="hidden">
+
+</div></form>
+</div>
+</div>
+<div id="block-blog-0" class="block block-blog">
+
+  <h2>Recent blog posts</h2>
+
+  <div class="content"><div class="item-list"><ul><li><a href="http://letsmakerobots.com/node/35694">Flea Market Find, Crawler Bot</a></li><li><a href="http://letsmakerobots.com/node/35655">Wheelbot-a new swarm robot test prototype</a></li><li><a href="http://letsmakerobots.com/node/35640">ARAWA (Articulated Robotic Arm Work Assistant)</a></li><li><a href="http://letsmakerobots.com/node/35639">Nibbler....again...The 4 bit computer with extras</a></li><li><a href="http://letsmakerobots.com/node/35619">Mini Internet Controlled Robot Fighting or MICRF</a></li><li><a href="http://letsmakerobots.com/node/35596">Ebay mixed bag of robot bits</a></li><li><a href="http://letsmakerobots.com/node/35593">I got trouble with the programming.</a></li><li><a href="http://letsmakerobots.com/node/35588">By comparing temperatur, Arduino tells you with RF Link if your room is too cold or too warm.</a></li><li><a href="http://letsmakerobots.com/node/35580">New</a></li><li><a href="http://letsmakerobots.com/node/35528">BaseBot – Basic Robot Kit v1 Specs</a></li></ul></div><div class="more-link"><a href="http://letsmakerobots.com/blog" title="Read the latest blog entries.">more</a></div></div>
+</div>
+<div id="block-links_weblink-1" class="block block-links_weblink">
+
+  <h2>Recently submitted links:</h2>
+
+  <div class="content"><div class="item-list"><ul><li><a href="http://letsmakerobots.com/node/35708">ButtBot</a></li><li><a href="http://letsmakerobots.com/node/35663">Arduino Sheild for Raspberry Pi</a></li><li><a href="http://letsmakerobots.com/node/35661">Barfbot</a></li><li><a href="http://letsmakerobots.com/node/35658">The Verge</a></li><li><a href="http://letsmakerobots.com/node/35612">Creative Robotics Ltd</a></li><li><a href="http://letsmakerobots.com/node/35565">Bipeds on a Budget</a></li><li><a href="http://letsmakerobots.com/node/35459">Robots out in the Field</a></li><li><a href="http://letsmakerobots.com/node/35420">Kenshiro robot has muscle and bones... Very cool, and creepy</a></li><li><a href="http://letsmakerobots.com/node/35330">Lucky Cows!</a></li><li><a href="http://letsmakerobots.com/node/35294">DIY Shrimp Microcontroller Replicates an Arduino Uno at One-Fifth the Price</a></li></ul></div></div>
+</div>
+<div id="block-user-3" class="block block-user">
+
+  <h2>Who's online</h2>
+
+  <div class="content">There are currently <em>31 users</em> and <em>21 guests</em> online.<div class="item-list"><h3>Online users</h3><ul><li><a href="http://letsmakerobots.com/user/17399" title="1-of-4" class="">1-of-4</a><br></li><li><a href="http://letsmakerobots.com/user/13614" title="jinx" class="">jinx</a><br></li><li><a href="http://letsmakerobots.com/user/15677" title="MDH" class="">MDH</a><br></li><li><a href="http://letsmakerobots.com/user/17276" title="bdk6" class="">bdk6</a><br></li><li><a href="http://letsmakerobots.com/user/17498" title="Maxhirez" class="">Maxhirez</a><br></li><li><a href="http://letsmakerobots.com/user/24" title="Chris the Carpenter" class="">Chris the Carpenter</a><br></li><li><a href="http://letsmakerobots.com/user/15835" title="sailindaze" class="">sailindaze</a><br></li><li><a href="http://letsmakerobots.com/user/15049" title="Dan M" class="">Dan M</a><br></li><li><a href="http://letsmakerobots.com/user/19644" title="KirkHamster" class="">KirkHamster</a><br></li><li><a href="http://letsmakerobots.com/user/16862" title="Sam01" class="">Sam01</a><br></li><li><a href="http://letsmakerobots.com/user/19076" title="fba" class="">fba</a><br></li><li><a href="http://letsmakerobots.com/user/17222" title="NilsB" class="">NilsB</a><br></li><li><a href="http://letsmakerobots.com/user/17926" title="sanc04" class="">sanc04</a><br></li><li><a href="http://letsmakerobots.com/user/3886" title="TinHead" class="">TinHead</a><br></li><li><a href="http://letsmakerobots.com/user/19627" title="01011001" class="">01011001</a><br></li><li><a href="http://letsmakerobots.com/user/19608" title="stragen001" class="">stragen001</a><br></li><li><a href="http://letsmakerobots.com/user/19429" title="Jorpy" class="">Jorpy</a><br></li><li><a href="http://letsmakerobots.com/user/17470" title="Bajdi" class="">Bajdi</a><br></li><li><a href="http://letsmakerobots.com/user/14021" title="birdmun" class="">birdmun</a><br></li><li><a href="http://letsmakerobots.com/user/747" title="voodoobot" class="">voodoobot</a><br></li><li><a href="http://letsmakerobots.com/user/19642" title="ljjeppe" class="">ljjeppe</a><br></li><li><a href="http://letsmakerobots.com/user/18659" title="hoff70" class="">hoff70</a><br></li><li><a href="http://letsmakerobots.com/user/16359" title="Torrentula" class="">Torrentula</a><br></li><li><a href="http://letsmakerobots.com/user/5293" title="ignoblegnome" class="">ignoblegnome</a><br></li><li><a href="http://letsmakerobots.com/user/3022" title="K120189" class="">K120189</a><br></li><li><a href="http://letsmakerobots.com/user/15907" title="mogul" class="">mogul</a><br></li><li><a href="http://letsmakerobots.com/user/18840" title="Protowrxs" class="">Protowrxs</a><br></li><li><a href="http://letsmakerobots.com/user/15907" title="mogul" class="">mogul</a><br></li><li><a href="http://letsmakerobots.com/user/19240" title="Allan B" class="">Allan B</a><br></li><li><a href="http://letsmakerobots.com/user/16864" title="hristo.staykov" class="">hristo.staykov</a><br></li><li><a href="http://letsmakerobots.com/user/17380" title="windy42" class="">windy42</a><br></li></ul></div></div>
+</div>
+<div id="block-user-1" class="block block-user">
+
+  <h2>Quick links</h2>
+
+  <div class="content">
+<ul class="menu">
+<li class="leaf"><a href="https://plus.google.com/u/0/112079279304962380860/posts" title="LMR on Google+">LMR on Google+</a></li>
+<li class="leaf"><a href="http://www.facebook.com/group.php?gid=52847854131">LMR on Facebook</a></li>
+<li class="leaf"><a href="http://www.flickr.com/groups/letsmakerobots" title="LMR on Flicker">LMR on Flicker</a></li>
+<li class="leaf"><a href="http://twitter.com/LetsMakeRobots" title="Follow LMR on Twitter">LMR on Twitter</a></li>
+<li class="leaf"><a href="http://letsmakerobots.com/node/4389">LMR Scrapbook</a></li>
+<li class="leaf"><a href="http://letsmakerobots.com/user/7752/pages">Pages</a></li>
+<li class="leaf"><a href="http://letsmakerobots.com/rss_feeds">RSS feeds</a></li>
+
+</ul>
+</div>
+</div>
+      </div>
+    </div>
+    <div id="ft">
+      <div id="footer-message">
+        <div id="bee3-footer">ALL LMR ARE BELONG TO US!</div>
+        Let's make robots!
+      </div>
+      <div id="region_footer"></div>
+    </div>
+  </div>
+  <script type="text/javascript" src="7752_files/googleanalytics.js"></script>
+<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script src="7752_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">try{var pageTracker = _gat._getTracker("UA-3749072-1");pageTracker._trackPageview();} catch(err) {}</script>
+
+
+<div style="display: none;" id="YontooInstallID">9c990aec-5b77-4d55-9e52-3419ce7c112d</div><div style="display: none;" id="Y2PluginIds">Y2:9c990aec-5b77-4d55-9e52-3419ce7c112d</div></body></html>

@@ -1,0 +1,68 @@
+/*
+File:			custom.css
+Description:	Custom styles for Thesis
+
+BASIC USAGE:
+
+If you have enabled the custom stylesheet in the Thesis options panel, the <body> tag 
+will be appended with the "custom" class, like so: <body class="custom">. You can use 
+the "custom" class to override *any* CSS declarations contained in the style.css file.
+
+For example, if you wish to change the default link color to green, you would add the 
+following declarations to this file:
+
+	.custom a, .custom a:visited { color: #090; }	<--- This makes links green
+	.custom a:hover { color: #00f; }	<--- This makes links blue when you mouse over them
+
+WHY THIS WORKS:
+
+By using the "custom" class, you are creating more specific CSS declarations for HTML
+elements. CSS styling is applied through rules of specificity, and because declarations
+prepended with .custom are more specific, they get applied when the page is rendered!
+
+More information about styling your Thesis installation using this file can be found
+in the User's Guide:
+	http://diythemes.com/thesis/rtfm/customizing-thesis-with-customcss/
+*/
+
+/* Featured Post Formatting */
+
+.custom #feature_box {  padding:0em; }
+
+.custom #my-feature-box1 { width:600px; padding-left:1em;}
+
+.custom #my-feature-box,#my-feature-box1  {
+background:/*url("http://www.stephenhobley.com/blog/wp-content/themes/thesis_18/arrow.gif")*/ #111 no-repeat scroll 0 0;
+background-position:right
+transparentfloat:right;  
+font-family: Helvetica,Arial,sans-serif; 
+color: #ffffff; 
+/*background: #111 no-repeat scroll 0 0;*/ 
+padding: 10px 15px 10px 5px; }
+
+.custom #my-feature-box h2 { color:#ffffff; font-size: 2.0em; margin: 0 0 5px 0; }
+.custom #my-feature-box h2 a,#my-feature-box a  { color: #fff; text-decoration: none; }
+.custom #my-feature-box h2 a:hover { color: #fb0; }
+.custom #my-feature-box p {color:#fb0;  font-size: 1.5em; line-height:1.5em; text-align: left;}
+.custom #my-feature-box .featurereadmore { padding: 22px 0 0 0; }
+.custom #my-feature-box .featurereadmore a { font-size: 14px; text-decoration: none; }
+
+/* Similar Posts w/a correction courtesy of slider1968 */
+ul.similar-posts {display:block; width: 580px; clear:both; text-align:center; margin:10px 0px 10px 0px; vertical-align: middle;} 
+ul.similar-posts li{display: inline; list_style-type:none; width:150px; float:left; display:inline; margin-right:20px; padding:0;  margin-bottom:5px} 
+ul.similar-posts img{clear:both; padding:5px; background:#FFFFFF; border:1px solid #FFFFFF; margin-right:5px;} 
+ul.similar-posts a{clear:both; display:block; border:none; text-decoration:none; margin-bottom:2px;} 
+ul.similar-posts li{font-size:14px; line-height: 1.3em;} 
+
+.custom #content .my-bubble {
+background:transparent url('images/comment-bubble.png') 0 0 no-repeat;
+float:right; padding:6px 4px; margin:0px;
+text-align:center; width:50px; height:50px;
+}
+.custom #content .my-bubble span a { display:block; text-align:center;
+border:none; color:#fff; font-family:arial; font-size:28px; line-height:1em;
+font-weight:bold; text-decoration:none; padding:0px;
+}
+
+
+

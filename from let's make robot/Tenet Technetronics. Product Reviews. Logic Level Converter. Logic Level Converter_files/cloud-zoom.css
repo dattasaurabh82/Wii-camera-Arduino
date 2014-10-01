@@ -1,0 +1,138 @@
+
+/* This is the moving lens square underneath the mouse pointer. */
+.cloud-zoom-lens {
+	border: 4px solid #dbdbdb;
+	margin:-4px;	/* Set this to minus the border thickness. */
+	background-color:#fff;	
+	cursor:move;
+}
+
+/* This is for the title text. */
+.cloud-zoom-title {
+	font-family:Arial, Helvetica, sans-serif;
+	position:absolute !important;
+	background-color:#000;
+	color:#fff;
+	padding:3px;
+	width:100%;
+	text-align:center;	
+	font-weight:bold;
+	font-size:10px;
+	top:0px;
+}
+
+/* This is the zoom window. */
+.cloud-zoom-big {
+	border:4px solid #ccc;
+	overflow:hidden;
+}
+
+/* This is the loading message. */
+.cloud-zoom-loading {
+	color:white;	
+	background:#222;
+	padding:3px;
+	border:1px solid #000;
+}
+
+.zoom-section {
+	display:inline;
+	clear:both;
+}
+/* Feature descriptions in ZoomEngine page */
+.zoom-desc {
+	float:left;
+	width:52px;
+	height: 285px;
+	background-image: url(../images/products/zoom-disc-bg.gif);
+	background-repeat: no-repeat;
+	padding-left: 24px;
+	padding-top: 5px;
+	margin-top: 54px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #e6e6e6;
+	border-right-color: #e6e6e6;
+	border-bottom-color: #e6e6e6;
+}
+
+.zoom-small-image {
+	border:1px solid #CCC;
+	float:left;
+	text-align: center;
+}
+.zoom-tiny-image {
+	height: 70px;
+	width: 42px;
+	margin-top: 13px;
+	margin-right: 0px;
+	margin-bottom: 13px;
+	margin-left: 0px;
+	
+}
+.zoom-tiny-image:hover {
+	border:1px solid #fff;
+}
+
+
+
+
+
+
+
+#maincontent {
+	float:left;
+	width:420px;
+	
+}
+#maincontent a {
+	
+}
+
+#maincontent a:hover {
+	color:#EAEAEA;
+}
+
+
+/*****************************************************/
+.mousetrap{
+	z-index: 999;
+	position: absolute;
+	width:300px;
+	height:310px;
+	left: 0px;
+	top: 0px;
+	cursor: move;
+	background-image: url(&quot;.&quot;);
+}
+
+
+#wrap{
+	top:0px;
+	position: relative;
+}
+
+
+.clearfix:after{clear:both;content:".";display:block;font-size:0;height:0;line-height:0;visibility:hidden;}
+
+.clearfix{display:block;zoom:1;}
+
+
+ul#thumblist{display:block; padding:0; padding-bottom:12px;
+margin:0; float:left;}
+
+ul#thumblist li{float:left;list-style:none; margin-right:10px;
+padding:0;}
+ul#thumblist li a{display:block;border:1px solid #CCC; 
+margin:0;
+/*padding:5px 14px 5px 14px;*/
+}
+.jqzoom{
+
+	text-decoration:none;
+	float:left;
+}

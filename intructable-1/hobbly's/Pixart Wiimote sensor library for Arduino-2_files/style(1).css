@@ -1,0 +1,43 @@
+div.sz-youtube-list {
+	text-align: left;
+}
+
+div.sz-youtube-list ul, div.sz-youtube-list li {
+	list-style: none;
+}
+
+div.sz-youtube-list li {
+    width: 130px;
+    min-height: 130px;
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: top;
+    margin: 5px;
+    zoom: 1;
+    *display: inline;
+    _height: 150px;
+}
+
+div.sz-youtube-list li p {
+	font-size: 11px;
+	padding: 0;
+	margin: 0;
+}
+
+ul.sz-videolisting, ul.sz-videolisting li {
+	list-style: none;
+}
+
+ul.sz-videolisting li {
+	width: 130px;
+	margin: 0;
+}
+
+
+ul.sz-videolisting span {
+	display:block;
+}
+
+#sidebar ul.sz-videolisting li::before, div.sz-youtube-list li::before {
+	content: "";	
+}

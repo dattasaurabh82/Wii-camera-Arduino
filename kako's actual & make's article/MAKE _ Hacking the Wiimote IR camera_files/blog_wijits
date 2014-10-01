@@ -1,0 +1,12 @@
+if(typeof LJT == "object" || typeof LJT_Lite == "object") {
+	try{
+		LJT_Lite.fireBeacon("trakr");
+	}catch(err){}
+} else {
+	var beaconName = "LJTlite_jsonp";
+	window[beaconName] = function (payload){
+		LJT_Lite.fireBeacon("trakr", payload);
+	};
+	document.write('<scr'+'ipt src="http://www.lijit.com/___tatooine_rc2/res/js/lite.beacon.min.js" ></scr'+'ipt>');
+	document.write('<scr'+'ipt src="http://www.lijit.com/ip.php?uri=http%3A%2F%2Fwww.lijit.com%2Fusers%2Ffm_audience&jsonp=LJTlite_jsonp" ></scr'+'ipt>');
+}
